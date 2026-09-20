@@ -40,6 +40,66 @@ header.site-header {
   font-size: 1.3rem;
   color: var(--accent-dark);
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-icon {
+  width: 22px;
+  height: 22px;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.topic-icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.icon-badge {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #eaf4ee;
+  color: var(--accent-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon-badge.lg {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+}
+
+.icon-badge.lg .topic-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.article-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.article-header h1 { margin-bottom: 0; }
+
+.hero-graphic {
+  margin: 8px 0 4px;
+  line-height: 0;
+}
+
+.hero-graphic svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
 }
 
 nav a {
@@ -85,8 +145,12 @@ a { color: var(--accent); }
 .article-list { list-style: none; padding: 0; }
 .article-list li {
   border-bottom: 1px solid var(--border);
-  padding: 16px 0;
+  padding: 18px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
 }
+.article-list .article-body { flex: 1; min-width: 0; }
 .article-list a {
   font-weight: 600;
   text-decoration: none;
