@@ -1,4 +1,4 @@
-# Mądry Portfel — blog o finansach osobistych
+# Mądry Portfel — blog o finansach dla młodych na starcie kariery zawodowej
 
 Statyczna strona (czysty HTML/CSS, zero build-toola) gotowa do darmowego hostingu na GitHub Pages.
 
