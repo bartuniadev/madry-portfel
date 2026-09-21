@@ -27,7 +27,12 @@ body {
 
 header.site-header {
   border-bottom: 1px solid var(--border);
-  background: var(--card);
+  background: rgba(250, 249, 246, 0.72);
+  backdrop-filter: saturate(180%) blur(14px);
+  -webkit-backdrop-filter: saturate(180%) blur(14px);
+  position: sticky;
+  top: 0;
+  z-index: 50;
 }
 
 .header-inner {
@@ -156,6 +161,8 @@ h3 { font-size: 1.2rem; margin-top: 1.5em; }
 .breadcrumb span[aria-current] { color: var(--text); }
 
 .home-main { max-width: var(--max-width-wide); }
+.home-main h1 { font-size: clamp(2.4rem, 5.5vw, 3.4rem); }
+.home-main .hero-graphic svg { box-shadow: 0 20px 50px -20px rgba(20, 92, 57, 0.35); border-radius: 16px; }
 
 .category-section { margin-top: 40px; }
 .category-section:first-of-type { margin-top: 28px; }
@@ -337,6 +344,60 @@ nav a:hover::after { right: 0; }
   transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
 .card:hover { box-shadow: 0 6px 18px rgba(31, 122, 77, 0.1); transform: translateY(-2px); }
+
+/* Scroll reveal (progressive enhancement — see assets/reveal.js) */
+.reveal {
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+html.js-reveal-ready .reveal:not(.is-visible) {
+  opacity: 0;
+  transform: translateY(18px);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.badge-new {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  padding: 3px 9px;
+  border-radius: 999px;
+  margin-left: 10px;
+  vertical-align: middle;
+  transform: translateY(-2px);
+}
+
+figure.chart-figure {
+  margin: 28px 0;
+  padding: 20px 22px 16px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+figure.chart-figure svg { width: 100%; height: auto; display: block; }
+figure.chart-figure figcaption {
+  margin-top: 14px;
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+figure.chart-figure figcaption strong { color: var(--text); }
+.chart-legend {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+.chart-legend span { display: inline-flex; align-items: center; gap: 7px; }
+.chart-legend i { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
