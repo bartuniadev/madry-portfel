@@ -25,17 +25,28 @@
 
   <div class="hero-graphic">
     <svg viewBox="0 0 720 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustracja rosnących oszczędności">
-      <rect x="0" y="0" width="720" height="200" fill="#eaf4ee"/>
+      <defs>
+        <linearGradient id="homeHeroBg" x1="0" y1="0" x2="720" y2="200" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#eef7f0"/>
+          <stop offset="1" stop-color="#d3e9d9"/>
+        </linearGradient>
+        <linearGradient id="homeHeroArea" x1="0" y1="0" x2="0" y2="200" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#1f7a4d" stop-opacity="0.28"/>
+          <stop offset="1" stop-color="#1f7a4d" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <rect x="0" y="0" width="720" height="200" fill="url(#homeHeroBg)"/>
       <g opacity="0.45">
         <circle cx="86" cy="56" r="16" fill="none" stroke="#1f7a4d" stroke-width="2"/>
         <circle cx="650" cy="150" r="11" fill="none" stroke="#1f7a4d" stroke-width="2"/>
-        <circle cx="470" cy="168" r="8" fill="none" stroke="#1f7a4d" stroke-width="2"/>
+        <circle cx="470" cy="168" r="6" fill="#e0a63f"/>
         <circle cx="610" cy="44" r="7" fill="none" stroke="#1f7a4d" stroke-width="2"/>
       </g>
-      <polyline points="36,152 160,118 260,138 380,80 500,102 660,40" fill="none" stroke="#1f7a4d" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-      <circle cx="160" cy="118" r="6" fill="#1f7a4d"/>
-      <circle cx="380" cy="80" r="6" fill="#1f7a4d"/>
-      <circle cx="660" cy="40" r="8" fill="#145c39"/>
+      <polygon points="36,152 160,118 260,138 380,80 500,102 660,40 660,200 36,200" fill="url(#homeHeroArea)"/>
+      <polyline points="36,152 160,118 260,138 380,80 500,102 660,40" fill="none" stroke="#145c39" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" style="filter: drop-shadow(0 3px 6px rgba(20,92,57,0.25))"/>
+      <circle cx="160" cy="118" r="6" fill="#145c39"/>
+      <circle cx="380" cy="80" r="6" fill="#145c39"/>
+      <circle cx="660" cy="40" r="8" fill="#e0a63f" stroke="#fff" stroke-width="2"/>
     </svg>
   </div>
 
