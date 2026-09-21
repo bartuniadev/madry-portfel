@@ -195,3 +195,57 @@ footer a { color: var(--muted); }
 table { border-collapse: collapse; width: 100%; margin: 1.2em 0; }
 th, td { border: 1px solid var(--border); padding: 8px 10px; text-align: left; font-size: 0.95rem; }
 th { background: #f2f0e8; }
+
+html { scroll-behavior: smooth; }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+main > h1,
+.article-header,
+.hero-graphic,
+.lead {
+  animation: fadeInUp 0.6s ease-out both;
+}
+.article-header { animation-delay: 0.03s; }
+.hero-graphic { animation-delay: 0.09s; }
+.lead { animation-delay: 0.15s; }
+
+.hero-graphic svg { transition: transform 0.4s ease; }
+.hero-graphic:hover svg { transform: scale(1.015); }
+
+.icon-badge { transition: transform 0.25s ease, background-color 0.25s ease; }
+.article-list li:hover .icon-badge { transform: scale(1.08) rotate(-3deg); background: #dcefe3; }
+
+.article-list li {
+  transition: background-color 0.2s ease, padding-inline 0.2s ease, border-radius 0.2s ease;
+  border-radius: 10px;
+}
+.article-list li:hover { background: #f2f6f1; padding-inline: 10px; }
+
+a { transition: color 0.2s ease; }
+
+nav a { position: relative; }
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: -4px;
+  height: 2px;
+  background: var(--accent);
+  transition: right 0.25s ease;
+}
+nav a:hover::after { right: 0; }
+
+.card, .disclosure {
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.card:hover { box-shadow: 0 6px 18px rgba(31, 122, 77, 0.1); transform: translateY(-2px); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
