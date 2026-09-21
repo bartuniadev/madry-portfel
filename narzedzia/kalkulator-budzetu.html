@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalkulator budżetu 50/30/20 — Mądry Portfel</title>
+<meta name="description" content="Darmowy kalkulator budżetu domowego metodą 50/30/20. Wpisz dochód, dostosuj proporcje do polskich realiów i zobacz kwoty od razu — bez konta, bez maila, offline.">
+<style>
+  :root{
+    --bg:#0e130f;
+    --surface:#161d19;
+    --surface-2:#1c241f;
+    --border:#2b362f;
+    --text:#eef2ef;
+    --text-2:#93a49a;
+    --green:#3ad889;
+    --gold:#f2c14e;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--green);}
+  a:focus-visible, button:focus-visible, input:focus-visible{outline:2px solid var(--green); outline-offset:2px;}
+
+  header.site-header{border-bottom:1px solid var(--border);}
+  .header-inner{
+    max-width:760px;
+    margin:0 auto;
+    padding:18px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  .logo{
+    font-weight:700;
+    font-size:1.15rem;
+    letter-spacing:-0.01em;
+    color:var(--text);
+    text-decoration:none;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .logo svg{width:20px;height:20px;color:var(--green);flex-shrink:0;}
+  nav.top a{
+    color:var(--text-2);
+    text-decoration:none;
+    margin-left:18px;
+    font-size:0.92rem;
+  }
+  nav.top a:hover, nav.top a[aria-current]{color:var(--green);}
+
+  main{max-width:760px;margin:0 auto;padding:32px 20px 60px;}
+
+  .pill{
+    display:inline-flex;
+    align-items:center;
+    font-family:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+    font-size:12px;
+    letter-spacing:.04em;
+    color:var(--green);
+    border:1px solid var(--green);
+    padding:4px 11px;
+    border-radius:999px;
+  }
+  h1{
+    font-size:clamp(1.7rem,5vw,2.15rem);
+    line-height:1.2;
+    margin:14px 0 0;
+    letter-spacing:-0.01em;
+  }
+  .lead{
+    max-width:60ch;
+    color:var(--text-2);
+    font-size:1.02rem;
+    margin-top:12px;
+  }
+
+  .calc-card{
+    margin-top:28px;
+    background:var(--surface);
+    border:2px solid var(--green);
+    border-radius:12px;
+    box-shadow:6px 6px 0 var(--gold);
+    padding:26px 24px;
+  }
+
+  .field{display:flex;flex-direction:column;gap:6px;margin-bottom:20px;}
+  .field label{font-size:0.88rem;color:var(--text-2);font-weight:600;}
+  .field input{
+    background:var(--bg);
+    border:1px solid var(--border);
+    color:var(--text);
+    border-radius:8px;
+    padding:12px 14px;
+    font-size:1.4rem;
+    font-family:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+    font-variant-numeric:tabular-nums;
+  }
+  .field input#income{font-weight:700;}
+  .field input::placeholder{color:#5c6a62;}
+
+  .split-controls{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+    margin-bottom:14px;
+  }
+  .split-controls .field{margin-bottom:0;}
+  .split-controls input{font-size:1.05rem;padding:9px 10px;}
+
+  .presets{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px;}
+  .preset-btn{
+    font-family:inherit;
+    font-size:0.82rem;
+    color:var(--text-2);
+    background:var(--surface-2);
+    border:1px solid var(--border);
+    border-radius:999px;
+    padding:7px 13px;
+    cursor:pointer;
+  }
+  .preset-btn:hover{color:var(--text);border-color:var(--green);}
+
+  .sum-warning{
+    font-size:0.85rem;
+    color:var(--gold);
+    background:rgba(242,193,78,0.1);
+    border:1px solid rgba(242,193,78,0.4);
+    border-radius:7px;
+    padding:8px 12px;
+    margin:6px 0 18px;
+  }
+
+  .bar{
+    display:flex;
+    height:14px;
+    border-radius:999px;
+    overflow:hidden;
+    background:var(--bg);
+    border:1px solid var(--border);
+    margin-bottom:24px;
+  }
+  .bar .seg{height:100%;transition:width .2s ease;}
+  .bar .seg.needs{background:var(--green);}
+  .bar .seg.wants{background:var(--border);}
+  .bar .seg.savings{background:var(--gold);}
+
+  .results-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+  }
+  .result-card{
+    background:var(--bg);
+    border:1px solid var(--border);
+    border-radius:9px;
+    padding:14px;
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+  }
+  .result-card .label{font-size:0.8rem;color:var(--text-2);}
+  .result-card .amount{
+    font-family:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+    font-weight:700;
+    font-size:1.15rem;
+    font-variant-numeric:tabular-nums;
+  }
+  .result-card .pct{font-size:0.78rem;color:var(--text-2);font-variant-numeric:tabular-nums;}
+  .result-card.needs{border-color:var(--green);}
+  .result-card.needs .amount{color:var(--green);}
+  .result-card.savings{border-color:var(--gold);}
+  .result-card.savings .amount{color:var(--gold);}
+
+  @media (max-width:480px){
+    .results-grid{grid-template-columns:1fr;}
+    .split-controls{grid-template-columns:1fr;}
+  }
+
+  .trust{
+    margin-top:22px;
+    padding-top:22px;
+    border-top:1px dashed var(--border);
+  }
+  .trust p{color:var(--text-2);font-size:0.92rem;max-width:60ch;margin:0 0 14px;}
+  .download-btn{
+    display:inline-block;
+    font-weight:700;
+    font-size:0.95rem;
+    color:#08130d;
+    background:var(--green);
+    padding:12px 20px;
+    border-radius:9px;
+    text-decoration:none;
+  }
+  .download-btn:hover{background:#4fe49a;}
+  .microcopy{font-size:0.8rem !important;color:#5c6a62 !important;margin-top:12px !important;}
+
+  .more-link{margin-top:26px;font-size:0.95rem;}
+
+  footer{
+    border-top:1px solid var(--border);
+    margin-top:20px;
+    padding:24px 20px;
+    text-align:center;
+    color:var(--text-2);
+    font-size:0.85rem;
+  }
+  footer a{color:var(--text-2);}
+  footer .ai-note{opacity:0.75;}
+
+  @media (prefers-reduced-motion: reduce){
+    *{transition-duration:0.01ms !important;}
+  }
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../index.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="7.5 13.5 10.5 10.5 13 12.5 16.5 8.5"/><polyline points="14 8.5 16.5 8.5 16.5 11"/></svg>
+      Mądry Portfel
+    </a>
+    <nav class="top">
+      <a href="#" aria-current="page">Narzędzia</a>
+      <a href="../index.html">Artykuły</a>
+      <a href="../o-nas.html">O nas</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <span class="pill">0 kont · 0 maila · 0 śledzenia</span>
+  <h1>Kalkulator budżetu 50/30/20</h1>
+  <p class="lead">Wpisz miesięczny dochód netto — kwoty na potrzeby, zachcianki i oszczędności policzą się od razu. Wszystko dzieje się w Twojej przeglądarce, nic nigdzie nie wysyłamy.</p>
+
+  <div class="calc-card">
+    <div class="field">
+      <label for="income">Miesięczny dochód netto</label>
+      <input type="number" id="income" inputmode="decimal" placeholder="np. 4500" min="0" step="1">
+    </div>
+
+    <div class="split-controls">
+      <div class="field">
+        <label for="pctNeeds">Potrzeby %</label>
+        <input type="number" id="pctNeeds" value="50" min="0" max="100" step="1">
+      </div>
+      <div class="field">
+        <label for="pctWants">Zachcianki %</label>
+        <input type="number" id="pctWants" value="30" min="0" max="100" step="1">
+      </div>
+      <div class="field">
+        <label for="pctSavings">Oszczędności %</label>
+        <input type="number" id="pctSavings" value="20" min="0" max="100" step="1">
+      </div>
+    </div>
+
+    <div class="presets">
+      <button type="button" class="preset-btn" data-preset="50,30,20">Klasyczne 50/30/20</button>
+      <button type="button" class="preset-btn" data-preset="60,20,20">Wysoki czynsz 60/20/20</button>
+      <button type="button" class="preset-btn" data-preset="65,15,20">Bardzo wysoki czynsz 65/15/20</button>
+    </div>
+
+    <p class="sum-warning" id="sumWarning" hidden>Suma procentów to <span id="sumValue"></span>%, nie 100% — kwoty poniżej i tak są poprawne, po prostu nie rozliczają całego dochodu.</p>
+
+    <div class="bar" aria-hidden="true">
+      <div class="seg needs" id="barNeeds" style="width:50%"></div>
+      <div class="seg wants" id="barWants" style="width:30%"></div>
+      <div class="seg savings" id="barSavings" style="width:20%"></div>
+    </div>
+
+    <div class="results-grid">
+      <div class="result-card needs">
+        <span class="label">Potrzeby</span>
+        <span class="amount" id="needsAmount">0 zł</span>
+        <span class="pct" id="needsPct">50%</span>
+      </div>
+      <div class="result-card wants">
+        <span class="label">Zachcianki</span>
+        <span class="amount" id="wantsAmount">0 zł</span>
+        <span class="pct" id="wantsPct">30%</span>
+      </div>
+      <div class="result-card savings">
+        <span class="label">Oszczędności</span>
+        <span class="amount" id="savingsAmount">0 zł</span>
+        <span class="pct" id="savingsPct">20%</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="trust">
+    <p>Ten kalkulator liczy wszystko lokalnie, w Twojej przeglądarce — żadne dane nie są nigdzie wysyłane ani zapisywane. Możesz go też pobrać i mieć na dysku, żeby liczyć budżet offline, bez internetu.</p>
+    <a class="download-btn" href="kalkulator-budzetu.html" download="kalkulator-budzetu-50-30-20-madry-portfel.html">Pobierz i używaj offline (HTML, 13 KB)</a>
+    <p class="microcopy">Przeglądarka może spytać, czy na pewno pobrać plik z internetu — to dotyczy każdego pobierania, nie tylko naszego. Ten plik nie zawiera makr ani niczego, co mogłoby coś zainstalować — to zwykła strona HTML, którą możesz otworzyć w dowolnej przeglądarce. <a href="https://github.com/bartuniadev/madry-portfel/blob/master/narzedzia/kalkulator-budzetu.html">Zobacz kod źródłowy na GitHub</a>.</p>
+  </div>
+
+  <p class="more-link"><a href="../artykuly/budzet-50-30-20.html">Przeczytaj więcej o metodzie 50/30/20 →</a></p>
+</main>
+
+<footer>
+  <p>&copy; 2026 Mądry Portfel. <a href="../polityka-prywatnosci.html">Polityka prywatności</a></p>
+  <p class="ai-note">Treści na tej stronie powstają z pomocą narzędzi AI i są redagowane oraz sprawdzane przez człowieka.</p>
+</footer>
+
+<script>
+  function fmt(n){
+    return new Intl.NumberFormat('pl-PL',{maximumFractionDigits:0}).format(Math.round(n)) + ' zł';
+  }
+
+  var incomeEl = document.getElementById('income');
+  var pctNeedsEl = document.getElementById('pctNeeds');
+  var pctWantsEl = document.getElementById('pctWants');
+  var pctSavingsEl = document.getElementById('pctSavings');
+  var sumWarning = document.getElementById('sumWarning');
+  var sumValue = document.getElementById('sumValue');
+
+  function recalc(){
+    var income = parseFloat(incomeEl.value) || 0;
+    var pN = parseFloat(pctNeedsEl.value) || 0;
+    var pW = parseFloat(pctWantsEl.value) || 0;
+    var pS = parseFloat(pctSavingsEl.value) || 0;
+    var sum = pN + pW + pS;
+
+    document.getElementById('needsAmount').textContent = fmt(income * pN / 100);
+    document.getElementById('wantsAmount').textContent = fmt(income * pW / 100);
+    document.getElementById('savingsAmount').textContent = fmt(income * pS / 100);
+    document.getElementById('needsPct').textContent = pN + '%';
+    document.getElementById('wantsPct').textContent = pW + '%';
+    document.getElementById('savingsPct').textContent = pS + '%';
+
+    if (Math.round(sum) !== 100){
+      sumWarning.hidden = false;
+      sumValue.textContent = sum;
+    } else {
+      sumWarning.hidden = true;
+    }
+
+    var total = sum || 1;
+    document.getElementById('barNeeds').style.width = (pN / total * 100) + '%';
+    document.getElementById('barWants').style.width = (pW / total * 100) + '%';
+    document.getElementById('barSavings').style.width = (pS / total * 100) + '%';
+  }
+
+  [incomeEl, pctNeedsEl, pctWantsEl, pctSavingsEl].forEach(function(el){
+    el.addEventListener('input', recalc);
+  });
+
+  document.querySelectorAll('.preset-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var parts = btn.getAttribute('data-preset').split(',');
+      pctNeedsEl.value = parts[0];
+      pctWantsEl.value = parts[1];
+      pctSavingsEl.value = parts[2];
+      recalc();
+    });
+  });
+
+  recalc();
+</script>
+</body>
+</html>
