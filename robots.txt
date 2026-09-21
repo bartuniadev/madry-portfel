@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://TWOJA-DOMENA-LUB-GITHUB-IO/sitemap.xml
+Sitemap: https://bartuniadev.github.io/madry-portfel/sitemap.xml
