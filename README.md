@@ -3,10 +3,26 @@
 Statyczna strona (czysty HTML/CSS, zero build-toola) gotowa do darmowego hostingu na GitHub Pages.
 
 ## Struktura
-- `index.html` — strona główna z listą artykułów
-- `artykuly/` — poszczególne wpisy
+- `index.html` — strona główna z listą artykułów w pięciu kategoriach
+- `artykuly/` — 27 wpisów; każdy ma sekcję „Źródła i przydatne strony" z linkami do stron urzędowych
+- `narzedzia/` — 4 kalkulatory działające w przeglądarce (bez zależności, do pobrania i użycia offline): brutto–netto, budżet 50/30/20, procent składany, spłata długów
 - `o-nas.html`, `polityka-prywatnosci.html` — strony wymagane m.in. do AdSense
-- `robots.txt`, `sitemap.xml` — SEO (podmień `TWOJA-DOMENA-LUB-GITHUB-IO` na realny adres po wdrożeniu)
+- `style.css`, `assets/` — style, fonty i skrypt animacji
+- `robots.txt`, `sitemap.xml` — SEO
+
+## Coroczny przegląd — liczby, które się zmieniają
+Część treści zawiera kwoty obowiązujące w konkretnym roku (stan: listopad 2026). Na początku każdego roku sprawdź i zaktualizuj:
+
+| Co | Wartość 2026 | Gdzie występuje |
+|---|---|---|
+| Minimalne wynagrodzenie | 4806 zł brutto | `narzedzia/kalkulator-brutto-netto.html`, `artykuly/ubezpieczenia-na-starcie.html` (kara za brak OC) |
+| Limit działalności nierejestrowanej | 10 813,50 zł na kwartał | `artykuly/dorabianie-po-godzinach.html` |
+| Limit ulgi dla młodych, kwota wolna, próg podatkowy | 85 528 zł / 30 000 zł / 120 000 zł | `artykuly/zwrot-podatku-pit-dla-mlodych.html`, `artykuly/dorabianie-po-godzinach.html`, kalkulator brutto–netto |
+| Składki i koszty uzyskania przychodu | 13,71% / 9% / 250 zł | kalkulator brutto–netto |
+| Opłaty za przedterminowy wykup obligacji | 0,50–3 zł | `artykuly/obligacje-skarbowe-dla-poczatkujacych.html` |
+| Opłaty przy zakupie auta | PCC 2%, rejestracja ok. 160 zł | `artykuly/pierwszy-samochod-ile-kosztuje.html` |
+
+Przy każdej zmianie treści zaktualizuj też `lastmod` w `sitemap.xml` oraz `dateModified` w danych strukturalnych artykułu.
 
 ## Jak wystawić stronę za darmo (GitHub Pages)
 
