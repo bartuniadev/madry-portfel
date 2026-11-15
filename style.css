@@ -434,3 +434,6 @@ figure.chart-figure figcaption strong { color: var(--text); }
   table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; font-size: 0.88rem; }
   th, td { padding: 6px 8px; }
 }
+
+.tool-teaser p a { color: #7fe3b0; }
+.tool-teaser p a:hover { color: #b6f2d3; }
