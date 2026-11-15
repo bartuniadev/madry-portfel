@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalkulator spłaty długów: lawina i kula śnieżna — Mądry Portfel</title>
+<meta name="description" content="Darmowy kalkulator spłaty długów: porównaj metodę lawiny i kuli śnieżnej, sprawdź datę wyjścia z długów i sumę odsetek. Bez konta, bez maila, działa offline.">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="canonical" href="https://bartuniadev.github.io/madry-portfel/narzedzia/kalkulator-splaty-dlugow.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mądry Portfel">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:title" content="Kalkulator spłaty długów: lawina i kula śnieżna — Mądry Portfel">
+<meta property="og:description" content="Darmowy kalkulator spłaty długów: porównaj metodę lawiny i kuli śnieżnej, sprawdź datę wyjścia z długów i sumę odsetek. Bez konta, bez maila, działa offline.">
+<meta property="og:url" content="https://bartuniadev.github.io/madry-portfel/narzedzia/kalkulator-splaty-dlugow.html">
+<meta property="og:image" content="https://bartuniadev.github.io/madry-portfel/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kalkulator spłaty długów: lawina i kula śnieżna — Mądry Portfel">
+<meta name="twitter:image" content="https://bartuniadev.github.io/madry-portfel/og-image.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Kalkulator spłaty długów",
+  "url": "https://bartuniadev.github.io/madry-portfel/narzedzia/kalkulator-splaty-dlugow.html",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any (przeglądarka)",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "PLN"},
+  "isAccessibleForFree": true,
+  "publisher": {"@type": "Organization", "name": "Mądry Portfel", "url": "https://bartuniadev.github.io/madry-portfel/"}
+}
+</script>
+<style>
+  :root{
+    --bg:#0e130f;
+    --surface:#161d19;
+    --surface-2:#1c241f;
+    --border:#2b362f;
+    --text:#eef2ef;
+    --text-2:#93a49a;
+    --green:#3ad889;
+    --gold:#f2c14e;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--green);}
+  a:focus-visible, button:focus-visible, input:focus-visible{outline:2px solid var(--green); outline-offset:2px;}
+
+  header.site-header{border-bottom:1px solid var(--border);}
+  .header-inner{
+    max-width:760px;
+    margin:0 auto;
+    padding:18px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  .logo{
+    font-weight:700;
+    font-size:1.15rem;
+    letter-spacing:-0.01em;
+    color:var(--text);
+    text-decoration:none;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .logo svg{width:20px;height:20px;color:var(--green);flex-shrink:0;}
+  nav.top a{
+    color:var(--text-2);
+    text-decoration:none;
+    margin-left:18px;
+    font-size:0.92rem;
+  }
+  nav.top a:hover, nav.top a[aria-current]{color:var(--green);}
+
+  main{max-width:760px;margin:0 auto;padding:32px 20px 60px;}
+
+  .breadcrumb-dark{
+    display:block;
+    font-size:0.8rem;
+    color:var(--text-2);
+    margin:22px 0 14px;
+  }
+  .breadcrumb-dark a{color:var(--text-2);text-decoration:none;}
+  .breadcrumb-dark a:hover{color:var(--green);}
+  .breadcrumb-dark span[aria-current]{color:var(--text);}
+
+  .pill{
+    display:inline-flex;
+    align-items:center;
+    font-family:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+    font-size:12px;
+    letter-spacing:.04em;
+    color:var(--green);
+    border:1px solid var(--green);
+    padding:4px 11px;
+    border-radius:999px;
+  }
+  h1{
+    font-size:clamp(1.7rem,5vw,2.15rem);
+    line-height:1.2;
+    margin:14px 0 0;
+    letter-spacing:-0.01em;
+  }
+  .lead{
+    max-width:60ch;
+    color:var(--text-2);
+    font-size:1.02rem;
+    margin-top:12px;
+  }
+
+  .calc-card{
+    margin-top:28px;
+    background:var(--surface);
+    border:2px solid var(--green);
+    border-radius:12px;
+    box-shadow:6px 6px 0 var(--gold);
+    padding:26px 24px;
+  }
+
+  .field{display:flex;flex-direction:column;gap:6px;margin-bottom:20px;}
+  .field label{font-size:0.88rem;color:var(--text-2);font-weight:600;}
+  .field input{
+    background:var(--bg);
+    border:1px solid var(--border);
+    color:var(--text);
+    border-radius:8px;
+    padding:12px 14px;
+    font-size:1.4rem;
+    font-family:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+    font-variant-numeric:tabular-nums;
+  }
+  .field input#income{font-weight:700;}
+  .field input::placeholder{color:#5c6a62;}
+
+  .split-controls{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+    margin-bottom:14px;
+  }
+  .split-controls .field{margin-bottom:0;}
+  .split-controls input{font-size:1.05rem;padding:9px 10px;}
+
+  .presets{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px;}
+  .preset-btn{
+    font-family:inherit;
+    font-size:0.82rem;
+    color:var(--text-2);
+    background:var(--surface-2);
+    border:1px solid var(--border);
+    border-radius:999px;
+    padding:7px 13px;
+    cursor:pointer;
+  }
+  .preset-btn:hover{color:var(--text);border-color:var(--green);}
+
+  .sum-warning{
+    font-size:0.85rem;
+    color:var(--gold);
+    background:rgba(242,193,78,0.1);
+    border:1px solid rgba(242,193,78,0.4);
+    border-radius:7px;
+    padding:8px 12px;
+    margin:6px 0 18px;
+  }
+
+  .bar{
+    display:flex;
+    height:14px;
+    border-radius:999px;
+    overflow:hidden;
+    background:var(--bg);
+    border:1px solid var(--border);
+    margin-bottom:24px;
+  }
+  .bar .seg{height:100%;transition:width .2s ease;}
+  .bar .seg.needs{background:var(--green);}
+  .bar .seg.wants{background:var(--border);}
+  .bar .seg.savings{background:var(--gold);}
+
+  .results-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+  }
+  .result-card{
+    background:var(--bg);
+    border:1px solid var(--border);
+    border-radius:9px;
+    padding:14px;
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+  }
+  .result-card .label{font-size:0.8rem;color:var(--text-2);}
+  .result-card .amount{
+    font-family:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+    font-weight:700;
+    font-size:1.15rem;
+    font-variant-numeric:tabular-nums;
+  }
+  .result-card .pct{font-size:0.78rem;color:var(--text-2);font-variant-numeric:tabular-nums;}
+  .result-card.needs{border-color:var(--green);}
+  .result-card.needs .amount{color:var(--green);}
+  .result-card.savings{border-color:var(--gold);}
+  .result-card.savings .amount{color:var(--gold);}
+
+  @media (max-width:480px){
+    .results-grid{grid-template-columns:1fr;}
+    .split-controls{grid-template-columns:1fr;}
+  }
+
+  .trust{
+    margin-top:22px;
+    padding-top:22px;
+    border-top:1px dashed var(--border);
+  }
+  .trust p{color:var(--text-2);font-size:0.92rem;max-width:60ch;margin:0 0 14px;}
+  .download-btn{
+    display:inline-block;
+    font-weight:700;
+    font-size:0.95rem;
+    color:#08130d;
+    background:var(--green);
+    padding:12px 20px;
+    border-radius:9px;
+    text-decoration:none;
+  }
+  .download-btn:hover{background:#4fe49a;}
+  .microcopy{font-size:0.8rem !important;color:#5c6a62 !important;margin-top:12px !important;}
+
+  .more-link{margin-top:26px;font-size:0.95rem;}
+
+  footer{
+    border-top:1px solid var(--border);
+    margin-top:20px;
+    padding:24px 20px;
+    text-align:center;
+    color:var(--text-2);
+    font-size:0.85rem;
+  }
+  footer a{color:var(--text-2);}
+  footer .ai-note{opacity:0.75;}
+
+  @media (prefers-reduced-motion: reduce){
+    *{transition-duration:0.01ms !important;}
+  }
+
+  .split-controls.two{grid-template-columns:repeat(2,1fr);gap:14px 16px;margin-bottom:16px;}
+  .field.check{justify-content:center;}
+  .field.check label{display:flex;align-items:center;gap:9px;color:var(--text);font-weight:500;cursor:pointer;}
+  .field.check input{width:18px;height:18px;accent-color:var(--green);}
+  .field .hint{font-size:0.78rem;color:var(--text-2);}
+  .growth-chart{width:100%;height:auto;display:block;margin:18px 0 6px;font-family:system-ui,sans-serif;}
+  .legend{display:flex;gap:18px;font-size:0.82rem;color:var(--text-2);margin-bottom:20px;}
+  .legend span{display:inline-flex;align-items:center;gap:7px;}
+  .legend i{width:11px;height:11px;border-radius:3px;display:inline-block;}
+  .sw-dep{background:var(--green);} .sw-gain{background:var(--gold);}
+  @media (max-width:480px){.split-controls.two{grid-template-columns:1fr;}}
+
+  .debt-head,.debt-row{display:grid;grid-template-columns:1.5fr 1fr 0.8fr 0.9fr 34px;gap:8px;align-items:center;}
+  .debt-head{font-size:0.76rem;color:var(--text-2);font-weight:600;margin-bottom:6px;}
+  .debt-row{margin-bottom:8px;}
+  .debt-row label{display:block;min-width:0;}
+  .debt-row label span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);}
+  .debt-row input{min-width:0;width:100%;background:var(--bg);border:1px solid var(--border);color:var(--text);border-radius:8px;padding:9px 10px;font-size:0.98rem;font-family:inherit;}
+  .debt-row input[type=number]{font-family:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;font-variant-numeric:tabular-nums;}
+  .d-x{height:34px;background:var(--surface-2);border:1px solid var(--border);color:var(--text-2);border-radius:8px;font-size:1.1rem;cursor:pointer;line-height:1;}
+  .d-x:hover{color:var(--text);border-color:var(--gold);}
+  .hbars{display:grid;gap:14px;margin:22px 0;}
+  .hb-l{display:flex;justify-content:space-between;flex-wrap:wrap;gap:2px 12px;font-size:0.88rem;margin-bottom:5px;color:var(--text-2);}
+  .hb-l strong{color:var(--text);font-variant-numeric:tabular-nums;}
+  .hb-t{height:16px;background:var(--bg);border:1px solid var(--border);border-radius:999px;overflow:hidden;}
+  .hb-t span{display:block;height:100%;border-radius:999px;transition:width .2s ease;}
+  .verdict{margin:18px 0 0;font-size:0.95rem;color:var(--text);}
+  [hidden]{display:none !important;}
+  @media (max-width:560px){
+    .debt-head{display:none;}
+    .debt-row{grid-template-columns:1fr 1fr 34px;padding-bottom:10px;border-bottom:1px dashed var(--border);margin-bottom:10px;}
+    .debt-row{align-items:end;}
+    .debt-row label span{display:block;position:static;width:auto;height:auto;clip:auto;font-size:0.74rem;color:var(--text-2);margin-bottom:3px;}
+    .debt-row .f-n{grid-column:1 / 3;}
+    .debt-row .d-x{grid-column:3;grid-row:1;}
+    .debt-row .f-m{grid-column:1 / 3;}
+  }
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../index.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="7.5 13.5 10.5 10.5 13 12.5 16.5 8.5"/><polyline points="14 8.5 16.5 8.5 16.5 11"/></svg>
+      Mądry Portfel
+    </a>
+    <nav class="top">
+      <a href="index.html" aria-current="page">Narzędzia</a>
+      <a href="../index.html">Artykuły</a>
+      <a href="../o-nas.html">O nas</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <nav class="breadcrumb-dark" aria-label="Okruszki"><a href="../index.html">Mądry Portfel</a> <span aria-hidden="true">/</span> <a href="index.html">Narzędzia</a> <span aria-hidden="true">/</span> <span aria-current="page">Kalkulator spłaty długów</span></nav>
+  <span class="pill">0 kont · 0 maila · 0 śledzenia</span>
+  <h1>Kalkulator spłaty długów</h1>
+  <p class="lead">Wpisz swoje zobowiązania i kwotę, którą możesz na nie przeznaczać co miesiąc. Zobaczysz, kiedy będziesz bez długów i ile odsetek oszczędza plan — metodą lawiny i kuli śnieżnej. Dane nie opuszczają Twojej przeglądarki.</p>
+
+  <div class="calc-card">
+    <div class="debt-head" aria-hidden="true"><span>Nazwa</span><span>Do spłaty (zł)</span><span>Oprocent. (%)</span><span>Min. rata (zł)</span><span></span></div>
+    <div id="rows"></div>
+    <button type="button" class="preset-btn" id="addRow">+ Dodaj zobowiązanie</button>
+
+    <div class="field" style="margin-top:20px">
+      <label for="budget">Ile łącznie możesz przeznaczać na długi co miesiąc (zł)</label>
+      <input type="number" id="budget" inputmode="decimal" value="900" min="0" step="50">
+    </div>
+
+    <p class="sum-warning" id="warn" hidden></p>
+
+    <div class="hbars" id="bars"></div>
+
+    <div class="results-grid">
+      <div class="result-card needs">
+        <span class="label">Lawina (od najdroższego)</span>
+        <span class="amount" id="avTime">—</span>
+        <span class="pct" id="avInt"></span>
+      </div>
+      <div class="result-card savings">
+        <span class="label">Kula śnieżna (od najmniejszego)</span>
+        <span class="amount" id="snTime">—</span>
+        <span class="pct" id="snInt"></span>
+      </div>
+      <div class="result-card">
+        <span class="label">Tylko minimalne raty</span>
+        <span class="amount" id="minTime">—</span>
+        <span class="pct" id="minInt"></span>
+      </div>
+    </div>
+    <p class="verdict" id="verdict"></p>
+  </div>
+
+  <div class="trust">
+    <p><strong>Jak to liczymy:</strong> odsetki naliczane co miesiąc (oprocentowanie roczne / 12), stałe minimalne raty. Co miesiąc opłacane są wszystkie raty minimalne, a reszta budżetu trafia w jeden dług — o najwyższym oprocentowaniu (lawina) albo o najmniejszej kwocie (kula śnieżna). Gdy dług znika, jego rata zasila następny. To uproszczenie: prawdziwe umowy mogą mieć prowizje, zmienne oprocentowanie lub minimalną spłatę liczoną jako procent zadłużenia.</p>
+    <a class="download-btn" href="kalkulator-splaty-dlugow.html" download="kalkulator-splaty-dlugow-madry-portfel.html">Pobierz i używaj offline (HTML)</a>
+    <p class="microcopy">To zwykła strona HTML bez makr i bez śledzenia — niczego nie zapisujemy ani nie wysyłamy. <a href="https://github.com/bartuniadev/madry-portfel/blob/master/narzedzia/kalkulator-splaty-dlugow.html">Zobacz kod źródłowy na GitHub</a>.</p>
+  </div>
+
+  <p class="more-link"><a href="../artykuly/jak-wyjsc-z-dlugow.html">Jak wyjść z długów — plan krok po kroku →</a><br><a href="kalkulator-budzetu.html">Kalkulator budżetu: skąd wziąć kwotę ponad minimum →</a></p>
+</main>
+
+<footer>
+  <p>&copy; 2026 Mądry Portfel. <a href="../polityka-prywatnosci.html">Polityka prywatności</a></p>
+  <p class="ai-note">Treści na tej stronie powstają z pomocą narzędzi AI i są redagowane oraz sprawdzane przez człowieka.</p>
+</footer>
+
+<script>
+  var MAX_MONTHS = 600;
+  var rowsEl = document.getElementById('rows');
+  var defaults = [
+    {n: 'Limit w koncie', b: 1500, r: 12, m: 50},
+    {n: 'Karta kredytowa', b: 5000, r: 18, m: 150},
+    {n: 'Pożyczka gotówkowa', b: 9000, r: 14, m: 250}
+  ];
+  function fmt(n){ return new Intl.NumberFormat('pl-PL',{maximumFractionDigits:0,useGrouping:'always'}).format(Math.round(n)) + ' zł'; }
+  function months(m){
+    if (m >= MAX_MONTHS) return 'ponad 50 lat';
+    var y = Math.floor(m / 12), r = m % 12, out = [];
+    if (y) out.push(y + (y === 1 ? ' rok' : (y % 10 >= 2 && y % 10 <= 4 && (y < 10 || y > 20) ? ' lata' : ' lat')));
+    if (r || !y) out.push(r + ' mies.');
+    return out.join(' ');
+  }
+  function addRow(d){
+    d = d || {n: '', b: '', r: '', m: ''};
+    var row = document.createElement('div'); row.className = 'debt-row';
+    row.innerHTML = '<label class="f-n"><span>Nazwa</span><input type="text" class="d-n" placeholder="np. karta"></label>' +
+      '<label class="f-b"><span>Do spłaty (zł)</span><input type="number" class="d-b" inputmode="decimal" min="0" step="100" placeholder="0"></label>' +
+      '<label class="f-r"><span>Oprocent. (%)</span><input type="number" class="d-r" inputmode="decimal" min="0" max="100" step="0.1" placeholder="0"></label>' +
+      '<label class="f-m"><span>Min. rata (zł)</span><input type="number" class="d-m" inputmode="decimal" min="0" step="10" placeholder="0"></label>' +
+      '<button type="button" class="d-x" aria-label="Usuń zobowiązanie">×</button>';
+    row.querySelector('.d-n').value = d.n; row.querySelector('.d-b').value = d.b;
+    row.querySelector('.d-r').value = d.r; row.querySelector('.d-m').value = d.m;
+    row.querySelector('.d-x').addEventListener('click', function(){ row.remove(); recalc(); });
+    row.querySelectorAll('input').forEach(function(i){ i.addEventListener('input', recalc); });
+    rowsEl.appendChild(row);
+  }
+  function read(){
+    var out = [];
+    rowsEl.querySelectorAll('.debt-row').forEach(function(row){
+      var b = parseFloat(row.querySelector('.d-b').value), r = parseFloat(row.querySelector('.d-r').value), m = parseFloat(row.querySelector('.d-m').value);
+      if (isFinite(b) && b > 0) out.push({bal: b, rate: (isFinite(r) && r > 0 ? r : 0) / 100, min: isFinite(m) && m > 0 ? m : 0});
+    });
+    return out;
+  }
+  function sim(debts, budget, mode){
+    var d = debts.map(function(x){ return {bal: x.bal, rate: x.rate, min: x.min}; });
+    var m = 0, interest = 0;
+    while (d.some(function(x){ return x.bal > 0.005; }) && m < MAX_MONTHS){
+      m++;
+      d.forEach(function(x){ if (x.bal > 0){ var i = x.bal * x.rate / 12; x.bal += i; interest += i; } });
+      var left = budget;
+      d.forEach(function(x){ if (x.bal > 0){ var p = Math.min(x.min, x.bal, left); x.bal -= p; left -= p; } });
+      if (mode !== 'min'){
+        var open = d.filter(function(x){ return x.bal > 0.005; });
+        open.sort(mode === 'avalanche' ? function(a, b){ return b.rate - a.rate || a.bal - b.bal; } : function(a, b){ return a.bal - b.bal || b.rate - a.rate; });
+        for (var k = 0; k < open.length && left > 0.005; k++){ var p2 = Math.min(left, open[k].bal); open[k].bal -= p2; left -= p2; }
+      }
+    }
+    return {months: m, interest: interest, done: m < MAX_MONTHS};
+  }
+  function simMinOnly(debts){
+    var worst = 0, total = 0, done = true;
+    debts.forEach(function(x){ var r = sim([x], x.min, 'min'); worst = Math.max(worst, r.months); total += r.interest; if (!r.done) done = false; });
+    return {months: worst, interest: total, done: done};
+  }
+  function bar(label, value, max, color, note){
+    return '<div class="hb"><div class="hb-l"><span>' + label + '</span><strong>' + note + '</strong></div><div class="hb-t"><span style="width:' + Math.max(1, value / max * 100) + '%;background:' + color + '"></span></div></div>';
+  }
+  function recalc(){
+    var debts = read(), budget = parseFloat(document.getElementById('budget').value); if (!isFinite(budget) || budget < 0) budget = 0;
+    var warn = document.getElementById('warn'), msgs = [];
+    var ids = ['avTime','avInt','snTime','snInt','minTime','minInt'];
+    if (!debts.length){ ids.forEach(function(i){ document.getElementById(i).textContent = i.indexOf('Time') > 0 ? '—' : ''; }); document.getElementById('bars').innerHTML = ''; document.getElementById('verdict').textContent = 'Dodaj przynajmniej jedno zobowiązanie z kwotą do spłaty.'; warn.hidden = true; return; }
+    var sumMin = debts.reduce(function(s, x){ return s + x.min; }, 0), total = debts.reduce(function(s, x){ return s + x.bal; }, 0);
+    if (budget < sumMin) msgs.push('Budżet (' + fmt(budget) + ') jest niższy niż suma minimalnych rat (' + fmt(sumMin) + '). To sygnał, żeby jak najszybciej porozmawiać z wierzycielami o zmianie warunków.');
+    debts.forEach(function(x){ if (x.min <= x.bal * x.rate / 12 && x.rate > 0) msgs.push('Przy jednym z długów minimalna rata nie pokrywa nawet miesięcznych odsetek — płacąc tylko ją, nigdy go nie spłacisz.'); });
+    msgs = msgs.filter(function(v, i, a){ return a.indexOf(v) === i; });
+    warn.hidden = !msgs.length; warn.textContent = msgs.join(' ');
+
+    var mn = simMinOnly(debts);
+    if (budget < sumMin){
+      ['av','sn'].forEach(function(p){ document.getElementById(p + 'Time').textContent = '—'; document.getElementById(p + 'Int').textContent = 'budżet poniżej minimalnych rat'; });
+      document.getElementById('minTime').textContent = months(mn.months);
+      document.getElementById('minInt').textContent = mn.done ? 'odsetki: ' + fmt(mn.interest) : 'przy tych kwotach dług nie maleje';
+      document.getElementById('bars').innerHTML = '';
+      document.getElementById('verdict').textContent = 'Żeby plan zadziałał, miesięczna kwota musi pokrywać co najmniej sumę minimalnych rat: ' + fmt(sumMin) + '. Brakuje ' + fmt(sumMin - budget) + ' miesięcznie.';
+      return;
+    }
+    var av = sim(debts, budget, 'avalanche'), sn = sim(debts, budget, 'snowball');
+    function put(pfx, r){
+      document.getElementById(pfx + 'Time').textContent = months(r.months);
+      document.getElementById(pfx + 'Int').textContent = r.done ? 'odsetki: ' + fmt(r.interest) : 'przy tych kwotach dług nie maleje';
+    }
+    put('av', av); put('sn', sn); put('min', mn);
+    var max = Math.max(av.interest, sn.interest, mn.interest, 1);
+    document.getElementById('bars').innerHTML =
+      bar('Lawina', av.interest, max, '#3ad889', av.done ? fmt(av.interest) + ' odsetek' : 'brak spłaty') +
+      bar('Kula śnieżna', sn.interest, max, '#f2c14e', sn.done ? fmt(sn.interest) + ' odsetek' : 'brak spłaty') +
+      bar('Tylko minimalne raty', mn.interest, max, '#6f8f80', mn.done ? fmt(mn.interest) + ' odsetek' : 'dług nie maleje');
+    var v = document.getElementById('verdict');
+    if (!av.done){ v.textContent = 'Przy tym budżecie długi nie zostaną spłacone. Zwiększ miesięczną kwotę albo porozmawiaj z wierzycielami o restrukturyzacji.'; return; }
+    var diff = sn.interest - av.interest, vsMin = mn.interest - av.interest, t = 'Łącznie do spłaty: ' + fmt(total) + '. ';
+    t += Math.abs(diff) < 1 ? 'Obie metody dają tu ten sam wynik. ' : 'Lawina jest tańsza od kuli śnieżnej o ' + fmt(diff) + (sn.months !== av.months ? ' i ' + (sn.months > av.months ? 'krótsza' : 'dłuższa') + ' o ' + Math.abs(sn.months - av.months) + ' mies. ' : '. ');
+    if (mn.done && vsMin > 1) t += 'W porównaniu z płaceniem samych minimalnych rat plan oszczędza ' + fmt(vsMin) + ' odsetek i skraca spłatę o ' + months(Math.max(0, mn.months - av.months)).replace(/\.$/, '') + '.';
+    else if (!mn.done) t += 'Płacąc same minimalne raty, nie spłaciłbyś tych długów.';
+    v.textContent = t;
+  }
+  defaults.forEach(addRow);
+  document.getElementById('addRow').addEventListener('click', function(){ if (rowsEl.children.length < 10) addRow(); });
+  document.getElementById('budget').addEventListener('input', recalc);
+  recalc();
+</script>
+</body>
+</html>
