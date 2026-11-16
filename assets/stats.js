@@ -38,6 +38,9 @@
 
   function loadCounter() {
     if (!statsAllowed()) return;
+    // „/madry-portfel/” i „/madry-portfel/index.html” to ta sama strona — licz je razem.
+    window.goatcounter = window.goatcounter || {};
+    window.goatcounter.path = function (p) { return p.replace(/\/index\.html$/, '/'); };
     var s = document.createElement('script');
     s.async = true;
     s.src = 'https://gc.zgo.at/count.js';

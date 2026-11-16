@@ -492,3 +492,16 @@ details.faq p { margin: 0 0 14px; }
 .optout input { width: 18px; height: 18px; accent-color: var(--accent); }
 .optout-status { margin: 8px 0 0; font-size: 0.9rem; color: var(--muted); }
 code { font-size: 0.9em; background: var(--card-sunken); padding: 1px 5px; border-radius: 4px; }
+
+.share { margin: 2em 0 0; padding: 16px 18px; border: 1px solid var(--border); border-radius: 12px; background: var(--card); }
+.share-title { margin: 0 0 10px; font-weight: 600; }
+.share-links { display: flex; flex-wrap: wrap; gap: 8px; }
+.share-links a, .share-links button {
+  font: inherit; font-size: 0.88rem; text-decoration: none; cursor: pointer;
+  color: var(--accent-dark); background: var(--bg); border: 1px solid var(--border);
+  border-radius: 999px; padding: 7px 14px;
+}
+.share-links a:hover, .share-links button:hover { border-color: var(--accent); background: #eef7f0; }
+.share-links a::after { display: none; }
+.share-links [data-share-native] { background: var(--accent); color: #fff; border-color: var(--accent); }
+.share-note { margin: 8px 0 0; font-size: 0.85rem; color: var(--muted); min-height: 1.2em; }

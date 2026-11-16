@@ -20,6 +20,13 @@ Statyczna strona (czysty HTML/CSS, zero build-toola) gotowa do darmowego hosting
 - Komunikat o prywatności wyświetla się raz; po kliknięciu „Rozumiem” zapisuje w localStorage klucz `mp-notice`.
 - Jeśli kiedyś dodasz reklamy (AdSense) lub inne narzędzia używające cookies, trzeba będzie wdrożyć baner zgody i zaktualizować `polityka-prywatnosci.html`.
 
+## Widoczność w wyszukiwarkach i AI
+- `sitemap.xml` — zgłoszona w Google Search Console (71 adresów; bez polityki prywatności, która ma `noindex`).
+- `feed.xml` — kanał RSS z nowymi poradnikami (link w nagłówku każdej strony).
+- `llms.txt` — opis serwisu i lista poradników dla asystentów AI.
+- `8e2e70638e5f6d82df0618f5c750c046.txt` — klucz IndexNow; po publikacji nowych treści zgłoś adresy do Binga i innych wyszukiwarek przez `https://api.indexnow.org/IndexNow` (host `bartuniadev.github.io`, `keyLocation` wskazujący ten plik).
+- `assets/og/*.jpg` — grafiki 1200×630 wyświetlane przy udostępnianiu linków (Facebook, LinkedIn, WhatsApp, X); `assets/share.js` obsługuje przyciski „Udostępnij” i „Kopiuj link” pod artykułami.
+
 ## Coroczny przegląd — liczby, które się zmieniają
 Część treści zawiera kwoty obowiązujące w konkretnym roku (stan: listopad 2026). Na początku każdego roku sprawdź i zaktualizuj:
 
