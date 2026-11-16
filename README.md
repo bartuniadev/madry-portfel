@@ -12,6 +12,13 @@ Statyczna strona (czysty HTML/CSS, zero build-toola) gotowa do darmowego hosting
 - `style.css`, `assets/` — style, fonty i skrypt animacji
 - `robots.txt`, `sitemap.xml` — SEO
 
+## Statystyki odwiedzin i prywatność
+- Odwiedziny liczy **GoatCounter** — bez plików cookies i bez profilowania. Kod licznika jest w `assets/stats.js` (stała `GOATCOUNTER_CODE`, obecnie `madryportfel`); skrypt jest dołączony do każdej strony.
+- **Żeby statystyki zaczęły się zbierać, załóż konto na goatcounter.com z kodem strony `madryportfel`** (albo z innym kodem i podmień stałą w `assets/stats.js`). Panel będzie pod adresem `https://madryportfel.goatcounter.com`.
+- Licznik działa tylko na opublikowanej stronie (nie w pobranych kalkulatorach), respektuje sygnały Global Privacy Control / Do Not Track i można go wyłączyć na stronie polityki prywatności.
+- Komunikat o prywatności wyświetla się raz; po kliknięciu „Rozumiem” zapisuje w localStorage klucz `mp-notice`.
+- Jeśli kiedyś dodasz reklamy (AdSense) lub inne narzędzia używające cookies, trzeba będzie wdrożyć baner zgody i zaktualizować `polityka-prywatnosci.html`.
+
 ## Coroczny przegląd — liczby, które się zmieniają
 Część treści zawiera kwoty obowiązujące w konkretnym roku (stan: listopad 2026). Na początku każdego roku sprawdź i zaktualizuj:
 
