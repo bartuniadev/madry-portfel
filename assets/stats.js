@@ -46,6 +46,7 @@
   }
 
   function policyHref() {
+    if (location.hostname === LIVE_HOST) return '/madry-portfel/polityka-prywatnosci.html';
     var path = location.pathname;
     var inSub = /\/(artykuly|narzedzia)\//.test(path);
     return (inSub ? '../' : '') + 'polityka-prywatnosci.html';

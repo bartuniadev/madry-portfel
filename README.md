@@ -9,7 +9,8 @@ Statyczna strona (czysty HTML/CSS, zero build-toola) gotowa do darmowego hosting
 - `slownik.html` — słownik 76 pojęć finansowych z odesłaniami do artykułów i kalkulatorów
 - `pytania.html` — 34 najczęstsze pytania z krótkimi odpowiedziami (dane strukturalne FAQ)
 - `o-nas.html`, `polityka-prywatnosci.html` — strony wymagane m.in. do AdSense
-- `style.css`, `assets/` — style, fonty i skrypt animacji
+- `style.css`, `assets/` — style, fonty, skrypt animacji (`reveal.js`) oraz statystyk i komunikatu o prywatności (`stats.js`)
+- `404.html` — strona błędu dla nieistniejących adresów (GitHub Pages używa jej automatycznie)
 - `robots.txt`, `sitemap.xml` — SEO
 
 ## Statystyki odwiedzin i prywatność
