@@ -471,3 +471,18 @@ dl.glossary dd a { white-space: nowrap; font-size: 0.93rem; }
 .category-section { scroll-margin-top: 84px; }
 [hidden] { display: none !important; }
 .cat-chips a { margin: 0; }
+
+details.faq { border-bottom: 1px solid var(--border); padding: 4px 0; }
+details.faq summary {
+  cursor: pointer; list-style: none; padding: 12px 34px 12px 0; position: relative;
+  font-weight: 600; color: var(--text);
+}
+details.faq summary::-webkit-details-marker { display: none; }
+details.faq summary::after {
+  content: "+"; position: absolute; right: 6px; top: 50%; transform: translateY(-50%);
+  font-size: 1.3rem; font-weight: 400; color: var(--accent);
+}
+details.faq[open] summary::after { content: "−"; }
+details.faq summary:hover { color: var(--accent-dark); }
+details.faq p { margin: 0 0 14px; }
+.quick-links { margin: 26px 0 0; font-size: 0.98rem; color: var(--muted); }
