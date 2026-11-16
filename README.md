@@ -4,7 +4,7 @@ Statyczna strona (czysty HTML/CSS, zero build-toola) gotowa do darmowego hosting
 
 ## Struktura
 - `index.html` — strona główna: wyszukiwarka poradników, odnośniki do kategorii i lista artykułów w siedmiu kategoriach
-- `artykuly/` — 54 wpisy; każdy ma sekcję „Źródła i przydatne strony" z linkami do stron urzędowych
+- `artykuly/` — 58 wpisów; każdy ma sekcję „Źródła i przydatne strony" z linkami do stron urzędowych
 - `narzedzia/` — 4 kalkulatory działające w przeglądarce (bez zależności, do pobrania i użycia offline): brutto–netto, budżet 50/30/20, procent składany, spłata długów
 - `slownik.html` — słownik 64 pojęć finansowych z odesłaniami do artykułów i kalkulatorów
 - `o-nas.html`, `polityka-prywatnosci.html` — strony wymagane m.in. do AdSense
