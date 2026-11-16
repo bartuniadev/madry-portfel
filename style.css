@@ -437,3 +437,18 @@ figure.chart-figure figcaption strong { color: var(--text); }
 
 .tool-teaser p a { color: #7fe3b0; }
 .tool-teaser p a:hover { color: #b6f2d3; }
+
+.gl-index { display: flex; flex-wrap: wrap; gap: 6px; margin: 22px 0 8px; }
+.gl-index a {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 34px; height: 34px; padding: 0 8px;
+  border: 1px solid var(--border); border-radius: 8px;
+  background: var(--card); text-decoration: none; font-weight: 600;
+}
+.gl-index a:hover { border-color: var(--accent); background: #eef7f0; }
+.gl-letter { margin-top: 1.6em; padding-bottom: 4px; border-bottom: 1px solid var(--border); scroll-margin-top: 80px; }
+dl.glossary { margin: 0; }
+dl.glossary dt { font-weight: 700; margin-top: 1.1em; color: var(--text); }
+dl.glossary dd { margin: 4px 0 0; color: var(--text); }
+dl.glossary dd a { white-space: nowrap; font-size: 0.93rem; }
+@media (max-width: 480px) { dl.glossary dd a { white-space: normal; } }
