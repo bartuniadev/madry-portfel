@@ -452,3 +452,22 @@ dl.glossary dt { font-weight: 700; margin-top: 1.1em; color: var(--text); }
 dl.glossary dd { margin: 4px 0 0; color: var(--text); }
 dl.glossary dd a { white-space: nowrap; font-size: 0.93rem; }
 @media (max-width: 480px) { dl.glossary dd a { white-space: normal; } }
+
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.finder { margin: 28px 0 12px; }
+.finder input {
+  width: 100%; font: inherit; font-size: 1.02rem; color: var(--text);
+  padding: 14px 16px; border: 1px solid var(--border); border-radius: 12px; background: var(--card);
+}
+.finder input:focus { outline: 2px solid var(--accent); outline-offset: 2px; border-color: var(--accent); }
+.finder-empty { margin: 14px 2px 0; color: var(--muted); }
+.cat-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 8px; }
+.cat-chips a {
+  font-size: 0.86rem; text-decoration: none; color: var(--accent-dark);
+  padding: 7px 13px; border: 1px solid var(--border); border-radius: 999px; background: var(--card);
+}
+.cat-chips a:hover { border-color: var(--accent); background: #eef7f0; }
+.cat-chips a::after { display: none; }
+.category-section { scroll-margin-top: 84px; }
+[hidden] { display: none !important; }
+.cat-chips a { margin: 0; }
