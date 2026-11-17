@@ -83,8 +83,8 @@ Treści mają charakter edukacyjny i nie są doradztwem finansowym. Serwis nie s
 
 ## Kariera i dochody
 
-- [Ile na rękę w 2027? Tabela brutto–netto od 4950 do 20 000 zł](https://bartuniadev.github.io/madry-portfel/artykuly/ile-na-reke-tabela-brutto-netto.html): Brutto a netto — dlaczego ta sama kwota daje inne pieniądze na rękę na umowie o pracę, zleceniu i B2B. Jak porównać oferty pracy, żeby się nie przeliczyć.
-- [Jak rozliczyć PIT za 2026 — Twój e-PIT krok po kroku i terminy 2027](https://bartuniadev.github.io/madry-portfel/artykuly/pit-za-2026-jak-rozliczyc.html): Brutto a netto — dlaczego ta sama kwota daje inne pieniądze na rękę na umowie o pracę, zleceniu i B2B. Jak porównać oferty pracy, żeby się nie przeliczyć.
+- [Ile na rękę w 2027? Tabela brutto–netto od 4950 do 20 000 zł](https://bartuniadev.github.io/madry-portfel/artykuly/ile-na-reke-tabela-brutto-netto.html): Ile na rękę w 2027: tabela netto od płacy minimalnej do 20 000 zł brutto, z PIT-2, z PPK i z ulgą dla młodych. 5000 zł brutto to ok. 3738 zł netto.
+- [Jak rozliczyć PIT za 2026 — Twój e-PIT krok po kroku i terminy 2027](https://bartuniadev.github.io/madry-portfel/artykuly/pit-za-2026-jak-rozliczyc.html): Jak rozliczyć PIT za 2026 rok: Twój e-PIT od 15 lutego 2027, termin 30 kwietnia, który formularz wybrać, ulgi, zwrot w 45 dni i najczęstsze błędy.
 - [Płaca minimalna 2027 — ile to netto na rękę i co się zmienia](https://bartuniadev.github.io/madry-portfel/artykuly/placa-minimalna-2027-netto.html): Płaca minimalna 2027: 4950 zł brutto to ok. 3704 zł netto. Kwoty z PPK i ulgą dla młodych, stawka godzinowa 32,30 zł i co rośnie razem z nią.
 - [Praca za granicą a PIT w Polsce — rezydencja, PIT/ZG i ulga na powrót](https://bartuniadev.github.io/madry-portfel/artykuly/praca-za-granica-a-podatki.html): Praca za granicą a PIT w Polsce: rezydencja podatkowa, wyłączenie z progresją czy proporcjonalne odliczenie, PIT-36 z PIT/ZG i ulga na powrót.
 - [Ulgi podatkowe, o których młodzi zapominają — i jak dodać je w Twój e-PIT](https://bartuniadev.github.io/madry-portfel/artykuly/ulgi-podatkowe-o-ktorych-mlodzi-zapominaja.html): Ulgi podatkowe w PIT, których Twój e-PIT nie doda sam: ulga na internet, IKZE, darowizny i krwiodawstwo, ulga na dziecko, koszty dojazdu i 50% kosztów.
@@ -107,6 +107,9 @@ Treści mają charakter edukacyjny i nie są doradztwem finansowym. Serwis nie s
 - [Kalkulator procentu składanego](https://bartuniadev.github.io/madry-portfel/narzedzia/kalkulator-procentu-skladanego.html): wpłaty miesięczne, podatek Belki, wartość po inflacji.
 - [Kalkulator spłaty długów](https://bartuniadev.github.io/madry-portfel/narzedzia/kalkulator-splaty-dlugow.html): porównanie metody lawiny i kuli śnieżnej.
 - [Kalkulator OKI](https://bartuniadev.github.io/madry-portfel/narzedzia/kalkulator-oki.html): osobiste konto inwestycyjne (od 2027 r.) w porównaniu ze zwykłym rachunkiem i IKE — podatek Belki kontra podatek od aktywów.
+- [Kalkulator umowy zlecenia](https://bartuniadev.github.io/madry-portfel/narzedzia/kalkulator-umowy-zlecenia.html): ile na rękę ze zlecenia dla studenta do 26 lat, przy jedynej pracy i obok etatu; minimalna stawka godzinowa 2026 i 2027.
+- [Kalkulator lokaty](https://bartuniadev.github.io/madry-portfel/narzedzia/kalkulator-lokaty.html): zysk z lokaty i konta oszczędnościowego po podatku Belki i inflacji, z odnawianiem lokaty.
+- [Kalkulator kredytu](https://bartuniadev.github.io/madry-portfel/narzedzia/kalkulator-kredytu.html): rata równa i malejąca, odsetki, RRSO z prowizją i efekt nadpłat.
 
 ## Pomocnicze
 
