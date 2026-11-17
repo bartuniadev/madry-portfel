@@ -5,8 +5,8 @@ Statyczna strona (czysty HTML/CSS, zero build-toola) gotowa do darmowego hosting
 ## Struktura
 - `index.html` — strona główna: wyszukiwarka poradników, odnośniki do kategorii i lista artykułów w siedmiu kategoriach
 - `artykuly/` — 70 wpisów; każdy ma sekcję „Źródła i przydatne strony" z linkami do stron urzędowych
-- `narzedzia/` — 4 kalkulatory działające w przeglądarce (bez zależności, do pobrania i użycia offline): brutto–netto, budżet 50/30/20, procent składany, spłata długów
-- `slownik.html` — słownik 76 pojęć finansowych z odesłaniami do artykułów i kalkulatorów
+- `narzedzia/` — 5 kalkulatorów działających w przeglądarce (bez zależności, do pobrania i użycia offline): brutto–netto 2026/2027 (z wypłatą w każdym miesiącu), budżet 50/30/20, procent składany, spłata długów, OKI (OKI vs zwykły rachunek vs IKE)
+- `slownik.html` — słownik 77 pojęć finansowych z odesłaniami do artykułów i kalkulatorów
 - `pytania.html` — 34 najczęstsze pytania z krótkimi odpowiedziami (dane strukturalne FAQ)
 - `pliki/budzet-domowy-madry-portfel.xlsx` — darmowy arkusz budżetu domowego (miesiąc 50/30/20, rok, cele) do pobrania bez maila; generowany skryptem z formułami.
 - `o-nas.html`, `polityka-prywatnosci.html` — strony wymagane m.in. do AdSense
@@ -32,14 +32,21 @@ Statyczna strona (czysty HTML/CSS, zero build-toola) gotowa do darmowego hosting
 ## Coroczny przegląd — liczby, które się zmieniają
 Część treści zawiera kwoty obowiązujące w konkretnym roku (stan: listopad 2026). Na początku każdego roku sprawdź i zaktualizuj:
 
-| Co | Wartość 2026 | Gdzie występuje |
-|---|---|---|
-| Minimalne wynagrodzenie | 4806 zł brutto | `narzedzia/kalkulator-brutto-netto.html`, `artykuly/ubezpieczenia-na-starcie.html` (kara za brak OC) |
-| Limit działalności nierejestrowanej | 10 813,50 zł na kwartał | `artykuly/dorabianie-po-godzinach.html` |
-| Limit ulgi dla młodych, kwota wolna, próg podatkowy | 85 528 zł / 30 000 zł / 120 000 zł | `artykuly/zwrot-podatku-pit-dla-mlodych.html`, `artykuly/dorabianie-po-godzinach.html`, kalkulator brutto–netto |
-| Składki i koszty uzyskania przychodu | 13,71% / 9% / 250 zł | kalkulator brutto–netto |
-| Opłaty za przedterminowy wykup obligacji | 0,50–3 zł | `artykuly/obligacje-skarbowe-dla-poczatkujacych.html` |
-| Opłaty przy zakupie auta | PCC 2%, rejestracja ok. 160 zł | `artykuly/pierwszy-samochod-ile-kosztuje.html` |
+| Co | 2026 | 2027 | Gdzie występuje |
+|---|---|---|---|
+| Minimalne wynagrodzenie / stawka godzinowa | 4806 zł / 31,40 zł | 4950 zł / 32,30 zł | kalkulator brutto–netto (`YEARS`), `artykuly/placa-minimalna-2027-netto.html`, `artykuly/zmiany-w-finansach-2027.html`, `artykuly/prawa-pracownika-w-liczbach.html`, `artykuly/ile-na-reke-tabela-brutto-netto.html`, `artykuly/ubezpieczenia-na-starcie.html` (kara za brak OC) |
+| Limit działalności nierejestrowanej (kwartał) | 10 813,50 zł | 11 137,50 zł | `artykuly/dorabianie-po-godzinach.html`, `pytania.html` |
+| Kwota wolna od zajęcia na koncie | 3604,50 zł | 3712,50 zł | `artykuly/windykacja-i-komornik-twoje-prawa.html` |
+| Limit IKE / IKZE | 28 260 / 11 304 zł | 30 099 / 12 039,60 zł | `artykuly/ike-ikze-emerytura.html`, `artykuly/koniec-roku-finanse-lista.html`, kalkulator OKI (`IKE_LIMIT`) |
+| Roczny limit podstawy składek emerytalnej i rentowej | 282 600 zł | ok. 300 990 zł (z projektu budżetu — potwierdź w styczniu) | kalkulator brutto–netto (`YEARS.cap`) |
+| Podatek od aktywów OKI / kwota zwolniona | — | 0,85% / 100 000 zł (w tym 25 000 zł oszczędności) | kalkulator OKI, `artykuly/osobiste-konto-inwestycyjne-oki.html` |
+| Skala PIT | 12% do 120 000 zł, 32% powyżej | czeka na decyzję prezydenta (12% / 24% / 32%, progi 130 i 150 tys. zł) | kalkulator brutto–netto (pole „Nowa skala”), `artykuly/zmiany-w-finansach-2027.html`, `artykuly/ile-na-reke-tabela-brutto-netto.html` |
+| Limit ulgi dla młodych, kwota wolna | 85 528 zł / 30 000 zł | bez zmian | `artykuly/zwrot-podatku-pit-dla-mlodych.html`, kalkulator brutto–netto |
+| Składki i koszty uzyskania przychodu | 13,71% / 9% / 250 zł | bez zmian | kalkulator brutto–netto |
+| Opłaty za przedterminowy wykup obligacji | 0,50–3 zł | sprawdź | `artykuly/obligacje-skarbowe-dla-poczatkujacych.html` |
+| Opłaty przy zakupie auta | PCC 2%, rejestracja ok. 160 zł | sprawdź | `artykuly/pierwszy-samochod-ile-kosztuje.html` |
+
+Kalkulator brutto–netto sam przełącza się na rok 2027 od 1 stycznia 2027 r. (wg daty w przeglądarce). Na rok 2028 dopisz nowy wpis w obiekcie `YEARS` i przycisk roku.
 
 Przy każdej zmianie treści zaktualizuj też `lastmod` w `sitemap.xml` oraz `dateModified` w danych strukturalnych artykułu.
 
