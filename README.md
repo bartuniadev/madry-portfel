@@ -8,6 +8,7 @@ Statyczna strona (czysty HTML/CSS, zero build-toola) gotowa do darmowego hosting
 - `narzedzia/` — 4 kalkulatory działające w przeglądarce (bez zależności, do pobrania i użycia offline): brutto–netto, budżet 50/30/20, procent składany, spłata długów
 - `slownik.html` — słownik 76 pojęć finansowych z odesłaniami do artykułów i kalkulatorów
 - `pytania.html` — 34 najczęstsze pytania z krótkimi odpowiedziami (dane strukturalne FAQ)
+- `pliki/budzet-domowy-madry-portfel.xlsx` — darmowy arkusz budżetu domowego (miesiąc 50/30/20, rok, cele) do pobrania bez maila; generowany skryptem z formułami.
 - `o-nas.html`, `polityka-prywatnosci.html` — strony wymagane m.in. do AdSense
 - `style.css`, `assets/` — style, fonty, skrypt animacji (`reveal.js`) oraz statystyk i komunikatu o prywatności (`stats.js`)
 - `404.html` — strona błędu dla nieistniejących adresów (GitHub Pages używa jej automatycznie)
