@@ -6,23 +6,7 @@
   <atom:link href="https://bartuniadev.github.io/madry-portfel/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Poradniki o pensji, podatkach, oszczędzaniu, kredytach i inwestowaniu dla osób, które dopiero zaczynają zarabiać.</description>
   <language>pl-PL</language>
-  <lastBuildDate>Wed, 18 Nov 2026 08:00:00 +0000</lastBuildDate>
-  <item>
-    <title>Jak rozliczyć PIT za 2026 — Twój e-PIT krok po kroku i terminy 2027</title>
-    <link>https://bartuniadev.github.io/madry-portfel/artykuly/pit-za-2026-jak-rozliczyc.html</link>
-    <guid isPermaLink="true">https://bartuniadev.github.io/madry-portfel/artykuly/pit-za-2026-jak-rozliczyc.html</guid>
-    <pubDate>Wed, 18 Nov 2026 08:00:00 +0000</pubDate>
-    <category>Kariera i dochody</category>
-    <description>Jak rozliczyć PIT za 2026 rok: Twój e-PIT od 15 lutego 2027, termin 30 kwietnia, który formularz wybrać, ulgi, zwrot w 45 dni i najczęstsze błędy.</description>
-  </item>
-  <item>
-    <title>Ile na rękę w 2027? Tabela brutto–netto od 4950 do 20 000 zł</title>
-    <link>https://bartuniadev.github.io/madry-portfel/artykuly/ile-na-reke-tabela-brutto-netto.html</link>
-    <guid isPermaLink="true">https://bartuniadev.github.io/madry-portfel/artykuly/ile-na-reke-tabela-brutto-netto.html</guid>
-    <pubDate>Wed, 18 Nov 2026 08:00:00 +0000</pubDate>
-    <category>Kariera i dochody</category>
-    <description>Brutto a netto — dlaczego ta sama kwota daje inne pieniądze na rękę na umowie o pracę, zleceniu i B2B. Jak porównać oferty pracy, żeby się nie przeliczyć.</description>
-  </item>
+  <lastBuildDate>Tue, 17 Nov 2026 08:00:00 +0000</lastBuildDate>
   <item>
     <title>Zmiany w finansach od 1 stycznia 2027 — co dotyczy młodych</title>
     <link>https://bartuniadev.github.io/madry-portfel/artykuly/zmiany-w-finansach-2027.html</link>
@@ -40,12 +24,28 @@
     <description>Płaca minimalna 2027: 4950 zł brutto to ok. 3704 zł netto. Kwoty z PPK i ulgą dla młodych, stawka godzinowa 32,30 zł i co rośnie razem z nią.</description>
   </item>
   <item>
+    <title>Jak rozliczyć PIT za 2026 — Twój e-PIT krok po kroku i terminy 2027</title>
+    <link>https://bartuniadev.github.io/madry-portfel/artykuly/pit-za-2026-jak-rozliczyc.html</link>
+    <guid isPermaLink="true">https://bartuniadev.github.io/madry-portfel/artykuly/pit-za-2026-jak-rozliczyc.html</guid>
+    <pubDate>Tue, 17 Nov 2026 08:00:00 +0000</pubDate>
+    <category>Kariera i dochody</category>
+    <description>Brutto a netto — dlaczego ta sama kwota daje inne pieniądze na rękę na umowie o pracę, zleceniu i B2B. Jak porównać oferty pracy, żeby się nie przeliczyć.</description>
+  </item>
+  <item>
     <title>OKI — osobiste konto inwestycyjne od 2027: jak działa i czy się opłaca</title>
     <link>https://bartuniadev.github.io/madry-portfel/artykuly/osobiste-konto-inwestycyjne-oki.html</link>
     <guid isPermaLink="true">https://bartuniadev.github.io/madry-portfel/artykuly/osobiste-konto-inwestycyjne-oki.html</guid>
     <pubDate>Tue, 17 Nov 2026 08:00:00 +0000</pubDate>
     <category>Emerytura i inwestowanie</category>
     <description>Osobiste konto inwestycyjne OKI od 2027: zyski bez podatku Belki, podatek 0,85% od aktywów ponad 100 000 zł, przykłady i porównanie z IKE i IKZE.</description>
+  </item>
+  <item>
+    <title>Ile na rękę w 2027? Tabela brutto–netto od 4950 do 20 000 zł</title>
+    <link>https://bartuniadev.github.io/madry-portfel/artykuly/ile-na-reke-tabela-brutto-netto.html</link>
+    <guid isPermaLink="true">https://bartuniadev.github.io/madry-portfel/artykuly/ile-na-reke-tabela-brutto-netto.html</guid>
+    <pubDate>Tue, 17 Nov 2026 08:00:00 +0000</pubDate>
+    <category>Kariera i dochody</category>
+    <description>Brutto a netto — dlaczego ta sama kwota daje inne pieniądze na rękę na umowie o pracę, zleceniu i B2B. Jak porównać oferty pracy, żeby się nie przeliczyć.</description>
   </item>
   <item>
     <title>Zmiana pracy — finansowa lista kontrolna przed, w trakcie i po</title>
