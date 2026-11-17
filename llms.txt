@@ -6,7 +6,7 @@ Treści mają charakter edukacyjny i nie są doradztwem finansowym. Serwis nie s
 
 ## Zacznij tutaj
 
-- [Zmiany w finansach od 1 stycznia 2027 — co dotyczy młodych](https://bartuniadev.github.io/madry-portfel/artykuly/zmiany-w-finansach-2027.html): Brutto a netto — dlaczego ta sama kwota daje inne pieniądze na rękę na umowie o pracę, zleceniu i B2B. Jak porównać oferty pracy, żeby się nie przeliczyć.
+- [Zmiany w finansach od 1 stycznia 2027 — co dotyczy młodych](https://bartuniadev.github.io/madry-portfel/artykuly/zmiany-w-finansach-2027.html): Zmiany od 1 stycznia 2027: płaca minimalna 4950 zł, limity IKE i IKZE, konta OKI bez podatku Belki, nowy próg PIT i KSeF. Co przesądzone, co czeka.
 - [Plan na pierwszy rok pracy — finanse krok po kroku, miesiąc po miesiącu](https://bartuniadev.github.io/madry-portfel/artykuly/plan-na-pierwszy-rok-pracy.html): Pierwsza praca a finanse: plan na 12 miesięcy — pasek wynagrodzenia, budżet, poduszka finansowa, PPK, IKE, inwestowanie i pierwszy PIT, krok po kroku.
 - [Spłacać długi czy oszczędzać? Poduszka, PPK, IKE i inwestycje — w jakiej kolejności](https://bartuniadev.github.io/madry-portfel/artykuly/kolejnosc-finansowych-priorytetow.html): Spłacać długi czy oszczędzać, PPK czy IKE, poduszka czy inwestowanie? Drabina finansowych priorytetów z wyjaśnieniem, dlaczego właśnie w tej kolejności.
 - [Pierwsza pensja — co zrobić z pieniędzmi w pierwszym miesiącu pracy](https://bartuniadev.github.io/madry-portfel/artykuly/pierwsza-pensja.html): Pierwsza pensja: jak podzielić pierwszą wypłatę, ile odłożyć, jakich błędów uniknąć i jak od pierwszego miesiąca zbudować dobre nawyki finansowe.
@@ -14,7 +14,7 @@ Treści mają charakter edukacyjny i nie są doradztwem finansowym. Serwis nie s
 - [Jak oszczędzać pieniądze automatycznie — system, który działa bez silnej woli](https://bartuniadev.github.io/madry-portfel/artykuly/automatyzacja-oszczedzania.html): Jak oszczędzać pieniądze bez silnej woli: stałe zlecenie dzień po wypłacie, subkonta na cele i kalendarz przelewów. System, który ustawisz w godzinę.
 - [Pasek wynagrodzenia — jak go czytać, pozycja po pozycji](https://bartuniadev.github.io/madry-portfel/artykuly/pasek-wynagrodzenia-jak-czytac.html): Jak czytać pasek wynagrodzenia: składki ZUS, zaliczka na podatek, PIT-2, PPK i koszt pracodawcy na przykładzie 6000 zł brutto w 2026 r.
 - [Finanse studenta — praca, stypendia, zniżki i budżet, który wytrzyma do końca miesiąca](https://bartuniadev.github.io/madry-portfel/artykuly/finanse-studenta.html): Finanse studenta: ile zostaje z pracy na zleceniu do 26 lat, stypendia, zniżki studenckie na przejazdy i budżet tygodniowy, który wytrzyma do końca miesiąca.
-- [Kalendarz finansowy — terminy podatkowe i daty, których przegapienie kosztuje pieniądze](https://bartuniadev.github.io/madry-portfel/artykuly/kalendarz-finansowy.html): Najważniejsze terminy finansowe w roku: Twój e-PIT, rozliczenie PIT do 30 kwietnia, wpłaty na IKE i IKZE do 31 grudnia, zaległy urlop i przeglądy polis.
+- [Kalendarz finansowy — terminy podatkowe i daty, których przegapienie kosztuje pieniądze](https://bartuniadev.github.io/madry-portfel/artykuly/kalendarz-finansowy.html): Brutto a netto — dlaczego ta sama kwota daje inne pieniądze na rękę na umowie o pracę, zleceniu i B2B. Jak porównać oferty pracy, żeby się nie przeliczyć.
 - [IKZE przed końcem roku i 6 innych rzeczy do zrobienia do 31 grudnia](https://bartuniadev.github.io/madry-portfel/artykuly/koniec-roku-finanse-lista.html): Co zrobić przed 31 grudnia: wpłata na IKZE obniżająca podatek, limit IKE, darowizny i ulgi, rozliczenie strat z inwestycji, urlop i przegląd roku.
 
 ## Budżet i wydatki
@@ -68,7 +68,7 @@ Treści mają charakter edukacyjny i nie są doradztwem finansowym. Serwis nie s
 
 ## Emerytura i inwestowanie
 
-- [OKI — osobiste konto inwestycyjne od 2027: jak działa i czy się opłaca](https://bartuniadev.github.io/madry-portfel/artykuly/osobiste-konto-inwestycyjne-oki.html): Brutto a netto — dlaczego ta sama kwota daje inne pieniądze na rękę na umowie o pracę, zleceniu i B2B. Jak porównać oferty pracy, żeby się nie przeliczyć.
+- [OKI — osobiste konto inwestycyjne od 2027: jak działa i czy się opłaca](https://bartuniadev.github.io/madry-portfel/artykuly/osobiste-konto-inwestycyjne-oki.html): Osobiste konto inwestycyjne OKI od 2027: zyski bez podatku Belki, podatek 0,85% od aktywów ponad 100 000 zł, przykłady i porównanie z IKE i IKZE.
 - [Spadki na giełdzie i bessa — jak zachować spokój, gdy portfel traci](https://bartuniadev.github.io/madry-portfel/artykuly/hossa-bessa-jak-nie-panikowac.html): Spadki na giełdzie i bessa: dlaczego są normalne, jakie błędy popełniamy pod wpływem emocji i co robić, a czego nie, gdy wartość inwestycji spada.
 - [W co inwestować? Akcje, obligacje, fundusze i nieruchomości — czym różnią się klasy aktywów](https://bartuniadev.github.io/madry-portfel/artykuly/klasy-aktywow-akcje-obligacje-fundusze.html): W co inwestować na start: akcje, obligacje, fundusze, ETF-y i nieruchomości wyjaśnione prosto — skąd zysk, jakie ryzyko i jak złożyć prosty portfel.
 - [Ile odkładać na emeryturę — prosty rachunek dla 25-, 35- i 45-latka](https://bartuniadev.github.io/madry-portfel/artykuly/ile-odkladac-na-emeryture.html): Ile odkładać na emeryturę miesięcznie, zależnie od wieku startu: rachunek dla 25-, 35- i 45-latka, wykorzystanie PPK, IKE i IKZE oraz prosta reguła.
@@ -83,7 +83,8 @@ Treści mają charakter edukacyjny i nie są doradztwem finansowym. Serwis nie s
 
 ## Kariera i dochody
 
-- [Płaca minimalna 2027 — ile to netto na rękę i co się zmienia](https://bartuniadev.github.io/madry-portfel/artykuly/placa-minimalna-2027-netto.html): Brutto a netto — dlaczego ta sama kwota daje inne pieniądze na rękę na umowie o pracę, zleceniu i B2B. Jak porównać oferty pracy, żeby się nie przeliczyć.
+- [Jak rozliczyć PIT za 2026 — Twój e-PIT krok po kroku i terminy 2027](https://bartuniadev.github.io/madry-portfel/artykuly/pit-za-2026-jak-rozliczyc.html): Jak rozliczyć PIT za 2026 rok: Twój e-PIT od 15 lutego 2027, termin 30 kwietnia, który formularz wybrać, ulgi, zwrot w 45 dni i najczęstsze błędy.
+- [Płaca minimalna 2027 — ile to netto na rękę i co się zmienia](https://bartuniadev.github.io/madry-portfel/artykuly/placa-minimalna-2027-netto.html): Płaca minimalna 2027: 4950 zł brutto to ok. 3704 zł netto. Kwoty z PPK i ulgą dla młodych, stawka godzinowa 32,30 zł i co rośnie razem z nią.
 - [Praca za granicą a PIT w Polsce — rezydencja, PIT/ZG i ulga na powrót](https://bartuniadev.github.io/madry-portfel/artykuly/praca-za-granica-a-podatki.html): Praca za granicą a PIT w Polsce: rezydencja podatkowa, wyłączenie z progresją czy proporcjonalne odliczenie, PIT-36 z PIT/ZG i ulga na powrót.
 - [Ulgi podatkowe, o których młodzi zapominają — i jak dodać je w Twój e-PIT](https://bartuniadev.github.io/madry-portfel/artykuly/ulgi-podatkowe-o-ktorych-mlodzi-zapominaja.html): Ulgi podatkowe w PIT, których Twój e-PIT nie doda sam: ulga na internet, IKZE, darowizny i krwiodawstwo, ulga na dziecko, koszty dojazdu i 50% kosztów.
 - [Zmiana pracy — finansowa lista kontrolna przed, w trakcie i po](https://bartuniadev.github.io/madry-portfel/artykuly/zmiana-pracy-lista-kontrolna.html): Zmiana pracy krok po kroku: co sprawdzić przed wypowiedzeniem, jak rozliczyć urlop i premie, co z PPK i jakie oświadczenia złożyć u nowego pracodawcy.
@@ -95,18 +96,19 @@ Treści mają charakter edukacyjny i nie są doradztwem finansowym. Serwis nie s
 - [Benefity pracownicze — ile są naprawdę warte i jak porównywać oferty pracy](https://bartuniadev.github.io/madry-portfel/artykuly/benefity-pozaplacowe-ile-sa-warte.html): Ile naprawdę są warte benefity pracownicze: PPK, pakiet medyczny, karta sportowa, praca zdalna. Prosty sposób na porównanie dwóch ofert pracy.
 - [Czy warto robić studia podyplomowe, kurs lub certyfikat — jak policzyć zwrot z inwestycji w siebie](https://bartuniadev.github.io/madry-portfel/artykuly/kursy-i-studia-podyplomowe-czy-sie-oplaca.html): Czy warto robić studia podyplomowe lub kurs: prosty rachunek zwrotu, pytania przed zakupem, dofinansowanie (pracodawca, KFS, BUR) i czerwone flagi.
 - [Jak dorobić do pensji legalnie — zlecenie, dzieło, działalność nierejestrowana i podatki](https://bartuniadev.github.io/madry-portfel/artykuly/dorabianie-po-godzinach.html): Jak legalnie dorobić do pensji: zlecenie, umowa o dzieło, działalność nierejestrowana (limit 2026) i sprzedaż rzeczy — ile zostaje po podatku.
-- [Zwrot podatku i pierwszy PIT — co musisz wiedzieć przed 26. urodzinami i po nich](https://bartuniadev.github.io/madry-portfel/artykuly/zwrot-podatku-pit-dla-mlodych.html): Zwrot podatku i pierwszy PIT: skąd bierze się zwrot albo dopłata, jak działa ulga dla młodych (PIT-0) i rok 26. urodzin oraz jak sprawdzić Twój e-PIT.
+- [Zwrot podatku i pierwszy PIT — co musisz wiedzieć przed 26. urodzinami i po nich](https://bartuniadev.github.io/madry-portfel/artykuly/zwrot-podatku-pit-dla-mlodych.html): Brutto a netto — dlaczego ta sama kwota daje inne pieniądze na rękę na umowie o pracę, zleceniu i B2B. Jak porównać oferty pracy, żeby się nie przeliczyć.
 - [Jak negocjować podwyżkę i kiedy zmiana pracy się bardziej opłaca](https://bartuniadev.github.io/madry-portfel/artykuly/negocjacje-podwyzka-zmiana-pracy.html): Jak negocjować podwyżkę: kiedy zacząć rozmowę, jak się przygotować i jakich argumentów użyć — oraz dlaczego zmiana pracy często daje więcej.
 
 ## Kalkulatory
 
-- [Kalkulator wynagrodzenia brutto–netto 2026](https://bartuniadev.github.io/madry-portfel/narzedzia/kalkulator-brutto-netto.html): umowa o pracę, ulga dla młodych, PIT-2, PPK, rozbicie na składki.
+- [Kalkulator wynagrodzeń brutto–netto 2026 i 2027](https://bartuniadev.github.io/madry-portfel/narzedzia/kalkulator-brutto-netto.html): umowa o pracę, ulga dla młodych, PIT-2, PPK, wypłata w każdym miesiącu roku z progiem podatkowym i limitem składek ZUS.
 - [Kalkulator budżetu 50/30/20](https://bartuniadev.github.io/madry-portfel/narzedzia/kalkulator-budzetu.html): podział dochodu netto na potrzeby, zachcianki i oszczędności.
 - [Kalkulator procentu składanego](https://bartuniadev.github.io/madry-portfel/narzedzia/kalkulator-procentu-skladanego.html): wpłaty miesięczne, podatek Belki, wartość po inflacji.
 - [Kalkulator spłaty długów](https://bartuniadev.github.io/madry-portfel/narzedzia/kalkulator-splaty-dlugow.html): porównanie metody lawiny i kuli śnieżnej.
+- [Kalkulator OKI](https://bartuniadev.github.io/madry-portfel/narzedzia/kalkulator-oki.html): osobiste konto inwestycyjne (od 2027 r.) w porównaniu ze zwykłym rachunkiem i IKE — podatek Belki kontra podatek od aktywów.
 
 ## Pomocnicze
 
 - [Najczęstsze pytania o finanse](https://bartuniadev.github.io/madry-portfel/pytania.html): krótkie odpowiedzi z odesłaniem do poradników.
-- [Słownik pojęć finansowych](https://bartuniadev.github.io/madry-portfel/slownik.html): definicje ponad 70 pojęć, od brutto i netto po RRSO i ETF.
+- [Słownik pojęć finansowych](https://bartuniadev.github.io/madry-portfel/slownik.html): definicje ponad 75 pojęć, od brutto i netto po RRSO i ETF.
 - [O serwisie](https://bartuniadev.github.io/madry-portfel/o-nas.html): zasady redakcyjne i kontakt.

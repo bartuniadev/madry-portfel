@@ -6,14 +6,22 @@
   <atom:link href="https://bartuniadev.github.io/madry-portfel/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Poradniki o pensji, podatkach, oszczędzaniu, kredytach i inwestowaniu dla osób, które dopiero zaczynają zarabiać.</description>
   <language>pl-PL</language>
-  <lastBuildDate>Tue, 17 Nov 2026 08:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Wed, 18 Nov 2026 08:00:00 +0000</lastBuildDate>
+  <item>
+    <title>Jak rozliczyć PIT za 2026 — Twój e-PIT krok po kroku i terminy 2027</title>
+    <link>https://bartuniadev.github.io/madry-portfel/artykuly/pit-za-2026-jak-rozliczyc.html</link>
+    <guid isPermaLink="true">https://bartuniadev.github.io/madry-portfel/artykuly/pit-za-2026-jak-rozliczyc.html</guid>
+    <pubDate>Wed, 18 Nov 2026 08:00:00 +0000</pubDate>
+    <category>Kariera i dochody</category>
+    <description>Jak rozliczyć PIT za 2026 rok: Twój e-PIT od 15 lutego 2027, termin 30 kwietnia, który formularz wybrać, ulgi, zwrot w 45 dni i najczęstsze błędy.</description>
+  </item>
   <item>
     <title>Zmiany w finansach od 1 stycznia 2027 — co dotyczy młodych</title>
     <link>https://bartuniadev.github.io/madry-portfel/artykuly/zmiany-w-finansach-2027.html</link>
     <guid isPermaLink="true">https://bartuniadev.github.io/madry-portfel/artykuly/zmiany-w-finansach-2027.html</guid>
     <pubDate>Tue, 17 Nov 2026 08:00:00 +0000</pubDate>
     <category>Zacznij tutaj</category>
-    <description>Brutto a netto — dlaczego ta sama kwota daje inne pieniądze na rękę na umowie o pracę, zleceniu i B2B. Jak porównać oferty pracy, żeby się nie przeliczyć.</description>
+    <description>Zmiany od 1 stycznia 2027: płaca minimalna 4950 zł, limity IKE i IKZE, konta OKI bez podatku Belki, nowy próg PIT i KSeF. Co przesądzone, co czeka.</description>
   </item>
   <item>
     <title>Płaca minimalna 2027 — ile to netto na rękę i co się zmienia</title>
@@ -21,7 +29,7 @@
     <guid isPermaLink="true">https://bartuniadev.github.io/madry-portfel/artykuly/placa-minimalna-2027-netto.html</guid>
     <pubDate>Tue, 17 Nov 2026 08:00:00 +0000</pubDate>
     <category>Kariera i dochody</category>
-    <description>Brutto a netto — dlaczego ta sama kwota daje inne pieniądze na rękę na umowie o pracę, zleceniu i B2B. Jak porównać oferty pracy, żeby się nie przeliczyć.</description>
+    <description>Płaca minimalna 2027: 4950 zł brutto to ok. 3704 zł netto. Kwoty z PPK i ulgą dla młodych, stawka godzinowa 32,30 zł i co rośnie razem z nią.</description>
   </item>
   <item>
     <title>OKI — osobiste konto inwestycyjne od 2027: jak działa i czy się opłaca</title>
@@ -29,7 +37,7 @@
     <guid isPermaLink="true">https://bartuniadev.github.io/madry-portfel/artykuly/osobiste-konto-inwestycyjne-oki.html</guid>
     <pubDate>Tue, 17 Nov 2026 08:00:00 +0000</pubDate>
     <category>Emerytura i inwestowanie</category>
-    <description>Brutto a netto — dlaczego ta sama kwota daje inne pieniądze na rękę na umowie o pracę, zleceniu i B2B. Jak porównać oferty pracy, żeby się nie przeliczyć.</description>
+    <description>Osobiste konto inwestycyjne OKI od 2027: zyski bez podatku Belki, podatek 0,85% od aktywów ponad 100 000 zł, przykłady i porównanie z IKE i IKZE.</description>
   </item>
   <item>
     <title>Zmiana pracy — finansowa lista kontrolna przed, w trakcie i po</title>
@@ -237,7 +245,7 @@
     <guid isPermaLink="true">https://bartuniadev.github.io/madry-portfel/artykuly/kalendarz-finansowy.html</guid>
     <pubDate>Mon, 16 Nov 2026 08:00:00 +0000</pubDate>
     <category>Zacznij tutaj</category>
-    <description>Najważniejsze terminy finansowe w roku: Twój e-PIT, rozliczenie PIT do 30 kwietnia, wpłaty na IKE i IKZE do 31 grudnia, zaległy urlop i przeglądy polis.</description>
+    <description>Brutto a netto — dlaczego ta sama kwota daje inne pieniądze na rękę na umowie o pracę, zleceniu i B2B. Jak porównać oferty pracy, żeby się nie przeliczyć.</description>
   </item>
   <item>
     <title>Jak oszczędzać na jedzeniu bez wyrzeczeń — drugi największy wydatek w budżecie</title>
@@ -357,7 +365,7 @@
     <guid isPermaLink="true">https://bartuniadev.github.io/madry-portfel/artykuly/zwrot-podatku-pit-dla-mlodych.html</guid>
     <pubDate>Sun, 15 Nov 2026 08:00:00 +0000</pubDate>
     <category>Kariera i dochody</category>
-    <description>Zwrot podatku i pierwszy PIT: skąd bierze się zwrot albo dopłata, jak działa ulga dla młodych (PIT-0) i rok 26. urodzin oraz jak sprawdzić Twój e-PIT.</description>
+    <description>Brutto a netto — dlaczego ta sama kwota daje inne pieniądze na rękę na umowie o pracę, zleceniu i B2B. Jak porównać oferty pracy, żeby się nie przeliczyć.</description>
   </item>
   <item>
     <title>Wspólne finanse w związku — trzy modele i rozmowa, od której warto zacząć</title>

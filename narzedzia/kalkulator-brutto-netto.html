@@ -3,21 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kalkulator brutto netto 2026 — ile na rękę z umowy o pracę</title>
-<meta name="description" content="Kalkulator brutto netto 2026: ile na rękę z umowy o pracę, z ulgą dla młodych, PIT-2 i PPK. Rozbicie na składki i koszt pracodawcy. Bez rejestracji.">
+<title>Kalkulator brutto netto 2027 i 2026 — ile na rękę</title>
+<meta name="description" content="Kalkulator brutto netto 2027 i 2026: ile na rękę z umowy o pracę, z ulgą dla młodych, PIT-2 i PPK. Wypłata w każdym miesiącu, także po progu 120 tys. zł.">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="canonical" href="https://bartuniadev.github.io/madry-portfel/narzedzia/kalkulator-brutto-netto.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Mądry Portfel">
 <meta property="og:locale" content="pl_PL">
-<meta property="og:title" content="Kalkulator brutto netto 2026 — ile na rękę z umowy o pracę">
-<meta property="og:description" content="Kalkulator brutto netto 2026: ile na rękę z umowy o pracę, z ulgą dla młodych, PIT-2 i PPK. Rozbicie na składki i koszt pracodawcy. Bez rejestracji.">
+<meta property="og:title" content="Kalkulator brutto netto 2027 i 2026 — ile na rękę">
+<meta property="og:description" content="Kalkulator brutto netto 2027 i 2026: ile na rękę z umowy o pracę, z ulgą dla młodych, PIT-2 i PPK. Wypłata w każdym miesiącu, także po progu 120 tys. zł.">
 <meta property="og:url" content="https://bartuniadev.github.io/madry-portfel/narzedzia/kalkulator-brutto-netto.html">
 <meta property="og:image" content="https://bartuniadev.github.io/madry-portfel/assets/og/kalkulator-brutto-netto.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Kalkulator brutto netto 2026 — ile na rękę z umowy o pracę">
+<meta name="twitter:title" content="Kalkulator brutto netto 2027 i 2026 — ile na rękę">
 <meta name="twitter:image" content="https://bartuniadev.github.io/madry-portfel/assets/og/kalkulator-brutto-netto.jpg">
 <script type="application/ld+json">
 {
@@ -38,8 +38,8 @@
     "name": "Mądry Portfel",
     "url": "https://bartuniadev.github.io/madry-portfel/"
   },
-  "description": "Kalkulator brutto netto 2026: ile na rękę z umowy o pracę, z ulgą dla młodych, PIT-2 i PPK. Rozbicie na składki i koszt pracodawcy. Bez rejestracji.",
-  "keywords": "kalkulator brutto netto 2026, ile na rękę 2026, wynagrodzenie netto, ulga dla młodych kalkulator"
+  "description": "Kalkulator brutto netto 2027 i 2026: ile na rękę z umowy o pracę, z ulgą dla młodych, PIT-2 i PPK. Wypłata w każdym miesiącu, także po progu 120 tys. zł.",
+  "keywords": "kalkulator brutto netto 2027, kalkulator wynagrodzeń 2027, ile na rękę 2027, kalkulator brutto netto 2026, ulga dla młodych kalkulator"
 }
 </script>
 <style>
@@ -297,6 +297,27 @@
   .sum-warning{margin:18px 0 0;}
   [hidden]{display:none !important;}
   @media (max-width:560px){.checks{grid-template-columns:1fr;}}
+  .year-toggle{display:inline-flex;border:1px solid var(--border);border-radius:999px;padding:3px;margin:0 0 18px;background:var(--bg);}
+  .year-toggle label{position:relative;cursor:pointer;}
+  .year-toggle input{position:absolute;opacity:0;width:1px;height:1px;}
+  .year-toggle span{display:block;padding:7px 18px;border-radius:999px;font-weight:700;font-size:0.92rem;color:var(--text-2);}
+  .year-toggle input:checked + span{background:var(--green);color:#08130d;}
+  .year-toggle input:focus-visible + span{outline:2px solid var(--green);outline-offset:2px;}
+  .scale-note{font-size:0.8rem;color:var(--text-2);margin:-4px 0 12px 27px;}
+  details.months{margin:20px 0 0;border:1px solid var(--border);border-radius:9px;background:var(--bg);}
+  details.months summary{cursor:pointer;padding:12px 14px;font-weight:600;font-size:0.92rem;}
+  details.months summary:focus-visible{outline:2px solid var(--green);outline-offset:2px;}
+  .months-wrap{overflow-x:auto;}
+  .months-table{width:100%;border-collapse:collapse;font-size:0.85rem;}
+  .months-table caption{caption-side:bottom;text-align:left;padding:8px 10px 10px;font-size:0.75rem;color:var(--text-2);}
+  .months-table th,.months-table td{padding:7px 10px;border-top:1px solid var(--border);text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;}
+  .months-table th{color:var(--text-2);font-weight:600;font-size:0.78rem;}
+  .months-table th:first-child,.months-table td:first-child{text-align:left;}
+  .months-table td:last-child{font-weight:700;color:var(--green);}
+  .months-table tr.changed td{background:rgba(242,193,78,0.07);}
+  .months-table tfoot td{font-weight:700;}
+  .m-short{display:none;}
+  @media (max-width:420px){.months-table th,.months-table td{padding:7px 6px;font-size:0.82rem;} .m-long{display:none;} .m-short{display:inline;}}
 </style>
 <link rel="alternate" type="application/rss+xml" title="Mądry Portfel — nowe poradniki" href="https://bartuniadev.github.io/madry-portfel/feed.xml">
 </head>
@@ -318,10 +339,14 @@
 <main>
   <nav class="breadcrumb-dark" aria-label="Okruszki"><a href="../index.html">Mądry Portfel</a> <span aria-hidden="true">/</span> <a href="index.html">Narzędzia</a> <span aria-hidden="true">/</span> <span aria-current="page">Kalkulator brutto–netto</span></nav>
   <span class="pill">0 kont · 0 maila · 0 ciasteczek</span>
-  <h1>Kalkulator wynagrodzenia brutto–netto</h1>
-  <p class="lead">Wpisz kwotę brutto z oferty pracy i zobacz, ile zostaje „na rękę" na umowie o pracę — z ulgą dla młodych, PPK i rozbiciem na składki. Zasady na 2026 rok, wszystko liczy się w Twojej przeglądarce.</p>
+  <h1>Kalkulator wynagrodzeń brutto–netto 2027 i 2026</h1>
+  <p class="lead">Wpisz kwotę brutto z oferty pracy i zobacz, ile zostaje „na rękę" na umowie o pracę — z ulgą dla młodych, PPK i rozbiciem na składki. Zasady na 2026 i 2027 rok, z wypłatą rozpisaną na każdy miesiąc — także po przekroczeniu progu podatkowego, limitu ulgi dla młodych i limitu składek ZUS. Wszystko liczy się w Twojej przeglądarce.</p>
 
   <div class="calc-card">
+    <div class="year-toggle" role="radiogroup" aria-label="Rok rozliczenia">
+      <label><input type="radio" name="year" value="2026" id="y2026" checked><span>2026</span></label>
+      <label><input type="radio" name="year" value="2027" id="y2027"><span>2027</span></label>
+    </div>
     <div class="field">
       <label for="gross">Wynagrodzenie brutto miesięcznie (zł)</label>
       <input type="number" id="gross" inputmode="decimal" value="6000" min="0" step="100">
@@ -347,10 +372,14 @@
       <div class="field check">
         <label><input type="checkbox" id="commute"> Dojeżdżam do pracy z innej miejscowości (koszty 300 zł)</label>
       </div>
+      <div class="field check" id="scaleField" hidden>
+        <label><input type="checkbox" id="newscale"> Nowa skala PIT od 2027 (12% do 130 tys. zł, 24% do 150 tys. zł)</label>
+        <p class="scale-note">Ustawa czeka na decyzję prezydenta (stan na 18.11.2026). Zmienia wynik tylko przy dochodzie powyżej 120 000 zł rocznie.</p>
+      </div>
     </div>
 
     <div class="net-box">
-      <span class="label">Na rękę miesięcznie</span>
+      <span class="label" id="netLabel">Na rękę miesięcznie</span>
       <span class="net-amount" id="net">0 zł</span>
       <span class="pct" id="netPct"></span>
     </div>
@@ -377,7 +406,7 @@
       <div class="result-card">
         <span class="label">Netto rocznie</span>
         <span class="amount" id="netYear">0 zł</span>
-        <span class="pct">12 × wypłata miesięczna</span>
+        <span class="pct">suma 12 wypłat w roku</span>
       </div>
       <div class="result-card savings" id="cardPpk">
         <span class="label">Dopłata pracodawcy do PPK</span>
@@ -387,15 +416,27 @@
       <div class="result-card">
         <span class="label">Koszt pracodawcy (ok.)</span>
         <span class="amount" id="empCost">0 zł</span>
-        <span class="pct">tyle firma płaci łącznie</span>
+        <span class="pct">miesięcznie, łącznie ze składkami firmy</span>
       </div>
     </div>
 
     <p class="sum-warning" id="warn" hidden></p>
+
+    <details class="months" id="monthsBox">
+      <summary>Wypłata w każdym miesiącu roku</summary>
+      <div class="months-wrap">
+      <table class="months-table">
+        <caption>Kwoty w złotych, zaokrąglone. ZUS — składki społeczne, PIT — zaliczka na podatek.</caption>
+        <thead><tr><th scope="col">Miesiąc</th><th scope="col">ZUS</th><th scope="col">PIT</th><th scope="col">Netto</th></tr></thead>
+        <tbody id="monthsBody"></tbody>
+        <tfoot><tr><td>Razem</td><td id="sumZus"></td><td id="sumTax"></td><td id="sumNet"></td></tr></tfoot>
+      </table>
+      </div>
+    </details>
   </div>
 
   <div class="trust">
-    <p><strong>Jak to liczymy:</strong> umowa o pracę, zasady na 2026 rok. Składki społeczne pracownika 13,71% (emerytalna 9,76%, rentowa 1,5%, chorobowa 2,45%), składka zdrowotna 9% podstawy, koszty uzyskania przychodu 250 zł (300 zł przy dojazdach), podatek 12% pomniejszony o 300 zł miesięcznie po złożeniu PIT-2. Przy PPK doliczamy do podstawy opodatkowania wpłatę pracodawcy (1,5%). Wynik dotyczy typowego miesiąca w pierwszym progu podatkowym — rzeczywista wypłata może różnić się o kilka złotych przez zaokrąglenia, dodatki, premie i benefity.</p>
+    <p><strong>Jak to liczymy:</strong> umowa o pracę u jednego pracodawcy, ta sama pensja przez cały rok. Składki społeczne pracownika 13,71% (emerytalna 9,76%, rentowa 1,5%, chorobowa 2,45%), składka zdrowotna 9% podstawy, koszty uzyskania przychodu 250 zł (300 zł przy dojazdach), podatek 12% (32% od dochodu ponad 120 000 zł narastająco w roku) pomniejszony o 300 zł miesięcznie po złożeniu PIT-2. Przy PPK doliczamy do podstawy opodatkowania wpłatę pracodawcy (1,5%). Ulga dla młodych obejmuje przychód do 85 528 zł rocznie. Składki emerytalna i rentowa przestają być pobierane po przekroczeniu rocznego limitu: 282 600 zł w 2026 r. i ok. 300 990 zł w 2027 r. (30-krotność prognozowanego przeciętnego wynagrodzenia z projektu budżetu). Płaca minimalna: 4806 zł w 2026 r., 4950 zł w 2027 r. Rzeczywista wypłata może różnić się o kilka złotych przez zaokrąglenia, dodatki, premie i benefity.</p>
     <a class="download-btn" href="kalkulator-brutto-netto.html" download="kalkulator-brutto-netto-madry-portfel.html">Pobierz i używaj offline (HTML)</a>
     <p class="microcopy">To zwykła strona HTML bez makr i bez ciasteczek. <a href="https://github.com/bartuniadev/madry-portfel/blob/master/narzedzia/kalkulator-brutto-netto.html">Zobacz kod źródłowy na GitHub</a>. Kalkulator ma charakter poglądowy i nie zastępuje wyliczenia działu kadr.</p>
   </div>
@@ -412,42 +453,94 @@
   function fmt(n){
     return new Intl.NumberFormat('pl-PL',{minimumFractionDigits:2,maximumFractionDigits:2,useGrouping:'always'}).format(n) + ' zł';
   }
+  function fmt0(n){
+    return new Intl.NumberFormat('pl-PL',{maximumFractionDigits:0,useGrouping:'always'}).format(Math.round(n));
+  }
   function r2(x){ return Math.round((x + Number.EPSILON) * 100) / 100; }
   function $(id){ return document.getElementById(id); }
 
-  function calc(gross, o){
-    var em = r2(gross * 0.0976), re = r2(gross * 0.015), ch = r2(gross * 0.0245);
-    var zus = r2(em + re + ch);
-    var health = r2((gross - zus) * 0.09);
-    var kup = o.commute ? 300 : 250;
-    var ppkOwn = o.ppk ? r2(gross * 0.02) : 0;
-    var ppkEmp = o.ppk ? r2(gross * 0.015) : 0;
-    var tax = 0;
-    if (!o.young){
-      var base = Math.max(0, Math.round(gross - zus - kup + ppkEmp));
-      tax = base * 0.12 - (o.pit2 ? 300 : 0);
-      tax = Math.max(0, Math.round(tax));
+  var YEARS = {
+    2026: {min: 4806, cap: 282600},
+    2027: {min: 4950, cap: 300990}
+  };
+  var MONTHS = ['Styczeń','Luty','Marzec','Kwiecień','Maj','Czerwiec','Lipiec','Sierpień','Wrzesień','Październik','Listopad','Grudzień'];
+  var YOUNG_LIMIT = 85528;
+
+  function scaleFor(o){
+    return (o.year === 2027 && o.newScale)
+      ? [[130000, 0.12], [150000, 0.24], [Infinity, 0.32]]
+      : [[120000, 0.12], [Infinity, 0.32]];
+  }
+  /* podatek wg skali od dochodu narastająco (bez kwoty zmniejszającej) */
+  function scaleTax(x, sc){
+    var t = 0, prev = 0;
+    for (var k = 0; k < sc.length; k++){
+      var top = sc[k][0];
+      if (x > prev) t += (Math.min(x, top) - prev) * sc[k][1];
+      prev = top;
     }
-    var net = r2(gross - zus - health - tax - ppkOwn);
-    return {zus: zus, health: health, tax: tax, ppkOwn: ppkOwn, ppkEmp: ppkEmp, net: Math.max(0, net),
-            taxBaseYear: Math.max(0, gross - zus - kup + ppkEmp) * 12,
-            empCost: r2(gross * 1.2048 + ppkEmp)};
+    return t;
+  }
+
+  /* symulacja 12 miesięcy przy tej samej pensji */
+  function simulate(gross, o){
+    var Y = YEARS[o.year], sc = scaleFor(o);
+    var kup = o.commute ? 300 : 250;
+    var cumGross = 0, cumRev = 0, cumBase = 0, rows = [];
+    for (var m = 0; m < 12; m++){
+      var capLeft = Math.max(0, Y.cap - cumGross);
+      var erBase = Math.min(gross, capLeft);
+      var em = r2(erBase * 0.0976), re = r2(erBase * 0.015), ch = r2(gross * 0.0245);
+      var zus = r2(em + re + ch);
+      var health = r2((gross - zus) * 0.09);
+      var ppkOwn = o.ppk ? r2(gross * 0.02) : 0;
+      var ppkEmp = o.ppk ? r2(gross * 0.015) : 0;
+      var rev = gross + ppkEmp;
+      var taxableRev = o.young ? Math.max(0, rev - Math.max(0, YOUNG_LIMIT - cumRev)) : rev;
+      var tax = 0;
+      if (taxableRev > 0 && rev > 0){
+        var share = taxableRev / rev;
+        var base = Math.max(0, Math.round(taxableRev - zus * share - kup));
+        tax = scaleTax(cumBase + base, sc) - scaleTax(cumBase, sc) - (o.pit2 ? 300 : 0);
+        tax = Math.max(0, Math.round(tax));
+        cumBase += base;
+      }
+      var net = Math.max(0, r2(gross - zus - health - tax - ppkOwn));
+      var empCost = r2(gross + erBase * (0.0976 + 0.065) + gross * (0.0167 + 0.0245 + 0.001) + ppkEmp);
+      rows.push({zus: zus, health: health, tax: tax, ppkOwn: ppkOwn, ppkEmp: ppkEmp, net: net, empCost: empCost,
+                 capHit: erBase < gross, taxed: taxableRev > 0, over: cumBase > sc[0][0]});
+      cumGross += gross; cumRev += rev;
+    }
+    return rows;
+  }
+
+  function currentYear(){
+    return document.getElementById('y2027').checked ? 2027 : 2026;
   }
 
   function recalc(){
     var gross = parseFloat($('gross').value); if (!isFinite(gross) || gross < 0) gross = 0;
-    var o = {young: $('young').checked, pit2: $('pit2').checked, ppk: $('ppk').checked, commute: $('commute').checked};
+    var year = currentYear();
+    var o = {year: year, young: $('young').checked, pit2: $('pit2').checked, ppk: $('ppk').checked,
+             commute: $('commute').checked, newScale: $('newscale').checked};
     $('pit2').disabled = o.young;
-    var c = calc(gross, o);
+    $('scaleField').hidden = year !== 2027;
+    var rows = simulate(gross, o), c = rows[0];
+    var sum = function(k){ return rows.reduce(function(a, r){ return a + r[k]; }, 0); };
+    var netYear = r2(sum('net')), avg = r2(netYear / 12);
+
+    $('netLabel').textContent = 'Na rękę miesięcznie (' + year + ')';
     $('net').textContent = fmt(c.net);
-    $('netPct').textContent = gross > 0 ? Math.round(c.net / gross * 100) + '% kwoty brutto' : '';
+    var pct = gross > 0 ? Math.round(c.net / gross * 100) + '% kwoty brutto' : '';
+    if (Math.abs(avg - c.net) >= 1) pct += ' · średnio w roku ' + fmt(avg);
+    $('netPct').textContent = pct;
     $('rZus').textContent = '− ' + fmt(c.zus);
     $('rHealth').textContent = '− ' + fmt(c.health);
-    $('rTax').textContent = o.young ? '0,00 zł (ulga dla młodych)' : '− ' + fmt(c.tax);
+    $('rTax').textContent = (o.young && !c.taxed) ? '0,00 zł (ulga dla młodych)' : '− ' + fmt(c.tax);
     $('rPpk').textContent = '− ' + fmt(c.ppkOwn);
     $('rowPpk').hidden = !o.ppk; $('cardPpk').hidden = !o.ppk;
     $('rNet').textContent = fmt(c.net);
-    $('netYear').textContent = fmt(c.net * 12);
+    $('netYear').textContent = fmt(netYear);
     $('ppkEmp').textContent = fmt(c.ppkEmp);
     $('empCost').textContent = fmt(c.empCost);
     var g = gross || 1;
@@ -457,20 +550,47 @@
     $('bTax').style.width = (c.tax / g * 100) + '%';
     $('bPpk').style.width = (c.ppkOwn / g * 100) + '%';
 
-    var w = [];
-    if (o.young && gross * 12 > 85528) w.push('Przy tej pensji roczny przychód przekroczy limit ulgi dla młodych (85 528 zł) — od miesiąca przekroczenia pracodawca zacznie pobierać zaliczki na podatek, więc wypłaty pod koniec roku będą niższe.');
-    if (!o.young && c.taxBaseYear > 120000) w.push('Roczny dochód przekroczy próg 120 000 zł — w ostatnich miesiącach roku nadwyżka będzie opodatkowana stawką 32%, więc wypłaty będą wtedy niższe niż pokazana.');
-    if (gross > 0 && gross < 4806) w.push('Kwota jest niższa od minimalnego wynagrodzenia za pełny etat w 2026 r. (4806 zł brutto) — taki wynik ma sens tylko przy niepełnym etacie.');
-    if (gross >= 23000) w.push('Przy bardzo wysokich zarobkach składki emerytalna i rentowa przestają być pobierane po przekroczeniu rocznego limitu podstawy — kalkulator tego nie uwzględnia.');
+    var body = '';
+    rows.forEach(function(r, m){
+      var changed = m > 0 && Math.abs(r.net - rows[m - 1].net) >= 1;
+      body += '<tr' + (changed ? ' class="changed"' : '') + '><td><span class="m-long">' + MONTHS[m] + '</span><span class="m-short">' + MONTHS[m].slice(0, 3) + '</span></td><td>' + fmt0(r.zus) + '</td><td>' + fmt0(r.tax) + '</td><td>' + fmt0(r.net) + '</td></tr>';
+    });
+    $('monthsBody').innerHTML = body;
+    $('sumZus').textContent = fmt0(sum('zus'));
+    $('sumTax').textContent = fmt0(sum('tax'));
+    $('sumNet').textContent = fmt0(netYear);
+
+    var w = [], Y = YEARS[year];
+    var first = function(pred){ for (var m = 0; m < 12; m++) if (pred(rows[m], m)) return m; return -1; };
+    var mYoung = o.young ? first(function(r){ return r.taxed; }) : -1;
+    var after = function(m){ return fmt(rows[Math.min(11, m + 1)].net); };
+    if (mYoung > 0) w.push('Ulga dla młodych: w miesiącu ' + MONTHS[mYoung].toLowerCase() + ' Twój przychód od początku roku przekroczy 85 528 zł — od tej chwili pracodawca pobiera zaliczki na podatek, więc wypłata spada do ok. ' + after(mYoung) + '.');
+    if (mYoung === 0) w.push('Przy tej pensji przekroczysz limit ulgi dla młodych (85 528 zł rocznie) już w styczniu, więc ulga prawie nic nie zmienia.');
+    var mDrop = first(function(r){ return r.over; });
+    if (mDrop >= 0){
+      var thr = (year === 2027 && o.newScale) ? '130 000 zł (stawka 24%, a powyżej 150 000 zł — 32%)' : '120 000 zł (nadwyżka opodatkowana stawką 32%)';
+      w.push('Próg podatkowy: w miesiącu ' + MONTHS[mDrop].toLowerCase() + ' Twój dochód od początku roku przekroczy ' + thr + ', więc wypłata spada do ok. ' + after(mDrop) + '.');
+    }
+    var mCap = first(function(r){ return r.capHit; });
+    if (mCap >= 0) w.push('Limit składek: od miesiąca ' + MONTHS[mCap].toLowerCase() + ' przekroczysz roczny limit podstawy składek emerytalnej i rentowej (' + fmt(Y.cap) + '), więc te składki nie są już pobierane i wypłata rośnie.');
+    if (gross > 0 && gross < Y.min) w.push('Kwota jest niższa od minimalnego wynagrodzenia za pełny etat w ' + year + ' r. (' + Y.min + ' zł brutto) — taki wynik ma sens tylko przy niepełnym etacie.');
     $('warn').hidden = w.length === 0; $('warn').textContent = w.join(' ');
+    $('monthsBox').classList.toggle('has-changes', w.length > 0);
   }
 
-  ['gross','young','pit2','ppk','commute'].forEach(function(id){
+  ['gross','young','pit2','ppk','commute','newscale','y2026','y2027'].forEach(function(id){
     $(id).addEventListener('input', recalc); $(id).addEventListener('change', recalc);
   });
   document.querySelectorAll('.preset-btn').forEach(function(btn){
-    btn.addEventListener('click', function(){ $('gross').value = btn.getAttribute('data-preset'); recalc(); });
+    btn.addEventListener('click', function(){
+      var v = btn.getAttribute('data-preset');
+      if (v === '4950') $('y2027').checked = true;
+      if (v === '4806') $('y2026').checked = true;
+      $('gross').value = v; recalc();
+    });
   });
+  /* od 1 stycznia 2027 domyślnie pokazujemy nowy rok */
+  if (new Date() >= new Date(2027, 0, 1)) $('y2027').checked = true;
   recalc();
 </script>
 <script defer src="../assets/stats.js"></script>
