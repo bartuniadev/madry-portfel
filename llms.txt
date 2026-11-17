@@ -6,6 +6,7 @@ Treści mają charakter edukacyjny i nie są doradztwem finansowym. Serwis nie s
 
 ## Zacznij tutaj
 
+- [Zmiany w finansach od 1 stycznia 2027 — co dotyczy młodych](https://bartuniadev.github.io/madry-portfel/artykuly/zmiany-w-finansach-2027.html): Brutto a netto — dlaczego ta sama kwota daje inne pieniądze na rękę na umowie o pracę, zleceniu i B2B. Jak porównać oferty pracy, żeby się nie przeliczyć.
 - [Plan na pierwszy rok pracy — finanse krok po kroku, miesiąc po miesiącu](https://bartuniadev.github.io/madry-portfel/artykuly/plan-na-pierwszy-rok-pracy.html): Pierwsza praca a finanse: plan na 12 miesięcy — pasek wynagrodzenia, budżet, poduszka finansowa, PPK, IKE, inwestowanie i pierwszy PIT, krok po kroku.
 - [Spłacać długi czy oszczędzać? Poduszka, PPK, IKE i inwestycje — w jakiej kolejności](https://bartuniadev.github.io/madry-portfel/artykuly/kolejnosc-finansowych-priorytetow.html): Spłacać długi czy oszczędzać, PPK czy IKE, poduszka czy inwestowanie? Drabina finansowych priorytetów z wyjaśnieniem, dlaczego właśnie w tej kolejności.
 - [Pierwsza pensja — co zrobić z pieniędzmi w pierwszym miesiącu pracy](https://bartuniadev.github.io/madry-portfel/artykuly/pierwsza-pensja.html): Pierwsza pensja: jak podzielić pierwszą wypłatę, ile odłożyć, jakich błędów uniknąć i jak od pierwszego miesiąca zbudować dobre nawyki finansowe.
@@ -67,6 +68,7 @@ Treści mają charakter edukacyjny i nie są doradztwem finansowym. Serwis nie s
 
 ## Emerytura i inwestowanie
 
+- [OKI — osobiste konto inwestycyjne od 2027: jak działa i czy się opłaca](https://bartuniadev.github.io/madry-portfel/artykuly/osobiste-konto-inwestycyjne-oki.html): Brutto a netto — dlaczego ta sama kwota daje inne pieniądze na rękę na umowie o pracę, zleceniu i B2B. Jak porównać oferty pracy, żeby się nie przeliczyć.
 - [Spadki na giełdzie i bessa — jak zachować spokój, gdy portfel traci](https://bartuniadev.github.io/madry-portfel/artykuly/hossa-bessa-jak-nie-panikowac.html): Spadki na giełdzie i bessa: dlaczego są normalne, jakie błędy popełniamy pod wpływem emocji i co robić, a czego nie, gdy wartość inwestycji spada.
 - [W co inwestować? Akcje, obligacje, fundusze i nieruchomości — czym różnią się klasy aktywów](https://bartuniadev.github.io/madry-portfel/artykuly/klasy-aktywow-akcje-obligacje-fundusze.html): W co inwestować na start: akcje, obligacje, fundusze, ETF-y i nieruchomości wyjaśnione prosto — skąd zysk, jakie ryzyko i jak złożyć prosty portfel.
 - [Ile odkładać na emeryturę — prosty rachunek dla 25-, 35- i 45-latka](https://bartuniadev.github.io/madry-portfel/artykuly/ile-odkladac-na-emeryture.html): Ile odkładać na emeryturę miesięcznie, zależnie od wieku startu: rachunek dla 25-, 35- i 45-latka, wykorzystanie PPK, IKE i IKZE oraz prosta reguła.
@@ -76,11 +78,12 @@ Treści mają charakter edukacyjny i nie są doradztwem finansowym. Serwis nie s
 - [ETF-y dla początkujących — jak kupić cały rynek jedną transakcją](https://bartuniadev.github.io/madry-portfel/artykuly/etf-dla-poczatkujacych.html): ETF dla początkujących: co to jest, dlaczego opłaty (TER) mają ogromne znaczenie, czym jest ETF akumulujący i jak kupić pierwszy fundusz krok po kroku.
 - [Emerytura z ZUS dla młodych — ile realnie dostaniesz i co możesz zrobić już dziś](https://bartuniadev.github.io/madry-portfel/artykuly/emerytura-z-zus-ile-realnie-dostaniesz.html): Ile wyniesie emerytura z ZUS dla młodych: czym jest stopa zastąpienia, dlaczego spada i co możesz zrobić już dziś, by nie zależeć tylko od ZUS.
 - [PPK, czyli Pracownicze Plany Kapitałowe — czy warto zostać w programie](https://bartuniadev.github.io/madry-portfel/artykuly/ppk-pracownicze-plany-kapitalowe.html): PPK — czy warto zostać w programie: ile dokłada pracodawca i państwo, jak sprawdzić wpłaty i kiedy rezygnacja z Pracowniczych Planów Kapitałowych ma sens.
-- [IKE czy IKZE — co wybrać i jak oszczędzać na emeryturę z ulgą podatkową](https://bartuniadev.github.io/madry-portfel/artykuly/ike-ikze-emerytura.html): IKE czy IKZE — czym się różnią, jakie są limity wpłat w 2026 r., ile daje ulga IKZE w PIT i które konto wybrać na starcie kariery.
+- [IKE czy IKZE — co wybrać i jak oszczędzać na emeryturę z ulgą podatkową](https://bartuniadev.github.io/madry-portfel/artykuly/ike-ikze-emerytura.html): IKE czy IKZE: czym się różnią, limity wpłat w 2026 i 2027 r. (IKE 30 099 zł, IKZE 12 039,60 zł), ile daje ulga IKZE w PIT i które konto wybrać.
 - [Jak zacząć inwestować, gdy masz mało pieniędzy i mniej czasu](https://bartuniadev.github.io/madry-portfel/artykuly/jak-zaczac-inwestowac.html): Jak zacząć inwestować małe kwoty: co zrobić przed pierwszą inwestycją, dlaczego regularność wygrywa z wyczuciem rynku i jakich błędów unikać.
 
 ## Kariera i dochody
 
+- [Płaca minimalna 2027 — ile to netto na rękę i co się zmienia](https://bartuniadev.github.io/madry-portfel/artykuly/placa-minimalna-2027-netto.html): Brutto a netto — dlaczego ta sama kwota daje inne pieniądze na rękę na umowie o pracę, zleceniu i B2B. Jak porównać oferty pracy, żeby się nie przeliczyć.
 - [Praca za granicą a PIT w Polsce — rezydencja, PIT/ZG i ulga na powrót](https://bartuniadev.github.io/madry-portfel/artykuly/praca-za-granica-a-podatki.html): Praca za granicą a PIT w Polsce: rezydencja podatkowa, wyłączenie z progresją czy proporcjonalne odliczenie, PIT-36 z PIT/ZG i ulga na powrót.
 - [Ulgi podatkowe, o których młodzi zapominają — i jak dodać je w Twój e-PIT](https://bartuniadev.github.io/madry-portfel/artykuly/ulgi-podatkowe-o-ktorych-mlodzi-zapominaja.html): Ulgi podatkowe w PIT, których Twój e-PIT nie doda sam: ulga na internet, IKZE, darowizny i krwiodawstwo, ulga na dziecko, koszty dojazdu i 50% kosztów.
 - [Zmiana pracy — finansowa lista kontrolna przed, w trakcie i po](https://bartuniadev.github.io/madry-portfel/artykuly/zmiana-pracy-lista-kontrolna.html): Zmiana pracy krok po kroku: co sprawdzić przed wypowiedzeniem, jak rozliczyć urlop i premie, co z PPK i jakie oświadczenia złożyć u nowego pracodawcy.

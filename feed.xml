@@ -6,7 +6,31 @@
   <atom:link href="https://bartuniadev.github.io/madry-portfel/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Poradniki o pensji, podatkach, oszczędzaniu, kredytach i inwestowaniu dla osób, które dopiero zaczynają zarabiać.</description>
   <language>pl-PL</language>
-  <lastBuildDate>Mon, 16 Nov 2026 08:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Tue, 17 Nov 2026 08:00:00 +0000</lastBuildDate>
+  <item>
+    <title>Zmiany w finansach od 1 stycznia 2027 — co dotyczy młodych</title>
+    <link>https://bartuniadev.github.io/madry-portfel/artykuly/zmiany-w-finansach-2027.html</link>
+    <guid isPermaLink="true">https://bartuniadev.github.io/madry-portfel/artykuly/zmiany-w-finansach-2027.html</guid>
+    <pubDate>Tue, 17 Nov 2026 08:00:00 +0000</pubDate>
+    <category>Zacznij tutaj</category>
+    <description>Brutto a netto — dlaczego ta sama kwota daje inne pieniądze na rękę na umowie o pracę, zleceniu i B2B. Jak porównać oferty pracy, żeby się nie przeliczyć.</description>
+  </item>
+  <item>
+    <title>Płaca minimalna 2027 — ile to netto na rękę i co się zmienia</title>
+    <link>https://bartuniadev.github.io/madry-portfel/artykuly/placa-minimalna-2027-netto.html</link>
+    <guid isPermaLink="true">https://bartuniadev.github.io/madry-portfel/artykuly/placa-minimalna-2027-netto.html</guid>
+    <pubDate>Tue, 17 Nov 2026 08:00:00 +0000</pubDate>
+    <category>Kariera i dochody</category>
+    <description>Brutto a netto — dlaczego ta sama kwota daje inne pieniądze na rękę na umowie o pracę, zleceniu i B2B. Jak porównać oferty pracy, żeby się nie przeliczyć.</description>
+  </item>
+  <item>
+    <title>OKI — osobiste konto inwestycyjne od 2027: jak działa i czy się opłaca</title>
+    <link>https://bartuniadev.github.io/madry-portfel/artykuly/osobiste-konto-inwestycyjne-oki.html</link>
+    <guid isPermaLink="true">https://bartuniadev.github.io/madry-portfel/artykuly/osobiste-konto-inwestycyjne-oki.html</guid>
+    <pubDate>Tue, 17 Nov 2026 08:00:00 +0000</pubDate>
+    <category>Emerytura i inwestowanie</category>
+    <description>Brutto a netto — dlaczego ta sama kwota daje inne pieniądze na rękę na umowie o pracę, zleceniu i B2B. Jak porównać oferty pracy, żeby się nie przeliczyć.</description>
+  </item>
   <item>
     <title>Zmiana pracy — finansowa lista kontrolna przed, w trakcie i po</title>
     <link>https://bartuniadev.github.io/madry-portfel/artykuly/zmiana-pracy-lista-kontrolna.html</link>
@@ -549,7 +573,7 @@
     <guid isPermaLink="true">https://bartuniadev.github.io/madry-portfel/artykuly/ike-ikze-emerytura.html</guid>
     <pubDate>Sun, 20 Sep 2026 08:00:00 +0000</pubDate>
     <category>Emerytura i inwestowanie</category>
-    <description>IKE czy IKZE — czym się różnią, jakie są limity wpłat w 2026 r., ile daje ulga IKZE w PIT i które konto wybrać na starcie kariery.</description>
+    <description>IKE czy IKZE: czym się różnią, limity wpłat w 2026 i 2027 r. (IKE 30 099 zł, IKZE 12 039,60 zł), ile daje ulga IKZE w PIT i które konto wybrać.</description>
   </item>
   <item>
     <title>Budżet domowy metodą 50/30/20 — jak go ułożyć krok po kroku</title>
