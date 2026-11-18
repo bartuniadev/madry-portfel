@@ -6,7 +6,15 @@
   <atom:link href="https://bartuniadev.github.io/madry-portfel/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Poradniki o pensji, podatkach, oszczędzaniu, kredytach i inwestowaniu dla osób, które dopiero zaczynają zarabiać.</description>
   <language>pl-PL</language>
-  <lastBuildDate>Tue, 17 Nov 2026 08:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Wed, 18 Nov 2026 08:00:00 +0000</lastBuildDate>
+  <item>
+    <title>Mediana wynagrodzeń 2026 — ile naprawdę zarabiają Polacy</title>
+    <link>https://bartuniadev.github.io/madry-portfel/artykuly/mediana-wynagrodzen-ile-zarabiaja-polacy.html</link>
+    <guid isPermaLink="true">https://bartuniadev.github.io/madry-portfel/artykuly/mediana-wynagrodzen-ile-zarabiaja-polacy.html</guid>
+    <pubDate>Wed, 18 Nov 2026 08:00:00 +0000</pubDate>
+    <category>Kariera i dochody</category>
+    <description>Brutto a netto — dlaczego ta sama kwota daje inne pieniądze na rękę na umowie o pracę, zleceniu i B2B. Jak porównać oferty pracy, żeby się nie przeliczyć.</description>
+  </item>
   <item>
     <title>Zmiany w finansach od 1 stycznia 2027 — co dotyczy młodych</title>
     <link>https://bartuniadev.github.io/madry-portfel/artykuly/zmiany-w-finansach-2027.html</link>
@@ -45,7 +53,7 @@
     <guid isPermaLink="true">https://bartuniadev.github.io/madry-portfel/artykuly/ile-na-reke-tabela-brutto-netto.html</guid>
     <pubDate>Tue, 17 Nov 2026 08:00:00 +0000</pubDate>
     <category>Kariera i dochody</category>
-    <description>Ile na rękę w 2027: tabela netto od płacy minimalnej do 20 000 zł brutto, z PIT-2, z PPK i z ulgą dla młodych. 5000 zł brutto to ok. 3738 zł netto.</description>
+    <description>Brutto a netto — dlaczego ta sama kwota daje inne pieniądze na rękę na umowie o pracę, zleceniu i B2B. Jak porównać oferty pracy, żeby się nie przeliczyć.</description>
   </item>
   <item>
     <title>Zmiana pracy — finansowa lista kontrolna przed, w trakcie i po</title>
@@ -117,7 +125,7 @@
     <guid isPermaLink="true">https://bartuniadev.github.io/madry-portfel/artykuly/rozmowa-o-pieniadzach-w-rekrutacji.html</guid>
     <pubDate>Mon, 16 Nov 2026 08:00:00 +0000</pubDate>
     <category>Kariera i dochody</category>
-    <description>Oczekiwania finansowe na rozmowie o pracę: co zmieniła jawność wynagrodzeń, jak czytać widełki płacowe i jak negocjować ofertę, nie tracąc pieniędzy.</description>
+    <description>Brutto a netto — dlaczego ta sama kwota daje inne pieniądze na rękę na umowie o pracę, zleceniu i B2B. Jak porównać oferty pracy, żeby się nie przeliczyć.</description>
   </item>
   <item>
     <title>Rachunki za prąd, gaz i ogrzewanie — jak je czytać i obniżyć bez marznięcia</title>
@@ -237,7 +245,7 @@
     <guid isPermaLink="true">https://bartuniadev.github.io/madry-portfel/artykuly/kolejnosc-finansowych-priorytetow.html</guid>
     <pubDate>Mon, 16 Nov 2026 08:00:00 +0000</pubDate>
     <category>Zacznij tutaj</category>
-    <description>Brutto a netto — dlaczego ta sama kwota daje inne pieniądze na rękę na umowie o pracę, zleceniu i B2B. Jak porównać oferty pracy, żeby się nie przeliczyć.</description>
+    <description>Spłacać długi czy oszczędzać, PPK czy IKE, poduszka czy inwestowanie? Drabina finansowych priorytetów z wyjaśnieniem, dlaczego właśnie w tej kolejności.</description>
   </item>
   <item>
     <title>W co inwestować? Akcje, obligacje, fundusze i nieruchomości — czym różnią się klasy aktywów</title>
@@ -277,7 +285,7 @@
     <guid isPermaLink="true">https://bartuniadev.github.io/madry-portfel/artykuly/ile-kosztuje-wesele.html</guid>
     <pubDate>Mon, 16 Nov 2026 08:00:00 +0000</pubDate>
     <category>Budżet i wydatki</category>
-    <description>Brutto a netto — dlaczego ta sama kwota daje inne pieniądze na rękę na umowie o pracę, zleceniu i B2B. Jak porównać oferty pracy, żeby się nie przeliczyć.</description>
+    <description>Ile kosztuje wesele i jak ułożyć budżet: kwota maksymalna, liczba gości, orientacyjny podział kosztów, umowy z usługodawcami i plan oszczędzania.</description>
   </item>
   <item>
     <title>Ile kosztuje utrzymanie psa lub kota — budżet zwierzaka na start i co miesiąc</title>
@@ -381,7 +389,7 @@
     <guid isPermaLink="true">https://bartuniadev.github.io/madry-portfel/artykuly/wspolne-finanse-w-zwiazku.html</guid>
     <pubDate>Sun, 15 Nov 2026 08:00:00 +0000</pubDate>
     <category>Budżet i wydatki</category>
-    <description>Brutto a netto — dlaczego ta sama kwota daje inne pieniądze na rękę na umowie o pracę, zleceniu i B2B. Jak porównać oferty pracy, żeby się nie przeliczyć.</description>
+    <description>Wspólne finanse w związku: wspólne konto czy osobne, podział wydatków po równo czy proporcjonalnie, majątek i długi w świetle prawa oraz sygnały ostrzegawcze.</description>
   </item>
   <item>
     <title>Utrata pracy — plan finansowy na pierwszy tydzień i kolejne miesiące</title>
@@ -389,7 +397,7 @@
     <guid isPermaLink="true">https://bartuniadev.github.io/madry-portfel/artykuly/utrata-pracy-plan-finansowy.html</guid>
     <pubDate>Sun, 15 Nov 2026 08:00:00 +0000</pubDate>
     <category>Kariera i dochody</category>
-    <description>Brutto a netto — dlaczego ta sama kwota daje inne pieniądze na rękę na umowie o pracę, zleceniu i B2B. Jak porównać oferty pracy, żeby się nie przeliczyć.</description>
+    <description>Utrata pracy: co Ci się należy (okres wypowiedzenia, odprawa, ekwiwalent za urlop), ile wynosi zasiłek dla bezrobotnych w 2026 r. i budżet awaryjny.</description>
   </item>
   <item>
     <title>Jakie ubezpieczenie warto mieć na starcie dorosłości, a które możesz odpuścić</title>
