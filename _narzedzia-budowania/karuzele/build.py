@@ -15,6 +15,15 @@ SETS = {
                    'note': 'Umowa o pracę, PIT-2, bez PPK, osoba powyżej 26 lat.'}),
         ('cta', {'eyebrow': 'Za darmo · bez rejestracji', 'title': 'Ile procent Polaków zarabia mniej od Ciebie?', 'sub': 'Wpisz pensję w kalkulatorze „Czy dobrze zarabiam?” — wynik w 10 sekund.', 'link': 'bartuniadev.github.io/madry-portfel'}),
     ],
+    'premia': [
+        ('hook', {'eyebrow': 'Grudzień 2026', 'title': 'Premia świąteczna: ile z niej <em>naprawdę</em> zostanie?', 'sub': 'Przesuń, zanim wydasz ją w głowie →'}),
+        ('table', {'eyebrow': 'Ile to na rękę?', 'title': 'Premia brutto i netto na umowie o pracę',
+                   'rows': [('500 zł', '341 zł', '393 zł'), ('1000 zł', '681 zł', '785 zł'), ('2000 zł', '1363 zł', '1570 zł'), ('5000 zł', '3408 zł', '3926 zł')],
+                   'note': 'Bez PPK. Do 26 lat — z ulgą dla młodych.', 'cols': ('Premia brutto', 'Na rękę', 'Do 26 lat')}),
+        ('stat', {'eyebrow': 'Fundusz socjalny', 'big': '1000 zł', 'title': 'tyle rocznie z ZFŚS dostaniesz bez podatku', 'sub': 'Liczą się wszystkie świadczenia z funduszu w roku — paczka, bon, dopłata do wczasów.'}),
+        ('stat', {'eyebrow': 'Sprytny ruch', 'big': 'IKZE', 'title': 'wpłata do 31 grudnia obniży podatek za 2026 rok', 'sub': 'Odzyskasz część podatku pobranego od premii w przyszłorocznym PIT.'}),
+        ('cta', {'eyebrow': 'Za darmo · bez rejestracji', 'title': 'Policz swoją premię i pensję', 'sub': 'Tabela premii, zasady ZFŚS i kalkulator brutto–netto 2027.', 'link': 'bartuniadev.github.io/madry-portfel'}),
+    ],
     'zmiany2027': [
         ('hook', {'eyebrow': 'Od 1 stycznia 2027', 'title': '5 zmian w Twoim portfelu od <em>nowego roku</em>', 'sub': 'Przesuń, żeby zobaczyć →'}),
         ('stat', {'eyebrow': '1 · Płaca minimalna', 'big': '4950 zł', 'title': 'brutto za pełny etat — ok. 3704 zł na rękę', 'sub': 'Na umowie zlecenia minimum to 32,30 zł brutto za godzinę.'}),
@@ -69,8 +78,8 @@ def slide(kind, d, i, n):
     elif kind == 'stat':
         b = '<div class="big">' + html.escape(d['big']) + '</div><h2>' + html.escape(d['title']) + '</h2><div class="sub">' + html.escape(d['sub']) + '</div>'
     elif kind == 'table':
-        rows = ''.join('<tr' + (' class="hl"' if r[0] == 'Mediana' else '') + '><td>' + html.escape(r[0]) + '</td><td>' + html.escape(r[1]) + '</td><td>' + html.escape(r[2]) + '</td></tr>' for r in d['rows'])
-        b = '<h2>' + html.escape(d['title']) + '</h2><table><thead><tr><th>Próg</th><th>Brutto</th><th>Na rękę</th></tr></thead><tbody>' + rows + '</tbody></table><div class="note">' + html.escape(d['note']) + '</div>'
+        rows = ''.join('<tr' + (' class="hl"' if r[0] in ('Mediana', '1000 zł') else '') + '><td>' + html.escape(r[0]) + '</td><td>' + html.escape(r[1]) + '</td><td>' + html.escape(r[2]) + '</td></tr>' for r in d['rows'])
+        b = '<h2>' + html.escape(d['title']) + '</h2><table><thead><tr>' + ''.join('<th>' + html.escape(c) + '</th>' for c in d.get('cols', ('Próg', 'Brutto', 'Na rękę'))) + '</tr></thead><tbody>' + rows + '</tbody></table><div class="note">' + html.escape(d['note']) + '</div>'
     else:
         b = '<h1 style="font-size:88px">' + html.escape(d['title']) + '</h1><div class="sub">' + html.escape(d['sub']) + '</div><div class="link">' + html.escape(d['link']) + '</div>'
     return ('<section class="slide' + (' dark' if dark else '') + '"><div class="bg"></div>' + e + '<div class="body">' + b +

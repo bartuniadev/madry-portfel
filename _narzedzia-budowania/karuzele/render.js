@@ -3,7 +3,7 @@ const dir = process.argv[2];
 (async () => {
   const b = await chromium.launch();
   const p = await b.newPage({ viewport: { width: 1080, height: 1350 } });
-  for (const name of ['zarobki', 'zmiany2027']) {
+  for (const name of ['zarobki', 'zmiany2027', 'premia']) {
     await p.goto('file://' + dir + name + '.html');
     await p.evaluate(() => document.fonts.ready);
     const slides = await p.$$('.slide');
