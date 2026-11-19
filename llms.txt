@@ -142,4 +142,5 @@ Treści mają charakter edukacyjny i nie są doradztwem finansowym. Serwis nie s
 
 - [Najczęstsze pytania o finanse](https://bartuniadev.github.io/madry-portfel/pytania.html): krótkie odpowiedzi z odesłaniem do poradników.
 - [Słownik pojęć finansowych](https://bartuniadev.github.io/madry-portfel/slownik.html): definicje ponad 75 pojęć, od brutto i netto po RRSO i ETF.
+- [Jak powstają treści](https://bartuniadev.github.io/madry-portfel/jak-powstaja-tresci.html): źródła danych, sposób liczenia kalkulatorów, coroczne aktualizacje i zgłaszanie błędów.
 - [O serwisie](https://bartuniadev.github.io/madry-portfel/o-nas.html): zasady redakcyjne i kontakt.

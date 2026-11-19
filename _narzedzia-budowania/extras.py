@@ -102,6 +102,7 @@ out += ['## Kalkulatory','',
  '## Pomocnicze','',
  f'- [Najczęstsze pytania o finanse]({BASE}pytania.html): krótkie odpowiedzi z odesłaniem do poradników.',
  f'- [Słownik pojęć finansowych]({BASE}slownik.html): definicje ponad 75 pojęć, od brutto i netto po RRSO i ETF.',
+ f'- [Jak powstają treści]({BASE}jak-powstaja-tresci.html): źródła danych, sposób liczenia kalkulatorów, coroczne aktualizacje i zgłaszanie błędów.',
  f'- [O serwisie]({BASE}o-nas.html): zasady redakcyjne i kontakt.','']
 open('llms.txt','w').write('\n'.join(out))
 print('articles',len(arts),'| feed items',feed.count('<item>'),'| llms lines',len(out))

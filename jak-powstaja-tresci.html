@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jak powstają treści i skąd bierzemy dane | Mądry Portfel</title>
+<meta name="description" content="Jak powstają artykuły i kalkulatory Mądrego Portfela: źródła danych (GUS, ZUS, podatki.gov.pl), sposób liczenia, coroczne aktualizacje i zgłaszanie błędów.">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="canonical" href="https://bartuniadev.github.io/madry-portfel/jak-powstaja-tresci.html">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mądry Portfel">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:title" content="Jak powstają treści i skąd bierzemy dane | Mądry Portfel">
+<meta property="og:description" content="Jak powstają artykuły i kalkulatory Mądrego Portfela: źródła danych (GUS, ZUS, podatki.gov.pl), sposób liczenia, coroczne aktualizacje i zgłaszanie błędów.">
+<meta property="og:url" content="https://bartuniadev.github.io/madry-portfel/jak-powstaja-tresci.html">
+<meta property="og:image" content="https://bartuniadev.github.io/madry-portfel/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Jak powstają treści i skąd bierzemy dane | Mądry Portfel">
+<meta name="twitter:image" content="https://bartuniadev.github.io/madry-portfel/og-image.png">
+<link rel="alternate" type="application/rss+xml" title="Mądry Portfel — nowe poradniki" href="https://bartuniadev.github.io/madry-portfel/feed.xml">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="index.html"><svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="7.5 13.5 10.5 10.5 13 12.5 16.5 8.5"/><polyline points="14 8.5 16.5 8.5 16.5 11"/></svg>Mądry Portfel</a>
+    <nav>
+      <a href="index.html">Artykuły</a>
+      <a href="narzedzia/index.html">Narzędzia</a>
+      <a href="slownik.html">Słownik</a>
+      <a href="o-nas.html">O nas</a>
+      <a href="polityka-prywatnosci.html">Polityka prywatności</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <nav class="breadcrumb" aria-label="Okruszki"><a href="index.html">Mądry Portfel</a> <span aria-hidden="true">/</span> <span aria-current="page">Jak powstają treści</span></nav>
+  <h1>Jak powstają treści i skąd bierzemy dane</h1>
+  <p class="lead">Piszemy o pieniądzach, więc błąd w kwocie albo terminie może kogoś realnie kosztować. Dlatego opisujemy wprost, jak powstają artykuły i kalkulatory, skąd bierzemy liczby, jak często je sprawdzamy i jak zgłosić pomyłkę.</p>
+
+  <h2>Kim jesteśmy i z czego się utrzymujemy</h2>
+  <ul>
+    <li><strong>Niezależny serwis edukacyjny</strong> dla osób na starcie kariery — nie jesteśmy bankiem, doradcą finansowym ani pośrednikiem.</li>
+    <li><strong>Bez reklam i bez sprzedawania produktów.</strong> Obecnie na stronie nie ma linków partnerskich. Jeśli kiedyś się pojawią, oznaczymy je wyraźnie przy artykule — i nie wpłyną na ocenę produktu.</li>
+    <li><strong>Bez zbierania danych.</strong> Nie używamy plików cookies, a kalkulatory liczą wszystko w Twojej przeglądarce — wpisane kwoty nigdzie nie są wysyłane (patrz: <a href="polityka-prywatnosci.html">polityka prywatności</a>).</li>
+  </ul>
+
+  <h2>Jak piszemy artykuły</h2>
+  <ol>
+    <li><strong>Temat zaczyna się od pytania</strong>, które realnie zadają osoby zaczynające pracę: ile zostanie na rękę, jak rozliczyć PIT, czy warto zostać w PPK.</li>
+    <li><strong>Treści powstają z pomocą narzędzi sztucznej inteligencji</strong> — przy wyszukiwaniu informacji, pisaniu i wyliczeniach. Nie publikujemy jednak liczb, których nie da się potwierdzić w źródle.</li>
+    <li><strong>Kluczowe kwoty, limity i terminy sprawdzamy w źródłach urzędowych</strong> (lista niżej) i podajemy je przy każdym artykule w sekcji „Źródła i przydatne strony”.</li>
+    <li><strong>Wyliczenia w tekstach liczymy tymi samymi wzorami co kalkulatory</strong> — dzięki temu kwota w artykule zgadza się z wynikiem kalkulatora.</li>
+    <li><strong>Gdy coś jest niepewne, piszemy to wprost</strong> — na przykład że ustawa czeka na decyzję prezydenta albo że interpretacje urzędów są rozbieżne — zamiast zgadywać.</li>
+  </ol>
+
+  <h2>Jak liczą kalkulatory</h2>
+  <p>Każdy kalkulator ma pod wynikiem sekcję „Jak liczymy” z założeniami: stawkami składek, progami podatkowymi, limitami i źródłem danych. Kod wszystkich kalkulatorów jest otwarty — możesz go przejrzeć w <a href="https://github.com/bartuniadev/madry-portfel" rel="noopener">repozytorium na GitHubie</a>. Wyniki sprawdzamy na przykładach liczonych ręcznie (np. 6000 zł brutto → 4420,43 zł netto na umowie o pracę w 2026 r.). Kalkulatory pokazują typowy przypadek — rzeczywista wypłata może różnić się o kilka złotych przez zaokrąglenia, dodatki i benefity.</p>
+
+  <h2>Skąd bierzemy dane</h2>
+  <table>
+    <thead><tr><th>Dane</th><th>Źródło</th></tr></thead>
+    <tbody>
+      <tr><td>Skala podatkowa, kwota zmniejszająca podatek, ulgi, Twój e-PIT</td><td><a href="https://www.podatki.gov.pl/" rel="noopener">podatki.gov.pl</a> (Ministerstwo Finansów)</td></tr>
+      <tr><td>Składki na ubezpieczenia społeczne, limity składek</td><td><a href="https://www.zus.pl/" rel="noopener">ZUS</a></td></tr>
+      <tr><td>Płaca minimalna, limity IKE i IKZE</td><td>rozporządzenia i obwieszczenia w <a href="https://dziennikustaw.gov.pl/" rel="noopener">Dzienniku Ustaw</a> i Monitorze Polskim, <a href="https://www.gov.pl/web/rodzina" rel="noopener">MRPiPS</a></td></tr>
+      <tr><td>Mediana i rozkład wynagrodzeń, inflacja (CPI)</td><td><a href="https://stat.gov.pl/" rel="noopener">GUS</a></td></tr>
+      <tr><td>Obligacje skarbowe</td><td><a href="https://www.obligacjeskarbowe.pl/" rel="noopener">obligacjeskarbowe.pl</a></td></tr>
+      <tr><td>Gwarancje depozytów, nadzór nad instytucjami</td><td><a href="https://www.bfg.pl/" rel="noopener">BFG</a>, <a href="https://www.knf.gov.pl/" rel="noopener">KNF</a></td></tr>
+      <tr><td>Prawa konsumenta, kredyty konsumenckie</td><td><a href="https://uokik.gov.pl/" rel="noopener">UOKiK</a>, <a href="https://rf.gov.pl/" rel="noopener">Rzecznik Finansowy</a></td></tr>
+      <tr><td>Przepisy (ustawy, Kodeks pracy)</td><td><a href="https://isap.sejm.gov.pl/" rel="noopener">Internetowy System Aktów Prawnych</a></td></tr>
+    </tbody>
+  </table>
+  <p>Gdy oficjalne dane są dostępne tylko w omówieniach (np. świeży komunikat GUS), podajemy też artykuł prasowy, z którego korzystaliśmy.</p>
+
+  <h2>Jak aktualizujemy treści</h2>
+  <ul>
+    <li><strong>Co roku w styczniu</strong> przeglądamy kwoty, które zmieniają się z nowym rokiem: płacę minimalną, limity IKE i IKZE, limity składek, skalę podatkową, inflację i dane o wynagrodzeniach.</li>
+    <li><strong>Gdy zmieniają się przepisy</strong> — aktualizujemy artykuły, których to dotyczy, i oznaczamy stan prawny datą (np. „stan prawny na listopad 2026 r.”).</li>
+    <li>Każdy artykuł ma datę publikacji, a kwoty opisane są z rokiem, którego dotyczą.</li>
+  </ul>
+
+  <h2>Znalazłeś błąd? Zgłoś go</h2>
+  <p>Jeśli zauważysz błędną kwotę, nieaktualny przepis albo niejasne wyjaśnienie, daj znać — poprawimy je i zaktualizujemy datę. Możesz <a href="https://github.com/bartuniadev/madry-portfel/issues" rel="noopener">zgłosić błąd na GitHubie</a> albo napisać na adres podany na stronie <a href="o-nas.html">O nas</a>.</p>
+
+  <h2>Czego nie robimy</h2>
+  <ul>
+    <li>Nie udzielamy indywidualnych porad finansowych, podatkowych ani inwestycyjnych — treści są edukacyjne i ogólne.</li>
+    <li>Nie polecamy konkretnych banków, funduszy ani firm pożyczkowych za pieniądze.</li>
+    <li>Nie obiecujemy szybkiego wzbogacenia się — piszemy o nawykach i decyzjach, które działają przez lata.</li>
+  </ul>
+</main>
+
+
+<footer>
+  <p>&copy; 2026 Mądry Portfel. <a href="polityka-prywatnosci.html">Polityka prywatności</a> · <a href="pytania.html">Najczęstsze pytania</a> · <a href="slownik.html">Słownik</a></p>
+  <p class="ai-note">Treści na tej stronie powstają z pomocą narzędzi AI, na podstawie źródeł podanych przy artykułach. Przepisy i kwoty się zmieniają — przed decyzją sprawdź je u źródła. <a href="jak-powstaja-tresci.html">Jak powstają treści</a></p>
+</footer>
+<script defer src="assets/reveal.js"></script>
+<script defer src="assets/stats.js"></script>
+</body>
+</html>
