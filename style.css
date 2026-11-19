@@ -520,3 +520,6 @@ code { font-size: 0.9em; background: var(--card-sunken); padding: 1px 5px; borde
 .salary-cta .sc-eyebrow { font-size: 0.78rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--accent-dark); }
 .salary-cta strong { font-size: 1.15rem; line-height: 1.35; text-wrap: balance; }
 .salary-cta .sc-go { font-weight: 700; color: var(--accent); }
+
+/* Telefon: bez ozdobnego wykresu */
+@media (max-width: 560px) { .home-main .hero-graphic { display: none; } .salary-cta { margin-top: 20px; } }

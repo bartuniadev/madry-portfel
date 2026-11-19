@@ -58,21 +58,24 @@
   function showNotice() {
     if (get(KEY_NOTICE) === '1') return;
     if (/polityka-prywatnosci\.html$/.test(location.pathname)) return;
+    var narrow = (window.innerWidth || 1000) < 560;
     var bar = document.createElement('div');
     bar.setAttribute('role', 'region');
     bar.setAttribute('aria-label', 'Informacja o prywatności');
     bar.style.cssText = 'position:fixed;left:12px;right:12px;bottom:12px;z-index:50;max-width:720px;margin:0 auto;' +
-      'display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;padding:14px 16px;border-radius:12px;' +
-      'background:#16211c;color:#e9f1ec;font:14px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;' +
+      'display:flex;flex-wrap:' + (narrow ? 'nowrap' : 'wrap') + ';align-items:center;gap:10px 16px;padding:' + (narrow ? '10px 12px' : '14px 16px') + ';border-radius:12px;' +
+      'background:#16211c;color:#e9f1ec;font:' + (narrow ? '13px/1.4' : '14px/1.5') + ' system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;' +
       'box-shadow:0 10px 30px rgba(0,0,0,.25)';
     var text = document.createElement('p');
-    text.style.cssText = 'margin:0;flex:1 1 320px';
-    text.innerHTML = 'Ta strona <strong>nie używa plików cookies</strong>. Odwiedziny liczymy anonimowo, ' +
+    text.style.cssText = 'margin:0;flex:' + (narrow ? '1 1 auto;min-width:0' : '1 1 320px');
+    if (narrow) text.innerHTML = '<strong>Bez plików cookies.</strong> Odwiedziny liczymy anonimowo. <a href="' + policyHref() + '" style="color:#7fe3b0">Więcej</a>';
+    else text.innerHTML = 'Ta strona <strong>nie używa plików cookies</strong>. Odwiedziny liczymy anonimowo, ' +
       'bez profilowania i bez reklam. <a href="' + policyHref() + '" style="color:#7fe3b0">Polityka prywatności</a>';
     var btn = document.createElement('button');
     btn.type = 'button';
-    btn.textContent = 'Rozumiem';
-    btn.style.cssText = 'font:inherit;font-weight:700;padding:9px 18px;border:0;border-radius:8px;' +
+    btn.textContent = narrow ? 'OK' : 'Rozumiem';
+    if (narrow) btn.setAttribute('aria-label', 'Rozumiem — zamknij informację o prywatności');
+    btn.style.cssText = 'font:inherit;font-weight:700;padding:' + (narrow ? '8px 14px;flex:none' : '9px 18px') + ';border:0;border-radius:8px;' +
       'background:#3ad889;color:#08130d;cursor:pointer';
     btn.addEventListener('click', function () {
       set(KEY_NOTICE, '1');
