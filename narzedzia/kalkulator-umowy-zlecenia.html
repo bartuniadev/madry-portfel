@@ -312,8 +312,46 @@
   .checks{display:grid;grid-template-columns:repeat(2,1fr);gap:4px 16px;margin:0 0 6px;}
   .checks .field{margin-bottom:10px;}
   @media (max-width:560px){.checks{grid-template-columns:1fr;}}
+  .tool-faq{margin-top:30px;}
+  .tool-faq h2{font-size:1.25rem;margin:0 0 6px;}
+  .tool-faq details{border-top:1px solid var(--border);padding:12px 2px;}
+  .tool-faq summary{cursor:pointer;font-weight:600;}
+  .tool-faq summary:focus-visible{outline:2px solid var(--green);outline-offset:2px;}
+  .tool-faq p{color:var(--text-2);margin:8px 0 0;max-width:65ch;}
 </style>
 <link rel="alternate" type="application/rss+xml" title="Mądry Portfel — nowe poradniki" href="https://bartuniadev.github.io/madry-portfel/feed.xml">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Ile na rękę z umowy zlecenia 3000 zł brutto?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Gdy zlecenie jest jedyną pracą (ze składką chorobową) — 2106,72 zł. Gdy masz też etat z co najmniej płacą minimalną — 2442 zł. Student do 26 lat dostaje całe 3000 zł."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Jaka jest minimalna stawka godzinowa w 2027 roku?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "32,30 zł brutto za godzinę (w 2026 r. — 31,40 zł). Zleceniodawca musi ją wypłacić niezależnie od tego, jak opisano wynagrodzenie w umowie."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Czy student płaci ZUS od umowy zlecenia?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Nie — student lub uczeń do 26. urodzin nie płaci od zlecenia składek ZUS ani zdrowotnej, a ulga dla młodych zwalnia go z podatku do 85 528 zł przychodu rocznie."
+   }
+  }
+ ]
+}
+</script>
 </head>
 <body>
 <header class="site-header">
@@ -412,6 +450,22 @@
 
     <p class="sum-warning" id="warn" hidden></p>
   </div>
+
+  <section class="tool-faq" aria-labelledby="faqTitle">
+    <h2 id="faqTitle">Najczęstsze pytania</h2>
+    <details>
+      <summary>Ile na rękę z umowy zlecenia 3000 zł brutto?</summary>
+      <p>Gdy zlecenie jest jedyną pracą (ze składką chorobową) — 2106,72 zł. Gdy masz też etat z co najmniej płacą minimalną — 2442 zł. Student do 26 lat dostaje całe 3000 zł.</p>
+    </details>
+    <details>
+      <summary>Jaka jest minimalna stawka godzinowa w 2027 roku?</summary>
+      <p>32,30 zł brutto za godzinę (w 2026 r. — 31,40 zł). Zleceniodawca musi ją wypłacić niezależnie od tego, jak opisano wynagrodzenie w umowie.</p>
+    </details>
+    <details>
+      <summary>Czy student płaci ZUS od umowy zlecenia?</summary>
+      <p>Nie — student lub uczeń do 26. urodzin nie płaci od zlecenia składek ZUS ani zdrowotnej, a ulga dla młodych zwalnia go z podatku do 85 528 zł przychodu rocznie.</p>
+    </details>
+  </section>
 
   <div class="trust">
     <p><strong>Jak to liczymy:</strong> umowa zlecenia z zleceniodawcą, który nie jest Twoim pracodawcą. <strong>Student lub uczeń do 26 lat</strong> — bez składek ZUS i zdrowotnej, a dzięki uldze dla młodych bez podatku (do 85 528 zł przychodu rocznie). <strong>Jedyna praca</strong> — składki społeczne 9,76% + 1,5% (+ 2,45% chorobowa, jeśli ją wybierzesz) i zdrowotna 9%. <strong>Etat u innego pracodawcy</strong> z wynagrodzeniem co najmniej minimalnym — ze zlecenia tylko składka zdrowotna 9%. Koszty uzyskania przychodu 20% (od kwoty po składkach społecznych), zaliczka 12%, pomniejszona o 300 zł, jeśli złożyłeś PIT-2 u tego zleceniodawcy. Przy umowach do 200 zł brutto miesięcznie podatek pobiera się ryczałtem, więc wynik może się nieznacznie różnić. Minimalna stawka godzinowa: 31,40 zł w 2026 r. i 32,30 zł w 2027 r.</p>

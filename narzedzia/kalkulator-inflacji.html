@@ -317,8 +317,46 @@
   .share-row .hint{font-size:0.82rem;color:var(--text-2);overflow-wrap:anywhere;}
   .sum-warning{margin-top:16px;}
   @media (max-width:480px){.split-controls{grid-template-columns:1fr 1fr;} .split-controls .field:first-child{grid-column:1 / -1;}}
+  .tool-faq{margin-top:30px;}
+  .tool-faq h2{font-size:1.25rem;margin:0 0 6px;}
+  .tool-faq details{border-top:1px solid var(--border);padding:12px 2px;}
+  .tool-faq summary{cursor:pointer;font-weight:600;}
+  .tool-faq summary:focus-visible{outline:2px solid var(--green);outline-offset:2px;}
+  .tool-faq p{color:var(--text-2);margin:8px 0 0;max-width:65ch;}
 </style>
 <link rel="alternate" type="application/rss+xml" title="Mądry Portfel — nowe poradniki" href="https://bartuniadev.github.io/madry-portfel/feed.xml">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Ile jest dziś warte 100 zł z 2020 roku?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Żeby w 2025 r. kupić to samo, co w 2020 r. za 100 zł, trzeba było mieć ok. 143,76 zł — ceny wzrosły w tym czasie o 43,8% (dane GUS)."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Jaka była inflacja w 2025 roku?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Średnioroczna inflacja w 2025 r. wyniosła 3,6% — tyle samo co w 2024 r. Najwyższa w ostatnich latach była w 2022 r. (14,4%) i 2023 r. (11,4%)."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Ile straciły pieniądze trzymane w gotówce od 2015 roku?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "100 zł odłożone w 2015 r. bez oprocentowania miało w 2025 r. siłę nabywczą ok. 63,84 zł, bo ceny wzrosły o 56,6%."
+   }
+  }
+ ]
+}
+</script>
 </head>
 <body>
 <header class="site-header">
@@ -394,6 +432,22 @@
     </div>
     <p class="sum-warning" id="warn" hidden></p>
   </div>
+
+  <section class="tool-faq" aria-labelledby="faqTitle">
+    <h2 id="faqTitle">Najczęstsze pytania</h2>
+    <details>
+      <summary>Ile jest dziś warte 100 zł z 2020 roku?</summary>
+      <p>Żeby w 2025 r. kupić to samo, co w 2020 r. za 100 zł, trzeba było mieć ok. 143,76 zł — ceny wzrosły w tym czasie o 43,8% (dane GUS).</p>
+    </details>
+    <details>
+      <summary>Jaka była inflacja w 2025 roku?</summary>
+      <p>Średnioroczna inflacja w 2025 r. wyniosła 3,6% — tyle samo co w 2024 r. Najwyższa w ostatnich latach była w 2022 r. (14,4%) i 2023 r. (11,4%).</p>
+    </details>
+    <details>
+      <summary>Ile straciły pieniądze trzymane w gotówce od 2015 roku?</summary>
+      <p>100 zł odłożone w 2015 r. bez oprocentowania miało w 2025 r. siłę nabywczą ok. 63,84 zł, bo ceny wzrosły o 56,6%.</p>
+    </details>
+  </section>
 
   <div class="trust">
     <p><strong>Jak to liczymy:</strong> średnioroczne wskaźniki cen towarów i usług konsumpcyjnych GUS (inflacja CPI) za lata 2001–2025 — np. 14,4% w 2022 r., 11,4% w 2023 r. i 3,6% w 2024 i 2025 r. Kwotę mnożymy przez wzrost cen w kolejnych latach. Rok 2026 to szacunek na podstawie ostatniego odczytu (październik 2026 r.: 3,5% rok do roku) — pełny wynik GUS poda w styczniu 2027 r. Inflacja to średnia dla koszyka zakupów — Twoje wydatki mogły drożeć szybciej lub wolniej. Źródło: <a href="https://stat.gov.pl/obszary-tematyczne/ceny-handel/wskazniki-cen/wskazniki-cen-towarow-i-uslug-konsumpcyjnych-pot-inflacja-/roczne-wskazniki-cen-towarow-i-uslug-konsumpcyjnych/">GUS — roczne wskaźniki cen</a>.</p>

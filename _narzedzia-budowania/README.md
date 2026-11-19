@@ -21,7 +21,8 @@ python3 /tmp/mp/seo_audit.py               # frazy kluczowe w H1, wstępie i H2
 - `extras.py` — bloki „Udostępnij”, `feed.xml`, `llms.txt`; uruchamia `apply_seo.py` i `fix_related.py`.
 - `seo_map.py` — frazy kluczowe, tytuły i opisy meta dla każdej strony.
 - `make_tool.py` + `tool_*.py` — generatory kalkulatorów w `narzedzia/`.
-- `gen_wyn.py` — strony „X zł brutto ile netto” w `wynagrodzenia/`.
+- `gen_wyn.py` — strony „X zł brutto ile netto” w `wynagrodzenia/`; `gen_wyn_net.py` — strony „X zł netto ile brutto”.
+- `add_tool_faq.py` — sekcje „Najczęstsze pytania” (z danymi FAQPage) w 4 kalkulatorach; uruchom ponownie po przebudowie kalkulatora skryptem `tool_*.py`.
 - `og_template.html` + `og_render.js` — grafiki 1200×630 do udostępniania (Playwright).
 - `karuzele/` — slajdy 1080×1350 do mediów społecznościowych.
 - `tresci/` — treść artykułów (HTML bez nagłówka i stopki).

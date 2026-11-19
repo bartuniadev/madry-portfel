@@ -314,8 +314,54 @@
   .share-row .download-btn{border:0;cursor:pointer;font-family:inherit;}
   .share-row .hint{font-size:0.82rem;color:var(--text-2);overflow-wrap:anywhere;}
   .sum-warning{margin-top:16px;}
+  .tool-faq{margin-top:30px;}
+  .tool-faq h2{font-size:1.25rem;margin:0 0 6px;}
+  .tool-faq details{border-top:1px solid var(--border);padding:12px 2px;}
+  .tool-faq summary{cursor:pointer;font-weight:600;}
+  .tool-faq summary:focus-visible{outline:2px solid var(--green);outline-offset:2px;}
+  .tool-faq p{color:var(--text-2);margin:8px 0 0;max-width:65ch;}
 </style>
 <link rel="alternate" type="application/rss+xml" title="Mądry Portfel — nowe poradniki" href="https://bartuniadev.github.io/madry-portfel/feed.xml">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Ile wynosi mediana wynagrodzeń w Polsce?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Według GUS w maju 2026 r. mediana wynosiła 7550,32 zł brutto, czyli ok. 5477 zł na rękę. Połowa pracujących zarabia mniej, połowa więcej."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Ile procent Polaków zarabia mniej niż średnia krajowa?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Ok. 65%. Przeciętne wynagrodzenie (9178,16 zł w maju 2026 r.) jest wyższe od mediany, bo podnoszą je najwyższe pensje."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Od jakiej pensji jestem w 10% najlepiej zarabiających?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Od 14 239 zł brutto miesięcznie (dane GUS za maj 2026 r.), czyli ok. 10 037 zł na rękę na umowie o pracę."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Ile zarabia 10% najmniej zarabiających?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Co najwyżej 4806 zł brutto — tyle, ile wynosiła płaca minimalna w 2026 r."
+   }
+  }
+ ]
+}
+</script>
 </head>
 <body>
 <header class="site-header">
@@ -387,6 +433,26 @@
     </div>
     <p class="sum-warning" id="warn" hidden></p>
   </div>
+
+  <section class="tool-faq" aria-labelledby="faqTitle">
+    <h2 id="faqTitle">Najczęstsze pytania</h2>
+    <details>
+      <summary>Ile wynosi mediana wynagrodzeń w Polsce?</summary>
+      <p>Według GUS w maju 2026 r. mediana wynosiła 7550,32 zł brutto, czyli ok. 5477 zł na rękę. Połowa pracujących zarabia mniej, połowa więcej.</p>
+    </details>
+    <details>
+      <summary>Ile procent Polaków zarabia mniej niż średnia krajowa?</summary>
+      <p>Ok. 65%. Przeciętne wynagrodzenie (9178,16 zł w maju 2026 r.) jest wyższe od mediany, bo podnoszą je najwyższe pensje.</p>
+    </details>
+    <details>
+      <summary>Od jakiej pensji jestem w 10% najlepiej zarabiających?</summary>
+      <p>Od 14 239 zł brutto miesięcznie (dane GUS za maj 2026 r.), czyli ok. 10 037 zł na rękę na umowie o pracę.</p>
+    </details>
+    <details>
+      <summary>Ile zarabia 10% najmniej zarabiających?</summary>
+      <p>Co najwyżej 4806 zł brutto — tyle, ile wynosiła płaca minimalna w 2026 r.</p>
+    </details>
+  </section>
 
   <div class="trust">
     <p><strong>Jak to liczymy:</strong> dane GUS o rozkładzie wynagrodzeń w gospodarce narodowej w maju 2026 r.: 10% osób zarabiało co najwyżej 4806 zł brutto, połowa — co najwyżej 7550,32 zł (mediana), a 10% najlepiej zarabiających — co najmniej 14 239 zł; przeciętne wynagrodzenie wyniosło 9178,16 zł. Między tymi punktami wynik szacujemy z rozkładu logarytmiczno-normalnego dopasowanego do danych GUS, więc to przybliżenie z dokładnością do kilku punktów procentowych. Kwotę netto przeliczamy na brutto dla umowy o pracę (z PIT-2, bez PPK, osoba powyżej 26 lat). Porównanie dotyczy pensji z jednego miesiąca, bez premii rocznych. Źródło: <a href="https://stat.gov.pl/obszary-tematyczne/rynek-pracy/pracujacy-zatrudnieni-wynagrodzenia-koszty-pracy/">GUS — wynagrodzenia</a>.</p>

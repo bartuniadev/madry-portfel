@@ -320,8 +320,54 @@
   .months-table tfoot td{font-weight:700;}
   .m-short{display:none;}
   @media (max-width:420px){.months-table th,.months-table td{padding:7px 6px;font-size:0.82rem;} .m-long{display:none;} .m-short{display:inline;}}
+  .tool-faq{margin-top:30px;}
+  .tool-faq h2{font-size:1.25rem;margin:0 0 6px;}
+  .tool-faq details{border-top:1px solid var(--border);padding:12px 2px;}
+  .tool-faq summary{cursor:pointer;font-weight:600;}
+  .tool-faq summary:focus-visible{outline:2px solid var(--green);outline-offset:2px;}
+  .tool-faq p{color:var(--text-2);margin:8px 0 0;max-width:65ch;}
 </style>
 <link rel="alternate" type="application/rss+xml" title="Mądry Portfel — nowe poradniki" href="https://bartuniadev.github.io/madry-portfel/feed.xml">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Ile na rękę z 6000 zł brutto w 2027 roku?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Na umowie o pracę ok. 4420,43 zł (z PIT-2, bez PPK, dla osoby powyżej 26 lat). Z PPK zostaje 4289,43 zł, a osobie do 26 lat z ulgą dla młodych — 4711,43 zł."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Ile brutto, żeby mieć 5000 zł na rękę?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Na umowie o pracę ok. 6850,14 zł brutto (z PIT-2, bez PPK). Swój wariant policzysz, przełączając kalkulator na „Netto → brutto”."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Czy w 2027 roku zmienia się sposób liczenia pensji?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Składki, koszty uzyskania przychodu i kwota zmniejszająca podatek zostają bez zmian. Rośnie płaca minimalna — do 4950 zł brutto. Nowa skala PIT (próg 130 000 zł i stawka 24%) czeka na decyzję prezydenta i dotyczyłaby tylko dochodów powyżej 120 000 zł rocznie."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Dlaczego pod koniec roku wypłata może być niższa?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Gdy dochód od początku roku przekroczy 120 000 zł, nadwyżka jest opodatkowana stawką 32%. U osób do 26 lat wypłata spada po przekroczeniu limitu ulgi dla młodych (85 528 zł przychodu). Wypłata rośnie za to po przekroczeniu rocznego limitu składek emerytalnej i rentowej."
+   }
+  }
+ ]
+}
+</script>
 </head>
 <body>
 <header class="site-header">
@@ -440,6 +486,26 @@
       </div>
     </details>
   </div>
+
+  <section class="tool-faq" aria-labelledby="faqTitle">
+    <h2 id="faqTitle">Najczęstsze pytania</h2>
+    <details>
+      <summary>Ile na rękę z 6000 zł brutto w 2027 roku?</summary>
+      <p>Na umowie o pracę ok. 4420,43 zł (z PIT-2, bez PPK, dla osoby powyżej 26 lat). Z PPK zostaje 4289,43 zł, a osobie do 26 lat z ulgą dla młodych — 4711,43 zł.</p>
+    </details>
+    <details>
+      <summary>Ile brutto, żeby mieć 5000 zł na rękę?</summary>
+      <p>Na umowie o pracę ok. 6850,14 zł brutto (z PIT-2, bez PPK). Swój wariant policzysz, przełączając kalkulator na „Netto → brutto”.</p>
+    </details>
+    <details>
+      <summary>Czy w 2027 roku zmienia się sposób liczenia pensji?</summary>
+      <p>Składki, koszty uzyskania przychodu i kwota zmniejszająca podatek zostają bez zmian. Rośnie płaca minimalna — do 4950 zł brutto. Nowa skala PIT (próg 130 000 zł i stawka 24%) czeka na decyzję prezydenta i dotyczyłaby tylko dochodów powyżej 120 000 zł rocznie.</p>
+    </details>
+    <details>
+      <summary>Dlaczego pod koniec roku wypłata może być niższa?</summary>
+      <p>Gdy dochód od początku roku przekroczy 120 000 zł, nadwyżka jest opodatkowana stawką 32%. U osób do 26 lat wypłata spada po przekroczeniu limitu ulgi dla młodych (85 528 zł przychodu). Wypłata rośnie za to po przekroczeniu rocznego limitu składek emerytalnej i rentowej.</p>
+    </details>
+  </section>
 
   <div class="trust">
     <p><strong>Jak to liczymy:</strong> umowa o pracę u jednego pracodawcy, ta sama pensja przez cały rok. Składki społeczne pracownika 13,71% (emerytalna 9,76%, rentowa 1,5%, chorobowa 2,45%), składka zdrowotna 9% podstawy, koszty uzyskania przychodu 250 zł (300 zł przy dojazdach), podatek 12% (32% od dochodu ponad 120 000 zł narastająco w roku) pomniejszony o 300 zł miesięcznie po złożeniu PIT-2. Przy PPK doliczamy do podstawy opodatkowania wpłatę pracodawcy (1,5%). Ulga dla młodych obejmuje przychód do 85 528 zł rocznie. Składki emerytalna i rentowa przestają być pobierane po przekroczeniu rocznego limitu: 282 600 zł w 2026 r. i ok. 300 990 zł w 2027 r. (30-krotność prognozowanego przeciętnego wynagrodzenia z projektu budżetu). Płaca minimalna: 4806 zł w 2026 r., 4950 zł w 2027 r. Rzeczywista wypłata może różnić się o kilka złotych przez zaokrąglenia, dodatki, premie i benefity.</p>

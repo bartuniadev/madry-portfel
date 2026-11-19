@@ -332,4 +332,9 @@ ARTICLES = [
   cat='kariera', icon='wave', hero='Ilustracja krzywej — rozkład wynagrodzeń w Polsce', body='mediana.html',
   related=['negocjacje-podwyzka-zmiana-pracy','ile-na-reke-tabela-brutto-netto','benefity-pozaplacowe-ile-sa-warte'],
   sources=[('https://stat.gov.pl/obszary-tematyczne/rynek-pracy/pracujacy-zatrudnieni-wynagrodzenia-koszty-pracy/','Główny Urząd Statystyczny — wynagrodzenia','rozkład wynagrodzeń w gospodarce narodowej: mediana, decyle i przeciętne wynagrodzenie'),('https://forsal.pl/praca/wynagrodzenia/artykuly/11340500,gus-mediana-wynagrodzen-maj-2026-sa-nowe-dane.html','Forsal: GUS — mediana wynagrodzeń w maju 2026','omówienie danych: decyl pierwszy i dziewiąty, mediana w małych firmach'),('https://www.portalsamorzadowy.pl/finanse/gus-mediana-wynagrodzen-w-pazdzierniku-2024-r-to-6856-75-zl-o-18-proc-mniej-od-sredniej,605140.html','Portal Samorządowy: mediana w październiku 2024','dane porównawcze za październik 2024 r.')]),
+ dict(slug='postanowienia-finansowe-na-2027', title='Postanowienia finansowe na 2027 — 7 celów, które da się dowieźć',
+  desc='Postanowienia finansowe na 2027 rok: poduszka, spłata długów, budżet, podwyżka, IKE i IKZE, stałe opłaty i pierwsze inwestycje — z pierwszym krokiem i kalkulatorem do każdego celu.',
+  cat='zacznij-tutaj', icon='target', hero='Ilustracja tarczy celu — postanowienia finansowe na nowy rok', body='postanowienia.html',
+  related=['zmiany-w-finansach-2027','kolejnosc-finansowych-priorytetow','automatyzacja-oszczedzania'],
+  sources=[('https://www.gov.pl/web/rodzina','Ministerstwo Rodziny, Pracy i Polityki Społecznej','limity wpłat na IKE i IKZE w 2027 r.'),B.SRC['podatki'],B.SRC['rf']]),
 ]
