@@ -532,3 +532,8 @@ details.toc ol { margin: 0 0 12px; padding-left: 22px; display: grid; gap: 6px; 
 details.toc a { text-decoration: none; }
 details.toc a:hover { text-decoration: underline; }
 h2[id] { scroll-margin-top: 16px; }
+
+/* Podpis autora pod datą artykułu */
+.byline { margin: -6px 0 14px; font-size: 0.88rem; color: var(--muted); }
+.byline a { color: inherit; text-decoration: underline; text-decoration-color: var(--border, #e4e0d6); text-underline-offset: 3px; }
+.byline a:hover { color: var(--accent); }

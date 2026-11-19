@@ -23,6 +23,8 @@ python3 /tmp/mp/seo_audit.py               # frazy kluczowe w H1, wstępie i H2
 - `make_tool.py` + `tool_*.py` — generatory kalkulatorów w `narzedzia/`.
 - `gen_wyn.py` — strony „X zł brutto ile netto” w `wynagrodzenia/`; `gen_wyn_net.py` — strony „X zł netto ile brutto”.
 - `add_tool_faq.py` — sekcje „Najczęstsze pytania” (z danymi FAQPage) w 4 kalkulatorach; uruchom ponownie po przebudowie kalkulatora skryptem `tool_*.py`.
+- `add_author.py` — strona „O autorze”, podpis pod artykułami i autor (Person) w danych strukturalnych; działa, gdy obok skryptu leży `author.json` (`{"name": "…", "bio": ["…"], "role": "…"}`), bez niego nic nie robi.
+- `add_toc.py`, `enrich_ld.py` — spis treści w artykułach i wspólne dane wydawcy; uruchamiane przez `extras.py`.
 - `og_template.html` + `og_render.js` — grafiki 1200×630 do udostępniania (Playwright).
 - `karuzele/` — slajdy 1080×1350 do mediów społecznościowych.
 - `tresci/` — treść artykułów (HTML bez nagłówka i stopki).
