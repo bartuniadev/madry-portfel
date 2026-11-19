@@ -129,3 +129,4 @@ print('og images wired:', n)
 import subprocess as _sp, sys as _sys
 _sp.run([_sys.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)),'apply_seo.py')], check=True)
 _sp.run([_sys.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)),'fix_related.py')], check=True)
+_sp.run([_sys.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)),'add_toc.py')], check=True)

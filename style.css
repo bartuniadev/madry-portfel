@@ -523,3 +523,12 @@ code { font-size: 0.9em; background: var(--card-sunken); padding: 1px 5px; borde
 
 /* Telefon: bez ozdobnego wykresu */
 @media (max-width: 560px) { .home-main .hero-graphic { display: none; } .salary-cta { margin-top: 20px; } }
+
+/* Spis treści w artykułach */
+details.toc { margin: 18px 0 8px; border: 1px solid var(--border, #d9e3dc); border-radius: 12px; background: var(--card, #fff); padding: 4px 16px; }
+details.toc summary { cursor: pointer; font-weight: 700; padding: 10px 0; color: var(--accent-dark); }
+details.toc summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+details.toc ol { margin: 0 0 12px; padding-left: 22px; display: grid; gap: 6px; }
+details.toc a { text-decoration: none; }
+details.toc a:hover { text-decoration: underline; }
+h2[id] { scroll-margin-top: 16px; }
