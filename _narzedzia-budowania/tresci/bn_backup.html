@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalkulator brutto netto 2026 — ile na rękę z umowy o pracę</title>
+<meta name="description" content="Kalkulator brutto netto 2026: ile na rękę z umowy o pracę, z ulgą dla młodych, PIT-2 i PPK. Rozbicie na składki i koszt pracodawcy. Bez rejestracji.">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="canonical" href="https://bartuniadev.github.io/madry-portfel/narzedzia/kalkulator-brutto-netto.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mądry Portfel">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:title" content="Kalkulator brutto netto 2026 — ile na rękę z umowy o pracę">
+<meta property="og:description" content="Kalkulator brutto netto 2026: ile na rękę z umowy o pracę, z ulgą dla młodych, PIT-2 i PPK. Rozbicie na składki i koszt pracodawcy. Bez rejestracji.">
+<meta property="og:url" content="https://bartuniadev.github.io/madry-portfel/narzedzia/kalkulator-brutto-netto.html">
+<meta property="og:image" content="https://bartuniadev.github.io/madry-portfel/assets/og/kalkulator-brutto-netto.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kalkulator brutto netto 2026 — ile na rękę z umowy o pracę">
+<meta name="twitter:image" content="https://bartuniadev.github.io/madry-portfel/assets/og/kalkulator-brutto-netto.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Kalkulator wynagrodzenia brutto–netto",
+  "url": "https://bartuniadev.github.io/madry-portfel/narzedzia/kalkulator-brutto-netto.html",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any (przeglądarka)",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "PLN"
+  },
+  "isAccessibleForFree": true,
+  "publisher": {
+    "@type": "Organization",
+    "name": "Mądry Portfel",
+    "url": "https://bartuniadev.github.io/madry-portfel/"
+  },
+  "description": "Kalkulator brutto netto 2026: ile na rękę z umowy o pracę, z ulgą dla młodych, PIT-2 i PPK. Rozbicie na składki i koszt pracodawcy. Bez rejestracji.",
+  "keywords": "kalkulator brutto netto 2026, ile na rękę 2026, wynagrodzenie netto, ulga dla młodych kalkulator"
+}
+</script>
+<style>
+  :root{
+    --bg:#0e130f;
+    --surface:#161d19;
+    --surface-2:#1c241f;
+    --border:#2b362f;
+    --text:#eef2ef;
+    --text-2:#93a49a;
+    --green:#3ad889;
+    --gold:#f2c14e;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--green);}
+  a:focus-visible, button:focus-visible, input:focus-visible{outline:2px solid var(--green); outline-offset:2px;}
+
+  header.site-header{border-bottom:1px solid var(--border);}
+  .header-inner{
+    max-width:760px;
+    margin:0 auto;
+    padding:18px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  .logo{
+    font-weight:700;
+    font-size:1.15rem;
+    letter-spacing:-0.01em;
+    color:var(--text);
+    text-decoration:none;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .logo svg{width:20px;height:20px;color:var(--green);flex-shrink:0;}
+  nav.top a{
+    color:var(--text-2);
+    text-decoration:none;
+    margin-left:18px;
+    font-size:0.92rem;
+  }
+  nav.top a:hover, nav.top a[aria-current]{color:var(--green);}
+
+  main{max-width:760px;margin:0 auto;padding:32px 20px 60px;}
+
+  .breadcrumb-dark{
+    display:block;
+    font-size:0.8rem;
+    color:var(--text-2);
+    margin:22px 0 14px;
+  }
+  .breadcrumb-dark a{color:var(--text-2);text-decoration:none;}
+  .breadcrumb-dark a:hover{color:var(--green);}
+  .breadcrumb-dark span[aria-current]{color:var(--text);}
+
+  .pill{
+    display:inline-flex;
+    align-items:center;
+    font-family:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+    font-size:12px;
+    letter-spacing:.04em;
+    color:var(--green);
+    border:1px solid var(--green);
+    padding:4px 11px;
+    border-radius:999px;
+  }
+  h1{
+    font-size:clamp(1.7rem,5vw,2.15rem);
+    line-height:1.2;
+    margin:14px 0 0;
+    letter-spacing:-0.01em;
+  }
+  .lead{
+    max-width:60ch;
+    color:var(--text-2);
+    font-size:1.02rem;
+    margin-top:12px;
+  }
+
+  .calc-card{
+    margin-top:28px;
+    background:var(--surface);
+    border:2px solid var(--green);
+    border-radius:12px;
+    box-shadow:6px 6px 0 var(--gold);
+    padding:26px 24px;
+  }
+
+  .field{display:flex;flex-direction:column;gap:6px;margin-bottom:20px;}
+  .field label{font-size:0.88rem;color:var(--text-2);font-weight:600;}
+  .field input{
+    background:var(--bg);
+    border:1px solid var(--border);
+    color:var(--text);
+    border-radius:8px;
+    padding:12px 14px;
+    font-size:1.4rem;
+    font-family:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+    font-variant-numeric:tabular-nums;
+  }
+  .field input#income{font-weight:700;}
+  .field input::placeholder{color:#5c6a62;}
+
+  .split-controls{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+    margin-bottom:14px;
+  }
+  .split-controls .field{margin-bottom:0;}
+  .split-controls input{font-size:1.05rem;padding:9px 10px;}
+
+  .presets{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px;}
+  .preset-btn{
+    font-family:inherit;
+    font-size:0.82rem;
+    color:var(--text-2);
+    background:var(--surface-2);
+    border:1px solid var(--border);
+    border-radius:999px;
+    padding:7px 13px;
+    cursor:pointer;
+  }
+  .preset-btn:hover{color:var(--text);border-color:var(--green);}
+
+  .sum-warning{
+    font-size:0.85rem;
+    color:var(--gold);
+    background:rgba(242,193,78,0.1);
+    border:1px solid rgba(242,193,78,0.4);
+    border-radius:7px;
+    padding:8px 12px;
+    margin:6px 0 18px;
+  }
+
+  .bar{
+    display:flex;
+    height:14px;
+    border-radius:999px;
+    overflow:hidden;
+    background:var(--bg);
+    border:1px solid var(--border);
+    margin-bottom:24px;
+  }
+  .bar .seg{height:100%;transition:width .2s ease;}
+  .bar .seg.needs{background:var(--green);}
+  .bar .seg.wants{background:var(--border);}
+  .bar .seg.savings{background:var(--gold);}
+
+  .results-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+  }
+  .result-card{
+    background:var(--bg);
+    border:1px solid var(--border);
+    border-radius:9px;
+    padding:14px;
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+  }
+  .result-card .label{font-size:0.8rem;color:var(--text-2);}
+  .result-card .amount{
+    font-family:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+    font-weight:700;
+    font-size:1.15rem;
+    font-variant-numeric:tabular-nums;
+  }
+  .result-card .pct{font-size:0.78rem;color:var(--text-2);font-variant-numeric:tabular-nums;}
+  .result-card.needs{border-color:var(--green);}
+  .result-card.needs .amount{color:var(--green);}
+  .result-card.savings{border-color:var(--gold);}
+  .result-card.savings .amount{color:var(--gold);}
+
+  @media (max-width:480px){
+    .results-grid{grid-template-columns:1fr;}
+    .split-controls{grid-template-columns:1fr;}
+  }
+
+  .trust{
+    margin-top:22px;
+    padding-top:22px;
+    border-top:1px dashed var(--border);
+  }
+  .trust p{color:var(--text-2);font-size:0.92rem;max-width:60ch;margin:0 0 14px;}
+  .download-btn{
+    display:inline-block;
+    font-weight:700;
+    font-size:0.95rem;
+    color:#08130d;
+    background:var(--green);
+    padding:12px 20px;
+    border-radius:9px;
+    text-decoration:none;
+  }
+  .download-btn:hover{background:#4fe49a;}
+  .microcopy{font-size:0.8rem !important;color:#93a49a !important;margin-top:12px !important;}
+
+  .more-link{margin-top:26px;font-size:0.95rem;}
+
+  footer{
+    border-top:1px solid var(--border);
+    margin-top:20px;
+    padding:24px 20px;
+    text-align:center;
+    color:var(--text-2);
+    font-size:0.85rem;
+  }
+  footer a{color:var(--text-2);}
+  footer .ai-note{opacity:0.75;}
+
+  @media (prefers-reduced-motion: reduce){
+    *{transition-duration:0.01ms !important;}
+  }
+
+  .split-controls.two{grid-template-columns:repeat(2,1fr);gap:14px 16px;margin-bottom:16px;}
+  .field.check{justify-content:center;}
+  .field.check label{display:flex;align-items:center;gap:9px;color:var(--text);font-weight:500;cursor:pointer;}
+  .field.check input{width:18px;height:18px;accent-color:var(--green);}
+  .field .hint{font-size:0.78rem;color:var(--text-2);}
+  .growth-chart{width:100%;height:auto;display:block;margin:18px 0 6px;font-family:system-ui,sans-serif;}
+  .legend{display:flex;gap:18px;font-size:0.82rem;color:var(--text-2);margin-bottom:20px;}
+  .legend span{display:inline-flex;align-items:center;gap:7px;}
+  .legend i{width:11px;height:11px;border-radius:3px;display:inline-block;}
+  .sw-dep{background:var(--green);} .sw-gain{background:var(--gold);}
+  @media (max-width:480px){.split-controls.two{grid-template-columns:1fr;}}
+
+  .checks{display:grid;grid-template-columns:repeat(2,1fr);gap:4px 16px;margin:14px 0 6px;}
+  .checks .field{margin-bottom:10px;}
+  .net-box{display:flex;flex-direction:column;gap:2px;margin:10px 0 16px;padding:16px 18px;background:var(--bg);border:1px solid var(--green);border-radius:10px;}
+  .net-box .label{font-size:0.85rem;color:var(--text-2);}
+  .net-box .pct{font-size:0.8rem;color:var(--text-2);}
+  .net-amount{font-family:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;font-weight:700;font-size:clamp(1.7rem,7vw,2.3rem);color:var(--green);font-variant-numeric:tabular-nums;}
+  .bar .seg.zus{background:#6f8f80;} .bar .seg.health{background:#4a6a8a;} .bar .seg.ppk{background:#b08ad8;}
+  .breakdown{width:100%;border-collapse:collapse;margin:0 0 20px;font-size:0.92rem;}
+  .breakdown td{padding:9px 4px;border-bottom:1px solid var(--border);}
+  .breakdown td:last-child{text-align:right;white-space:nowrap;font-family:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;font-variant-numeric:tabular-nums;}
+  .breakdown tr.total td{border-bottom:0;font-weight:700;color:var(--green);}
+  .dot{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:9px;}
+  .dot.zus{background:#6f8f80;} .dot.health{background:#4a6a8a;} .dot.savings{background:var(--gold);} .dot.ppk{background:#b08ad8;} .dot.needs{background:var(--green);}
+  .sum-warning{margin:18px 0 0;}
+  [hidden]{display:none !important;}
+  @media (max-width:560px){.checks{grid-template-columns:1fr;}}
+</style>
+<link rel="alternate" type="application/rss+xml" title="Mądry Portfel — nowe poradniki" href="https://bartuniadev.github.io/madry-portfel/feed.xml">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../index.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="7.5 13.5 10.5 10.5 13 12.5 16.5 8.5"/><polyline points="14 8.5 16.5 8.5 16.5 11"/></svg>
+      Mądry Portfel
+    </a>
+    <nav class="top">
+      <a href="index.html" aria-current="page">Narzędzia</a>
+      <a href="../index.html">Artykuły</a>
+      <a href="../o-nas.html">O nas</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <nav class="breadcrumb-dark" aria-label="Okruszki"><a href="../index.html">Mądry Portfel</a> <span aria-hidden="true">/</span> <a href="index.html">Narzędzia</a> <span aria-hidden="true">/</span> <span aria-current="page">Kalkulator brutto–netto</span></nav>
+  <span class="pill">0 kont · 0 maila · 0 ciasteczek</span>
+  <h1>Kalkulator wynagrodzenia brutto–netto</h1>
+  <p class="lead">Wpisz kwotę brutto z oferty pracy i zobacz, ile zostaje „na rękę" na umowie o pracę — z ulgą dla młodych, PPK i rozbiciem na składki. Zasady na 2026 rok, wszystko liczy się w Twojej przeglądarce.</p>
+
+  <div class="calc-card">
+    <div class="field">
+      <label for="gross">Wynagrodzenie brutto miesięcznie (zł)</label>
+      <input type="number" id="gross" inputmode="decimal" value="6000" min="0" step="100">
+    </div>
+    <div class="presets">
+      <button type="button" class="preset-btn" data-preset="4806">Minimalne 2026: 4806 zł</button>
+      <button type="button" class="preset-btn" data-preset="4950">Minimalne 2027: 4950 zł</button>
+      <button type="button" class="preset-btn" data-preset="6000">6000 zł</button>
+      <button type="button" class="preset-btn" data-preset="8000">8000 zł</button>
+      <button type="button" class="preset-btn" data-preset="12000">12 000 zł</button>
+    </div>
+
+    <div class="checks">
+      <div class="field check">
+        <label><input type="checkbox" id="young"> Nie mam jeszcze 26 lat (ulga dla młodych, PIT-0)</label>
+      </div>
+      <div class="field check">
+        <label><input type="checkbox" id="pit2" checked> Złożyłem pracodawcy PIT-2 (kwota zmniejszająca 300 zł)</label>
+      </div>
+      <div class="field check">
+        <label><input type="checkbox" id="ppk" checked> Jestem w PPK (wpłata 2%)</label>
+      </div>
+      <div class="field check">
+        <label><input type="checkbox" id="commute"> Dojeżdżam do pracy z innej miejscowości (koszty 300 zł)</label>
+      </div>
+    </div>
+
+    <div class="net-box">
+      <span class="label">Na rękę miesięcznie</span>
+      <span class="net-amount" id="net">0 zł</span>
+      <span class="pct" id="netPct"></span>
+    </div>
+
+    <div class="bar" aria-hidden="true">
+      <div class="seg needs" id="bNet" style="width:74%"></div>
+      <div class="seg zus" id="bZus" style="width:14%"></div>
+      <div class="seg health" id="bHealth" style="width:8%"></div>
+      <div class="seg savings" id="bTax" style="width:4%"></div>
+      <div class="seg ppk" id="bPpk" style="width:0%"></div>
+    </div>
+
+    <table class="breakdown">
+      <tbody>
+        <tr><td><i class="dot zus"></i>Składki społeczne (emerytalna, rentowa, chorobowa)</td><td id="rZus">0 zł</td></tr>
+        <tr><td><i class="dot health"></i>Składka zdrowotna</td><td id="rHealth">0 zł</td></tr>
+        <tr><td><i class="dot savings"></i>Zaliczka na podatek dochodowy</td><td id="rTax">0 zł</td></tr>
+        <tr id="rowPpk"><td><i class="dot ppk"></i>Twoja wpłata do PPK (trafia na Twój rachunek)</td><td id="rPpk">0 zł</td></tr>
+        <tr class="total"><td><i class="dot needs"></i>Wypłata netto</td><td id="rNet">0 zł</td></tr>
+      </tbody>
+    </table>
+
+    <div class="results-grid">
+      <div class="result-card">
+        <span class="label">Netto rocznie</span>
+        <span class="amount" id="netYear">0 zł</span>
+        <span class="pct">12 × wypłata miesięczna</span>
+      </div>
+      <div class="result-card savings" id="cardPpk">
+        <span class="label">Dopłata pracodawcy do PPK</span>
+        <span class="amount" id="ppkEmp">0 zł</span>
+        <span class="pct">miesięcznie, poza wypłatą</span>
+      </div>
+      <div class="result-card">
+        <span class="label">Koszt pracodawcy (ok.)</span>
+        <span class="amount" id="empCost">0 zł</span>
+        <span class="pct">tyle firma płaci łącznie</span>
+      </div>
+    </div>
+
+    <p class="sum-warning" id="warn" hidden></p>
+  </div>
+
+  <div class="trust">
+    <p><strong>Jak to liczymy:</strong> umowa o pracę, zasady na 2026 rok. Składki społeczne pracownika 13,71% (emerytalna 9,76%, rentowa 1,5%, chorobowa 2,45%), składka zdrowotna 9% podstawy, koszty uzyskania przychodu 250 zł (300 zł przy dojazdach), podatek 12% pomniejszony o 300 zł miesięcznie po złożeniu PIT-2. Przy PPK doliczamy do podstawy opodatkowania wpłatę pracodawcy (1,5%). Wynik dotyczy typowego miesiąca w pierwszym progu podatkowym — rzeczywista wypłata może różnić się o kilka złotych przez zaokrąglenia, dodatki, premie i benefity.</p>
+    <a class="download-btn" href="kalkulator-brutto-netto.html" download="kalkulator-brutto-netto-madry-portfel.html">Pobierz i używaj offline (HTML)</a>
+    <p class="microcopy">To zwykła strona HTML bez makr i bez ciasteczek. <a href="https://github.com/bartuniadev/madry-portfel/blob/master/narzedzia/kalkulator-brutto-netto.html">Zobacz kod źródłowy na GitHub</a>. Kalkulator ma charakter poglądowy i nie zastępuje wyliczenia działu kadr.</p>
+  </div>
+
+  <p class="more-link"><a href="../artykuly/brutto-netto-rodzaje-umow.html">Brutto vs netto i rodzaje umów — jak czytać ofertę pracy →</a><br><a href="../artykuly/zwrot-podatku-pit-dla-mlodych.html">Zwrot podatku i pierwszy PIT →</a><br><a href="../artykuly/ppk-pracownicze-plany-kapitalowe.html">PPK — czy warto zostać w programie →</a></p>
+</main>
+
+<footer>
+  <p>&copy; 2026 Mądry Portfel. <a href="../polityka-prywatnosci.html">Polityka prywatności</a></p>
+  <p class="ai-note">Treści na tej stronie powstają z pomocą narzędzi AI, na podstawie źródeł podanych przy artykułach. Przepisy i kwoty się zmieniają — przed decyzją sprawdź je u źródła.</p>
+</footer>
+
+<script>
+  function fmt(n){
+    return new Intl.NumberFormat('pl-PL',{minimumFractionDigits:2,maximumFractionDigits:2,useGrouping:'always'}).format(n) + ' zł';
+  }
+  function r2(x){ return Math.round((x + Number.EPSILON) * 100) / 100; }
+  function $(id){ return document.getElementById(id); }
+
+  function calc(gross, o){
+    var em = r2(gross * 0.0976), re = r2(gross * 0.015), ch = r2(gross * 0.0245);
+    var zus = r2(em + re + ch);
+    var health = r2((gross - zus) * 0.09);
+    var kup = o.commute ? 300 : 250;
+    var ppkOwn = o.ppk ? r2(gross * 0.02) : 0;
+    var ppkEmp = o.ppk ? r2(gross * 0.015) : 0;
+    var tax = 0;
+    if (!o.young){
+      var base = Math.max(0, Math.round(gross - zus - kup + ppkEmp));
+      tax = base * 0.12 - (o.pit2 ? 300 : 0);
+      tax = Math.max(0, Math.round(tax));
+    }
+    var net = r2(gross - zus - health - tax - ppkOwn);
+    return {zus: zus, health: health, tax: tax, ppkOwn: ppkOwn, ppkEmp: ppkEmp, net: Math.max(0, net),
+            taxBaseYear: Math.max(0, gross - zus - kup + ppkEmp) * 12,
+            empCost: r2(gross * 1.2048 + ppkEmp)};
+  }
+
+  function recalc(){
+    var gross = parseFloat($('gross').value); if (!isFinite(gross) || gross < 0) gross = 0;
+    var o = {young: $('young').checked, pit2: $('pit2').checked, ppk: $('ppk').checked, commute: $('commute').checked};
+    $('pit2').disabled = o.young;
+    var c = calc(gross, o);
+    $('net').textContent = fmt(c.net);
+    $('netPct').textContent = gross > 0 ? Math.round(c.net / gross * 100) + '% kwoty brutto' : '';
+    $('rZus').textContent = '− ' + fmt(c.zus);
+    $('rHealth').textContent = '− ' + fmt(c.health);
+    $('rTax').textContent = o.young ? '0,00 zł (ulga dla młodych)' : '− ' + fmt(c.tax);
+    $('rPpk').textContent = '− ' + fmt(c.ppkOwn);
+    $('rowPpk').hidden = !o.ppk; $('cardPpk').hidden = !o.ppk;
+    $('rNet').textContent = fmt(c.net);
+    $('netYear').textContent = fmt(c.net * 12);
+    $('ppkEmp').textContent = fmt(c.ppkEmp);
+    $('empCost').textContent = fmt(c.empCost);
+    var g = gross || 1;
+    $('bNet').style.width = (c.net / g * 100) + '%';
+    $('bZus').style.width = (c.zus / g * 100) + '%';
+    $('bHealth').style.width = (c.health / g * 100) + '%';
+    $('bTax').style.width = (c.tax / g * 100) + '%';
+    $('bPpk').style.width = (c.ppkOwn / g * 100) + '%';
+
+    var w = [];
+    if (o.young && gross * 12 > 85528) w.push('Przy tej pensji roczny przychód przekroczy limit ulgi dla młodych (85 528 zł) — od miesiąca przekroczenia pracodawca zacznie pobierać zaliczki na podatek, więc wypłaty pod koniec roku będą niższe.');
+    if (!o.young && c.taxBaseYear > 120000) w.push('Roczny dochód przekroczy próg 120 000 zł — w ostatnich miesiącach roku nadwyżka będzie opodatkowana stawką 32%, więc wypłaty będą wtedy niższe niż pokazana.');
+    if (gross > 0 && gross < 4806) w.push('Kwota jest niższa od minimalnego wynagrodzenia za pełny etat w 2026 r. (4806 zł brutto) — taki wynik ma sens tylko przy niepełnym etacie.');
+    if (gross >= 23000) w.push('Przy bardzo wysokich zarobkach składki emerytalna i rentowa przestają być pobierane po przekroczeniu rocznego limitu podstawy — kalkulator tego nie uwzględnia.');
+    $('warn').hidden = w.length === 0; $('warn').textContent = w.join(' ');
+  }
+
+  ['gross','young','pit2','ppk','commute'].forEach(function(id){
+    $(id).addEventListener('input', recalc); $(id).addEventListener('change', recalc);
+  });
+  document.querySelectorAll('.preset-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){ $('gross').value = btn.getAttribute('data-preset'); recalc(); });
+  });
+  recalc();
+</script>
+<script defer src="../assets/stats.js"></script>
+</body>
+</html>

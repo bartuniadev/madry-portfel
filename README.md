@@ -5,7 +5,8 @@ Statyczna strona (czysty HTML/CSS, zero build-toola) gotowa do darmowego hosting
 ## Struktura
 - `index.html` — strona główna: wyszukiwarka poradników, odnośniki do kategorii i lista artykułów w siedmiu kategoriach
 - `artykuly/` — 70 wpisów; każdy ma sekcję „Źródła i przydatne strony" z linkami do stron urzędowych
-- `narzedzia/` — 5 kalkulatorów działających w przeglądarce (bez zależności, do pobrania i użycia offline): brutto–netto 2026/2027 (z wypłatą w każdym miesiącu), budżet 50/30/20, procent składany, spłata długów, OKI (OKI vs zwykły rachunek vs IKE)
+- `narzedzia/` — 12 kalkulatorów działających w przeglądarce (bez zależności, do pobrania i użycia offline): czy dobrze zarabiam (rozkład płac GUS), brutto–netto 2026/2027 (z wypłatą w każdym miesiącu), umowa zlecenia, inflacja (CPI GUS od 2000 r.), lokata, kredyt (raty, RRSO, nadpłata), OKI, poduszka finansowa, podział kosztów dla par, budżet 50/30/20, procent składany, spłata długów
+- `wynagrodzenia/` — strony „X zł brutto ile netto” dla 11 popularnych kwot (5000–15 000 zł): etat, zlecenie, koszt pracodawcy, pozycja na tle płac GUS, budżet, FAQ
 - `slownik.html` — słownik 77 pojęć finansowych z odesłaniami do artykułów i kalkulatorów
 - `pytania.html` — 34 najczęstsze pytania z krótkimi odpowiedziami (dane strukturalne FAQ)
 - `pliki/budzet-domowy-madry-portfel.xlsx` — darmowy arkusz budżetu domowego (miesiąc 50/30/20, rok, cele) do pobrania bez maila; generowany skryptem z formułami.
@@ -41,6 +42,8 @@ Część treści zawiera kwoty obowiązujące w konkretnym roku (stan: listopad 
 | Roczny limit podstawy składek emerytalnej i rentowej | 282 600 zł | ok. 300 990 zł (z projektu budżetu — potwierdź w styczniu) | kalkulator brutto–netto (`YEARS.cap`) |
 | Podatek od aktywów OKI / kwota zwolniona | — | 0,85% / 100 000 zł (w tym 25 000 zł oszczędności) | kalkulator OKI, `artykuly/osobiste-konto-inwestycyjne-oki.html` |
 | Skala PIT | 12% do 120 000 zł, 32% powyżej | czeka na decyzję prezydenta (12% / 24% / 32%, progi 130 i 150 tys. zł) | kalkulator brutto–netto (pole „Nowa skala”), `artykuly/zmiany-w-finansach-2027.html`, `artykuly/ile-na-reke-tabela-brutto-netto.html` |
+| Rozkład płac GUS (mediana, decyle) | — | maj 2026: D1 4806 zł, mediana 7550,32 zł, D9 14 239 zł | `narzedzia/czy-dobrze-zarabiam.html` (MED, D1, D9), `artykuly/mediana-wynagrodzen-ile-zarabiaja-polacy.html`, strony w `wynagrodzenia/` |
+| Inflacja średnioroczna (CPI GUS) | 2025: 3,6% | 2026: szacunek 3,5% — w styczniu 2027 wpisz wynik GUS | `narzedzia/kalkulator-inflacji.html` (obiekt `CPI`) |
 | Limit ulgi dla młodych, kwota wolna | 85 528 zł / 30 000 zł | bez zmian | `artykuly/zwrot-podatku-pit-dla-mlodych.html`, kalkulator brutto–netto |
 | Składki i koszty uzyskania przychodu | 13,71% / 9% / 250 zł | bez zmian | kalkulator brutto–netto |
 | Opłaty za przedterminowy wykup obligacji | 0,50–3 zł | sprawdź | `artykuly/obligacje-skarbowe-dla-poczatkujacych.html` |
