@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kalkulator brutto netto 2027 i 2026 — ile na rękę</title>
-<meta name="description" content="Kalkulator brutto netto 2027 i 2026: ile na rękę z umowy o pracę, z ulgą dla młodych, PIT-2 i PPK. Wypłata w każdym miesiącu, także po progu 120 tys. zł.">
+<meta name="description" content="Kalkulator brutto netto 2027 i 2026 w obie strony: ile na rękę z umowy o pracę i ile brutto, żeby dostać daną kwotę netto. Z ulgą dla młodych i PPK.">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="canonical" href="https://bartuniadev.github.io/madry-portfel/narzedzia/kalkulator-brutto-netto.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Mądry Portfel">
 <meta property="og:locale" content="pl_PL">
 <meta property="og:title" content="Kalkulator brutto netto 2027 i 2026 — ile na rękę">
-<meta property="og:description" content="Kalkulator brutto netto 2027 i 2026: ile na rękę z umowy o pracę, z ulgą dla młodych, PIT-2 i PPK. Wypłata w każdym miesiącu, także po progu 120 tys. zł.">
+<meta property="og:description" content="Kalkulator brutto netto 2027 i 2026 w obie strony: ile na rękę z umowy o pracę i ile brutto, żeby dostać daną kwotę netto. Z ulgą dla młodych i PPK.">
 <meta property="og:url" content="https://bartuniadev.github.io/madry-portfel/narzedzia/kalkulator-brutto-netto.html">
 <meta property="og:image" content="https://bartuniadev.github.io/madry-portfel/assets/og/kalkulator-brutto-netto.jpg">
 <meta property="og:image:width" content="1200">
@@ -38,8 +38,8 @@
     "name": "Mądry Portfel",
     "url": "https://bartuniadev.github.io/madry-portfel/"
   },
-  "description": "Kalkulator brutto netto 2027 i 2026: ile na rękę z umowy o pracę, z ulgą dla młodych, PIT-2 i PPK. Wypłata w każdym miesiącu, także po progu 120 tys. zł.",
-  "keywords": "kalkulator brutto netto 2027, kalkulator wynagrodzeń 2027, ile na rękę 2027, kalkulator brutto netto 2026, ulga dla młodych kalkulator"
+  "description": "Kalkulator brutto netto 2027 i 2026 w obie strony: ile na rękę z umowy o pracę i ile brutto, żeby dostać daną kwotę netto. Z ulgą dla młodych i PPK.",
+  "keywords": "kalkulator brutto netto 2027, kalkulator netto brutto, ile brutto żeby mieć netto, kalkulator wynagrodzeń 2027, ile na rękę 2027, ulga dla młodych kalkulator"
 }
 </script>
 <style>
@@ -303,6 +303,8 @@
   .year-toggle span{display:block;padding:7px 18px;border-radius:999px;font-weight:700;font-size:0.92rem;color:var(--text-2);}
   .year-toggle input:checked + span{background:var(--green);color:#08130d;}
   .year-toggle input:focus-visible + span{outline:2px solid var(--green);outline-offset:2px;}
+  .mode-toggle{margin-left:8px;}
+  @media (max-width:480px){.mode-toggle{margin-left:0;display:flex;width:fit-content;}}
   .scale-note{font-size:0.8rem;color:var(--text-2);margin:-4px 0 12px 27px;}
   details.months{margin:20px 0 0;border:1px solid var(--border);border-radius:9px;background:var(--bg);}
   details.months summary{cursor:pointer;padding:12px 14px;font-weight:600;font-size:0.92rem;}
@@ -340,15 +342,19 @@
   <nav class="breadcrumb-dark" aria-label="Okruszki"><a href="../index.html">Mądry Portfel</a> <span aria-hidden="true">/</span> <a href="index.html">Narzędzia</a> <span aria-hidden="true">/</span> <span aria-current="page">Kalkulator brutto–netto</span></nav>
   <span class="pill">0 kont · 0 maila · 0 ciasteczek</span>
   <h1>Kalkulator wynagrodzeń brutto–netto 2027 i 2026</h1>
-  <p class="lead">Wpisz kwotę brutto z oferty pracy i zobacz, ile zostaje „na rękę" na umowie o pracę — z ulgą dla młodych, PPK i rozbiciem na składki. Zasady na 2026 i 2027 rok, z wypłatą rozpisaną na każdy miesiąc — także po przekroczeniu progu podatkowego, limitu ulgi dla młodych i limitu składek ZUS. Wszystko liczy się w Twojej przeglądarce.</p>
+  <p class="lead">Wpisz kwotę brutto z oferty pracy i zobacz, ile zostaje „na rękę" na umowie o pracę — albo odwrotnie: wpisz, ile chcesz dostać na rękę, a policzę potrzebne brutto — z ulgą dla młodych, PPK i rozbiciem na składki. Zasady na 2026 i 2027 rok, z wypłatą rozpisaną na każdy miesiąc — także po przekroczeniu progu podatkowego, limitu ulgi dla młodych i limitu składek ZUS. Wszystko liczy się w Twojej przeglądarce.</p>
 
   <div class="calc-card">
     <div class="year-toggle" role="radiogroup" aria-label="Rok rozliczenia">
       <label><input type="radio" name="year" value="2026" id="y2026" checked><span>2026</span></label>
       <label><input type="radio" name="year" value="2027" id="y2027"><span>2027</span></label>
     </div>
+    <div class="year-toggle mode-toggle" role="radiogroup" aria-label="Którą kwotę znasz">
+      <label><input type="radio" name="mode" value="gross" id="mGross" checked><span>Brutto → netto</span></label>
+      <label><input type="radio" name="mode" value="net" id="mNet"><span>Netto → brutto</span></label>
+    </div>
     <div class="field">
-      <label for="gross">Wynagrodzenie brutto miesięcznie (zł)</label>
+      <label for="gross" id="grossLbl">Wynagrodzenie brutto miesięcznie (zł)</label>
       <input type="number" id="gross" inputmode="decimal" value="6000" min="0" step="100">
     </div>
     <div class="presets">
@@ -442,6 +448,7 @@
   </div>
 
   <p class="more-link">Gotowe wyliczenia dla popularnych kwot brutto: <a href="../wynagrodzenia/5000-brutto-ile-netto.html">5 000 zł</a> · <a href="../wynagrodzenia/5500-brutto-ile-netto.html">5 500 zł</a> · <a href="../wynagrodzenia/6000-brutto-ile-netto.html">6 000 zł</a> · <a href="../wynagrodzenia/6500-brutto-ile-netto.html">6 500 zł</a> · <a href="../wynagrodzenia/7000-brutto-ile-netto.html">7 000 zł</a> · <a href="../wynagrodzenia/7500-brutto-ile-netto.html">7 500 zł</a> · <a href="../wynagrodzenia/8000-brutto-ile-netto.html">8 000 zł</a> · <a href="../wynagrodzenia/9000-brutto-ile-netto.html">9 000 zł</a> · <a href="../wynagrodzenia/10000-brutto-ile-netto.html">10 000 zł</a> · <a href="../wynagrodzenia/12000-brutto-ile-netto.html">12 000 zł</a> · <a href="../wynagrodzenia/15000-brutto-ile-netto.html">15 000 zł</a></p>
+  <p class="more-link">Ile brutto, żeby dostać na rękę: <a href="../wynagrodzenia/4000-netto-ile-brutto.html">4 000 zł netto</a> · <a href="../wynagrodzenia/5000-netto-ile-brutto.html">5 000 zł netto</a> · <a href="../wynagrodzenia/6000-netto-ile-brutto.html">6 000 zł netto</a> · <a href="../wynagrodzenia/7000-netto-ile-brutto.html">7 000 zł netto</a> · <a href="../wynagrodzenia/8000-netto-ile-brutto.html">8 000 zł netto</a> · <a href="../wynagrodzenia/10000-netto-ile-brutto.html">10 000 zł netto</a></p>
   <p class="more-link"><a href="../artykuly/brutto-netto-rodzaje-umow.html">Brutto vs netto i rodzaje umów — jak czytać ofertę pracy →</a><br><a href="../artykuly/zwrot-podatku-pit-dla-mlodych.html">Zwrot podatku i pierwszy PIT →</a><br><a href="../artykuly/ppk-pracownicze-plany-kapitalowe.html">PPK — czy warto zostać w programie →</a></p>
 </main>
 
@@ -519,20 +526,30 @@
     return document.getElementById('y2027').checked ? 2027 : 2026;
   }
 
+  /* tryb „znam netto”: szukamy brutto, przy którym wypłata w pierwszym miesiącu roku daje podane netto */
+  function grossForNet(target, o){
+    var lo = 0, hi = 200000;
+    for (var i = 0; i < 60; i++){ var m = (lo + hi) / 2; if (simulate(m, o)[0].net < target) lo = m; else hi = m; }
+    var g = Math.ceil(hi * 100) / 100;
+    for (var k = 0; k < 500 && simulate(g, o)[0].net < target; k++) g = Math.round((g + 0.01) * 100) / 100;
+    return g;
+  }
   function recalc(){
-    var gross = parseFloat($('gross').value); if (!isFinite(gross) || gross < 0) gross = 0;
-    var year = currentYear();
+    var input = parseFloat($('gross').value); if (!isFinite(input) || input < 0) input = 0;
+    var year = currentYear(), netMode = $('mNet').checked;
     var o = {year: year, young: $('young').checked, pit2: $('pit2').checked, ppk: $('ppk').checked,
              commute: $('commute').checked, newScale: $('newscale').checked};
+    $('grossLbl').textContent = netMode ? 'Ile chcesz dostać na rękę miesięcznie (zł)' : 'Wynagrodzenie brutto miesięcznie (zł)';
+    var gross = netMode ? grossForNet(input, o) : input;
     $('pit2').disabled = o.young;
     $('scaleField').hidden = year !== 2027;
     var rows = simulate(gross, o), c = rows[0];
     var sum = function(k){ return rows.reduce(function(a, r){ return a + r[k]; }, 0); };
     var netYear = r2(sum('net')), avg = r2(netYear / 12);
 
-    $('netLabel').textContent = 'Na rękę miesięcznie (' + year + ')';
-    $('net').textContent = fmt(c.net);
-    var pct = gross > 0 ? Math.round(c.net / gross * 100) + '% kwoty brutto' : '';
+    $('netLabel').textContent = netMode ? 'Potrzebujesz brutto miesięcznie (' + year + ')' : 'Na rękę miesięcznie (' + year + ')';
+    $('net').textContent = fmt(netMode ? gross : c.net);
+    var pct = netMode ? (input > 0 ? 'żeby dostać na rękę ' + fmt(c.net) + ' · netto to ' + Math.round(c.net / gross * 100) + '% brutto' : '') : (gross > 0 ? Math.round(c.net / gross * 100) + '% kwoty brutto' : '');
     if (Math.abs(avg - c.net) >= 1) pct += ' · średnio w roku ' + fmt(avg);
     $('netPct').textContent = pct;
     $('rZus').textContent = '− ' + fmt(c.zus);
@@ -579,7 +596,7 @@
     $('monthsBox').classList.toggle('has-changes', w.length > 0);
   }
 
-  ['gross','young','pit2','ppk','commute','newscale','y2026','y2027'].forEach(function(id){
+  ['gross','young','pit2','ppk','commute','newscale','y2026','y2027','mGross','mNet'].forEach(function(id){
     $(id).addEventListener('input', recalc); $(id).addEventListener('change', recalc);
   });
   document.querySelectorAll('.preset-btn').forEach(function(btn){
@@ -587,6 +604,7 @@
       var v = btn.getAttribute('data-preset');
       if (v === '4950') $('y2027').checked = true;
       if (v === '4806') $('y2026').checked = true;
+      $('mGross').checked = true;
       $('gross').value = v; recalc();
     });
   });
