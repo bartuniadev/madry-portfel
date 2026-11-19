@@ -337,4 +337,9 @@ ARTICLES = [
   cat='zacznij-tutaj', icon='target', hero='Ilustracja tarczy celu — postanowienia finansowe na nowy rok', body='postanowienia.html',
   related=['zmiany-w-finansach-2027','kolejnosc-finansowych-priorytetow','automatyzacja-oszczedzania'],
   sources=[('https://www.gov.pl/web/rodzina','Ministerstwo Rodziny, Pracy i Polityki Społecznej','limity wpłat na IKE i IKZE w 2027 r.'),B.SRC['podatki'],B.SRC['rf']]),
+ dict(slug='premia-swiateczna-bony-ile-netto', title='Premia świąteczna ile netto? Premia, bony i ZFŚS w 2026',
+  desc='Premia świąteczna ile netto: tabela dla 500–5000 zł brutto, z PPK i dla osób do 26 lat. Świadczenia z ZFŚS bez podatku do 1000 zł rocznie, bony i paczki oraz co zrobić z premią.',
+  cat='kariera', icon='gift', hero='Ilustracja prezentu — premia świąteczna i bony', body='premia.html',
+  related=['budzet-na-swieta','pasek-wynagrodzenia-jak-czytac','koniec-roku-finanse-lista'],
+  sources=[B.SRC['podatki'],('https://www.zus.pl/','Zakład Ubezpieczeń Społecznych','składki od świadczeń dla pracowników'),('https://direct.money.pl/artykuly/porady/ministerstwo-finansow-nie-podniesie-limitu-zfss-w-2026-r-od-nadwyzki-ponad-1000-zl-bedzie-podatek','Money.pl: limit 1000 zł dla świadczeń z ZFŚS w 2026 r.','stanowisko Ministerstwa Finansów w sprawie limitu')]),
 ]
