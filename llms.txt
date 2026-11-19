@@ -116,6 +116,7 @@ Treści mają charakter edukacyjny i nie są doradztwem finansowym. Serwis nie s
 - [Kalkulator kredytu](https://bartuniadev.github.io/madry-portfel/narzedzia/kalkulator-kredytu.html): rata równa i malejąca, odsetki, RRSO z prowizją i efekt nadpłat.
 - [Kalkulator poduszki finansowej](https://bartuniadev.github.io/madry-portfel/narzedzia/kalkulator-poduszki-finansowej.html): ile odłożyć na czarną godzinę (3–6+ miesięcy niezbędnych wydatków) i w jakim czasie.
 - [Kalkulator inflacji](https://bartuniadev.github.io/madry-portfel/narzedzia/kalkulator-inflacji.html): ile dziś trzeba mieć, żeby kupić to samo co w danym roku, według średniorocznej inflacji GUS od 2000 r.
+- [Porównanie ofert pracy](https://bartuniadev.github.io/madry-portfel/narzedzia/porownanie-ofert-pracy.html): dwie oferty obok siebie — netto na etacie lub zleceniu, PPK, benefity, koszt i czas dojazdu, bezpłatny urlop na zleceniu; która jest realnie warta więcej.
 - [Podział kosztów w związku](https://bartuniadev.github.io/madry-portfel/narzedzia/kalkulator-podzialu-kosztow.html): po równo, proporcjonalnie do dochodów lub równe kieszonkowe — wkład na wspólne konto i co zostaje każdemu.
 
 ## Ile na rękę — popularne kwoty

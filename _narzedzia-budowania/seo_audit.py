@@ -15,10 +15,11 @@ miss={'h1':[],'intro':[],'h2':[]}
 for k,(kw,sec,ti,de) in SEO.items():
     if not k.startswith('artykuly/'): continue
     t=open(root+k+'.html').read()
+    t=re.sub(r'<details class="toc">.*?</details>','',t,flags=re.S)
     h1=norm(re.search(r'<h1>(.*?)</h1>',t,re.S).group(1))
-    m=re.search(r'<p class="meta">.*?</p>(.*?)<h2',t,re.S)
+    m=re.search(r'<p class="meta">.*?</p>(.*?)<h2[ >]',t,re.S)
     intro=norm(m.group(1)) if m else ''
-    h2=' | '.join(norm(x) for x in re.findall(r'<h2>(.*?)</h2>',t,re.S) if 'Powiązane' not in x and 'Źródła' not in x)
+    h2=' | '.join(norm(x) for x in re.findall(r'<h2[^>]*>(.*?)</h2>',t,re.S) if 'Powiązane' not in x and 'Źródła' not in x)
     if not has(h1,kw): miss['h1'].append((k[9:],kw))
     if not has(intro,kw): miss['intro'].append((k[9:],kw))
     if not any(has(h2,s) for s in [kw]+sec): miss['h2'].append((k[9:],kw))

@@ -9,6 +9,7 @@ Najczęściej używane:
 - [Czy dobrze zarabiam? — Twoja pensja na tle Polaków (dane GUS)](https://bartuniadev.github.io/madry-portfel/narzedzia/czy-dobrze-zarabiam.html)
 - [Ile na rękę w 2027 — tabela brutto–netto](https://bartuniadev.github.io/madry-portfel/artykuly/ile-na-reke-tabela-brutto-netto.html)
 - [Zmiany w finansach od 1 stycznia 2027](https://bartuniadev.github.io/madry-portfel/artykuly/zmiany-w-finansach-2027.html)
+- [Porównanie ofert pracy — etat czy zlecenie, benefity, dojazdy](https://bartuniadev.github.io/madry-portfel/narzedzia/porownanie-ofert-pracy.html)
 - [Kalkulator inflacji (GUS od 2000 r.)](https://bartuniadev.github.io/madry-portfel/narzedzia/kalkulator-inflacji.html)
 - [Wszystkie kalkulatory](https://bartuniadev.github.io/madry-portfel/narzedzia/index.html)
 
@@ -18,8 +19,8 @@ Statyczna strona (czysty HTML/CSS, zero build-toola) na GitHub Pages. Skrypty ge
 
 ## Struktura
 - `index.html` — strona główna: wyszukiwarka poradników, odnośniki do kategorii i lista artykułów w siedmiu kategoriach
-- `artykuly/` — 76 wpisów; każdy ma sekcję „Źródła i przydatne strony" z linkami do stron urzędowych
-- `narzedzia/` — 12 kalkulatorów działających w przeglądarce (bez zależności, do pobrania i użycia offline): czy dobrze zarabiam (rozkład płac GUS), brutto–netto 2026/2027 (z wypłatą w każdym miesiącu), umowa zlecenia, inflacja (CPI GUS od 2000 r.), lokata, kredyt (raty, RRSO, nadpłata), OKI, poduszka finansowa, podział kosztów dla par, budżet 50/30/20, procent składany, spłata długów
+- `artykuly/` — 78 wpisów; każdy ma sekcję „Źródła i przydatne strony" z linkami do stron urzędowych
+- `narzedzia/` — 13 kalkulatorów działających w przeglądarce (bez zależności, do pobrania i użycia offline): czy dobrze zarabiam (rozkład płac GUS), brutto–netto 2026/2027 (z wypłatą w każdym miesiącu), umowa zlecenia, porównanie dwóch ofert pracy (netto, benefity, dojazdy), inflacja (CPI GUS od 2000 r.), lokata, kredyt (raty, RRSO, nadpłata), OKI, poduszka finansowa, podział kosztów dla par, budżet 50/30/20, procent składany, spłata długów
 - `wynagrodzenia/` — strony „X zł brutto ile netto” dla 11 popularnych kwot (5000–15 000 zł) i „X zł netto ile brutto” dla 6 kwot (4000–10 000 zł): etat, zlecenie, koszt pracodawcy, pozycja na tle płac GUS, budżet, FAQ
 - `slownik.html` — słownik 77 pojęć finansowych z odesłaniami do artykułów i kalkulatorów
 - `pytania.html` — 36 najczęstszych pytań z krótkimi odpowiedziami (dane strukturalne FAQ)
