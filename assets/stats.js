@@ -74,7 +74,7 @@
     var btn = document.createElement('button');
     btn.type = 'button';
     btn.textContent = narrow ? 'OK' : 'Rozumiem';
-    if (narrow) btn.setAttribute('aria-label', 'Rozumiem — zamknij informację o prywatności');
+    if (narrow) btn.setAttribute('aria-label', 'OK, zamknij informację o prywatności');
     btn.style.cssText = 'font:inherit;font-weight:700;padding:' + (narrow ? '8px 14px;flex:none' : '9px 18px') + ';border:0;border-radius:8px;' +
       'background:#3ad889;color:#08130d;cursor:pointer';
     btn.addEventListener('click', function () {

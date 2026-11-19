@@ -83,14 +83,14 @@ Treści mają charakter edukacyjny i nie są doradztwem finansowym. Serwis nie s
 
 ## Kariera i dochody
 
-- [Mediana wynagrodzeń 2026 — ile naprawdę zarabiają Polacy](https://bartuniadev.github.io/madry-portfel/artykuly/mediana-wynagrodzen-ile-zarabiaja-polacy.html): Brutto a netto — dlaczego ta sama kwota daje inne pieniądze na rękę na umowie o pracę, zleceniu i B2B. Jak porównać oferty pracy, żeby się nie przeliczyć.
+- [Mediana wynagrodzeń 2026 — ile naprawdę zarabiają Polacy](https://bartuniadev.github.io/madry-portfel/artykuly/mediana-wynagrodzen-ile-zarabiaja-polacy.html): Mediana wynagrodzeń 2026: 7550 zł brutto (ok. 5477 zł netto). Czym różni się od średniej krajowej, ile zarabia 10% najmniej i najlepiej zarabiających.
 - [Ile na rękę w 2027? Tabela brutto–netto od 4950 do 20 000 zł](https://bartuniadev.github.io/madry-portfel/artykuly/ile-na-reke-tabela-brutto-netto.html): Brutto a netto — dlaczego ta sama kwota daje inne pieniądze na rękę na umowie o pracę, zleceniu i B2B. Jak porównać oferty pracy, żeby się nie przeliczyć.
 - [Jak rozliczyć PIT za 2026 — Twój e-PIT krok po kroku i terminy 2027](https://bartuniadev.github.io/madry-portfel/artykuly/pit-za-2026-jak-rozliczyc.html): Jak rozliczyć PIT za 2026 rok: Twój e-PIT od 15 lutego 2027, termin 30 kwietnia, który formularz wybrać, ulgi, zwrot w 45 dni i najczęstsze błędy.
 - [Płaca minimalna 2027 — ile to netto na rękę i co się zmienia](https://bartuniadev.github.io/madry-portfel/artykuly/placa-minimalna-2027-netto.html): Płaca minimalna 2027: 4950 zł brutto to ok. 3704 zł netto. Kwoty z PPK i ulgą dla młodych, stawka godzinowa 32,30 zł i co rośnie razem z nią.
 - [Praca za granicą a PIT w Polsce — rezydencja, PIT/ZG i ulga na powrót](https://bartuniadev.github.io/madry-portfel/artykuly/praca-za-granica-a-podatki.html): Praca za granicą a PIT w Polsce: rezydencja podatkowa, wyłączenie z progresją czy proporcjonalne odliczenie, PIT-36 z PIT/ZG i ulga na powrót.
 - [Ulgi podatkowe, o których młodzi zapominają — i jak dodać je w Twój e-PIT](https://bartuniadev.github.io/madry-portfel/artykuly/ulgi-podatkowe-o-ktorych-mlodzi-zapominaja.html): Ulgi podatkowe w PIT, których Twój e-PIT nie doda sam: ulga na internet, IKZE, darowizny i krwiodawstwo, ulga na dziecko, koszty dojazdu i 50% kosztów.
 - [Zmiana pracy — finansowa lista kontrolna przed, w trakcie i po](https://bartuniadev.github.io/madry-portfel/artykuly/zmiana-pracy-lista-kontrolna.html): Zmiana pracy krok po kroku: co sprawdzić przed wypowiedzeniem, jak rozliczyć urlop i premie, co z PPK i jakie oświadczenia złożyć u nowego pracodawcy.
-- [Oczekiwania finansowe na rozmowie o pracę — jak odpowiadać, gdy widełki są jawne](https://bartuniadev.github.io/madry-portfel/artykuly/rozmowa-o-pieniadzach-w-rekrutacji.html): Brutto a netto — dlaczego ta sama kwota daje inne pieniądze na rękę na umowie o pracę, zleceniu i B2B. Jak porównać oferty pracy, żeby się nie przeliczyć.
+- [Oczekiwania finansowe na rozmowie o pracę — jak odpowiadać, gdy widełki są jawne](https://bartuniadev.github.io/madry-portfel/artykuly/rozmowa-o-pieniadzach-w-rekrutacji.html): Oczekiwania finansowe na rozmowie o pracę: co zmieniła jawność wynagrodzeń, jak czytać widełki płacowe i jak negocjować ofertę, nie tracąc pieniędzy.
 - [Umowa o pracę — jak ją czytać i co sprawdzić przed podpisaniem](https://bartuniadev.github.io/madry-portfel/artykuly/umowa-o-prace-jak-czytac.html): Umowa o pracę: co sprawdzić przed podpisaniem — składniki wynagrodzenia, czas pracy, zakaz konkurencji, umowa szkoleniowa i zapisy, które powinny zaniepokoić.
 - [B2B czy umowa o pracę — porównanie na liczbach i stawka, przy której kontrakt się opłaca](https://bartuniadev.github.io/madry-portfel/artykuly/b2b-czy-etat-porownanie.html): B2B czy umowa o pracę: ile zostaje na rękę w 2026 r., ile kosztuje ZUS przedsiębiorcy, co tracisz bez etatu i jaka stawka na fakturze się opłaca.
 - [Ile dni urlopu, ile płatne L4, jak płatne nadgodziny — prawa pracownika w liczbach](https://bartuniadev.github.io/madry-portfel/artykuly/prawa-pracownika-w-liczbach.html): Prawa pracownika w liczbach: ile dni urlopu, ile płatne jest L4, dodatki za nadgodziny, okres próbny i okresy wypowiedzenia — ściągawka na 2026 r.
@@ -114,6 +114,20 @@ Treści mają charakter edukacyjny i nie są doradztwem finansowym. Serwis nie s
 - [Kalkulator kredytu](https://bartuniadev.github.io/madry-portfel/narzedzia/kalkulator-kredytu.html): rata równa i malejąca, odsetki, RRSO z prowizją i efekt nadpłat.
 - [Kalkulator poduszki finansowej](https://bartuniadev.github.io/madry-portfel/narzedzia/kalkulator-poduszki-finansowej.html): ile odłożyć na czarną godzinę (3–6+ miesięcy niezbędnych wydatków) i w jakim czasie.
 - [Podział kosztów w związku](https://bartuniadev.github.io/madry-portfel/narzedzia/kalkulator-podzialu-kosztow.html): po równo, proporcjonalnie do dochodów lub równe kieszonkowe — wkład na wspólne konto i co zostaje każdemu.
+
+## Ile na rękę — popularne kwoty
+
+- [5000 zł brutto ile netto](https://bartuniadev.github.io/madry-portfel/wynagrodzenia/5000-brutto-ile-netto.html): wyliczenie netto na umowie o pracę i zleceniu, koszt pracodawcy, pozycja na tle zarobków GUS.
+- [5500 zł brutto ile netto](https://bartuniadev.github.io/madry-portfel/wynagrodzenia/5500-brutto-ile-netto.html): wyliczenie netto na umowie o pracę i zleceniu, koszt pracodawcy, pozycja na tle zarobków GUS.
+- [6000 zł brutto ile netto](https://bartuniadev.github.io/madry-portfel/wynagrodzenia/6000-brutto-ile-netto.html): wyliczenie netto na umowie o pracę i zleceniu, koszt pracodawcy, pozycja na tle zarobków GUS.
+- [6500 zł brutto ile netto](https://bartuniadev.github.io/madry-portfel/wynagrodzenia/6500-brutto-ile-netto.html): wyliczenie netto na umowie o pracę i zleceniu, koszt pracodawcy, pozycja na tle zarobków GUS.
+- [7000 zł brutto ile netto](https://bartuniadev.github.io/madry-portfel/wynagrodzenia/7000-brutto-ile-netto.html): wyliczenie netto na umowie o pracę i zleceniu, koszt pracodawcy, pozycja na tle zarobków GUS.
+- [7500 zł brutto ile netto](https://bartuniadev.github.io/madry-portfel/wynagrodzenia/7500-brutto-ile-netto.html): wyliczenie netto na umowie o pracę i zleceniu, koszt pracodawcy, pozycja na tle zarobków GUS.
+- [8000 zł brutto ile netto](https://bartuniadev.github.io/madry-portfel/wynagrodzenia/8000-brutto-ile-netto.html): wyliczenie netto na umowie o pracę i zleceniu, koszt pracodawcy, pozycja na tle zarobków GUS.
+- [9000 zł brutto ile netto](https://bartuniadev.github.io/madry-portfel/wynagrodzenia/9000-brutto-ile-netto.html): wyliczenie netto na umowie o pracę i zleceniu, koszt pracodawcy, pozycja na tle zarobków GUS.
+- [10000 zł brutto ile netto](https://bartuniadev.github.io/madry-portfel/wynagrodzenia/10000-brutto-ile-netto.html): wyliczenie netto na umowie o pracę i zleceniu, koszt pracodawcy, pozycja na tle zarobków GUS.
+- [12000 zł brutto ile netto](https://bartuniadev.github.io/madry-portfel/wynagrodzenia/12000-brutto-ile-netto.html): wyliczenie netto na umowie o pracę i zleceniu, koszt pracodawcy, pozycja na tle zarobków GUS.
+- [15000 zł brutto ile netto](https://bartuniadev.github.io/madry-portfel/wynagrodzenia/15000-brutto-ile-netto.html): wyliczenie netto na umowie o pracę i zleceniu, koszt pracodawcy, pozycja na tle zarobków GUS.
 
 ## Pomocnicze
 
