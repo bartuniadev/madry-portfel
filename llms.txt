@@ -84,6 +84,7 @@ Treści mają charakter edukacyjny i nie są doradztwem finansowym. Serwis nie s
 
 ## Kariera i dochody
 
+- [Dni wolne od pracy 2027 i długie weekendy — kalendarz](https://bartuniadev.github.io/madry-portfel/artykuly/dni-wolne-od-pracy-2027.html): Dni wolne od pracy 2027: 14 świąt, dzień wolny za 1 maja i 25 grudnia, długie weekendy (10 dni wolnego za 4 dni urlopu) i wymiar czasu pracy 2027.
 - [Premia świąteczna ile netto? Premia, bony i ZFŚS w 2026](https://bartuniadev.github.io/madry-portfel/artykuly/premia-swiateczna-bony-ile-netto.html): Premia świąteczna ile netto: z 1000 zł brutto zostaje ok. 681 zł. Tabela 500–5000 zł, z PPK i do 26 lat. Świadczenia z ZFŚS bez podatku do 1000 zł rocznie.
 - [Mediana wynagrodzeń 2026 — ile naprawdę zarabiają Polacy](https://bartuniadev.github.io/madry-portfel/artykuly/mediana-wynagrodzen-ile-zarabiaja-polacy.html): Mediana wynagrodzeń 2026: 7550 zł brutto (ok. 5477 zł netto). Czym różni się od średniej krajowej, ile zarabia 10% najmniej i najlepiej zarabiających.
 - [Ile na rękę w 2027? Tabela brutto–netto od 4950 do 20 000 zł](https://bartuniadev.github.io/madry-portfel/artykuly/ile-na-reke-tabela-brutto-netto.html): Ile na rękę w 2027: tabela netto od płacy minimalnej do 20 000 zł brutto, z PIT-2, z PPK i z ulgą dla młodych. 5000 zł brutto to ok. 3738 zł netto.
@@ -116,6 +117,7 @@ Treści mają charakter edukacyjny i nie są doradztwem finansowym. Serwis nie s
 - [Kalkulator kredytu](https://bartuniadev.github.io/madry-portfel/narzedzia/kalkulator-kredytu.html): rata równa i malejąca, odsetki, RRSO z prowizją i efekt nadpłat.
 - [Kalkulator poduszki finansowej](https://bartuniadev.github.io/madry-portfel/narzedzia/kalkulator-poduszki-finansowej.html): ile odłożyć na czarną godzinę (3–6+ miesięcy niezbędnych wydatków) i w jakim czasie.
 - [Kalkulator inflacji](https://bartuniadev.github.io/madry-portfel/narzedzia/kalkulator-inflacji.html): ile dziś trzeba mieć, żeby kupić to samo co w danym roku, według średniorocznej inflacji GUS od 2000 r.
+- [Kalkulator urlopu](https://bartuniadev.github.io/madry-portfel/narzedzia/kalkulator-urlopu.html): ile dni urlopu wypoczynkowego przysługuje (20 lub 26 dni, staż ze szkołą), urlop przy pierwszej pracy i zmianie pracy, niepełny etat, ekwiwalent za niewykorzystany urlop.
 - [Porównanie ofert pracy](https://bartuniadev.github.io/madry-portfel/narzedzia/porownanie-ofert-pracy.html): dwie oferty obok siebie — netto na etacie lub zleceniu, PPK, benefity, koszt i czas dojazdu, bezpłatny urlop na zleceniu; która jest realnie warta więcej.
 - [Podział kosztów w związku](https://bartuniadev.github.io/madry-portfel/narzedzia/kalkulator-podzialu-kosztow.html): po równo, proporcjonalnie do dochodów lub równe kieszonkowe — wkład na wspólne konto i co zostaje każdemu.
 

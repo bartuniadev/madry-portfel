@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalkulator urlopu 2027 — ile dni urlopu i ekwiwalent</title>
+<meta name="description" content="Kalkulator urlopu: ile dni urlopu Ci przysługuje (20 czy 26), staż ze studiami, pierwsza praca, zmiana pracy, niepełny etat i ekwiwalent za urlop.">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="canonical" href="https://bartuniadev.github.io/madry-portfel/narzedzia/kalkulator-urlopu.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mądry Portfel">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:title" content="Kalkulator urlopu 2027 — ile dni urlopu i ekwiwalent">
+<meta property="og:description" content="Kalkulator urlopu: ile dni urlopu Ci przysługuje (20 czy 26), staż ze studiami, pierwsza praca, zmiana pracy, niepełny etat i ekwiwalent za urlop.">
+<meta property="og:url" content="https://bartuniadev.github.io/madry-portfel/narzedzia/kalkulator-urlopu.html">
+<meta property="og:image" content="https://bartuniadev.github.io/madry-portfel/assets/og/kalkulator-urlopu.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kalkulator urlopu 2027 — ile dni urlopu i ekwiwalent">
+<meta name="twitter:image" content="https://bartuniadev.github.io/madry-portfel/assets/og/kalkulator-urlopu.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Kalkulator urlopu wypoczynkowego",
+  "url": "https://bartuniadev.github.io/madry-portfel/narzedzia/kalkulator-urlopu.html",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any (przeglądarka)",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "PLN"
+  },
+  "isAccessibleForFree": true,
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://bartuniadev.github.io/madry-portfel/#organization",
+    "name": "Mądry Portfel",
+    "url": "https://bartuniadev.github.io/madry-portfel/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://bartuniadev.github.io/madry-portfel/assets/logo-512.png",
+      "width": 512,
+      "height": 512
+    },
+    "sameAs": [
+      "https://github.com/bartuniadev/madry-portfel"
+    ],
+    "publishingPrinciples": "https://bartuniadev.github.io/madry-portfel/jak-powstaja-tresci.html"
+  },
+  "description": "Kalkulator urlopu: ile dni urlopu Ci przysługuje (20 czy 26), staż ze studiami, pierwsza praca, zmiana pracy, niepełny etat i ekwiwalent za urlop.",
+  "keywords": "kalkulator urlopu, ile dni urlopu, urlop proporcjonalny, ekwiwalent za urlop, urlop po studiach"
+}
+</script>
+<style>
+  :root{
+    --bg:#0e130f;
+    --surface:#161d19;
+    --surface-2:#1c241f;
+    --border:#2b362f;
+    --text:#eef2ef;
+    --text-2:#93a49a;
+    --green:#3ad889;
+    --gold:#f2c14e;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--green);}
+  a:focus-visible, button:focus-visible, input:focus-visible{outline:2px solid var(--green); outline-offset:2px;}
+
+  header.site-header{border-bottom:1px solid var(--border);}
+  .header-inner{
+    max-width:760px;
+    margin:0 auto;
+    padding:18px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  .logo{
+    font-weight:700;
+    font-size:1.15rem;
+    letter-spacing:-0.01em;
+    color:var(--text);
+    text-decoration:none;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .logo svg{width:20px;height:20px;color:var(--green);flex-shrink:0;}
+  nav.top a{
+    color:var(--text-2);
+    text-decoration:none;
+    margin-left:18px;
+    font-size:0.92rem;
+  }
+  nav.top a:hover, nav.top a[aria-current]{color:var(--green);}
+
+  main{max-width:760px;margin:0 auto;padding:32px 20px 60px;}
+
+  .breadcrumb-dark{
+    display:block;
+    font-size:0.8rem;
+    color:var(--text-2);
+    margin:22px 0 14px;
+  }
+  .breadcrumb-dark a{color:var(--text-2);text-decoration:none;}
+  .breadcrumb-dark a:hover{color:var(--green);}
+  .breadcrumb-dark span[aria-current]{color:var(--text);}
+
+  .pill{
+    display:inline-flex;
+    align-items:center;
+    font-family:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+    font-size:12px;
+    letter-spacing:.04em;
+    color:var(--green);
+    border:1px solid var(--green);
+    padding:4px 11px;
+    border-radius:999px;
+  }
+  h1{
+    font-size:clamp(1.7rem,5vw,2.15rem);
+    line-height:1.2;
+    margin:14px 0 0;
+    letter-spacing:-0.01em;
+  }
+  .lead{
+    max-width:60ch;
+    color:var(--text-2);
+    font-size:1.02rem;
+    margin-top:12px;
+  }
+
+  .calc-card{
+    margin-top:28px;
+    background:var(--surface);
+    border:2px solid var(--green);
+    border-radius:12px;
+    box-shadow:6px 6px 0 var(--gold);
+    padding:26px 24px;
+  }
+
+  .field{display:flex;flex-direction:column;gap:6px;margin-bottom:20px;}
+  .field label{font-size:0.88rem;color:var(--text-2);font-weight:600;}
+  .field input{
+    background:var(--bg);
+    border:1px solid var(--border);
+    color:var(--text);
+    border-radius:8px;
+    padding:12px 14px;
+    font-size:1.4rem;
+    font-family:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+    font-variant-numeric:tabular-nums;
+  }
+  .field input#income{font-weight:700;}
+  .field input::placeholder{color:#5c6a62;}
+
+  .split-controls{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+    margin-bottom:14px;
+  }
+  .split-controls .field{margin-bottom:0;}
+  .split-controls input{font-size:1.05rem;padding:9px 10px;}
+
+  .presets{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px;}
+  .preset-btn{
+    font-family:inherit;
+    font-size:0.82rem;
+    color:var(--text-2);
+    background:var(--surface-2);
+    border:1px solid var(--border);
+    border-radius:999px;
+    padding:7px 13px;
+    cursor:pointer;
+  }
+  .preset-btn:hover{color:var(--text);border-color:var(--green);}
+
+  .sum-warning{
+    font-size:0.85rem;
+    color:var(--gold);
+    background:rgba(242,193,78,0.1);
+    border:1px solid rgba(242,193,78,0.4);
+    border-radius:7px;
+    padding:8px 12px;
+    margin:6px 0 18px;
+  }
+
+  .bar{
+    display:flex;
+    height:14px;
+    border-radius:999px;
+    overflow:hidden;
+    background:var(--bg);
+    border:1px solid var(--border);
+    margin-bottom:24px;
+  }
+  .bar .seg{height:100%;transition:width .2s ease;}
+  .bar .seg.needs{background:var(--green);}
+  .bar .seg.wants{background:var(--border);}
+  .bar .seg.savings{background:var(--gold);}
+
+  .results-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+  }
+  .result-card{
+    background:var(--bg);
+    border:1px solid var(--border);
+    border-radius:9px;
+    padding:14px;
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+  }
+  .result-card .label{font-size:0.8rem;color:var(--text-2);}
+  .result-card .amount{
+    font-family:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+    font-weight:700;
+    font-size:1.15rem;
+    font-variant-numeric:tabular-nums;
+  }
+  .result-card .pct{font-size:0.78rem;color:var(--text-2);font-variant-numeric:tabular-nums;}
+  .result-card.needs{border-color:var(--green);}
+  .result-card.needs .amount{color:var(--green);}
+  .result-card.savings{border-color:var(--gold);}
+  .result-card.savings .amount{color:var(--gold);}
+
+  @media (max-width:480px){
+    .results-grid{grid-template-columns:1fr;}
+    .split-controls{grid-template-columns:1fr;}
+  }
+
+  .trust{
+    margin-top:22px;
+    padding-top:22px;
+    border-top:1px dashed var(--border);
+  }
+  .trust p{color:var(--text-2);font-size:0.92rem;max-width:60ch;margin:0 0 14px;}
+  .download-btn{
+    display:inline-block;
+    font-weight:700;
+    font-size:0.95rem;
+    color:#08130d;
+    background:var(--green);
+    padding:12px 20px;
+    border-radius:9px;
+    text-decoration:none;
+  }
+  .download-btn:hover{background:#4fe49a;}
+  .microcopy{font-size:0.8rem !important;color:#93a49a !important;margin-top:12px !important;}
+
+  .more-link{margin-top:26px;font-size:0.95rem;}
+
+  footer{
+    border-top:1px solid var(--border);
+    margin-top:20px;
+    padding:24px 20px;
+    text-align:center;
+    color:var(--text-2);
+    font-size:0.85rem;
+  }
+  footer a{color:var(--text-2);}
+  footer .ai-note{opacity:0.75;}
+
+  @media (prefers-reduced-motion: reduce){
+    *{transition-duration:0.01ms !important;}
+  }
+
+  .split-controls.two{grid-template-columns:repeat(2,1fr);gap:14px 16px;margin-bottom:16px;}
+  .field.check{justify-content:center;}
+  .field.check label{display:flex;align-items:center;gap:9px;color:var(--text);font-weight:500;cursor:pointer;}
+  .field.check input{width:18px;height:18px;accent-color:var(--green);}
+  .field .hint{font-size:0.78rem;color:var(--text-2);}
+  .growth-chart{width:100%;height:auto;display:block;margin:18px 0 6px;font-family:system-ui,sans-serif;}
+  .legend{display:flex;gap:18px;font-size:0.82rem;color:var(--text-2);margin-bottom:20px;}
+  .legend span{display:inline-flex;align-items:center;gap:7px;}
+  .legend i{width:11px;height:11px;border-radius:3px;display:inline-block;}
+  .sw-dep{background:var(--green);} .sw-gain{background:var(--gold);}
+  @media (max-width:480px){.split-controls.two{grid-template-columns:1fr;}}
+  .type-toggle{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px;}
+  .type-toggle label{position:relative;cursor:pointer;}
+  .type-toggle input{position:absolute;opacity:0;width:1px;height:1px;}
+  .type-toggle span{display:block;padding:8px 14px;border-radius:999px;border:1px solid var(--border);font-size:0.88rem;color:var(--text-2);background:var(--bg);}
+  .type-toggle input:checked + span{background:var(--green);border-color:var(--green);color:#08130d;font-weight:700;}
+  .type-toggle input:focus-visible + span{outline:2px solid var(--green);outline-offset:2px;}
+  .net-box{display:flex;flex-direction:column;gap:2px;margin:10px 0 16px;padding:16px 18px;background:var(--bg);border:1px solid var(--green);border-radius:10px;}
+  .net-box .label{font-size:0.85rem;color:var(--text-2);}
+  .net-box .pct{font-size:0.8rem;color:var(--text-2);}
+  .net-amount{font-family:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;font-weight:700;font-size:clamp(1.7rem,7vw,2.3rem);color:var(--green);font-variant-numeric:tabular-nums;}
+  .breakdown{width:100%;border-collapse:collapse;margin:0 0 20px;font-size:0.92rem;}
+  .breakdown td{padding:9px 4px;border-bottom:1px solid var(--border);}
+  .breakdown td:last-child{text-align:right;white-space:nowrap;font-family:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;font-variant-numeric:tabular-nums;}
+  .breakdown tr.total td{border-bottom:0;font-weight:700;color:var(--green);}
+  .verdict{margin:4px 0 18px;padding:14px 16px;border:1px solid var(--green);border-radius:10px;background:var(--bg);font-size:0.95rem;}
+  .verdict.worse{border-color:var(--gold);}
+  details.tbl{margin:18px 0 0;border:1px solid var(--border);border-radius:9px;background:var(--bg);}
+  details.tbl summary{cursor:pointer;padding:12px 14px;font-weight:600;font-size:0.92rem;}
+  details.tbl summary:focus-visible{outline:2px solid var(--green);outline-offset:2px;}
+  .tbl-wrap{overflow-x:auto;}
+  .data-table{width:100%;border-collapse:collapse;font-size:0.85rem;}
+  .data-table th,.data-table td{padding:7px 6px;border-top:1px solid var(--border);text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;}
+  .data-table th{color:var(--text-2);font-weight:600;font-size:0.78rem;}
+  .data-table th:first-child,.data-table td:first-child{text-align:left;}
+  .data-table caption{caption-side:bottom;text-align:left;padding:8px 10px 10px;font-size:0.75rem;color:var(--text-2);}
+  @media (max-width:380px){.data-table th,.data-table td{padding:7px 4px;font-size:0.78rem;}}
+  .more-link{line-height:2.2;}
+  [hidden]{display:none !important;}
+  #edu,#fte,#ms,#me{width:100%;background:var(--surface);border:1px solid var(--border);color:var(--text);border-radius:8px;padding:9px 10px;font-size:1rem;font-family:inherit;min-height:44px;}
+  #edu:focus-visible,#fte:focus-visible,#ms:focus-visible,#me:focus-visible{outline:2px solid var(--green);outline-offset:2px;}
+  .tool-sub{font-size:1.15rem;margin:26px 0 6px;}
+  p.hint{margin:-4px 0 14px;font-size:.85rem;color:var(--text-2);line-height:1.5;}
+</style>
+<link rel="alternate" type="application/rss+xml" title="Mądry Portfel — nowe poradniki" href="https://bartuniadev.github.io/madry-portfel/feed.xml">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../index.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="7.5 13.5 10.5 10.5 13 12.5 16.5 8.5"/><polyline points="14 8.5 16.5 8.5 16.5 11"/></svg>
+      Mądry Portfel
+    </a>
+    <nav class="top">
+      <a href="index.html" aria-current="page">Narzędzia</a>
+      <a href="../index.html">Artykuły</a>
+      <a href="../o-nas.html">O nas</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <nav class="breadcrumb-dark" aria-label="Okruszki"><a href="../index.html">Mądry Portfel</a> <span aria-hidden="true">/</span> <a href="index.html">Narzędzia</a> <span aria-hidden="true">/</span> <span aria-current="page">Kalkulator urlopu</span></nav>
+  <span class="pill">0 kont · 0 maila · 0 ciasteczek</span>
+  <h1>Kalkulator urlopu — ile dni urlopu Ci przysługuje</h1>
+  <p class="lead">Sprawdź, ile dni urlopu wypoczynkowego masz w tym roku: ze stażem liczonym razem ze szkołą, przy pierwszej pracy, zmianie pracy w trakcie roku i na niepełnym etacie. Na końcu policzysz ekwiwalent za niewykorzystany urlop. Wszystko liczy się w Twojej przeglądarce.</p>
+
+  <div class="calc-card">
+    <p class="field-title">Twój staż pracy</p>
+    <div class="field"><label for="edu">Najwyżej ukończona szkoła</label><select id="edu">
+      <option value="0">Podstawowa / bez średniej</option>
+      <option value="3">Branżowa I st. / zawodowa (3 lata)</option>
+      <option value="4">Liceum (4 lata)</option>
+      <option value="5">Technikum / branżowa II st. (5 lat)</option>
+      <option value="6">Szkoła policealna (6 lat)</option>
+      <option value="8" selected>Studia wyższe (8 lat)</option>
+    </select><span class="hint">Studia to licencjat, inżynier lub magister. Liczy się jedna, najkorzystniejsza szkoła — okresy nauki się nie sumują.</span></div>
+    <div class="split-controls two">
+      <div class="field"><label for="wy">Okres pracy — lata</label><input type="number" id="wy" inputmode="numeric" value="1" min="0" max="50" step="1"></div>
+      <div class="field"><label for="wm">i miesiące</label><input type="number" id="wm" inputmode="numeric" value="6" min="0" max="11" step="1"></div>
+    </div>
+    <p class="hint">Wszystkie umowy o pracę, a od 2026 r. także udokumentowane umowy zlecenia i działalność gospodarcza (okresy pokrywające się liczą się raz). Pracę w trakcie nauki wliczasz zamiast szkoły tylko wtedy, gdy to korzystniejsze.</p>
+
+    <div class="field"><label for="fte">Wymiar etatu</label><select id="fte">
+      <option value="1" selected>Pełny etat</option><option value="0.8">4/5 etatu</option><option value="0.75">3/4 etatu</option><option value="0.5">1/2 etatu</option><option value="0.25">1/4 etatu</option>
+    </select></div>
+
+    <p class="field-title" id="sitLabel">Twoja sytuacja w tym roku</p>
+    <div class="type-toggle" role="radiogroup" aria-labelledby="sitLabel">
+      <label><input type="radio" name="sit" value="full" checked><span>Cały rok u tego pracodawcy</span></label>
+      <label><input type="radio" name="sit" value="first"><span>Pierwsza praca w życiu</span></label>
+      <label><input type="radio" name="sit" value="part"><span>Zmiana pracy w trakcie roku</span></label>
+    </div>
+    <div class="split-controls two" id="months" hidden>
+      <div class="field"><label for="ms">Miesiąc rozpoczęcia pracy u tego pracodawcy</label><select id="ms"><option value="1">styczeń</option><option value="2">luty</option><option value="3" selected>marzec</option><option value="4">kwiecień</option><option value="5">maj</option><option value="6">czerwiec</option><option value="7">lipiec</option><option value="8">sierpień</option><option value="9">wrzesień</option><option value="10">październik</option><option value="11">listopad</option><option value="12">grudzień</option></select></div>
+      <div class="field" id="meF"><label for="me">Miesiąc zakończenia (grudzień, jeśli pracujesz dłużej)</label><select id="me"><option value="1">styczeń</option><option value="2">luty</option><option value="3">marzec</option><option value="4">kwiecień</option><option value="5">maj</option><option value="6">czerwiec</option><option value="7">lipiec</option><option value="8">sierpień</option><option value="9">wrzesień</option><option value="10">październik</option><option value="11">listopad</option><option value="12" selected>grudzień</option></select></div>
+    </div>
+
+    <div class="net-box">
+      <span class="label" id="resLabel">Urlop w tym roku</span>
+      <span class="net-amount" id="days">0 dni</span>
+      <span class="pct" id="daysNote"></span>
+    </div>
+
+    <div class="results-grid">
+      <div class="result-card">
+        <span class="label">Staż do urlopu</span>
+        <span class="amount" id="staz">—</span>
+        <span class="pct" id="stazNote"></span>
+      </div>
+      <div class="result-card needs">
+        <span class="label">Wymiar roczny</span>
+        <span class="amount" id="annual">—</span>
+        <span class="pct" id="annualNote"></span>
+      </div>
+      <div class="result-card savings">
+        <span class="label">Do 26 dni urlopu</span>
+        <span class="amount" id="to26">—</span>
+        <span class="pct" id="to26Note"></span>
+      </div>
+    </div>
+    <div class="verdict" id="verdict" aria-live="polite"></div>
+
+    <h2 class="tool-sub" id="ekw">Ekwiwalent za niewykorzystany urlop</h2>
+    <p class="hint">Należy się, gdy umowa się kończy, a urlop nie został wykorzystany. Wpisz pensję brutto (stałe składniki) i liczbę niewykorzystanych dni.</p>
+    <div class="split-controls two">
+      <div class="field"><label for="sal">Wynagrodzenie brutto miesięcznie (zł)</label><input type="number" id="sal" inputmode="decimal" value="6000" min="0" step="100"></div>
+      <div class="field"><label for="left">Niewykorzystane dni urlopu</label><input type="number" id="left" inputmode="decimal" value="5" min="0" max="80" step="1"></div>
+    </div>
+    <div class="results-grid">
+      <div class="result-card">
+        <span class="label">Ekwiwalent brutto</span>
+        <span class="amount" id="eqG">0 zł</span>
+        <span class="pct" id="eqRate"></span>
+      </div>
+      <div class="result-card savings">
+        <span class="label">Ok. na rękę</span>
+        <span class="amount" id="eqN">0 zł</span>
+        <span class="pct">gdy jest wypłacony razem z ostatnią pensją</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="trust">
+    <p><strong>Jak to liczymy:</strong> <strong>Wymiar urlopu</strong> (art. 154 Kodeksu pracy): 20 dni przy stażu poniżej 10 lat, 26 dni od 10 lat. Do stażu wlicza się ukończona szkoła (art. 155): szkoła branżowa I stopnia do 3 lat, technikum lub szkoła branżowa II stopnia do 5, liceum 4, szkoła policealna 6, studia wyższe 8 lat. Od 2026 r. wlicza się też okresy zleceń i działalności gospodarczej — po udokumentowaniu zaświadczeniem z ZUS. <strong>Niepełny etat:</strong> wymiar proporcjonalny, niepełny dzień zaokrąglony w górę; dzień urlopu to 8 godzin. <strong>Pierwsza praca:</strong> 1/12 rocznego wymiaru po każdym przepracowanym miesiącu (art. 153) — zakładamy rozpoczęcie pierwszego dnia miesiąca. <strong>Zmiana pracy:</strong> urlop proporcjonalny do miesięcy zatrudnienia w roku, niepełny miesiąc i niepełny dzień zaokrąglone w górę; gdy stara i nowa praca przypadają w tym samym miesiącu, zaokrągla poprzedni pracodawca. <strong>Ekwiwalent:</strong> pensja ÷ współczynnik 20,92 (2026 i 2027 r., pomniejszony proporcjonalnie przy niepełnym etacie) × liczba dni; na rękę liczymy jak dodatek do pensji na umowie o pracę (składki, zdrowotna, podatek 12% z PIT-2, bez PPK).</p>
+    <a class="download-btn" href="kalkulator-urlopu.html" download="kalkulator-urlopu-madry-portfel.html">Pobierz i używaj offline (HTML)</a>
+    <p class="microcopy">To zwykła strona HTML bez makr i bez ciasteczek. <a href="https://github.com/bartuniadev/madry-portfel/blob/master/narzedzia/kalkulator-urlopu.html">Zobacz kod źródłowy na GitHub</a>.</p>
+  </div>
+
+  <p class="more-link"><a href="../artykuly/dni-wolne-od-pracy-2027.html">Dni wolne od pracy 2027 i długie weekendy →</a><br><a href="../artykuly/prawa-pracownika-w-liczbach.html">Prawa pracownika w liczbach →</a><br><a href="../artykuly/zmiana-pracy-lista-kontrolna.html">Zmiana pracy — lista kontrolna →</a></p>
+</main>
+
+<footer>
+  <p>&copy; 2026 Mądry Portfel. <a href="../polityka-prywatnosci.html">Polityka prywatności</a></p>
+  <p class="ai-note">Treści na tej stronie powstają z pomocą narzędzi AI, na podstawie źródeł podanych przy artykułach. Przepisy i kwoty się zmieniają — przed decyzją sprawdź je u źródła. <a href="../jak-powstaja-tresci.html">Jak powstają treści</a></p>
+</footer>
+
+<script>
+  function $(id){ return document.getElementById(id); }
+  function r2(x){ return Math.round((x + Number.EPSILON) * 100) / 100; }
+  function fmt(n){ return new Intl.NumberFormat('pl-PL',{maximumFractionDigits:0,useGrouping:'always'}).format(Math.round(n)) + ' zł'; }
+  function dec(n, d){ return new Intl.NumberFormat('pl-PL',{maximumFractionDigits:d || 1}).format(n); }
+  function godz(n){ return n + ' ' + plural(n, 'godzina', 'godziny', 'godzin'); }
+  function num(id, max){ var v = parseFloat($(id).value); if (!isFinite(v) || v < 0) v = 0; return max != null ? Math.min(v, max) : v; }
+  function plural(n, one, few, many){ var a = Math.abs(n) % 100, b = a % 10; if (n === 1) return one; if (b >= 2 && b <= 4 && (a < 12 || a > 14)) return few; return many; }
+  function dni(n){ return n === 1 ? 'dzień' : 'dni'; }
+  function ym(totalM){ var y = Math.floor(totalM / 12), m = totalM % 12, out = [];
+    if (y) out.push(y + ' ' + plural(y, 'rok', 'lata', 'lat'));
+    if (m) out.push(m + ' mies.');
+    return out.length ? out.join(' ') : '0 mies.'; }
+  var COEF = 20.92;
+  function netEtat(g){
+    var zus = r2(r2(g * 0.0976) + r2(g * 0.015) + r2(g * 0.0245)), h = r2((g - zus) * 0.09);
+    var tax = Math.max(0, Math.round(Math.max(0, Math.round(g - zus - 250)) * 0.12 - 300));
+    return g - zus - h - tax;
+  }
+  function sit(){ var r = document.querySelector('input[name="sit"]:checked'); return r ? r.value : 'full'; }
+
+  function recalc(){
+    var edu = parseInt($('edu').value, 10), workM = Math.round(num('wy', 60)) * 12 + Math.round(num('wm', 11));
+    var fte = parseFloat($('fte').value), s = sit();
+    var stazM = edu * 12 + workM;
+    var base = stazM >= 120 ? 26 : 20;
+    var annual = Math.ceil(base * fte - 1e-9);
+    $('staz').textContent = ym(stazM);
+    $('stazNote').textContent = edu ? 'w tym ' + edu + ' ' + plural(edu, 'rok', 'lata', 'lat') + ' za szkołę' : 'bez okresu nauki';
+    $('annual').textContent = annual + ' ' + dni(annual);
+    $('annualNote').textContent = fte < 1 ? 'z ' + base + ' dni dla pełnego etatu' : (base === 26 ? 'staż co najmniej 10 lat' : 'staż poniżej 10 lat');
+    if (stazM >= 120){ $('to26').textContent = 'masz już'; $('to26Note').textContent = 'prawo do 26 dni'; }
+    else { $('to26').textContent = ym(120 - stazM); $('to26Note').textContent = 'stażu brakuje'; }
+
+    $('months').hidden = s === 'full';
+    $('meF').hidden = s !== 'part';
+    var ms = parseInt($('ms').value, 10), me = parseInt($('me').value, 10), days, note, label, v = '';
+    if (s === 'full'){
+      days = annual; label = 'Urlop w tym roku';
+      note = godz(annual * 8) + (fte < 1 ? ' (dzień urlopu = 8 godzin)' : '');
+      v = 'Masz ' + annual + ' ' + dni(annual) + ' urlopu, w tym 4 dni urlopu na żądanie. Niewykorzystany urlop przechodzi na kolejny rok — trzeba go wykorzystać do 30 września.';
+    } else if (s === 'first'){
+      var mm = 13 - ms, acc = base * fte * mm / 12;
+      days = acc; label = 'Urlop do końca roku';
+      note = 'po ' + dec(base * fte / 12, 2) + ' dnia za każdy z ' + mm + ' ' + plural(mm, 'miesiąca', 'miesięcy', 'miesięcy') + ' (ok. ' + Math.round(acc * 8) + ' godz.)';
+      v = 'W pierwszej pracy urlop nabywasz z dołu: po każdym przepracowanym miesiącu 1/12 rocznego wymiaru. Od 1 stycznia przyszłego roku masz od razu pełne ' + annual + ' ' + dni(annual) + '.';
+      if (stazM >= 120) v += ' Uwaga: przy pierwszej pracy staż zwykle wynika tylko ze szkoły — sprawdź wpisany okres pracy.';
+    } else {
+      if (me < ms) me = ms;
+      var mp = me - ms + 1, prop = Math.min(annual, Math.ceil(annual * mp / 12 - 1e-9));
+      days = prop; label = 'Urlop u tego pracodawcy';
+      note = mp + ' ' + plural(mp, 'miesiąc', 'miesiące', 'miesięcy') + ' z 12 · ' + godz(prop * 8);
+      v = 'U tego pracodawcy przysługuje Ci ' + prop + ' ' + dni(prop) + ' urlopu (proporcjonalnie do ' + mp + ' ' + plural(mp, 'miesiąca', 'miesięcy', 'miesięcy') + '). U poprzedniego lub następnego pracodawcy dostaniesz urlop za pozostałe miesiące roku. Jeśli u poprzedniego wykorzystałeś więcej, niż wynikało z proporcji, tu dostaniesz odpowiednio mniej.';
+    }
+    $('resLabel').textContent = label;
+    var whole = Math.abs(days - Math.round(days)) < 1e-9;
+    $('days').textContent = (s === 'first' ? 'ok. ' + dec(days) : days) + ' ' + (whole ? dni(Math.round(days)) : 'dnia');
+    $('daysNote').textContent = note;
+    $('verdict').textContent = v;
+
+    var sal = num('sal'), left = num('left', 80), daily = sal / (COEF * fte);
+    var eq = r2(daily * left);
+    $('eqG').textContent = fmt(eq);
+    $('eqRate').textContent = left ? fmt(daily) + ' za dzień (' + dec(daily / 8) + ' zł/godz.)' : '';
+    $('eqN').textContent = fmt(Math.max(0, netEtat(sal + eq) - netEtat(sal)));
+  }
+  ['edu','wy','wm','fte','ms','me','sal','left'].forEach(function(id){ $(id).addEventListener('input', recalc); $(id).addEventListener('change', recalc); });
+  document.querySelectorAll('input[name="sit"]').forEach(function(r){ r.addEventListener('change', recalc); });
+  recalc();
+</script>
+<script defer src="../assets/stats.js"></script>
+</body>
+</html>

@@ -1,5 +1,5 @@
 # usage: python add_index.py  (reads entries from stdin as python list of dicts)
-import sys, re, os, ast
+import sys, re, os, ast, datetime
 S=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,S)
 import build_all as B
 try:
@@ -25,6 +25,6 @@ for e in entries:
     if e.get('last'):
         j=s.index('    </ul>',j)
     s=s[:j]+html+s[j:]
-    m=m.replace('</urlset>',f'  <url><loc>https://bartuniadev.github.io/madry-portfel/artykuly/{e["slug"]}.html</loc><lastmod>2026-11-16</lastmod></url>\n</urlset>')
+    m=m.replace('</urlset>',f'  <url><loc>https://bartuniadev.github.io/madry-portfel/artykuly/{e["slug"]}.html</loc><lastmod>{datetime.date.today().isoformat()}</lastmod></url>\n</urlset>')
 open(root+'index.html','w').write(s); open(root+'sitemap.xml','w').write(m)
 print('index updated')

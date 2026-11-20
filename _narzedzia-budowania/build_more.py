@@ -342,4 +342,9 @@ ARTICLES = [
   cat='kariera', icon='gift', hero='Ilustracja prezentu — premia świąteczna i bony', body='premia.html',
   related=['budzet-na-swieta','pasek-wynagrodzenia-jak-czytac','koniec-roku-finanse-lista'],
   sources=[B.SRC['podatki'],('https://www.zus.pl/','Zakład Ubezpieczeń Społecznych','składki od świadczeń dla pracowników'),('https://direct.money.pl/artykuly/porady/ministerstwo-finansow-nie-podniesie-limitu-zfss-w-2026-r-od-nadwyzki-ponad-1000-zl-bedzie-podatek','Money.pl: limit 1000 zł dla świadczeń z ZFŚS w 2026 r.','stanowisko Ministerstwa Finansów w sprawie limitu')]),
+ dict(slug='dni-wolne-od-pracy-2027', title='Dni wolne od pracy 2027 i długie weekendy — kalendarz',
+  desc='Dni wolne od pracy 2027: 14 świąt, dodatkowe dni wolne za 1 maja i 25 grudnia, długie weekendy i kiedy wziąć urlop, wymiar czasu pracy w każdym miesiącu.',
+  cat='kariera', icon='calendar', hero='Ilustracja kalendarza — dni wolne od pracy w 2027 roku', body='dniwolne2027.html',
+  related=['prawa-pracownika-w-liczbach','podroze-taniej-budzet-urlopu','zmiany-w-finansach-2027'],
+  sources=[('https://isap.sejm.gov.pl/','Internetowy System Aktów Prawnych','Kodeks pracy (art. 130, 152–171) i ustawa o dniach wolnych od pracy'),('https://www.pip.gov.pl/','Państwowa Inspekcja Pracy','porady w sprawie urlopów i czasu pracy'),('https://www.zus.pl/','Zakład Ubezpieczeń Społecznych','zaświadczenie o okresach zleceń i działalności do stażu pracy (eZUS)')]),
 ]

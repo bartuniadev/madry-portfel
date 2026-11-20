@@ -1,7 +1,7 @@
 # Unifies publisher/author structured data across the site (idempotent):
 # one Organization with PNG logo, publishing principles and the open-source repo;
 # Article.isAccessibleForFree; AboutPage/WebPage data for the about and methodology pages.
-import glob, json, os, re
+import glob, html, json, os, re
 
 ROOT = '/home/user/madry-portfel/'
 BASE = 'https://bartuniadev.github.io/madry-portfel/'
@@ -35,6 +35,21 @@ def fix_node(n):
         n.setdefault('inLanguage', 'pl-PL')
 
 
+def _text(h):
+    return re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', ' ', h))).strip()
+
+
+def article_faq(s):
+    """FAQPage data built from the visible <details class="faq"> questions of an article."""
+    s = re.sub(r'<script type="application/ld\+json">\s*\{\s*"@context": "https://schema.org",\s*"@type": "FAQPage".*?</script>\n?', '', s, flags=re.S)
+    qa = [(_text(q), _text(a)) for q, a in re.findall(r'<details class="faq">\s*<summary>(.*?)</summary>(.*?)</details>', s, re.S)]
+    if not qa:
+        return s
+    ld = {"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "pl-PL",
+          "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in qa]}
+    return s.replace('</head>', '<script type="application/ld+json">\n' + json.dumps(ld, ensure_ascii=False, indent=2) + '\n</script>\n</head>', 1)
+
+
 changed = 0
 for f in glob.glob(ROOT + '*.html') + glob.glob(ROOT + '*/*.html'):
     rel = os.path.relpath(f, ROOT)
@@ -58,6 +73,8 @@ for f in glob.glob(ROOT + '*.html') + glob.glob(ROOT + '*/*.html'):
         return '<script type="application/ld+json">\n' + json.dumps(d, ensure_ascii=False, indent=2) + '\n</script>'
 
     s = re.sub(r'<script type="application/ld\+json">\s*(.*?)\s*</script>', repl, s, flags=re.S)
+    if rel.startswith('artykuly/'):
+        s = article_faq(s)
     if rel in PAGES and 'application/ld+json' not in s:
         s = s.replace('</head>', '<script type="application/ld+json">\n' + json.dumps(PAGES[rel], ensure_ascii=False, indent=2) + '\n</script>\n</head>', 1)
     if s != orig:
