@@ -10,7 +10,7 @@ if len(sys.argv)>1:
 for f in glob.glob('*.html')+glob.glob('*/*.html'):
     if f.startswith('_'): continue
     t=open(f).read()
-    for h in re.findall(r'(?:href|src)="([^"#]+)',t):
+    for h in re.findall(r'(?:href|src)="([^"#?]+)',t):
         if h.startswith(('http','mailto')): continue
         p=('/home/user/madry-portfel/'+h[len('/madry-portfel/'):]) if h.startswith('/madry-portfel/') else os.path.normpath(os.path.join(os.path.dirname(f),h))
         if not os.path.exists(p): bad.append((f,h))

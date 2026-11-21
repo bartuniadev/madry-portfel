@@ -4,7 +4,7 @@ from urllib.parse import quote
 
 ROOT = '/home/user/madry-portfel/'
 BASE = 'https://bartuniadev.github.io/madry-portfel/'
-AMOUNTS = [5000, 5500, 6000, 6500, 7000, 7500, 8000, 9000, 10000, 12000, 15000]
+AMOUNTS = [5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000, 11000, 12000, 13000, 14000, 15000, 16000, 18000, 20000]
 TODAY = '2026-11-19'
 MED, D1, D9 = 7550.32, 4806.0, 14239.0
 SU = math.log(D9 / MED) / 1.2815516
@@ -156,7 +156,7 @@ def page(g):
 {table}
     </tbody>
   </table>
-  <p>Inny wariant policzysz w <a href="../narzedzia/kalkulator-brutto-netto.html">kalkulatorze brutto–netto 2027</a> — pokazuje też wypłatę w każdym miesiącu roku.</p>
+  <p>Inny wariant policzysz w <a href="../narzedzia/kalkulator-brutto-netto.html?brutto={g}&amp;rok=2027&amp;ppk=0">kalkulatorze brutto–netto 2027</a> — pokazuje też wypłatę w każdym miesiącu roku.</p>
 {notes_html}
   <h2>Na co idzie różnica między brutto a netto</h2>
   <ul>

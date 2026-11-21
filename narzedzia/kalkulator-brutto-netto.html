@@ -261,6 +261,9 @@
     text-decoration:none;
   }
   .download-btn:hover{background:#4fe49a;}
+  .share-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:16px;}
+  .share-row .download-btn{border:0;cursor:pointer;font-family:inherit;}
+  .share-row .hint{font-size:0.82rem;color:var(--text-2);overflow-wrap:anywhere;}
   .microcopy{font-size:0.8rem !important;color:#93a49a !important;margin-top:12px !important;}
 
   .more-link{margin-top:26px;font-size:0.95rem;}
@@ -464,6 +467,10 @@
         <tr class="total"><td><i class="dot needs"></i>Wypłata netto</td><td id="rNet">0 zł</td></tr>
       </tbody>
     </table>
+    <div class="share-row">
+      <button type="button" class="download-btn" id="shareBtn">Udostępnij wynik</button>
+      <span class="hint" id="shareStatus" aria-live="polite"></span>
+    </div>
 
     <div class="results-grid">
       <div class="result-card">
@@ -524,8 +531,8 @@
     <p class="microcopy">To zwykła strona HTML bez makr i bez ciasteczek. <a href="https://github.com/bartuniadev/madry-portfel/blob/master/narzedzia/kalkulator-brutto-netto.html">Zobacz kod źródłowy na GitHub</a>. Kalkulator ma charakter poglądowy i nie zastępuje wyliczenia działu kadr.</p>
   </div>
 
-  <p class="more-link">Gotowe wyliczenia dla popularnych kwot brutto: <a href="../wynagrodzenia/5000-brutto-ile-netto.html">5 000 zł</a> · <a href="../wynagrodzenia/5500-brutto-ile-netto.html">5 500 zł</a> · <a href="../wynagrodzenia/6000-brutto-ile-netto.html">6 000 zł</a> · <a href="../wynagrodzenia/6500-brutto-ile-netto.html">6 500 zł</a> · <a href="../wynagrodzenia/7000-brutto-ile-netto.html">7 000 zł</a> · <a href="../wynagrodzenia/7500-brutto-ile-netto.html">7 500 zł</a> · <a href="../wynagrodzenia/8000-brutto-ile-netto.html">8 000 zł</a> · <a href="../wynagrodzenia/9000-brutto-ile-netto.html">9 000 zł</a> · <a href="../wynagrodzenia/10000-brutto-ile-netto.html">10 000 zł</a> · <a href="../wynagrodzenia/12000-brutto-ile-netto.html">12 000 zł</a> · <a href="../wynagrodzenia/15000-brutto-ile-netto.html">15 000 zł</a></p>
-  <p class="more-link">Ile brutto, żeby dostać na rękę: <a href="../wynagrodzenia/4000-netto-ile-brutto.html">4 000 zł netto</a> · <a href="../wynagrodzenia/5000-netto-ile-brutto.html">5 000 zł netto</a> · <a href="../wynagrodzenia/6000-netto-ile-brutto.html">6 000 zł netto</a> · <a href="../wynagrodzenia/7000-netto-ile-brutto.html">7 000 zł netto</a> · <a href="../wynagrodzenia/8000-netto-ile-brutto.html">8 000 zł netto</a> · <a href="../wynagrodzenia/10000-netto-ile-brutto.html">10 000 zł netto</a></p>
+  <p class="more-link">Gotowe wyliczenia dla popularnych kwot brutto: <a href="../wynagrodzenia/5000-brutto-ile-netto.html">5 000 zł</a> · <a href="../wynagrodzenia/5500-brutto-ile-netto.html">5 500 zł</a> · <a href="../wynagrodzenia/6000-brutto-ile-netto.html">6 000 zł</a> · <a href="../wynagrodzenia/6500-brutto-ile-netto.html">6 500 zł</a> · <a href="../wynagrodzenia/7000-brutto-ile-netto.html">7 000 zł</a> · <a href="../wynagrodzenia/7500-brutto-ile-netto.html">7 500 zł</a> · <a href="../wynagrodzenia/8000-brutto-ile-netto.html">8 000 zł</a> · <a href="../wynagrodzenia/8500-brutto-ile-netto.html">8 500 zł</a> · <a href="../wynagrodzenia/9000-brutto-ile-netto.html">9 000 zł</a> · <a href="../wynagrodzenia/9500-brutto-ile-netto.html">9 500 zł</a> · <a href="../wynagrodzenia/10000-brutto-ile-netto.html">10 000 zł</a> · <a href="../wynagrodzenia/11000-brutto-ile-netto.html">11 000 zł</a> · <a href="../wynagrodzenia/12000-brutto-ile-netto.html">12 000 zł</a> · <a href="../wynagrodzenia/13000-brutto-ile-netto.html">13 000 zł</a> · <a href="../wynagrodzenia/14000-brutto-ile-netto.html">14 000 zł</a> · <a href="../wynagrodzenia/15000-brutto-ile-netto.html">15 000 zł</a> · <a href="../wynagrodzenia/16000-brutto-ile-netto.html">16 000 zł</a> · <a href="../wynagrodzenia/18000-brutto-ile-netto.html">18 000 zł</a> · <a href="../wynagrodzenia/20000-brutto-ile-netto.html">20 000 zł</a>.</p>
+  <p class="more-link">Ile brutto, żeby dostać na rękę: <a href="../wynagrodzenia/4000-netto-ile-brutto.html">4 000 zł netto</a> · <a href="../wynagrodzenia/4500-netto-ile-brutto.html">4 500 zł netto</a> · <a href="../wynagrodzenia/5000-netto-ile-brutto.html">5 000 zł netto</a> · <a href="../wynagrodzenia/5500-netto-ile-brutto.html">5 500 zł netto</a> · <a href="../wynagrodzenia/6000-netto-ile-brutto.html">6 000 zł netto</a> · <a href="../wynagrodzenia/6500-netto-ile-brutto.html">6 500 zł netto</a> · <a href="../wynagrodzenia/7000-netto-ile-brutto.html">7 000 zł netto</a> · <a href="../wynagrodzenia/7500-netto-ile-brutto.html">7 500 zł netto</a> · <a href="../wynagrodzenia/8000-netto-ile-brutto.html">8 000 zł netto</a> · <a href="../wynagrodzenia/9000-netto-ile-brutto.html">9 000 zł netto</a> · <a href="../wynagrodzenia/10000-netto-ile-brutto.html">10 000 zł netto</a> · <a href="../wynagrodzenia/12000-netto-ile-brutto.html">12 000 zł netto</a>.</p>
   <p class="more-link"><a href="../artykuly/brutto-netto-rodzaje-umow.html">Brutto vs netto i rodzaje umów — jak czytać ofertę pracy →</a><br><a href="../artykuly/zwrot-podatku-pit-dla-mlodych.html">Zwrot podatku i pierwszy PIT →</a><br><a href="../artykuly/ppk-pracownicze-plany-kapitalowe.html">PPK — czy warto zostać w programie →</a></p>
 </main>
 
@@ -687,6 +694,36 @@
   });
   /* od 1 stycznia 2027 domyślnie pokazujemy nowy rok */
   if (new Date() >= new Date(2027, 0, 1)) $('y2027').checked = true;
+  /* link z wynikiem: ?brutto=7000&rok=2027&ppk=0&mlody=1 (albo ?netto=5000) */
+  (function(){
+    var p; try { p = new URLSearchParams(location.search); } catch (e) { return; }
+    var num = function(k){ var v = parseFloat((p.get(k) || '').replace(',', '.')); return isFinite(v) && v >= 0 && v <= 1000000 ? v : null; };
+    var b = num('brutto'), n = num('netto');
+    if (n !== null){ $('mNet').checked = true; $('gross').value = n; }
+    else if (b !== null){ $('mGross').checked = true; $('gross').value = b; }
+    if (p.get('rok') === '2027') $('y2027').checked = true;
+    if (p.get('rok') === '2026') $('y2026').checked = true;
+    [['mlody','young'],['ppk','ppk'],['pit2','pit2'],['dojazd','commute'],['skala','newscale']].forEach(function(f){
+      if (p.has(f[0])) $(f[1]).checked = p.get(f[0]) === '1';
+    });
+  })();
+  $('shareBtn').addEventListener('click', function(){
+    var p = new URLSearchParams();
+    p.set($('mNet').checked ? 'netto' : 'brutto', String(parseFloat($('gross').value) || 0));
+    p.set('rok', String(currentYear()));
+    p.set('ppk', $('ppk').checked ? '1' : '0');
+    if ($('young').checked) p.set('mlody', '1');
+    if (!$('pit2').checked) p.set('pit2', '0');
+    if ($('commute').checked) p.set('dojazd', '1');
+    if ($('newscale').checked) p.set('skala', '1');
+    var url = location.origin + location.pathname + '?' + p.toString();
+    var text = $('netLabel').textContent + ': ' + $('net').textContent + ' — policzone w kalkulatorze Mądrego Portfela';
+    var st = $('shareStatus');
+    if (navigator.share){ navigator.share({title: document.title, text: text, url: url}).catch(function(){}); return; }
+    if (navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(url).then(function(){ st.textContent = 'Skopiowano link — otworzy kalkulator z tą samą kwotą.'; }, function(){ st.textContent = url; });
+    } else st.textContent = url;
+  });
   recalc();
 </script>
 <script defer src="../assets/stats.js"></script>

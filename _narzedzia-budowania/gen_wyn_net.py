@@ -3,7 +3,7 @@ import os, sys, re, json, html, math
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import gen_wyn as G
 
-NETS = [4000, 5000, 6000, 7000, 8000, 10000]
+NETS = [4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 9000, 10000, 12000]
 
 
 def solve(fn, target):
@@ -74,7 +74,7 @@ def page(n):
 {table}
     </tbody>
   </table>
-{young_note}  <p>Inną kwotę albo swój wariant (PPK, dojazdy, rok 2026 lub 2027) policzysz w <a href="../narzedzia/kalkulator-brutto-netto.html">kalkulatorze brutto–netto</a> — przełącz go na „Netto → brutto”.</p>
+{young_note}  <p>Inną kwotę albo swój wariant (PPK, dojazdy, rok 2026 lub 2027) policzysz w <a href="../narzedzia/kalkulator-brutto-netto.html?netto={n}&amp;rok=2027&amp;ppk=0">kalkulatorze brutto–netto</a> — otworzy się od razu z tą kwotą w trybie „Netto → brutto”.</p>
 
   <h2>Ile brutto na umowie zlecenia</h2>
   <table>

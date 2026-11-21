@@ -101,7 +101,7 @@ top = f'''<main class="home-main">
         <li><i class="b-hea"></i>Zdrowotna <span id="hcH">{pl(H)}</span></li>
         <li><i class="b-tax"></i>Podatek <span id="hcT">{pl(T)}</span></li>
       </ul>
-      <p class="hc-note">Z PIT-2, bez PPK. Ulga dla młodych, PPK i próg podatkowy — w <a href="narzedzia/kalkulator-brutto-netto.html">pełnym kalkulatorze brutto–netto&nbsp;→</a></p>
+      <p class="hc-note">Z PIT-2, bez PPK. Ulga dla młodych, PPK i próg podatkowy — w <a id="hcLink" href="narzedzia/kalkulator-brutto-netto.html">pełnym kalkulatorze brutto–netto&nbsp;→</a></p>
     </aside>
   </section>
 
@@ -162,6 +162,7 @@ script = '''<script>
     document.getElementById('hcN').textContent=fmt(n); document.getElementById('hcZ').textContent=fmt(z);
     document.getElementById('hcH').textContent=fmt(h); document.getElementById('hcT').textContent=fmt(t);
     var w=function(id,x){document.getElementById(id).style.width=(v?x/v*100:0)+'%';}; w('hbN',n); w('hbZ',z); w('hbH',h); w('hbT',t);
+    document.getElementById('hcLink').href='narzedzia/kalkulator-brutto-netto.html?brutto='+v+'&ppk=0';
   });
 })();
 </script>'''
