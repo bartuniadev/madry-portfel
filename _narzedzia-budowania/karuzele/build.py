@@ -33,6 +33,16 @@ SETS = {
         ('stat', {'eyebrow': '5 · Konto a komornik', 'big': '3712,50 zł', 'title': 'miesięcznie na koncie jest wolne od zajęcia', 'sub': 'To 75% płacy minimalnej — tej kwoty komornik nie może zająć.'}),
         ('cta', {'eyebrow': 'Wszystkie zmiany i kalkulatory', 'title': 'Policz swoją pensję na 2027 rok', 'sub': 'Kalkulator brutto–netto 2027, kalkulator OKI i pełna lista zmian — za darmo, bez rejestracji.', 'link': 'bartuniadev.github.io/madry-portfel'}),
     ],
+    'weekendy': [
+        ('hook', {'eyebrow': 'Kalendarz 2027', 'title': '28 dni wolnego za <em>11 dni</em> urlopu', 'sub': 'Zapisz, zanim ktoś z zespołu zajmie te terminy →'}),
+        ('table', {'eyebrow': 'Gdzie wziąć urlop', 'title': 'Najlepsze długie weekendy 2027',
+                   'rows': [('1–10 stycznia', '4 dni', '10 dni'), ('27–30 maja', '1 dzień', '4 dni'), ('11–14 listopada', '1 dzień', '4 dni'), ('24.12–2.01.2028', '5 dni', '10 dni')],
+                   'note': 'Urlop: 4–5 i 7–8 stycznia, 28 maja, 12 listopada, 27–31 grudnia.', 'cols': ('Wolne', 'Urlop', 'Razem')}),
+        ('stat', {'eyebrow': 'Święta w sobotę', 'big': '2 dni', 'title': 'dodatkowego wolnego za 1 maja i 25 grudnia', 'sub': 'Oba święta wypadają w sobotę, więc pracodawca musi wyznaczyć Ci za każde inny dzień wolny.'}),
+        ('stat', {'eyebrow': 'Długie weekendy za darmo', 'big': '5 razy', 'title': 'trzy dni wolnego pod rząd bez urlopu', 'sub': 'Nowy Rok (1–3.01), Wielkanoc (27⁠–⁠29.03), majówka (1–3.05), Wszystkich Świętych (30.10⁠–⁠1.11) i święta (24–26.12).'}),
+        ('stat', {'eyebrow': 'Wymiar czasu pracy', 'big': '251 dni', 'title': 'pracy w 2027 roku — razem 2008 godzin', 'sub': 'Najkrótszy miesiąc to maj: 18 dni i 144 godziny.'}),
+        ('cta', {'eyebrow': 'Pełny kalendarz za darmo', 'title': 'Ile dni urlopu masz w 2027?', 'sub': 'Kalendarz świąt, plan długich weekendów i kalkulator urlopu — bez rejestracji.', 'link': 'bartuniadev.github.io/madry-portfel'}),
+    ],
 }
 CSS = '''
 @import url("file:///home/user/madry-portfel/assets/fonts/fonts.css");
