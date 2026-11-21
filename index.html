@@ -56,7 +56,7 @@
 <link rel="alternate" type="application/rss+xml" title="Mądry Portfel — nowe poradniki" href="https://bartuniadev.github.io/madry-portfel/feed.xml">
 </head>
 <body>
-<header class="site-header">
+<header class="site-header wide">
   <div class="header-inner">
     <a class="logo" href="index.html"><svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="7.5 13.5 10.5 10.5 13 12.5 16.5 8.5"/><polyline points="14 8.5 16.5 8.5 16.5 11"/></svg>Mądry Portfel</a>
     <nav>
@@ -64,65 +64,104 @@
       <a href="narzedzia/index.html">Narzędzia</a>
       <a href="slownik.html">Słownik</a>
       <a href="o-nas.html">O nas</a>
-      <a href="polityka-prywatnosci.html">Polityka prywatności</a>
     </nav>
   </div>
 </header>
 
 <main class="home-main">
-  <h1>Mądry Portfel</h1>
-  <p class="lead">Finanse osobiste dla młodych, którzy dopiero zaczynają zarabiać. Pierwsza pensja, budżet, oszczędzanie i pierwsze kroki w inwestowaniu — konkretnie, bez lania wody i bez naciągania na produkty finansowe.</p>
-
-  <a class="salary-cta" href="narzedzia/czy-dobrze-zarabiam.html">
-    <span class="sc-eyebrow">Nowe · dane GUS 2026</span>
-    <strong>Czy dobrze zarabiasz? Sprawdź, ile procent Polaków zarabia mniej od Ciebie</strong>
-    <span class="sc-go">Sprawdź w 10 sekund →</span>
-  </a>
-
-  <div class="hero-graphic">
-    <svg viewBox="0 0 720 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustracja rosnących oszczędności">
-      <defs>
-        <linearGradient id="homeHeroBg" x1="0" y1="0" x2="720" y2="200" gradientUnits="userSpaceOnUse">
-          <stop offset="0" stop-color="#eef7f0"/>
-          <stop offset="1" stop-color="#d3e9d9"/>
-        </linearGradient>
-        <linearGradient id="homeHeroArea" x1="0" y1="0" x2="0" y2="200" gradientUnits="userSpaceOnUse">
-          <stop offset="0" stop-color="#1f7a4d" stop-opacity="0.28"/>
-          <stop offset="1" stop-color="#1f7a4d" stop-opacity="0"/>
-        </linearGradient>
-      </defs>
-      <rect x="0" y="0" width="720" height="200" fill="url(#homeHeroBg)"/>
-      <g opacity="0.45">
-        <circle cx="86" cy="56" r="16" fill="none" stroke="#1f7a4d" stroke-width="2"/>
-        <circle cx="650" cy="150" r="11" fill="none" stroke="#1f7a4d" stroke-width="2"/>
-        <circle cx="470" cy="168" r="6" fill="#e0a63f"/>
-        <circle cx="610" cy="44" r="7" fill="none" stroke="#1f7a4d" stroke-width="2"/>
-      </g>
-      <polygon points="36,152 160,118 260,138 380,80 500,102 660,40 660,200 36,200" fill="url(#homeHeroArea)"/>
-      <polyline points="36,152 160,118 260,138 380,80 500,102 660,40" fill="none" stroke="#145c39" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" style="filter: drop-shadow(0 3px 6px rgba(20,92,57,0.25))"/>
-      <circle cx="160" cy="118" r="6" fill="#145c39"/>
-      <circle cx="380" cy="80" r="6" fill="#145c39"/>
-      <circle cx="660" cy="40" r="8" fill="#e0a63f" stroke="#fff" stroke-width="2"/>
-    </svg>
-  </div>
-
-  <div class="tool-teaser reveal">
-    <div class="tt-copy">
-      <span class="tt-eyebrow">14 darmowych kalkulatorów · 0 kont · 0 maila · 0 ciasteczek</span>
-      <h2>Policz to na własnych liczbach</h2>
-      <p><a href="narzedzia/czy-dobrze-zarabiam.html">Czy dobrze zarabiam?</a> · <a href="narzedzia/kalkulator-brutto-netto.html">Brutto–netto 2026 i 2027</a> · <a href="narzedzia/kalkulator-budzetu.html">Budżet 50/30/20</a> · <a href="narzedzia/kalkulator-procentu-skladanego.html">Procent składany</a> · <a href="narzedzia/kalkulator-splaty-dlugow.html">Spłata długów</a> · <a href="narzedzia/kalkulator-oki.html">OKI czy zwykły rachunek</a> · <a href="narzedzia/kalkulator-umowy-zlecenia.html">Umowa zlecenia</a> · <a href="narzedzia/porownanie-ofert-pracy.html">Porównanie ofert pracy</a> · <a href="narzedzia/kalkulator-urlopu.html">Urlop i ekwiwalent</a> · <a href="narzedzia/kalkulator-lokaty.html">Lokata</a> · <a href="narzedzia/kalkulator-kredytu.html">Rata kredytu</a> · <a href="narzedzia/kalkulator-poduszki-finansowej.html">Poduszka finansowa</a> · <a href="narzedzia/kalkulator-podzialu-kosztow.html">Podział kosztów dla par</a> · <a href="narzedzia/kalkulator-inflacji.html">Inflacja</a> · <a href="pliki/budzet-domowy-madry-portfel.xlsx" download>arkusz budżetu do pobrania</a>. Liczą się w Twojej przeglądarce i działają też offline.</p>
+  <section class="home-hero">
+    <div class="hh-copy">
+      <p class="hh-eyebrow">Bez reklam · bez kont · bez ciasteczek</p>
+      <h1>Finanse osobiste dla młodych — <span class="hh-accent">policzone</span> i wyjaśnione</h1>
+      <p class="lead">Pierwsza pensja, podatki, budżet, oszczędzanie i inwestowanie. 79 poradników ze źródłami urzędowymi i 14 kalkulatorów, które liczą w Twojej przeglądarce.</p>
+      <div class="finder">
+        <label class="visually-hidden" for="q">Szukaj poradnika</label>
+        <input type="search" id="q" placeholder="Szukaj: PIT, urlop, najem, ETF…" autocomplete="off">
+        <p class="finder-empty" id="qEmpty" hidden>Nic nie znaleziono. Spróbuj innego słowa albo zajrzyj do <a href="slownik.html">słownika</a> lub <a href="pytania.html">najczęstszych pytań</a>.</p>
+      </div>
+      <p class="hh-popular"><span>Popularne:</span> <a href="artykuly/pit-za-2026-jak-rozliczyc.html">PIT za 2026</a> <a href="artykuly/dni-wolne-od-pracy-2027.html">Dni wolne 2027<span class="badge-new">Nowość</span></a> <a href="artykuly/ike-ikze-emerytura.html">IKE i IKZE</a> <a href="artykuly/plan-na-pierwszy-rok-pracy.html">Pierwsza praca</a></p>
     </div>
-    <a class="tt-cta" href="narzedzia/index.html">Wszystkie narzędzia →</a>
-  </div>
+    <aside class="hh-calc" aria-labelledby="hcTitle">
+      <p class="hc-eyebrow">Umowa o pracę · 2026 i 2027</p>
+      <h2 id="hcTitle">Ile na rękę?</h2>
+      <label for="hcG">Pensja brutto miesięcznie</label>
+      <div class="hc-input"><input id="hcG" type="number" inputmode="decimal" value="7000" min="0" max="100000" step="100"><span aria-hidden="true">zł</span></div>
+      <p class="hc-out" aria-live="polite"><span>Na rękę</span> <strong id="hcN">5 102 zł</strong></p>
+      <div class="hc-bar" aria-hidden="true"><i class="b-net" id="hbN" style="width:72.9%"></i><i class="b-zus" id="hbZ" style="width:13.7%"></i><i class="b-hea" id="hbH" style="width:7.8%"></i><i class="b-tax" id="hbT" style="width:5.6%"></i></div>
+      <ul class="hc-legend">
+        <li><i class="b-zus"></i>ZUS <span id="hcZ">960 zł</span></li>
+        <li><i class="b-hea"></i>Zdrowotna <span id="hcH">544 zł</span></li>
+        <li><i class="b-tax"></i>Podatek <span id="hcT">395 zł</span></li>
+      </ul>
+      <p class="hc-note">Z PIT-2, bez PPK. Ulga dla młodych, PPK i próg podatkowy — w <a href="narzedzia/kalkulator-brutto-netto.html">pełnym kalkulatorze brutto–netto&nbsp;→</a></p>
+    </aside>
+  </section>
 
-  <p class="quick-links">Ile na rękę: <a href="wynagrodzenia/5000-brutto-ile-netto.html">5 000</a> · <a href="wynagrodzenia/6000-brutto-ile-netto.html">6 000</a> · <a href="wynagrodzenia/7000-brutto-ile-netto.html">7 000</a> · <a href="wynagrodzenia/8000-brutto-ile-netto.html">8 000</a> · <a href="wynagrodzenia/10000-brutto-ile-netto.html">10 000</a> zł brutto. Ile brutto, żeby mieć na rękę: <a href="wynagrodzenia/4000-netto-ile-brutto.html">4 000</a> · <a href="wynagrodzenia/5000-netto-ile-brutto.html">5 000</a> · <a href="wynagrodzenia/6000-netto-ile-brutto.html">6 000</a> · <a href="wynagrodzenia/8000-netto-ile-brutto.html">8 000</a> zł netto.</p>
-  <p class="quick-links">Nie wiesz, od czego zacząć? <a href="artykuly/plan-na-pierwszy-rok-pracy.html">Plan na pierwszy rok pracy</a> · <a href="pytania.html">Najczęstsze pytania</a> · <a href="slownik.html">Słownik pojęć</a></p>
+  <section class="home-block" aria-labelledby="hTools">
+    <div class="hb-head"><h2 id="hTools">Najpopularniejsze kalkulatory</h2><a href="narzedzia/index.html">Wszystkie 14&nbsp;→</a></div>
+    <div class="tool-grid">
+      <a class="tool-card featured" href="narzedzia/czy-dobrze-zarabiam.html">
+        <span class="tc-icon"><svg class="topic-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12c2.500-6 5-6 7.500 0s5 6 7.500 0 3.500-4 5-2"/><line x1="2" y1="20" x2="22" y2="20"/></svg></span>
+        <span class="tc-title">Czy dobrze zarabiam?</span>
+        <span class="tc-desc">Twoja pensja na tle Polaków — dane GUS</span>
+      </a>
+      <a class="tool-card" href="narzedzia/kalkulator-brutto-netto.html">
+        <span class="tc-icon"><svg class="topic-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h9l3 3v15H6z"/><path d="M15 3v3h3"/><line x1="9" y1="10" x2="15" y2="10"/><line x1="9" y1="14" x2="15" y2="14"/><line x1="9" y1="18" x2="13" y2="18"/></svg></span>
+        <span class="tc-title">Brutto–netto 2026 i 2027</span>
+        <span class="tc-desc">Wypłata w każdym miesiącu, PIT-2, PPK, ulga dla młodych</span>
+      </a>
+      <a class="tool-card" href="narzedzia/kalkulator-urlopu.html">
+        <span class="tc-icon"><svg class="topic-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/><path d="M8 15l2.5 2.5L16 13"/></svg></span>
+        <span class="tc-title">Kalkulator urlopu</span>
+        <span class="tc-desc">20 czy 26 dni, zmiana pracy i ekwiwalent</span>
+      </a>
+      <a class="tool-card" href="narzedzia/porownanie-ofert-pracy.html">
+        <span class="tc-icon"><svg class="topic-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><line x1="3" y1="13" x2="21" y2="13"/></svg></span>
+        <span class="tc-title">Porównanie ofert pracy</span>
+        <span class="tc-desc">Netto, benefity i dojazdy — która jest warta więcej</span>
+      </a>
+      <a class="tool-card" href="narzedzia/kalkulator-budzetu.html">
+        <span class="tc-icon"><svg class="topic-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="6" y1="20" x2="6" y2="14"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="18" y1="20" x2="18" y2="10"/></svg></span>
+        <span class="tc-title">Budżet 50/30/20</span>
+        <span class="tc-desc">Podział wypłaty na potrzeby, zachcianki i oszczędności</span>
+      </a>
+      <a class="tool-card" href="narzedzia/kalkulator-procentu-skladanego.html">
+        <span class="tc-icon"><svg class="topic-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 17 9 11 13 15 21 5"/><polyline points="15 5 21 5 21 11"/></svg></span>
+        <span class="tc-title">Procent składany</span>
+        <span class="tc-desc">Ile urosną regularne oszczędności po latach</span>
+      </a>
+    </div>
+    <p class="more-tools"><span>Także:</span> <a href="narzedzia/kalkulator-umowy-zlecenia.html">Umowa zlecenia</a> <a href="narzedzia/kalkulator-oki.html">OKI</a> <a href="narzedzia/kalkulator-lokaty.html">Lokata</a> <a href="narzedzia/kalkulator-kredytu.html">Rata kredytu</a> <a href="narzedzia/kalkulator-poduszki-finansowej.html">Poduszka finansowa</a> <a href="narzedzia/kalkulator-podzialu-kosztow.html">Podział kosztów dla par</a> <a href="narzedzia/kalkulator-inflacji.html">Inflacja</a> <a href="narzedzia/kalkulator-splaty-dlugow.html">Spłata długów</a> <a href="pliki/budzet-domowy-madry-portfel.xlsx" download>Arkusz budżetu (.xlsx)</a></p>
+  </section>
 
-  <div class="finder">
-    <label class="visually-hidden" for="q">Szukaj poradnika</label>
-    <input type="search" id="q" placeholder="Szukaj w poradnikach, np. PIT, najem, ETF…" autocomplete="off">
-    <p class="finder-empty" id="qEmpty" hidden>Nic nie znaleziono. Spróbuj innego słowa albo zajrzyj do <a href="slownik.html">słownika</a>.</p>
-  </div>
+  <section class="home-block" aria-labelledby="hNow">
+    <div class="hb-head"><h2 id="hNow">Na czasie</h2><a href="artykuly/koniec-roku-finanse-lista.html">Lista na koniec roku&nbsp;→</a></div>
+    <div class="feature-grid">
+      <a class="feature-card" href="artykuly/dni-wolne-od-pracy-2027.html">
+        <span class="fc-top"><span class="fc-icon"><svg class="topic-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/></svg></span><span class="fc-eyebrow">Kalendarz</span></span>
+        <span class="fc-title">Dni wolne od pracy 2027 i długie weekendy</span>
+        <span class="fc-desc">10 dni wolnego za 4 dni urlopu — gotowy plan na cały rok.</span>
+      </a>
+      <a class="feature-card" href="artykuly/zmiany-w-finansach-2027.html">
+        <span class="fc-top"><span class="fc-icon"><svg class="topic-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/></svg></span><span class="fc-eyebrow">Od 1 stycznia</span></span>
+        <span class="fc-title">Zmiany w finansach 2027</span>
+        <span class="fc-desc">Płaca minimalna 4950 zł, nowe limity IKE i IKZE, konto OKI bez podatku Belki.</span>
+      </a>
+      <a class="feature-card" href="artykuly/ile-na-reke-tabela-brutto-netto.html">
+        <span class="fc-top"><span class="fc-icon"><svg class="topic-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="12" y2="16"/></svg></span><span class="fc-eyebrow">Pensja</span></span>
+        <span class="fc-title">Ile na rękę w 2027 — tabela</span>
+        <span class="fc-desc">Netto dla pensji od płacy minimalnej do 20 000 zł brutto.</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="home-block salary-strip" aria-labelledby="hSal">
+    <h2 id="hSal" class="visually-hidden">Ile na rękę — popularne kwoty</h2>
+    <p><span>Ile na rękę z pensji brutto:</span> <a href="wynagrodzenia/5000-brutto-ile-netto.html">5 000 zł</a> <a href="wynagrodzenia/6000-brutto-ile-netto.html">6 000 zł</a> <a href="wynagrodzenia/7000-brutto-ile-netto.html">7 000 zł</a> <a href="wynagrodzenia/8000-brutto-ile-netto.html">8 000 zł</a> <a href="wynagrodzenia/10000-brutto-ile-netto.html">10 000 zł</a> <a href="wynagrodzenia/12000-brutto-ile-netto.html">12 000 zł</a></p>
+    <p><span>Ile brutto, żeby mieć na rękę:</span> <a href="wynagrodzenia/4000-netto-ile-brutto.html">4 000 zł</a> <a href="wynagrodzenia/5000-netto-ile-brutto.html">5 000 zł</a> <a href="wynagrodzenia/6000-netto-ile-brutto.html">6 000 zł</a> <a href="wynagrodzenia/8000-netto-ile-brutto.html">8 000 zł</a></p>
+  </section>
+
+  <div class="hb-head articles-head"><h2 id="poradniki">Poradniki</h2><a href="pytania.html">Najczęstsze pytania&nbsp;→</a></div>
   <nav class="cat-chips" aria-label="Kategorie"><a href="#zacznij-tutaj">Zacznij tutaj</a><a href="#budzet">Budżet i wydatki</a><a href="#dlugi">Kredyty i długi</a><a href="#mieszkanie">Mieszkanie i samochód</a><a href="#oszczedzanie">Oszczędzanie i bezpieczeństwo</a><a href="#inwestowanie">Emerytura i inwestowanie</a><a href="#kariera">Kariera i dochody</a></nav>
 
   <section class="category-section reveal" id="zacznij-tutaj">
@@ -587,7 +626,7 @@
       <li>
         <div class="icon-badge"><svg class="topic-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/></svg></div>
         <div class="article-body">
-          <a href="artykuly/dni-wolne-od-pracy-2027.html">Dni wolne od pracy 2027 i długie weekendy — kalendarz<span class="badge-new">Nowość</span></a>
+          <a href="artykuly/dni-wolne-od-pracy-2027.html">Dni wolne od pracy 2027 i długie weekendy — kalendarz</a>
           <p>14 świąt, dodatkowe dni wolne za 1 maja i 25 grudnia, gotowe długie weekendy z liczbą dni urlopu i wymiar czasu pracy w każdym miesiącu 2027 r.</p>
         </div>
       </li>
@@ -730,14 +769,34 @@
 <script>
 (function(){
   var q=document.getElementById('q'); if(!q) return;
-  var empty=document.getElementById('qEmpty');
+  var main=document.querySelector('.home-main'), empty=document.getElementById('qEmpty');
   var norm=function(t){return t.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/ł/g,'l');};
   var items=[].slice.call(document.querySelectorAll('.category-section .article-list li')).map(function(li){return {li:li,text:norm(li.textContent)};});
+  [].forEach.call(document.querySelectorAll('.category-section'),function(sec){
+    var n=sec.querySelectorAll('.article-list li').length; if(n<=8) return;
+    sec.classList.add('collapsed');
+    var btn=document.createElement('button'); btn.type='button'; btn.className='show-all';
+    btn.textContent='Pokaż wszystkie ('+n+')'; btn.setAttribute('aria-expanded','false');
+    btn.addEventListener('click',function(){var open=sec.classList.toggle('collapsed')===false; btn.setAttribute('aria-expanded',open?'true':'false'); btn.textContent=open?'Zwiń':'Pokaż wszystkie ('+n+')';});
+    sec.appendChild(btn);
+  });
   q.addEventListener('input',function(){
     var words=norm(q.value).split(/\s+/).filter(Boolean).map(function(w){return w.length>=6?w.slice(0,-2):w.length>=4?w.slice(0,-1):w;}), shown=0;
+    main.classList.toggle('searching',words.length>0);
     items.forEach(function(it){var ok=words.every(function(w){return it.text.indexOf(w)>-1;}); it.li.hidden=!ok; if(ok) shown++;});
     [].forEach.call(document.querySelectorAll('.category-section'),function(sec){sec.hidden=!sec.querySelector('li:not([hidden])'); sec.classList.add('is-visible');});
     empty.hidden=shown>0;
+  });
+  q.addEventListener('keydown',function(e){ if(e.key==='Enter'){ var h=document.getElementById('poradniki'); if(h) h.scrollIntoView({block:'start'}); } });
+  var g=document.getElementById('hcG'); if(!g) return;
+  var r2=function(x){return Math.round((x+Number.EPSILON)*100)/100;};
+  var fmt=function(n){return new Intl.NumberFormat('pl-PL',{maximumFractionDigits:0,useGrouping:'always'}).format(Math.round(n))+'\u00a0zł';};
+  g.addEventListener('input',function(){
+    var v=parseFloat(g.value); if(!isFinite(v)||v<0) v=0; v=Math.min(v,100000);
+    var z=r2(r2(v*0.0976)+r2(v*0.015)+r2(v*0.0245)), h=r2((v-z)*0.09), t=Math.max(0,Math.round(Math.max(0,Math.round(v-z-250))*0.12-300)), n=v-z-h-t;
+    document.getElementById('hcN').textContent=fmt(n); document.getElementById('hcZ').textContent=fmt(z);
+    document.getElementById('hcH').textContent=fmt(h); document.getElementById('hcT').textContent=fmt(t);
+    var w=function(id,x){document.getElementById(id).style.width=(v?x/v*100:0)+'%';}; w('hbN',n); w('hbZ',z); w('hbH',h); w('hbT',t);
   });
 })();
 </script>
