@@ -24,6 +24,24 @@ FAQ = {
         ('Jaka jest minimalna stawka godzinowa w 2027 roku?', '32,30 zł brutto za godzinę (w 2026 r. — 31,40 zł). Zleceniodawca musi ją wypłacić niezależnie od tego, jak opisano wynagrodzenie w umowie.'),
         ('Czy student płaci ZUS od umowy zlecenia?', 'Nie — student lub uczeń do 26. urodzin nie płaci od zlecenia składek ZUS ani zdrowotnej, a ulga dla młodych zwalnia go z podatku do 85 528 zł przychodu rocznie.'),
     ],
+    'kalkulator-l4': [
+        ('Ile dostanę na L4 przy pensji 7000 zł brutto?', 'Za każdy dzień zwolnienia 161,07 zł brutto chorobowego (80%). Przy 10 dniach L4 wypłata za miesiąc wyniesie ok. 4783 zł na rękę zamiast 5102 zł, czyli ok. 318 zł mniej (umowa o pracę, PIT-2, bez PPK).'),
+        ('Ile płatne jest L4?', 'Co do zasady 80% podstawy, czyli przeciętnej pensji brutto z ostatnich 12 miesięcy pomniejszonej o 13,71% składek. 100% przysługuje m.in. w ciąży, po wypadku w drodze do pracy lub z pracy i przy badaniach dawcy.'),
+        ('Kto płaci za L4 — pracodawca czy ZUS?', 'Przez pierwsze 33 dni choroby w roku kalendarzowym płaci pracodawca (wynagrodzenie chorobowe), a osobom po 50. roku życia — przez 14 dni. Potem zasiłek chorobowy wypłaca ZUS, w tej samej wysokości.'),
+        ('Czy od L4 płaci się podatek i ZUS?', 'Od wynagrodzenia chorobowego i zasiłku nie płaci się składek emerytalnej, rentowej i chorobowej. Pobierana jest tylko składka zdrowotna 9% i zaliczka na podatek — dlatego na rękę tracisz mniej, niż sugeruje 80%.'),
+    ],
+    'kalkulator-nadgodzin': [
+        ('Ile dostanę za 10 nadgodzin przy pensji 7000 zł brutto?', 'W listopadzie 2026 r. (160 godzin pracy) stawka godzinowa to 43,75 zł, więc 10 nadgodzin z dodatkiem 50% to 656,25 zł brutto, czyli ok. 447 zł na rękę.'),
+        ('Kiedy dodatek za nadgodziny wynosi 100%?', 'Za nadgodziny w nocy, w niedziele i święta, które nie są dla Ciebie dniami pracy, w dniu wolnym udzielonym za pracę w niedzielę lub święto oraz za przekroczenie przeciętnej tygodniowej normy czasu pracy. W pozostałych przypadkach dodatek wynosi 50%.'),
+        ('Ile nadgodzin można mieć w roku?', 'Co do zasady 150 godzin w roku kalendarzowym. Układ zbiorowy, regulamin pracy lub umowa o pracę mogą ustalić inny limit.'),
+        ('Czy zamiast pieniędzy mogę dostać wolne za nadgodziny?', 'Tak. Na Twój wniosek pracodawca może dać czas wolny w tym samym wymiarze (godzina za godzinę), a z własnej inicjatywy — w wymiarze o połowę wyższym. Wtedy dodatek za nadgodziny nie przysługuje.'),
+    ],
+    'kalkulator-urlopu': [
+        ('Ile dni urlopu po studiach?', 'Ukończone studia wliczają się do stażu jako 8 lat, więc absolwent ma 20 dni urlopu, a 26 dni — po 2 latach pracy. Od 2026 r. do stażu wliczają się też udokumentowane umowy zlecenia i działalność gospodarcza.'),
+        ('Ile wynosi ekwiwalent za 5 dni urlopu przy pensji 6000 zł?', 'Ok. 1434 zł brutto (6000 zł ÷ 20,92 × 5 dni), czyli ok. 977 zł na rękę, gdy jest wypłacony razem z ostatnią pensją.'),
+        ('Ile urlopu przy zmianie pracy w trakcie roku?', 'U każdego pracodawcy proporcjonalnie do miesięcy zatrudnienia w danym roku. Np. przy 20 dniach i pracy od marca do grudnia (10 miesięcy) — 17 dni (20 × 10/12, zaokrąglone w górę).'),
+        ('Do kiedy trzeba wykorzystać zaległy urlop?', 'Do 30 września następnego roku — urlop z 2026 r. trzeba wykorzystać do 30 września 2027 r.'),
+    ],
 }
 CSS = '''  .tool-faq{margin-top:30px;}
   .tool-faq h2{font-size:1.25rem;margin:0 0 6px;}

@@ -323,8 +323,54 @@
   #edu:focus-visible,#fte:focus-visible,#ms:focus-visible,#me:focus-visible{outline:2px solid var(--green);outline-offset:2px;}
   .tool-sub{font-size:1.15rem;margin:26px 0 6px;}
   p.hint{margin:-4px 0 14px;font-size:.85rem;color:var(--text-2);line-height:1.5;}
+  .tool-faq{margin-top:30px;}
+  .tool-faq h2{font-size:1.25rem;margin:0 0 6px;}
+  .tool-faq details{border-top:1px solid var(--border);padding:12px 2px;}
+  .tool-faq summary{cursor:pointer;font-weight:600;}
+  .tool-faq summary:focus-visible{outline:2px solid var(--green);outline-offset:2px;}
+  .tool-faq p{color:var(--text-2);margin:8px 0 0;max-width:65ch;}
 </style>
 <link rel="alternate" type="application/rss+xml" title="Mądry Portfel — nowe poradniki" href="https://bartuniadev.github.io/madry-portfel/feed.xml">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Ile dni urlopu po studiach?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Ukończone studia wliczają się do stażu jako 8 lat, więc absolwent ma 20 dni urlopu, a 26 dni — po 2 latach pracy. Od 2026 r. do stażu wliczają się też udokumentowane umowy zlecenia i działalność gospodarcza."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Ile wynosi ekwiwalent za 5 dni urlopu przy pensji 6000 zł?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Ok. 1434 zł brutto (6000 zł ÷ 20,92 × 5 dni), czyli ok. 977 zł na rękę, gdy jest wypłacony razem z ostatnią pensją."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Ile urlopu przy zmianie pracy w trakcie roku?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "U każdego pracodawcy proporcjonalnie do miesięcy zatrudnienia w danym roku. Np. przy 20 dniach i pracy od marca do grudnia (10 miesięcy) — 17 dni (20 × 10/12, zaokrąglone w górę)."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do kiedy trzeba wykorzystać zaległy urlop?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Do 30 września następnego roku — urlop z 2026 r. trzeba wykorzystać do 30 września 2027 r."
+   }
+  }
+ ]
+}
+</script>
 </head>
 <body>
 <header class="site-header">
@@ -422,6 +468,26 @@
       </div>
     </div>
   </div>
+
+  <section class="tool-faq" aria-labelledby="faqTitle">
+    <h2 id="faqTitle">Najczęstsze pytania</h2>
+    <details>
+      <summary>Ile dni urlopu po studiach?</summary>
+      <p>Ukończone studia wliczają się do stażu jako 8 lat, więc absolwent ma 20 dni urlopu, a 26 dni — po 2 latach pracy. Od 2026 r. do stażu wliczają się też udokumentowane umowy zlecenia i działalność gospodarcza.</p>
+    </details>
+    <details>
+      <summary>Ile wynosi ekwiwalent za 5 dni urlopu przy pensji 6000 zł?</summary>
+      <p>Ok. 1434 zł brutto (6000 zł ÷ 20,92 × 5 dni), czyli ok. 977 zł na rękę, gdy jest wypłacony razem z ostatnią pensją.</p>
+    </details>
+    <details>
+      <summary>Ile urlopu przy zmianie pracy w trakcie roku?</summary>
+      <p>U każdego pracodawcy proporcjonalnie do miesięcy zatrudnienia w danym roku. Np. przy 20 dniach i pracy od marca do grudnia (10 miesięcy) — 17 dni (20 × 10/12, zaokrąglone w górę).</p>
+    </details>
+    <details>
+      <summary>Do kiedy trzeba wykorzystać zaległy urlop?</summary>
+      <p>Do 30 września następnego roku — urlop z 2026 r. trzeba wykorzystać do 30 września 2027 r.</p>
+    </details>
+  </section>
 
   <div class="trust">
     <p><strong>Jak to liczymy:</strong> <strong>Wymiar urlopu</strong> (art. 154 Kodeksu pracy): 20 dni przy stażu poniżej 10 lat, 26 dni od 10 lat. Do stażu wlicza się ukończona szkoła (art. 155): szkoła branżowa I stopnia do 3 lat, technikum lub szkoła branżowa II stopnia do 5, liceum 4, szkoła policealna 6, studia wyższe 8 lat. Od 2026 r. wlicza się też okresy zleceń i działalności gospodarczej — po udokumentowaniu zaświadczeniem z ZUS. <strong>Niepełny etat:</strong> wymiar proporcjonalny, niepełny dzień zaokrąglony w górę; dzień urlopu to 8 godzin. <strong>Pierwsza praca:</strong> 1/12 rocznego wymiaru po każdym przepracowanym miesiącu (art. 153) — zakładamy rozpoczęcie pierwszego dnia miesiąca. <strong>Zmiana pracy:</strong> urlop proporcjonalny do miesięcy zatrudnienia w roku, niepełny miesiąc i niepełny dzień zaokrąglone w górę; gdy stara i nowa praca przypadają w tym samym miesiącu, zaokrągla poprzedni pracodawca. <strong>Ekwiwalent:</strong> pensja ÷ współczynnik 20,92 (2026 i 2027 r., pomniejszony proporcjonalnie przy niepełnym etacie) × liczba dni; na rękę liczymy jak dodatek do pensji na umowie o pracę (składki, zdrowotna, podatek 12% z PIT-2, bez PPK).</p>

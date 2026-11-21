@@ -46,7 +46,7 @@ TOOLS = [
 MORE = [('kalkulator-umowy-zlecenia', 'Umowa zlecenia'), ('kalkulator-oki', 'OKI'), ('kalkulator-lokaty', 'Lokata'),
         ('kalkulator-kredytu', 'Rata kredytu'), ('kalkulator-poduszki-finansowej', 'Poduszka finansowa'),
         ('kalkulator-podzialu-kosztow', 'Podział kosztów dla par'), ('kalkulator-inflacji', 'Inflacja'),
-        ('kalkulator-splaty-dlugow', 'Spłata długów')]
+        ('kalkulator-splaty-dlugow', 'Spłata długów'), ('kalkulator-l4', 'L4 — chorobowe'), ('kalkulator-nadgodzin', 'Nadgodziny')]
 FEATURES = [
     ('dni-wolne-od-pracy-2027', 'Kalendarz', 'Dni wolne od pracy 2027 i długie weekendy', '10 dni wolnego za 4 dni urlopu — gotowy plan na cały rok.'),
     ('zmiany-w-finansach-2027', 'Od 1 stycznia', 'Zmiany w finansach 2027', 'Płaca minimalna 4950 zł, nowe limity IKE i IKZE, konto OKI bez podatku Belki.'),

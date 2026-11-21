@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalkulator nadgodzin 2026 i 2027 — ile za nadgodziny</title>
+<meta name="description" content="Kalkulator nadgodzin: stawka godzinowa z wymiaru czasu pracy, dodatek 50% lub 100%, nadgodziny brutto i na rękę. Wymiar godzin dla 2026 i 2027 r.">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="canonical" href="https://bartuniadev.github.io/madry-portfel/narzedzia/kalkulator-nadgodzin.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mądry Portfel">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:title" content="Kalkulator nadgodzin 2026 i 2027 — ile za nadgodziny">
+<meta property="og:description" content="Kalkulator nadgodzin: stawka godzinowa z wymiaru czasu pracy, dodatek 50% lub 100%, nadgodziny brutto i na rękę. Wymiar godzin dla 2026 i 2027 r.">
+<meta property="og:url" content="https://bartuniadev.github.io/madry-portfel/narzedzia/kalkulator-nadgodzin.html">
+<meta property="og:image" content="https://bartuniadev.github.io/madry-portfel/assets/og/kalkulator-nadgodzin.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kalkulator nadgodzin 2026 i 2027 — ile za nadgodziny">
+<meta name="twitter:image" content="https://bartuniadev.github.io/madry-portfel/assets/og/kalkulator-nadgodzin.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Kalkulator nadgodzin",
+  "url": "https://bartuniadev.github.io/madry-portfel/narzedzia/kalkulator-nadgodzin.html",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any (przeglądarka)",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "PLN"
+  },
+  "isAccessibleForFree": true,
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://bartuniadev.github.io/madry-portfel/#organization",
+    "name": "Mądry Portfel",
+    "url": "https://bartuniadev.github.io/madry-portfel/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://bartuniadev.github.io/madry-portfel/assets/logo-512.png",
+      "width": 512,
+      "height": 512
+    },
+    "sameAs": [
+      "https://github.com/bartuniadev/madry-portfel"
+    ],
+    "publishingPrinciples": "https://bartuniadev.github.io/madry-portfel/jak-powstaja-tresci.html"
+  },
+  "description": "Kalkulator nadgodzin: stawka godzinowa z wymiaru czasu pracy, dodatek 50% lub 100%, nadgodziny brutto i na rękę. Wymiar godzin dla 2026 i 2027 r.",
+  "keywords": "kalkulator nadgodzin, ile za nadgodziny, dodatek za nadgodziny, nadgodziny na rękę, stawka godzinowa"
+}
+</script>
+<style>
+  :root{
+    --bg:#0e130f;
+    --surface:#161d19;
+    --surface-2:#1c241f;
+    --border:#2b362f;
+    --text:#eef2ef;
+    --text-2:#93a49a;
+    --green:#3ad889;
+    --gold:#f2c14e;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--green);}
+  a:focus-visible, button:focus-visible, input:focus-visible{outline:2px solid var(--green); outline-offset:2px;}
+
+  header.site-header{border-bottom:1px solid var(--border);}
+  .header-inner{
+    max-width:760px;
+    margin:0 auto;
+    padding:18px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  .logo{
+    font-weight:700;
+    font-size:1.15rem;
+    letter-spacing:-0.01em;
+    color:var(--text);
+    text-decoration:none;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .logo svg{width:20px;height:20px;color:var(--green);flex-shrink:0;}
+  nav.top a{
+    color:var(--text-2);
+    text-decoration:none;
+    margin-left:18px;
+    font-size:0.92rem;
+  }
+  nav.top a:hover, nav.top a[aria-current]{color:var(--green);}
+
+  main{max-width:760px;margin:0 auto;padding:32px 20px 60px;}
+
+  .breadcrumb-dark{
+    display:block;
+    font-size:0.8rem;
+    color:var(--text-2);
+    margin:22px 0 14px;
+  }
+  .breadcrumb-dark a{color:var(--text-2);text-decoration:none;}
+  .breadcrumb-dark a:hover{color:var(--green);}
+  .breadcrumb-dark span[aria-current]{color:var(--text);}
+
+  .pill{
+    display:inline-flex;
+    align-items:center;
+    font-family:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+    font-size:12px;
+    letter-spacing:.04em;
+    color:var(--green);
+    border:1px solid var(--green);
+    padding:4px 11px;
+    border-radius:999px;
+  }
+  h1{
+    font-size:clamp(1.7rem,5vw,2.15rem);
+    line-height:1.2;
+    margin:14px 0 0;
+    letter-spacing:-0.01em;
+  }
+  .lead{
+    max-width:60ch;
+    color:var(--text-2);
+    font-size:1.02rem;
+    margin-top:12px;
+  }
+
+  .calc-card{
+    margin-top:28px;
+    background:var(--surface);
+    border:2px solid var(--green);
+    border-radius:12px;
+    box-shadow:6px 6px 0 var(--gold);
+    padding:26px 24px;
+  }
+
+  .field{display:flex;flex-direction:column;gap:6px;margin-bottom:20px;}
+  .field label{font-size:0.88rem;color:var(--text-2);font-weight:600;}
+  .field input{
+    background:var(--bg);
+    border:1px solid var(--border);
+    color:var(--text);
+    border-radius:8px;
+    padding:12px 14px;
+    font-size:1.4rem;
+    font-family:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+    font-variant-numeric:tabular-nums;
+  }
+  .field input#income{font-weight:700;}
+  .field input::placeholder{color:#5c6a62;}
+
+  .split-controls{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+    margin-bottom:14px;
+  }
+  .split-controls .field{margin-bottom:0;}
+  .split-controls input{font-size:1.05rem;padding:9px 10px;}
+
+  .presets{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px;}
+  .preset-btn{
+    font-family:inherit;
+    font-size:0.82rem;
+    color:var(--text-2);
+    background:var(--surface-2);
+    border:1px solid var(--border);
+    border-radius:999px;
+    padding:7px 13px;
+    cursor:pointer;
+  }
+  .preset-btn:hover{color:var(--text);border-color:var(--green);}
+
+  .sum-warning{
+    font-size:0.85rem;
+    color:var(--gold);
+    background:rgba(242,193,78,0.1);
+    border:1px solid rgba(242,193,78,0.4);
+    border-radius:7px;
+    padding:8px 12px;
+    margin:6px 0 18px;
+  }
+
+  .bar{
+    display:flex;
+    height:14px;
+    border-radius:999px;
+    overflow:hidden;
+    background:var(--bg);
+    border:1px solid var(--border);
+    margin-bottom:24px;
+  }
+  .bar .seg{height:100%;transition:width .2s ease;}
+  .bar .seg.needs{background:var(--green);}
+  .bar .seg.wants{background:var(--border);}
+  .bar .seg.savings{background:var(--gold);}
+
+  .results-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+  }
+  .result-card{
+    background:var(--bg);
+    border:1px solid var(--border);
+    border-radius:9px;
+    padding:14px;
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+  }
+  .result-card .label{font-size:0.8rem;color:var(--text-2);}
+  .result-card .amount{
+    font-family:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+    font-weight:700;
+    font-size:1.15rem;
+    font-variant-numeric:tabular-nums;
+  }
+  .result-card .pct{font-size:0.78rem;color:var(--text-2);font-variant-numeric:tabular-nums;}
+  .result-card.needs{border-color:var(--green);}
+  .result-card.needs .amount{color:var(--green);}
+  .result-card.savings{border-color:var(--gold);}
+  .result-card.savings .amount{color:var(--gold);}
+
+  @media (max-width:480px){
+    .results-grid{grid-template-columns:1fr;}
+    .split-controls{grid-template-columns:1fr;}
+  }
+
+  .trust{
+    margin-top:22px;
+    padding-top:22px;
+    border-top:1px dashed var(--border);
+  }
+  .trust p{color:var(--text-2);font-size:0.92rem;max-width:60ch;margin:0 0 14px;}
+  .download-btn{
+    display:inline-block;
+    font-weight:700;
+    font-size:0.95rem;
+    color:#08130d;
+    background:var(--green);
+    padding:12px 20px;
+    border-radius:9px;
+    text-decoration:none;
+  }
+  .download-btn:hover{background:#4fe49a;}
+  .microcopy{font-size:0.8rem !important;color:#93a49a !important;margin-top:12px !important;}
+
+  .more-link{margin-top:26px;font-size:0.95rem;}
+
+  footer{
+    border-top:1px solid var(--border);
+    margin-top:20px;
+    padding:24px 20px;
+    text-align:center;
+    color:var(--text-2);
+    font-size:0.85rem;
+  }
+  footer a{color:var(--text-2);}
+  footer .ai-note{opacity:0.75;}
+
+  @media (prefers-reduced-motion: reduce){
+    *{transition-duration:0.01ms !important;}
+  }
+
+  .split-controls.two{grid-template-columns:repeat(2,1fr);gap:14px 16px;margin-bottom:16px;}
+  .field.check{justify-content:center;}
+  .field.check label{display:flex;align-items:center;gap:9px;color:var(--text);font-weight:500;cursor:pointer;}
+  .field.check input{width:18px;height:18px;accent-color:var(--green);}
+  .field .hint{font-size:0.78rem;color:var(--text-2);}
+  .growth-chart{width:100%;height:auto;display:block;margin:18px 0 6px;font-family:system-ui,sans-serif;}
+  .legend{display:flex;gap:18px;font-size:0.82rem;color:var(--text-2);margin-bottom:20px;}
+  .legend span{display:inline-flex;align-items:center;gap:7px;}
+  .legend i{width:11px;height:11px;border-radius:3px;display:inline-block;}
+  .sw-dep{background:var(--green);} .sw-gain{background:var(--gold);}
+  @media (max-width:480px){.split-controls.two{grid-template-columns:1fr;}}
+  .type-toggle{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px;}
+  .type-toggle label{position:relative;cursor:pointer;}
+  .type-toggle input{position:absolute;opacity:0;width:1px;height:1px;}
+  .type-toggle span{display:block;padding:8px 14px;border-radius:999px;border:1px solid var(--border);font-size:0.88rem;color:var(--text-2);background:var(--bg);}
+  .type-toggle input:checked + span{background:var(--green);border-color:var(--green);color:#08130d;font-weight:700;}
+  .type-toggle input:focus-visible + span{outline:2px solid var(--green);outline-offset:2px;}
+  .net-box{display:flex;flex-direction:column;gap:2px;margin:10px 0 16px;padding:16px 18px;background:var(--bg);border:1px solid var(--green);border-radius:10px;}
+  .net-box .label{font-size:0.85rem;color:var(--text-2);}
+  .net-box .pct{font-size:0.8rem;color:var(--text-2);}
+  .net-amount{font-family:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;font-weight:700;font-size:clamp(1.7rem,7vw,2.3rem);color:var(--green);font-variant-numeric:tabular-nums;}
+  .breakdown{width:100%;border-collapse:collapse;margin:0 0 20px;font-size:0.92rem;}
+  .breakdown td{padding:9px 4px;border-bottom:1px solid var(--border);}
+  .breakdown td:last-child{text-align:right;white-space:nowrap;font-family:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;font-variant-numeric:tabular-nums;}
+  .breakdown tr.total td{border-bottom:0;font-weight:700;color:var(--green);}
+  .verdict{margin:4px 0 18px;padding:14px 16px;border:1px solid var(--green);border-radius:10px;background:var(--bg);font-size:0.95rem;}
+  .verdict.worse{border-color:var(--gold);}
+  details.tbl{margin:18px 0 0;border:1px solid var(--border);border-radius:9px;background:var(--bg);}
+  details.tbl summary{cursor:pointer;padding:12px 14px;font-weight:600;font-size:0.92rem;}
+  details.tbl summary:focus-visible{outline:2px solid var(--green);outline-offset:2px;}
+  .tbl-wrap{overflow-x:auto;}
+  .data-table{width:100%;border-collapse:collapse;font-size:0.85rem;}
+  .data-table th,.data-table td{padding:7px 6px;border-top:1px solid var(--border);text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;}
+  .data-table th{color:var(--text-2);font-weight:600;font-size:0.78rem;}
+  .data-table th:first-child,.data-table td:first-child{text-align:left;}
+  .data-table caption{caption-side:bottom;text-align:left;padding:8px 10px 10px;font-size:0.75rem;color:var(--text-2);}
+  @media (max-width:380px){.data-table th,.data-table td{padding:7px 4px;font-size:0.78rem;}}
+  .more-link{line-height:2.2;}
+  [hidden]{display:none !important;}
+  #m{width:100%;background:var(--surface);border:1px solid var(--border);color:var(--text);border-radius:8px;padding:9px 10px;font-size:1rem;font-family:inherit;min-height:44px;}
+  #m:focus-visible{outline:2px solid var(--green);outline-offset:2px;}
+  .tool-faq{margin-top:30px;}
+  .tool-faq h2{font-size:1.25rem;margin:0 0 6px;}
+  .tool-faq details{border-top:1px solid var(--border);padding:12px 2px;}
+  .tool-faq summary{cursor:pointer;font-weight:600;}
+  .tool-faq summary:focus-visible{outline:2px solid var(--green);outline-offset:2px;}
+  .tool-faq p{color:var(--text-2);margin:8px 0 0;max-width:65ch;}
+</style>
+<link rel="alternate" type="application/rss+xml" title="Mądry Portfel — nowe poradniki" href="https://bartuniadev.github.io/madry-portfel/feed.xml">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Ile dostanę za 10 nadgodzin przy pensji 7000 zł brutto?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "W listopadzie 2026 r. (160 godzin pracy) stawka godzinowa to 43,75 zł, więc 10 nadgodzin z dodatkiem 50% to 656,25 zł brutto, czyli ok. 447 zł na rękę."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Kiedy dodatek za nadgodziny wynosi 100%?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Za nadgodziny w nocy, w niedziele i święta, które nie są dla Ciebie dniami pracy, w dniu wolnym udzielonym za pracę w niedzielę lub święto oraz za przekroczenie przeciętnej tygodniowej normy czasu pracy. W pozostałych przypadkach dodatek wynosi 50%."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Ile nadgodzin można mieć w roku?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Co do zasady 150 godzin w roku kalendarzowym. Układ zbiorowy, regulamin pracy lub umowa o pracę mogą ustalić inny limit."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Czy zamiast pieniędzy mogę dostać wolne za nadgodziny?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Tak. Na Twój wniosek pracodawca może dać czas wolny w tym samym wymiarze (godzina za godzinę), a z własnej inicjatywy — w wymiarze o połowę wyższym. Wtedy dodatek za nadgodziny nie przysługuje."
+   }
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../index.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="7.5 13.5 10.5 10.5 13 12.5 16.5 8.5"/><polyline points="14 8.5 16.5 8.5 16.5 11"/></svg>
+      Mądry Portfel
+    </a>
+    <nav class="top">
+      <a href="index.html" aria-current="page">Narzędzia</a>
+      <a href="../index.html">Artykuły</a>
+      <a href="../o-nas.html">O nas</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <nav class="breadcrumb-dark" aria-label="Okruszki"><a href="../index.html">Mądry Portfel</a> <span aria-hidden="true">/</span> <a href="index.html">Narzędzia</a> <span aria-hidden="true">/</span> <span aria-current="page">Kalkulator nadgodzin</span></nav>
+  <span class="pill">0 kont · 0 maila · 0 ciasteczek</span>
+  <h1>Kalkulator nadgodzin — ile dostaniesz za nadgodziny</h1>
+  <p class="lead">Wpisz pensję, miesiąc i liczbę nadgodzin — policzę stawkę godzinową z wymiaru czasu pracy, dodatek 50% lub 100% i to, ile z tego zostanie Ci na rękę. Wymiar godzin dla każdego miesiąca 2026 i 2027 r. Liczy się w Twojej przeglądarce.</p>
+
+  <div class="calc-card">
+    <div class="split-controls two">
+      <div class="field"><label for="g">Pensja brutto miesięcznie (zł)</label><input type="number" id="g" inputmode="decimal" value="7000" min="0" step="100"></div>
+      <div class="field"><label for="m">Miesiąc (wymiar czasu pracy)</label><select id="m"><option value="2026-0">styczeń 2026 — 160 godz.</option><option value="2026-1">luty 2026 — 160 godz.</option><option value="2026-2">marzec 2026 — 176 godz.</option><option value="2026-3">kwiecień 2026 — 168 godz.</option><option value="2026-4">maj 2026 — 160 godz.</option><option value="2026-5">czerwiec 2026 — 168 godz.</option><option value="2026-6">lipiec 2026 — 184 godz.</option><option value="2026-7">sierpień 2026 — 160 godz.</option><option value="2026-8">wrzesień 2026 — 176 godz.</option><option value="2026-9">październik 2026 — 176 godz.</option><option value="2026-10" selected>listopad 2026 — 160 godz.</option><option value="2026-11">grudzień 2026 — 160 godz.</option><option value="2027-0">styczeń 2027 — 152 godz.</option><option value="2027-1">luty 2027 — 160 godz.</option><option value="2027-2">marzec 2027 — 176 godz.</option><option value="2027-3">kwiecień 2027 — 176 godz.</option><option value="2027-4">maj 2027 — 144 godz.</option><option value="2027-5">czerwiec 2027 — 176 godz.</option><option value="2027-6">lipiec 2027 — 176 godz.</option><option value="2027-7">sierpień 2027 — 176 godz.</option><option value="2027-8">wrzesień 2027 — 176 godz.</option><option value="2027-9">październik 2027 — 168 godz.</option><option value="2027-10">listopad 2027 — 160 godz.</option><option value="2027-11">grudzień 2027 — 168 godz.</option></select></div>
+    </div>
+    <div class="split-controls two">
+      <div class="field"><label for="h50">Nadgodziny z dodatkiem 50%</label><input type="number" id="h50" inputmode="decimal" value="10" min="0" max="200" step="1"><span class="hint">Zwykłe dni robocze — zostajesz dłużej po pracy.</span></div>
+      <div class="field"><label for="h100">Nadgodziny z dodatkiem 100%</label><input type="number" id="h100" inputmode="decimal" value="0" min="0" max="200" step="1"><span class="hint">W nocy, w niedziele i święta wolne od pracy oraz w dniu wolnym za pracę w niedzielę lub święto.</span></div>
+    </div>
+
+    <div class="net-box">
+      <span class="label">Za nadgodziny dostaniesz na rękę</span>
+      <span class="net-amount" id="net">0 zł</span>
+      <span class="pct" id="netNote"></span>
+    </div>
+
+    <div class="results-grid">
+      <div class="result-card">
+        <span class="label">Stawka godzinowa</span>
+        <span class="amount" id="rate">0 zł</span>
+        <span class="pct" id="rateNote"></span>
+      </div>
+      <div class="result-card needs">
+        <span class="label">Nadgodziny brutto</span>
+        <span class="amount" id="gross">0 zł</span>
+        <span class="pct" id="grossNote"></span>
+      </div>
+      <div class="result-card savings">
+        <span class="label">Wypłata w tym miesiącu</span>
+        <span class="amount" id="total">0 zł</span>
+        <span class="pct" id="totalNote"></span>
+      </div>
+    </div>
+    <div class="verdict" id="verdict" aria-live="polite"></div>
+    <p class="sum-warning" id="warn" hidden></p>
+  </div>
+
+  <section class="tool-faq" aria-labelledby="faqTitle">
+    <h2 id="faqTitle">Najczęstsze pytania</h2>
+    <details>
+      <summary>Ile dostanę za 10 nadgodzin przy pensji 7000 zł brutto?</summary>
+      <p>W listopadzie 2026 r. (160 godzin pracy) stawka godzinowa to 43,75 zł, więc 10 nadgodzin z dodatkiem 50% to 656,25 zł brutto, czyli ok. 447 zł na rękę.</p>
+    </details>
+    <details>
+      <summary>Kiedy dodatek za nadgodziny wynosi 100%?</summary>
+      <p>Za nadgodziny w nocy, w niedziele i święta, które nie są dla Ciebie dniami pracy, w dniu wolnym udzielonym za pracę w niedzielę lub święto oraz za przekroczenie przeciętnej tygodniowej normy czasu pracy. W pozostałych przypadkach dodatek wynosi 50%.</p>
+    </details>
+    <details>
+      <summary>Ile nadgodzin można mieć w roku?</summary>
+      <p>Co do zasady 150 godzin w roku kalendarzowym. Układ zbiorowy, regulamin pracy lub umowa o pracę mogą ustalić inny limit.</p>
+    </details>
+    <details>
+      <summary>Czy zamiast pieniędzy mogę dostać wolne za nadgodziny?</summary>
+      <p>Tak. Na Twój wniosek pracodawca może dać czas wolny w tym samym wymiarze (godzina za godzinę), a z własnej inicjatywy — w wymiarze o połowę wyższym. Wtedy dodatek za nadgodziny nie przysługuje.</p>
+    </details>
+  </section>
+
+  <div class="trust">
+    <p><strong>Jak to liczymy:</strong> <strong>Stawka godzinowa</strong> to pensja miesięczna podzielona przez wymiar czasu pracy w danym miesiącu (od 144 godzin w maju 2027 r. do 184 w lipcu 2026 r.) — dlatego ta sama nadgodzina jest warta różnie w różnych miesiącach. <strong>Za każdą nadgodzinę</strong> dostajesz zwykłe wynagrodzenie i dodatek (art. 151¹ Kodeksu pracy): 50% w zwykłe dni, 100% w nocy, w niedziele i święta wolne od pracy, w dniu wolnym za pracę w niedzielę lub święto oraz za przekroczenie przeciętnej tygodniowej normy. Zakładamy, że nadgodziny wykraczają poza miesięczny wymiar i nie odbierasz za nie wolnego — jeśli pracodawca da Ci czas wolny, dodatek nie przysługuje. <strong>Na rękę</strong> liczymy jak dodatek do pensji na umowie o pracę (składki, zdrowotna, podatek 12% z PIT-2, bez PPK). Limit to co do zasady 150 nadgodzin w roku, chyba że układ zbiorowy, regulamin lub umowa przewiduje inny.</p>
+    <a class="download-btn" href="kalkulator-nadgodzin.html" download="kalkulator-nadgodzin-madry-portfel.html">Pobierz i używaj offline (HTML)</a>
+    <p class="microcopy">To zwykła strona HTML bez makr i bez ciasteczek. <a href="https://github.com/bartuniadev/madry-portfel/blob/master/narzedzia/kalkulator-nadgodzin.html">Zobacz kod źródłowy na GitHub</a>.</p>
+  </div>
+
+  <p class="more-link"><a href="../artykuly/prawa-pracownika-w-liczbach.html">Prawa pracownika w liczbach — urlop, L4, nadgodziny →</a><br><a href="../artykuly/dni-wolne-od-pracy-2027.html">Wymiar czasu pracy i dni wolne 2027 →</a><br><a href="kalkulator-brutto-netto.html">Kalkulator brutto–netto 2026 i 2027 →</a></p>
+</main>
+
+<footer>
+  <p>&copy; 2026 Mądry Portfel. <a href="../polityka-prywatnosci.html">Polityka prywatności</a></p>
+  <p class="ai-note">Treści na tej stronie powstają z pomocą narzędzi AI, na podstawie źródeł podanych przy artykułach. Przepisy i kwoty się zmieniają — przed decyzją sprawdź je u źródła. <a href="../jak-powstaja-tresci.html">Jak powstają treści</a></p>
+</footer>
+
+<script>
+  function $(id){ return document.getElementById(id); }
+  function r2(x){ return Math.round((x + Number.EPSILON) * 100) / 100; }
+  function fmt(n){ return new Intl.NumberFormat('pl-PL',{minimumFractionDigits:2,maximumFractionDigits:2,useGrouping:'always'}).format(r2(n)) + ' zł'; }
+  function fmt0(n){ return new Intl.NumberFormat('pl-PL',{maximumFractionDigits:0,useGrouping:'always'}).format(Math.round(n)) + ' zł'; }
+  function num(id, max){ var v = parseFloat($(id).value); if (!isFinite(v) || v < 0) v = 0; return max != null ? Math.min(v, max) : v; }
+  function ndg(n){ var a = Math.abs(n) % 100, b = a % 10; return n + ' ' + (n === 1 ? 'nadgodzina' : (n % 1 === 0 && b >= 2 && b <= 4 && (a < 12 || a > 14)) ? 'nadgodziny' : 'nadgodzin'); }
+  var HOURS = {"2026":[160,160,176,168,160,168,184,160,176,176,160,160],"2027":[152,160,176,176,144,176,176,176,176,168,160,168]};
+  var MONTHS = ['styczniu','lutym','marcu','kwietniu','maju','czerwcu','lipcu','sierpniu','wrześniu','październiku','listopadzie','grudniu'];
+  function netEtat(g){
+    var zus = r2(r2(g * 0.0976) + r2(g * 0.015) + r2(g * 0.0245)), h = r2((g - zus) * 0.09);
+    var tax = Math.max(0, Math.round(Math.max(0, Math.round(g - zus - 250)) * 0.12 - 300));
+    return g - zus - h - tax;
+  }
+  function recalc(){
+    var g = num('g'), sel = $('m').value.split('-'), y = sel[0], mi = parseInt(sel[1], 10), wym = HOURS[y][mi];
+    var h50 = num('h50', 200), h100 = num('h100', 200);
+    var rate = g / wym, ot = r2(h50 * rate * 1.5 + h100 * rate * 2);
+    var netOt = Math.max(0, netEtat(g + ot) - netEtat(g));
+    $('net').textContent = fmt(netOt);
+    $('netNote').textContent = (h50 + h100) ? 'z ' + fmt(ot) + ' brutto' : 'wpisz liczbę nadgodzin';
+    $('rate').textContent = fmt(rate);
+    $('rateNote').textContent = fmt(g) + ' ÷ ' + wym + ' godz. w ' + MONTHS[mi];
+    $('gross').textContent = fmt(ot);
+    $('grossNote').textContent = (h50 ? h50 + ' × ' + fmt(rate * 1.5) : '') + (h50 && h100 ? ' + ' : '') + (h100 ? h100 + ' × ' + fmt(rate * 2) : '');
+    $('total').textContent = fmt0(netEtat(g + ot));
+    $('totalNote').textContent = 'na rękę, zamiast ' + fmt0(netEtat(g));
+    var hrs = h50 + h100;
+    $('verdict').textContent = hrs ? ndg(hrs) + ' w ' + MONTHS[mi] + ' ' + y + ' r. to ' + fmt0(netOt) + ' więcej na rękę — średnio ' + fmt(netOt / hrs) + ' za godzinę.' : '';
+    var w = [];
+    if (hrs > 150) w.push('Ponad 150 nadgodzin to więcej niż roczny limit z Kodeksu pracy (chyba że Twój układ zbiorowy, regulamin lub umowa przewiduje wyższy).');
+    else if (hrs * 12 > 150) w.push('Przy takiej liczbie nadgodzin co miesiąc przekroczysz roczny limit 150 godzin po ok. ' + Math.floor(150 / hrs) + ' miesiącach.');
+    $('warn').hidden = !w.length; $('warn').textContent = w.join(' ');
+  }
+  ['g','m','h50','h100'].forEach(function(id){ $(id).addEventListener('input', recalc); $(id).addEventListener('change', recalc); });
+  (function(){ var n = new Date(), k = n.getFullYear() + '-' + n.getMonth(); if ($('m').querySelector('option[value="' + k + '"]')) $('m').value = k; })();
+  recalc();
+</script>
+<script defer src="../assets/stats.js"></script>
+</body>
+</html>
