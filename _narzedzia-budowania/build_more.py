@@ -347,4 +347,9 @@ ARTICLES = [
   cat='kariera', icon='calendar', hero='Ilustracja kalendarza — dni wolne od pracy w 2027 roku', body='dniwolne2027.html',
   related=['prawa-pracownika-w-liczbach','podroze-taniej-budzet-urlopu','zmiany-w-finansach-2027'],
   sources=[('https://isap.sejm.gov.pl/','Internetowy System Aktów Prawnych','Kodeks pracy (art. 130, 152–171) i ustawa o dniach wolnych od pracy'),('https://www.pip.gov.pl/','Państwowa Inspekcja Pracy','porady w sprawie urlopów i czasu pracy'),('https://www.zus.pl/','Zakład Ubezpieczeń Społecznych','zaświadczenie o okresach zleceń i działalności do stażu pracy (eZUS)')]),
+ dict(slug='niedziele-handlowe-2026-2027', title='Niedziele handlowe 2026 i 2027 — pełna lista dat',
+  desc='Niedziele handlowe 2026 i 2027: pełna lista dat, najbliższa niedziela handlowa, trzy niedziele przed Wigilią i cztery dni bez sklepów od 24 do 27 grudnia 2026.',
+  cat='budzet', icon='cart', hero='Ilustracja koszyka — niedziele handlowe w 2026 i 2027 roku', body='niedziele.html',
+  related=['budzet-na-swieta','jedzenie-taniej-bez-wyrzeczen','black-friday-jak-nie-dac-sie-nabic'],
+  sources=[('https://isap.sejm.gov.pl/','Internetowy System Aktów Prawnych','ustawa o ograniczeniu handlu w niedziele i święta oraz w niektóre inne dni'),('https://zielonalinia.gov.pl/','Zielona Linia — gov.pl','kalendarz niedziel handlowych'),('https://www.pip.gov.pl/','Państwowa Inspekcja Pracy','kontrola przestrzegania zakazu handlu')]),
 ]

@@ -50,7 +50,7 @@ MORE = [('kalkulator-umowy-zlecenia', 'Umowa zlecenia'), ('kalkulator-oki', 'OKI
 FEATURES = [
     ('dni-wolne-od-pracy-2027', 'Kalendarz', 'Dni wolne od pracy 2027 i długie weekendy', '10 dni wolnego za 4 dni urlopu — gotowy plan na cały rok.'),
     ('zmiany-w-finansach-2027', 'Od 1 stycznia', 'Zmiany w finansach 2027', 'Płaca minimalna 4950 zł, nowe limity IKE i IKZE, konto OKI bez podatku Belki.'),
-    ('ile-na-reke-tabela-brutto-netto', 'Pensja', 'Ile na rękę w 2027 — tabela', 'Netto dla pensji od płacy minimalnej do 20 000 zł brutto.'),
+    ('niedziele-handlowe-2026-2027', 'Zakupy', 'Niedziele handlowe 2026 i 2027', 'W grudniu sklepy otwarte 6, 13 i 20 grudnia, a od 24 do 27 grudnia zamknięte.'),
 ]
 for slug, *_ in FEATURES:
     assert slug in art_icons, slug

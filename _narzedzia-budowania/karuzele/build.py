@@ -43,6 +43,14 @@ SETS = {
         ('stat', {'eyebrow': 'Wymiar czasu pracy', 'big': '251 dni', 'title': 'pracy w 2027 roku — razem 2008 godzin', 'sub': 'Najkrótszy miesiąc to maj: 18 dni i 144 godziny.'}),
         ('cta', {'eyebrow': 'Pełny kalendarz za darmo', 'title': 'Ile dni urlopu masz w 2027?', 'sub': 'Kalendarz świąt, plan długich weekendów i kalkulator urlopu — bez rejestracji.', 'link': 'bartuniadev.github.io/madry-portfel'}),
     ],
+    'niedziele': [
+        ('hook', {'eyebrow': 'Grudzień 2026', 'title': '3 niedziele handlowe i <em>4 dni</em> bez sklepów', 'sub': 'Zapisz, zanim zaczniesz świąteczne zakupy →'}),
+        ('table', {'eyebrow': 'Kiedy sklepy są otwarte', 'title': 'Niedziele handlowe przed świętami',
+                   'rows': [('6 grudnia', 'niedziela', 'otwarte'), ('13 grudnia', 'niedziela', 'otwarte'), ('20 grudnia', 'niedziela', 'otwarte'), ('24–27 grudnia', 'czw–nd', 'zamknięte')],
+                   'note': 'Wigilia jest dniem wolnym od pracy od 2025 r.', 'cols': ('Data', 'Dzień', 'Sklepy')}),
+        ('stat', {'eyebrow': 'Cały 2027 rok', 'big': '8 niedziel', 'title': 'handlowych: 31.01, 21.03, 25.04, 27.06, 29.08 i 5, 12, 19.12', 'sub': 'Zawsze ostatnia niedziela stycznia, kwietnia, czerwca i sierpnia, niedziela przed Wielkanocą i trzy przed Wigilią.'}),
+        ('cta', {'eyebrow': 'Licznik dni i pełna lista', 'title': 'Kiedy najbliższa niedziela handlowa?', 'sub': 'Sprawdzisz w kalendarzu niedziel handlowych 2026 i 2027 — z poradami, jak nie przepłacić przed świętami.', 'link': 'bartuniadev.github.io/madry-portfel'}),
+    ],
 }
 CSS = '''
 @import url("file:///home/user/madry-portfel/assets/fonts/fonts.css");
