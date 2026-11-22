@@ -1,4 +1,4 @@
-import sys; import os; sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import sys; sys.path.insert(0,'/tmp/claude-0/-home-user-madry-portfel/cdaf70f1-1943-5eed-b702-c63f4f7538c9/scratchpad')
 import make_tool
 main_inner = '''    <div class="type-toggle" role="radiogroup" aria-label="Rodzaj kwoty">
       <label><input type="radio" name="kind" id="kGross" value="gross" checked><span>Kwota brutto</span></label>
@@ -44,6 +44,8 @@ main_inner = '''    <div class="type-toggle" role="radiogroup" aria-label="Rodza
 
     <div class="share-row">
       <button type="button" class="download-btn" id="shareBtn">Udostępnij wynik</button>
+      <button type="button" class="download-btn story-btn" id="storyBtn">Grafika do relacji (Instagram)</button>
+      <label class="hint story-amt"><input type="checkbox" id="storyAmt"> pokaż kwotę na grafice</label>
       <span class="hint" id="shareStatus" aria-live="polite"></span>
     </div>
     <p class="sum-warning" id="warn" hidden></p>'''
@@ -122,14 +124,78 @@ script = r'''  function $(id){ return document.getElementById(id); }
       navigator.clipboard.writeText(full).then(function(){ st.textContent = 'Skopiowano — wklej znajomym lub w social media.'; }, function(){ st.textContent = full; });
     } else st.textContent = full;
   });
+  /* grafika 1080×1920 do relacji — rysowana z wyprzedzeniem, żeby udostępnianie działało od razu po kliknięciu */
+  var storyBlob = null, storyKey = '', storyTimer = null, fontsReady = null;
+  function curKey(){ return last ? last.p + '|' + Math.round(last.g) + '|' + $('storyAmt').checked : ''; }
+  function loadFonts(){
+    if (fontsReady) return fontsReady;
+    var l = document.createElement('link'); l.rel = 'stylesheet'; l.href = '../assets/fonts/fonts.css'; document.head.appendChild(l);
+    fontsReady = new Promise(function(res){ l.onload = res; l.onerror = res; }).then(function(){
+      return Promise.all(['600 100px Fraunces', '500 60px Inter', '600 60px Inter'].map(function(f){ return document.fonts.load(f, 'ąęłśćżźóń%0'); })).catch(function(){});
+    });
+    return fontsReady;
+  }
+  function rr(c, x, y, w, h, r){ c.beginPath(); c.moveTo(x + r, y); c.arcTo(x + w, y, x + w, y + h, r); c.arcTo(x + w, y + h, x, y + h, r); c.arcTo(x, y + h, x, y, r); c.arcTo(x, y, x + w, y, r); c.closePath(); }
+  function drawStory(){
+    if (!last) return;
+    var key = curKey();
+    var cv = document.createElement('canvas'); cv.width = 1080; cv.height = 1920; var c = cv.getContext('2d');
+    var g = c.createLinearGradient(0, 0, 1080, 1920); g.addColorStop(0, '#1b2a22'); g.addColorStop(1, '#0a100c'); c.fillStyle = g; c.fillRect(0, 0, 1080, 1920);
+    var rg = c.createRadialGradient(900, 420, 0, 900, 420, 760); rg.addColorStop(0, 'rgba(58,216,137,0.24)'); rg.addColorStop(1, 'rgba(58,216,137,0)'); c.fillStyle = rg; c.fillRect(0, 0, 1080, 1920);
+    var F = '"Fraunces", Georgia, serif', I = '"Inter", system-ui, sans-serif';
+    c.textBaseline = 'alphabetic'; c.textAlign = 'left';
+    c.fillStyle = '#3ad889'; c.font = '600 40px ' + I; c.fillText('CZY DOBRZE ZARABIAM?', 90, 330);
+    c.fillStyle = '#eef2ef'; c.font = '500 66px ' + I; c.fillText('Zarabiam więcej niż', 90, 560);
+    c.fillStyle = '#3ad889'; c.font = '600 340px ' + F; c.fillText(last.p + '%', 78, 890);
+    c.fillStyle = '#eef2ef'; c.font = '500 66px ' + I; c.fillText('pracujących w Polsce', 90, 1000);
+    var p = typeof last.p === 'number' ? last.p : (String(last.p).charAt(0) === '>' ? 99.5 : 0.5);
+    var x0 = 90, w = 900, y = 1110;
+    c.fillStyle = 'rgba(255,255,255,0.12)'; rr(c, x0, y, w, 26, 13); c.fill();
+    var bg = c.createLinearGradient(x0, 0, x0 + w, 0); bg.addColorStop(0, '#1f7a4d'); bg.addColorStop(1, '#3ad889');
+    c.fillStyle = bg; rr(c, x0, y, Math.max(26, w * p / 100), 26, 13); c.fill();
+    c.fillStyle = 'rgba(255,255,255,0.55)'; c.fillRect(x0 + w / 2 - 1.5, y - 14, 3, 54);
+    c.beginPath(); c.arc(x0 + w * p / 100, y + 13, 24, 0, Math.PI * 2); c.fillStyle = '#ffffff'; c.fill(); c.lineWidth = 8; c.strokeStyle = '#3ad889'; c.stroke();
+    c.font = '500 34px ' + I; c.fillStyle = '#a8b6ae'; c.fillText('0%', x0, y + 90); c.textAlign = 'center'; c.fillText('mediana', x0 + w / 2, y + 90); c.textAlign = 'right'; c.fillText('100%', x0 + w, y + 90); c.textAlign = 'left';
+    c.font = '500 40px ' + I; c.fillStyle = '#c9d3cd';
+    var line = 'Dane GUS o rozkładzie płac, maj 2026';
+    if ($('storyAmt').checked) line = 'Pensja ' + fmt(last.g) + ' brutto · dane GUS, maj 2026';
+    c.fillText(line, 90, 1290);
+    c.fillStyle = '#3ad889'; rr(c, 90, 1390, 900, 150, 32); c.fill();
+    c.fillStyle = '#08130d'; c.font = '600 54px ' + I; c.textAlign = 'center'; c.fillText('Sprawdź, gdzie jesteś Ty →', 540, 1485); c.textAlign = 'left';
+    c.strokeStyle = '#3ad889'; c.lineWidth = 6; c.beginPath(); c.arc(118, 1650, 28, 0, Math.PI * 2); c.stroke();
+    c.beginPath(); c.moveTo(103, 1658); c.lineTo(115, 1646); c.lineTo(124, 1653); c.lineTo(136, 1640); c.stroke();
+    c.fillStyle = '#ffffff'; c.font = '500 56px ' + F; c.fillText('Mądry Portfel', 166, 1670);
+    c.fillStyle = '#a8b6ae'; c.font = '500 36px ' + I; c.fillText('bartuniadev.github.io/madry-portfel', 90, 1745);
+    cv.toBlob(function(b){ storyBlob = b; storyKey = key; }, 'image/png');
+  }
+  function queueStory(){ if (storyBlob && storyKey === curKey()) return; clearTimeout(storyTimer); storyTimer = setTimeout(function(){ loadFonts().then(drawStory); }, 250); }
+  $('storyBtn').addEventListener('click', function(){
+    var st = $('shareStatus');
+    if (!storyBlob || storyKey !== curKey()){ st.textContent = 'Przygotowuję grafikę — kliknij jeszcze raz za chwilę.'; queueStory(); return; }
+    var file = new File([storyBlob], 'czy-dobrze-zarabiam.png', {type: 'image/png'});
+    if (navigator.canShare && navigator.canShare({files: [file]})){
+      navigator.share({files: [file], title: 'Czy dobrze zarabiam?'}).catch(function(){});
+      return;
+    }
+    var a = document.createElement('a'); a.href = URL.createObjectURL(storyBlob); a.download = 'czy-dobrze-zarabiam.png';
+    document.body.appendChild(a); a.click(); a.remove();
+    st.textContent = 'Zapisano grafikę — wrzuć ją do relacji i dodaj naklejkę z linkiem do strony.';
+  });
+  $('storyAmt').addEventListener('change', queueStory);
   ['amount','kGross','kNet'].forEach(function(id){ $(id).addEventListener('input', recalc); $(id).addEventListener('change', recalc); });
+  ['amount','kGross','kNet'].forEach(function(id){ $(id).addEventListener('input', queueStory); $(id).addEventListener('change', queueStory); });
+  document.querySelectorAll('.preset-btn').forEach(function(b){ b.addEventListener('click', queueStory); });
   document.querySelectorAll('.preset-btn').forEach(function(b){ b.addEventListener('click', function(){ $('kGross').checked = true; $('amount').value = b.getAttribute('data-v'); recalc(); }); });
-  recalc();'''
+  recalc();
+  queueStory();'''
 css = '''  .dist-chart{width:100%;height:auto;display:block;margin:4px 0 6px;font-family:system-ui,sans-serif;}
   .chart-note{font-size:0.8rem;color:var(--text-2);margin:0 0 16px;}
   .share-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:18px;}
   .share-row .download-btn{border:0;cursor:pointer;font-family:inherit;}
   .share-row .hint{font-size:0.82rem;color:var(--text-2);overflow-wrap:anywhere;}
+  .share-row .story-btn{background:var(--surface-2);color:var(--text);border:1px solid var(--border);}
+  .share-row .story-btn:hover{background:var(--surface);border-color:var(--green);}
+  .share-row .story-amt{display:flex;align-items:center;gap:6px;}
   .sum-warning{margin-top:16px;}
 '''
 print('zarobki', make_tool.build('czy-dobrze-zarabiam',
