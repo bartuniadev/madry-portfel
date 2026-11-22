@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pakiet do udostępniania | Mądry Portfel</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="alternate" type="application/rss+xml" title="Mądry Portfel — nowe poradniki" href="https://bartuniadev.github.io/madry-portfel/feed.xml">
+<meta name="robots" content="noindex, nofollow">
+<style>
+.kit-step{margin:28px 0;padding:20px 22px;border:1px solid var(--border);border-radius:16px;background:var(--card)}
+.kit-step h2{margin:0 0 8px;font-size:1.3rem}
+.kit-step ol{padding-left:1.2em}.kit-step li{margin:6px 0}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:12px 0}
+.btn{display:inline-block;font:inherit;font-size:.9rem;font-weight:600;text-decoration:none;cursor:pointer;color:var(--accent-dark);background:var(--bg);border:1px solid var(--border);border-radius:999px;padding:8px 14px}
+.btn:hover{border-color:var(--accent);background:#eef7f0}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.primary:hover{background:var(--accent-dark)}
+.copy{font:inherit;font-size:.85rem;font-weight:600;cursor:pointer;color:var(--accent-dark);background:#eef7f0;border:1px solid #cfe5d6;border-radius:999px;padding:5px 12px}
+.copy.done{background:var(--accent);color:#fff;border-color:var(--accent)}
+.kit-card{margin:22px 0;padding:20px 22px;border:1px solid var(--border);border-radius:16px;background:var(--card)}
+.kit-card h3{margin:0;font-size:1.2rem}
+.when{margin:4px 0 12px;color:var(--muted);font-size:.9rem}
+.thumbs{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px}
+.thumbs img{width:108px;height:135px;object-fit:cover;border-radius:8px;border:1px solid var(--border);display:block}
+.cap{margin:12px 0}.cap-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.cap textarea{width:100%;font:inherit;font-size:.88rem;line-height:1.5;padding:10px 12px;border:1px solid var(--border);border-radius:10px;background:var(--bg);color:var(--text);resize:vertical}
+.lbl{font-size:.88rem;color:var(--muted)}
+.hint{font-size:.82rem;color:var(--muted)}
+.msg{width:100%;font:inherit;font-size:.95rem;padding:12px;border:1px solid var(--border);border-radius:10px;background:var(--bg)}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="index.html"><svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="7.5 13.5 10.5 10.5 13 12.5 16.5 8.5"/><polyline points="14 8.5 16.5 8.5 16.5 11"/></svg>Mądry Portfel</a>
+    <nav>
+      <a href="index.html">Artykuły</a>
+      <a href="narzedzia/index.html">Narzędzia</a>
+      <a href="slownik.html">Słownik</a>
+      <a href="o-nas.html">O nas</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <h1>Pakiet do udostępniania</h1>
+  <p class="lead">Ta strona jest dla Ciebie — nie ma jej w menu ani w wyszukiwarkach. Trzy kroki, każdy zajmuje kilka minut, a razem dają stronie pierwszych czytelników.</p>
+
+  <section class="kit-step">
+    <h2>1. Zgłoś stronę do Google i Bing (5 minut, raz)</h2>
+    <ol>
+      <li><a class="btn primary" href="https://search.google.com/search-console" target="_blank" rel="noopener">Otwórz Google Search Console</a> → <strong>Dodaj usługę</strong> → <strong>Prefiks URL</strong> i wklej adres: <button type="button" class="copy" data-copy-text="https://bartuniadev.github.io/madry-portfel/">Kopiuj adres strony</button></li>
+      <li>Weryfikacja: wybierz <strong>Plik HTML</strong> i kliknij <strong>Weryfikuj</strong> (plik jest już na stronie). Jeśli Google każe pobrać inny plik — wyślij mi jego nazwę.</li>
+      <li>W menu <strong>Mapy witryn</strong> wpisz <code>sitemap.xml</code> <button type="button" class="copy" data-copy-text="sitemap.xml">Kopiuj</button> i kliknij <strong>Prześlij</strong>.</li>
+      <li>W <strong>Sprawdzaniu adresu URL</strong> wklej adres strony głównej i kliknij <strong>Poproś o zindeksowanie</strong>.</li>
+      <li><a class="btn" href="https://www.bing.com/webmasters" target="_blank" rel="noopener">Otwórz Bing Webmaster Tools</a> → <strong>Importuj z Google Search Console</strong> (Bing zasila też DuckDuckGo i Ecosię).</li>
+    </ol>
+  </section>
+
+  <section class="kit-step">
+    <h2>2. Wyślij link 10 znajomym (2 minuty)</h2>
+    <p>Pierwsze wejścia i pierwsze uwagi najszybciej dadzą znajomi. Gotowa wiadomość:</p>
+    <textarea class="msg" id="friendMsg" readonly rows="4">Hej! Zrobiłem stronę z darmowymi kalkulatorami finansowymi — ile na rękę z pensji, L4, nadgodziny, urlop i czy dobrze zarabiasz na tle Polaków. Bez reklam i bez rejestracji. Rzucisz okiem i powiesz, co poprawić? https://bartuniadev.github.io/madry-portfel/</textarea>
+    <div class="row">
+      <a class="btn primary" href="https://wa.me/?text=Hej%21%20Zrobi%C5%82em%20stron%C4%99%20z%20darmowymi%20kalkulatorami%20finansowymi%20%E2%80%94%20ile%20na%20r%C4%99k%C4%99%20z%20pensji%2C%20L4%2C%20nadgodziny%2C%20urlop%20i%20czy%20dobrze%20zarabiasz%20na%20tle%20Polak%C3%B3w.%20Bez%20reklam%20i%20bez%20rejestracji.%20Rzucisz%20okiem%20i%20powiesz%2C%20co%20poprawi%C4%87%3F%20https%3A%2F%2Fbartuniadev.github.io%2Fmadry-portfel%2F" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn" href="fb-messenger://share?link=https%3A%2F%2Fbartuniadev.github.io%2Fmadry-portfel%2F">Messenger</a>
+      <a class="btn" href="sms:&amp;body=Hej%21%20Zrobi%C5%82em%20stron%C4%99%20z%20darmowymi%20kalkulatorami%20finansowymi%20%E2%80%94%20ile%20na%20r%C4%99k%C4%99%20z%20pensji%2C%20L4%2C%20nadgodziny%2C%20urlop%20i%20czy%20dobrze%20zarabiasz%20na%20tle%20Polak%C3%B3w.%20Bez%20reklam%20i%20bez%20rejestracji.%20Rzucisz%20okiem%20i%20powiesz%2C%20co%20poprawi%C4%87%3F%20https%3A%2F%2Fbartuniadev.github.io%2Fmadry-portfel%2F">SMS</a>
+      <a class="btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbartuniadev.github.io%2Fmadry-portfel%2F" target="_blank" rel="noopener">Facebook</a>
+      <button type="button" class="copy" data-copy="friendMsg">Kopiuj wiadomość</button>
+    </div>
+  </section>
+
+  <section class="kit-step">
+    <h2>3. Wrzuć karuzelę (5 minut na post)</h2>
+    <p>Na telefonie przycisk <strong>Udostępnij zdjęcia</strong> otwiera menu udostępniania — wybierz Instagram albo Facebook, a potem wklej skopiowany opis. Jeden post w danej grupie, z treścią (nie sam link), i napisz wprost, że to Twoja strona. Odpowiadaj na komentarze — to najbardziej podbija zasięg.</p>
+  </section>
+
+  <section class="kit-card" id="niedziele">
+    <h3>Niedziele handlowe — 3 niedziele i 4 dni bez sklepów</h3>
+    <p class="when">Kiedy: Najlepiej 28 listopada – 5 grudnia, przypomnienie 18–19 grudnia</p>
+    <div class="thumbs"><a href="pliki/karuzele/niedziele-1.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/niedziele-1.jpg" alt="Slajd 1" width="108" height="135" loading="lazy"></a><a href="pliki/karuzele/niedziele-2.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/niedziele-2.jpg" alt="Slajd 2" width="108" height="135" loading="lazy"></a><a href="pliki/karuzele/niedziele-3.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/niedziele-3.jpg" alt="Slajd 3" width="108" height="135" loading="lazy"></a><a href="pliki/karuzele/niedziele-4.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/niedziele-4.jpg" alt="Slajd 4" width="108" height="135" loading="lazy"></a></div>
+    <div class="row">
+      <button type="button" class="btn primary share-files" data-files='["pliki/karuzele/niedziele-1.jpg", "pliki/karuzele/niedziele-2.jpg", "pliki/karuzele/niedziele-3.jpg", "pliki/karuzele/niedziele-4.jpg"]' data-title="Niedziele handlowe — 3 niedziele i 4 dni bez sklepów">Udostępnij zdjęcia (Instagram, Facebook…)</button>
+      <span class="hint">Na komputerze: kliknij miniaturę i zapisz obraz.</span>
+    </div>
+      <div class="cap">
+        <div class="cap-head"><strong>Instagram</strong><button type="button" class="copy" data-copy="c-niedziele-0">Kopiuj</button></div>
+        <textarea id="c-niedziele-0" readonly rows="6">Grudzień 2026 w sklepach 🛒 Niedziele handlowe: 6, 13 i 20 grudnia. A od 24 do 27 grudnia duże sklepy będą zamknięte — cztery dni z rzędu (Wigilia jest wolna od 2025 r.).
+
+Zrób zakupy suche i chemię wcześniej, na ostatnią chwilę zostaw tylko świeże produkty — taniej i bez kolejek.
+
+Wszystkie niedziele handlowe 2026 i 2027 + licznik do najbliższej — link w bio.
+
+#niedzielahandlowa #święta #zakupy #wigilia #oszczędzanie #budżet #finanseosobiste</textarea>
+      </div>
+      <div class="cap">
+        <div class="cap-head"><strong>Facebook</strong><button type="button" class="copy" data-copy="c-niedziele-1">Kopiuj</button></div>
+        <textarea id="c-niedziele-1" readonly rows="6">Przypominajka na grudzień: niedziele handlowe to 6, 13 i 20 grudnia. Od czwartku 24 do niedzieli 27 grudnia duże sklepy będą zamknięte — cztery dni bez zakupów. W 2027 r. niedziel handlowych będzie osiem (31.01, 21.03, 25.04, 27.06, 29.08 i 5, 12, 19.12).
+Pełna lista z licznikiem dni do najbliższej niedzieli handlowej (moja strona, bez reklam):
+https://bartuniadev.github.io/madry-portfel/artykuly/niedziele-handlowe-2026-2027.html</textarea>
+      </div>
+    <div class="row"><span class="lbl">Link do artykułu:</span> <a class="btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbartuniadev.github.io%2Fmadry-portfel%2Fartykuly%2Fniedziele-handlowe-2026-2027.html" target="_blank" rel="noopener">Facebook</a><a class="btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fbartuniadev.github.io%2Fmadry-portfel%2Fartykuly%2Fniedziele-handlowe-2026-2027.html" target="_blank" rel="noopener">LinkedIn</a><a class="btn" href="https://wa.me/?text=Niedziele%20handlowe%20%E2%80%94%203%20niedziele%20i%204%20dni%20bez%20sklep%C3%B3w%20https%3A%2F%2Fbartuniadev.github.io%2Fmadry-portfel%2Fartykuly%2Fniedziele-handlowe-2026-2027.html" target="_blank" rel="noopener">WhatsApp</a><a class="btn" href="https://twitter.com/intent/tweet?text=Niedziele%20handlowe%20%E2%80%94%203%20niedziele%20i%204%20dni%20bez%20sklep%C3%B3w&amp;url=https%3A%2F%2Fbartuniadev.github.io%2Fmadry-portfel%2Fartykuly%2Fniedziele-handlowe-2026-2027.html" target="_blank" rel="noopener">X</a> <button type="button" class="btn copy" data-copy-text="https://bartuniadev.github.io/madry-portfel/artykuly/niedziele-handlowe-2026-2027.html">Kopiuj link</button></div>
+  </section>
+  <section class="kit-card" id="weekendy">
+    <h3>Długie weekendy 2027 — 28 dni wolnego za 11 dni urlopu</h3>
+    <p class="when">Kiedy: Teraz i do połowy grudnia, powtórka na początku stycznia</p>
+    <div class="thumbs"><a href="pliki/karuzele/weekendy-1.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/weekendy-1.jpg" alt="Slajd 1" width="108" height="135" loading="lazy"></a><a href="pliki/karuzele/weekendy-2.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/weekendy-2.jpg" alt="Slajd 2" width="108" height="135" loading="lazy"></a><a href="pliki/karuzele/weekendy-3.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/weekendy-3.jpg" alt="Slajd 3" width="108" height="135" loading="lazy"></a><a href="pliki/karuzele/weekendy-4.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/weekendy-4.jpg" alt="Slajd 4" width="108" height="135" loading="lazy"></a><a href="pliki/karuzele/weekendy-5.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/weekendy-5.jpg" alt="Slajd 5" width="108" height="135" loading="lazy"></a><a href="pliki/karuzele/weekendy-6.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/weekendy-6.jpg" alt="Slajd 6" width="108" height="135" loading="lazy"></a></div>
+    <div class="row">
+      <button type="button" class="btn primary share-files" data-files='["pliki/karuzele/weekendy-1.jpg", "pliki/karuzele/weekendy-2.jpg", "pliki/karuzele/weekendy-3.jpg", "pliki/karuzele/weekendy-4.jpg", "pliki/karuzele/weekendy-5.jpg", "pliki/karuzele/weekendy-6.jpg"]' data-title="Długie weekendy 2027 — 28 dni wolnego za 11 dni urlopu">Udostępnij zdjęcia (Instagram, Facebook…)</button>
+      <span class="hint">Na komputerze: kliknij miniaturę i zapisz obraz.</span>
+    </div>
+      <div class="cap">
+        <div class="cap-head"><strong>Instagram</strong><button type="button" class="copy" data-copy="c-weekendy-0">Kopiuj</button></div>
+        <textarea id="c-weekendy-0" readonly rows="6">28 dni wolnego za 11 dni urlopu 🗓️ Tak wygląda 2027 rok, jeśli dobrze rozłożysz wolne:
+
+• 1–10 stycznia — 4 dni urlopu
+• Boże Ciało 27–30 maja — 1 dzień
+• 11–14 listopada — 1 dzień
+• 24 grudnia – 2 stycznia 2028 — 5 dni
+
+Do tego 1 maja i 25 grudnia wypadają w sobotę — za każde z tych świąt pracodawca musi dać Ci inny dzień wolny.
+
+Zapisz post i wyślij osobie, z którą planujesz wyjazdy. Pełny kalendarz i kalkulator urlopu — link w bio.
+
+#długiweekend #urlop #dniwolne2027 #kalendarz2027 #praca #podróże #finanseosobiste</textarea>
+      </div>
+      <div class="cap">
+        <div class="cap-head"><strong>Facebook</strong><button type="button" class="copy" data-copy="c-weekendy-1">Kopiuj</button></div>
+        <textarea id="c-weekendy-1" readonly rows="6">Rozpisałem dni wolne od pracy na 2027 rok. Najlepsze okazje: 1–10 stycznia za 4 dni urlopu, Boże Ciało i 11 listopada (po 4 dni wolnego za 1 dzień urlopu) oraz 24 grudnia–2 stycznia za 5 dni. Razem 28 dni wolnego za 11 dni urlopu. Do tego 1 maja i 25 grudnia wypadają w sobotę, więc należy się za nie dodatkowy dzień wolny.
+Pełny kalendarz z wymiarem czasu pracy (to moja strona, bez reklam):
+https://bartuniadev.github.io/madry-portfel/artykuly/dni-wolne-od-pracy-2027.html</textarea>
+      </div>
+      <div class="cap">
+        <div class="cap-head"><strong>LinkedIn</strong><button type="button" class="copy" data-copy="c-weekendy-2">Kopiuj</button></div>
+        <textarea id="c-weekendy-2" readonly rows="6">Planowanie urlopów na 2027 rok warto zacząć teraz — kalendarz jest wyjątkowo łaskawy: 11 dni urlopu daje 28 dni wolnego, a dwa święta w sobotę (1 maja i 25 grudnia) oznaczają dwa dodatkowe dni wolne dla pracowników. Rozpiska z wymiarem czasu pracy na każdy miesiąc i kalkulatorem urlopu (także dla osób zmieniających pracę):
+https://bartuniadev.github.io/madry-portfel/artykuly/dni-wolne-od-pracy-2027.html</textarea>
+      </div>
+    <div class="row"><span class="lbl">Link do artykułu:</span> <a class="btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbartuniadev.github.io%2Fmadry-portfel%2Fartykuly%2Fdni-wolne-od-pracy-2027.html" target="_blank" rel="noopener">Facebook</a><a class="btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fbartuniadev.github.io%2Fmadry-portfel%2Fartykuly%2Fdni-wolne-od-pracy-2027.html" target="_blank" rel="noopener">LinkedIn</a><a class="btn" href="https://wa.me/?text=D%C5%82ugie%20weekendy%202027%20%E2%80%94%2028%20dni%20wolnego%20za%2011%20dni%20urlopu%20https%3A%2F%2Fbartuniadev.github.io%2Fmadry-portfel%2Fartykuly%2Fdni-wolne-od-pracy-2027.html" target="_blank" rel="noopener">WhatsApp</a><a class="btn" href="https://twitter.com/intent/tweet?text=D%C5%82ugie%20weekendy%202027%20%E2%80%94%2028%20dni%20wolnego%20za%2011%20dni%20urlopu&amp;url=https%3A%2F%2Fbartuniadev.github.io%2Fmadry-portfel%2Fartykuly%2Fdni-wolne-od-pracy-2027.html" target="_blank" rel="noopener">X</a> <button type="button" class="btn copy" data-copy-text="https://bartuniadev.github.io/madry-portfel/artykuly/dni-wolne-od-pracy-2027.html">Kopiuj link</button></div>
+  </section>
+  <section class="kit-card" id="zarobki">
+    <h3>Czy dobrze zarabiasz? Mediana płac GUS</h3>
+    <p class="when">Kiedy: W dowolnym momencie — temat „zawsze na czasie”</p>
+    <div class="thumbs"><a href="pliki/karuzele/zarobki-1.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/zarobki-1.jpg" alt="Slajd 1" width="108" height="135" loading="lazy"></a><a href="pliki/karuzele/zarobki-2.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/zarobki-2.jpg" alt="Slajd 2" width="108" height="135" loading="lazy"></a><a href="pliki/karuzele/zarobki-3.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/zarobki-3.jpg" alt="Slajd 3" width="108" height="135" loading="lazy"></a><a href="pliki/karuzele/zarobki-4.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/zarobki-4.jpg" alt="Slajd 4" width="108" height="135" loading="lazy"></a><a href="pliki/karuzele/zarobki-5.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/zarobki-5.jpg" alt="Slajd 5" width="108" height="135" loading="lazy"></a></div>
+    <div class="row">
+      <button type="button" class="btn primary share-files" data-files='["pliki/karuzele/zarobki-1.jpg", "pliki/karuzele/zarobki-2.jpg", "pliki/karuzele/zarobki-3.jpg", "pliki/karuzele/zarobki-4.jpg", "pliki/karuzele/zarobki-5.jpg"]' data-title="Czy dobrze zarabiasz? Mediana płac GUS">Udostępnij zdjęcia (Instagram, Facebook…)</button>
+      <span class="hint">Na komputerze: kliknij miniaturę i zapisz obraz.</span>
+    </div>
+      <div class="cap">
+        <div class="cap-head"><strong>Instagram</strong><button type="button" class="copy" data-copy="c-zarobki-0">Kopiuj</button></div>
+        <textarea id="c-zarobki-0" readonly rows="6">Połowa Polaków zarabia mniej niż 7550 zł brutto, czyli ok. 5477 zł na rękę. A „średnia krajowa”? 9178 zł — tyle nie zarabia ok. 65% pracujących. 👀
+
+Średnią zawyżają najwyższe pensje, dlatego do porównań lepsza jest mediana. Na slajdach progi: ile zarabia 10% najmniej i 10% najlepiej zarabiających — brutto i na rękę.
+
+Zrobiłem darmowy kalkulator „Czy dobrze zarabiam?” — wpisujesz pensję i widzisz, ile procent Polaków zarabia mniej od Ciebie. Bez rejestracji, nic nie jest wysyłane. Link w bio.
+
+Dane: GUS, rozkład wynagrodzeń, maj 2026.
+
+#zarobki #wynagrodzenie #finanseosobiste #pieniądze #praca #mediana #gus #oszczędzanie #pierwszapraca #kariera</textarea>
+      </div>
+      <div class="cap">
+        <div class="cap-head"><strong>Facebook</strong><button type="button" class="copy" data-copy="c-zarobki-1">Kopiuj</button></div>
+        <textarea id="c-zarobki-1" readonly rows="6">Ciekawe dane GUS za maj 2026: połowa pracujących zarabia mniej niż 7550 zł brutto (ok. 5477 zł na rękę), a mniej niż „średnią krajową” (9178 zł) zarabia ok. 65% osób.
+
+Zrobiłem darmowy kalkulator, który pokazuje, ile procent Polaków zarabia mniej od Ciebie — wpisujesz pensję brutto albo netto, wynik od razu, bez rejestracji i bez zbierania danych:
+https://bartuniadev.github.io/madry-portfel/narzedzia/czy-dobrze-zarabiam.html
+
+Ile Wam wyszło? 🙂</textarea>
+      </div>
+      <div class="cap">
+        <div class="cap-head"><strong>LinkedIn</strong><button type="button" class="copy" data-copy="c-zarobki-2">Kopiuj</button></div>
+        <textarea id="c-zarobki-2" readonly rows="6">Mediana wynagrodzeń w Polsce: 7550 zł brutto (GUS, maj 2026). Średnia: 9178 zł. Różnica 18% — i dlatego ok. 65% pracujących zarabia mniej niż „średnia krajowa”.
+
+Przy rozmowie o podwyżce albo zmianie pracy warto porównywać się z medianą dla swojej branży, a nie ze średnią z nagłówków.
+
+Zbudowałem prosty, darmowy kalkulator „Czy dobrze zarabiam?”, który pokazuje pozycję pensji na tle rozkładu płac GUS: https://bartuniadev.github.io/madry-portfel/narzedzia/czy-dobrze-zarabiam.html
+
+#wynagrodzenia #rynekpracy #HR #kariera</textarea>
+      </div>
+      <div class="cap">
+        <div class="cap-head"><strong>Wykop / Reddit</strong><button type="button" class="copy" data-copy="c-zarobki-3">Kopiuj</button></div>
+        <textarea id="c-zarobki-3" readonly rows="6">Tytuł: Połowa Polaków zarabia mniej niż 7550 zł brutto — zrobiłem kalkulator, który pokazuje, gdzie jesteś Ty (dane GUS)
+
+Treść: Wpisujesz pensję brutto albo netto i dostajesz procent pracujących, którzy zarabiają mniej. Dane GUS za maj 2026 (decyle i mediana), bez rejestracji, nic nie wysyła. Mediana 7550 zł, średnia 9178 zł — mniej niż średnią zarabia ok. 65% ludzi. Jeśli coś liczy dziwnie, dajcie znać.
+https://bartuniadev.github.io/madry-portfel/narzedzia/czy-dobrze-zarabiam.html
+
+Tagi Wykop: #pieniadze #praca #finanse #zarobki #gus</textarea>
+      </div>
+    <div class="row"><span class="lbl">Link do artykułu:</span> <a class="btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbartuniadev.github.io%2Fmadry-portfel%2Fnarzedzia%2Fczy-dobrze-zarabiam.html" target="_blank" rel="noopener">Facebook</a><a class="btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fbartuniadev.github.io%2Fmadry-portfel%2Fnarzedzia%2Fczy-dobrze-zarabiam.html" target="_blank" rel="noopener">LinkedIn</a><a class="btn" href="https://wa.me/?text=Czy%20dobrze%20zarabiasz%3F%20Mediana%20p%C5%82ac%20GUS%20https%3A%2F%2Fbartuniadev.github.io%2Fmadry-portfel%2Fnarzedzia%2Fczy-dobrze-zarabiam.html" target="_blank" rel="noopener">WhatsApp</a><a class="btn" href="https://twitter.com/intent/tweet?text=Czy%20dobrze%20zarabiasz%3F%20Mediana%20p%C5%82ac%20GUS&amp;url=https%3A%2F%2Fbartuniadev.github.io%2Fmadry-portfel%2Fnarzedzia%2Fczy-dobrze-zarabiam.html" target="_blank" rel="noopener">X</a> <button type="button" class="btn copy" data-copy-text="https://bartuniadev.github.io/madry-portfel/narzedzia/czy-dobrze-zarabiam.html">Kopiuj link</button></div>
+  </section>
+  <section class="kit-card" id="premia">
+    <h3>Premia świąteczna — ile z niej zostanie</h3>
+    <p class="when">Kiedy: 1–15 grudnia</p>
+    <div class="thumbs"><a href="pliki/karuzele/premia-1.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/premia-1.jpg" alt="Slajd 1" width="108" height="135" loading="lazy"></a><a href="pliki/karuzele/premia-2.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/premia-2.jpg" alt="Slajd 2" width="108" height="135" loading="lazy"></a><a href="pliki/karuzele/premia-3.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/premia-3.jpg" alt="Slajd 3" width="108" height="135" loading="lazy"></a><a href="pliki/karuzele/premia-4.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/premia-4.jpg" alt="Slajd 4" width="108" height="135" loading="lazy"></a><a href="pliki/karuzele/premia-5.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/premia-5.jpg" alt="Slajd 5" width="108" height="135" loading="lazy"></a></div>
+    <div class="row">
+      <button type="button" class="btn primary share-files" data-files='["pliki/karuzele/premia-1.jpg", "pliki/karuzele/premia-2.jpg", "pliki/karuzele/premia-3.jpg", "pliki/karuzele/premia-4.jpg", "pliki/karuzele/premia-5.jpg"]' data-title="Premia świąteczna — ile z niej zostanie">Udostępnij zdjęcia (Instagram, Facebook…)</button>
+      <span class="hint">Na komputerze: kliknij miniaturę i zapisz obraz.</span>
+    </div>
+      <div class="cap">
+        <div class="cap-head"><strong>Instagram</strong><button type="button" class="copy" data-copy="c-premia-0">Kopiuj</button></div>
+        <textarea id="c-premia-0" readonly rows="6">Dostajesz premię świąteczną? Zanim wydasz ją w głowie — z 1000 zł brutto na rękę zostaje ok. 681 zł 😬 (do 26 lat ok. 785 zł).
+
+Inaczej z funduszem socjalnym: świadczenia z ZFŚS (paczka, bon, dopłata do wczasów) są bez podatku do 1000 zł rocznie.
+
+A sprytny ruch na koniec roku: wpłata części premii na IKZE do 31 grudnia obniży podatek za 2026 r.
+
+Tabela premii i zasady ZFŚS — link w bio.
+
+#premia #święta #finanseosobiste #pieniądze #podatki #ikze #praca #wynagrodzenie</textarea>
+      </div>
+      <div class="cap">
+        <div class="cap-head"><strong>Facebook</strong><button type="button" class="copy" data-copy="c-premia-1">Kopiuj</button></div>
+        <textarea id="c-premia-1" readonly rows="6">Premia świąteczna — ile z niej naprawdę zostanie? Z 1000 zł brutto ok. 681 zł na rękę (premia jest opodatkowana jak pensja, a kwota wolna jest już wykorzystana). Świadczenia z funduszu socjalnego są za to bez podatku do 1000 zł w roku.
+Rozpisałem tabelę dla 500–5000 zł i zasady ZFŚS:
+https://bartuniadev.github.io/madry-portfel/artykuly/premia-swiateczna-bony-ile-netto.html</textarea>
+      </div>
+    <div class="row"><span class="lbl">Link do artykułu:</span> <a class="btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbartuniadev.github.io%2Fmadry-portfel%2Fartykuly%2Fpremia-swiateczna-bony-ile-netto.html" target="_blank" rel="noopener">Facebook</a><a class="btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fbartuniadev.github.io%2Fmadry-portfel%2Fartykuly%2Fpremia-swiateczna-bony-ile-netto.html" target="_blank" rel="noopener">LinkedIn</a><a class="btn" href="https://wa.me/?text=Premia%20%C5%9Bwi%C4%85teczna%20%E2%80%94%20ile%20z%20niej%20zostanie%20https%3A%2F%2Fbartuniadev.github.io%2Fmadry-portfel%2Fartykuly%2Fpremia-swiateczna-bony-ile-netto.html" target="_blank" rel="noopener">WhatsApp</a><a class="btn" href="https://twitter.com/intent/tweet?text=Premia%20%C5%9Bwi%C4%85teczna%20%E2%80%94%20ile%20z%20niej%20zostanie&amp;url=https%3A%2F%2Fbartuniadev.github.io%2Fmadry-portfel%2Fartykuly%2Fpremia-swiateczna-bony-ile-netto.html" target="_blank" rel="noopener">X</a> <button type="button" class="btn copy" data-copy-text="https://bartuniadev.github.io/madry-portfel/artykuly/premia-swiateczna-bony-ile-netto.html">Kopiuj link</button></div>
+  </section>
+  <section class="kit-card" id="zmiany2027">
+    <h3>Zmiany w finansach od 1 stycznia 2027</h3>
+    <p class="when">Kiedy: 20 grudnia – 10 stycznia</p>
+    <div class="thumbs"><a href="pliki/karuzele/zmiany2027-1.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/zmiany2027-1.jpg" alt="Slajd 1" width="108" height="135" loading="lazy"></a><a href="pliki/karuzele/zmiany2027-2.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/zmiany2027-2.jpg" alt="Slajd 2" width="108" height="135" loading="lazy"></a><a href="pliki/karuzele/zmiany2027-3.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/zmiany2027-3.jpg" alt="Slajd 3" width="108" height="135" loading="lazy"></a><a href="pliki/karuzele/zmiany2027-4.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/zmiany2027-4.jpg" alt="Slajd 4" width="108" height="135" loading="lazy"></a><a href="pliki/karuzele/zmiany2027-5.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/zmiany2027-5.jpg" alt="Slajd 5" width="108" height="135" loading="lazy"></a><a href="pliki/karuzele/zmiany2027-6.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/zmiany2027-6.jpg" alt="Slajd 6" width="108" height="135" loading="lazy"></a><a href="pliki/karuzele/zmiany2027-7.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/zmiany2027-7.jpg" alt="Slajd 7" width="108" height="135" loading="lazy"></a></div>
+    <div class="row">
+      <button type="button" class="btn primary share-files" data-files='["pliki/karuzele/zmiany2027-1.jpg", "pliki/karuzele/zmiany2027-2.jpg", "pliki/karuzele/zmiany2027-3.jpg", "pliki/karuzele/zmiany2027-4.jpg", "pliki/karuzele/zmiany2027-5.jpg", "pliki/karuzele/zmiany2027-6.jpg", "pliki/karuzele/zmiany2027-7.jpg"]' data-title="Zmiany w finansach od 1 stycznia 2027">Udostępnij zdjęcia (Instagram, Facebook…)</button>
+      <span class="hint">Na komputerze: kliknij miniaturę i zapisz obraz.</span>
+    </div>
+      <div class="cap">
+        <div class="cap-head"><strong>Instagram</strong><button type="button" class="copy" data-copy="c-zmiany2027-0">Kopiuj</button></div>
+        <textarea id="c-zmiany2027-0" readonly rows="6">Od 1 stycznia 2027 zmienia się kilka kwot, które dotyczą prawie każdego, kto pracuje 👇
+
+1. Płaca minimalna: 4950 zł brutto (ok. 3704 zł na rękę), 32,30 zł/h na zleceniu
+2. IKE: limit 30 099 zł, IKZE: 12 039,60 zł
+3. Nowe konto OKI — inwestowanie bez podatku Belki
+4. Dorabianie bez firmy: do 11 137,50 zł na kwartał
+5. Na koncie 3712,50 zł miesięcznie jest wolne od zajęcia komorniczego
+
+Zapisz, żeby mieć pod ręką w styczniu. Kalkulator brutto–netto 2027 i pełna lista zmian — link w bio.
+
+#finanseosobiste #2027 #płacaminimalna #ike #ikze #oki #podatki #pieniądze #oszczędzanie #nowyrok</textarea>
+      </div>
+      <div class="cap">
+        <div class="cap-head"><strong>Facebook</strong><button type="button" class="copy" data-copy="c-zmiany2027-1">Kopiuj</button></div>
+        <textarea id="c-zmiany2027-1" readonly rows="6">Co zmienia się w finansach od 1 stycznia 2027 — w skrócie: płaca minimalna 4950 zł brutto (ok. 3704 zł na rękę), wyższe limity IKE i IKZE, nowe konta OKI bez podatku Belki, wyższy limit dorabiania bez firmy.
+
+Rozpisałem wszystko z liczbami i źródłami, jest też darmowy kalkulator brutto–netto na 2027:
+https://bartuniadev.github.io/madry-portfel/artykuly/zmiany-w-finansach-2027.html</textarea>
+      </div>
+      <div class="cap">
+        <div class="cap-head"><strong>LinkedIn</strong><button type="button" class="copy" data-copy="c-zmiany2027-2">Kopiuj</button></div>
+        <textarea id="c-zmiany2027-2" readonly rows="6">1 stycznia 2027 r. wchodzą zmiany, które warto znać przed pierwszą wypłatą w nowym roku: płaca minimalna 4950 zł, limity IKE 30 099 zł i IKZE 12 039,60 zł, start osobistych kont inwestycyjnych (OKI), wyższy kwartalny limit działalności nierejestrowanej.
+
+Pełne zestawienie z wyliczeniami: https://bartuniadev.github.io/madry-portfel/artykuly/zmiany-w-finansach-2027.html</textarea>
+      </div>
+    <div class="row"><span class="lbl">Link do artykułu:</span> <a class="btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbartuniadev.github.io%2Fmadry-portfel%2Fartykuly%2Fzmiany-w-finansach-2027.html" target="_blank" rel="noopener">Facebook</a><a class="btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fbartuniadev.github.io%2Fmadry-portfel%2Fartykuly%2Fzmiany-w-finansach-2027.html" target="_blank" rel="noopener">LinkedIn</a><a class="btn" href="https://wa.me/?text=Zmiany%20w%20finansach%20od%201%20stycznia%202027%20https%3A%2F%2Fbartuniadev.github.io%2Fmadry-portfel%2Fartykuly%2Fzmiany-w-finansach-2027.html" target="_blank" rel="noopener">WhatsApp</a><a class="btn" href="https://twitter.com/intent/tweet?text=Zmiany%20w%20finansach%20od%201%20stycznia%202027&amp;url=https%3A%2F%2Fbartuniadev.github.io%2Fmadry-portfel%2Fartykuly%2Fzmiany-w-finansach-2027.html" target="_blank" rel="noopener">X</a> <button type="button" class="btn copy" data-copy-text="https://bartuniadev.github.io/madry-portfel/artykuly/zmiany-w-finansach-2027.html">Kopiuj link</button></div>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 Mądry Portfel. <a href="polityka-prywatnosci.html">Polityka prywatności</a> · <a href="pytania.html">Najczęstsze pytania</a> · <a href="slownik.html">Słownik</a></p>
+  <p class="ai-note">Treści na tej stronie powstają z pomocą narzędzi AI, na podstawie źródeł podanych przy artykułach. Przepisy i kwoty się zmieniają — przed decyzją sprawdź je u źródła. <a href="jak-powstaja-tresci.html">Jak powstają treści</a></p>
+</footer>
+<script defer src="assets/reveal.js"></script>
+<script defer src="assets/stats.js"></script>
+<script>
+(function(){
+  function flash(b){ var t = b.textContent; b.classList.add('done'); b.textContent = 'Skopiowano'; setTimeout(function(){ b.classList.remove('done'); b.textContent = t; }, 1600); }
+  function copy(text, b){
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(function(){ flash(b); }, function(){ fallback(text, b); });
+    else fallback(text, b);
+  }
+  function fallback(text, b){ var t = document.createElement('textarea'); t.value = text; document.body.appendChild(t); t.select(); try { document.execCommand('copy'); flash(b); } catch (e) {} t.remove(); }
+  document.querySelectorAll('[data-copy]').forEach(function(b){ b.addEventListener('click', function(){ copy(document.getElementById(b.getAttribute('data-copy')).value, b); }); });
+  document.querySelectorAll('[data-copy-text]').forEach(function(b){ b.addEventListener('click', function(){ copy(b.getAttribute('data-copy-text'), b); }); });
+  document.querySelectorAll('.share-files').forEach(function(b){
+    b.addEventListener('click', function(){
+      var paths = JSON.parse(b.getAttribute('data-files'));
+      Promise.all(paths.map(function(p){ return fetch(p).then(function(r){ return r.blob(); }).then(function(bl){ return new File([bl], p.split('/').pop(), {type: 'image/jpeg'}); }); }))
+        .then(function(files){
+          if (navigator.canShare && navigator.canShare({files: files})) return navigator.share({files: files, title: b.getAttribute('data-title')});
+          window.open(paths[0], '_blank');
+        }).catch(function(){});
+    });
+  });
+})();
+</script>
+</body>
+</html>

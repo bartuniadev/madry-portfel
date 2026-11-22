@@ -11,7 +11,7 @@ for f in glob.glob('*.html')+glob.glob('*/*.html'):
     if f.startswith('_'): continue
     t=open(f).read()
     for h in re.findall(r'(?:href|src)="([^"#?]+)',t):
-        if h.startswith(('http','mailto')): continue
+        if h.startswith(('http','mailto','sms:','tel:','fb-messenger:')): continue
         p=('/home/user/madry-portfel/'+h[len('/madry-portfel/'):]) if h.startswith('/madry-portfel/') else os.path.normpath(os.path.join(os.path.dirname(f),h))
         if not os.path.exists(p): bad.append((f,h))
     for blk in re.findall(r'<script type="application/ld\+json">(.*?)</script>',t,re.S):
@@ -19,7 +19,7 @@ for f in glob.glob('*.html')+glob.glob('*/*.html'):
         except Exception: bad.append((f,'jsonld'))
     for mm in re.finditer(r'<meta [^>]*content="([^"]*)"([^>]*)>',t):
         if mm.group(2).strip(): bad.append((f,'meta'))
-    if f not in ('google054b00c069a6f4cf.html','404.html','polityka-prywatnosci.html') and f.replace('\\','/') not in m and not f.startswith('google'): bad.append((f,'not in sitemap'))
+    if f not in ('google054b00c069a6f4cf.html','404.html','polityka-prywatnosci.html','udostepnij.html') and f.replace('\\','/') not in m and not f.startswith('google'): bad.append((f,'not in sitemap'))
 for a in glob.glob('artykuly/*.html'):
     if a not in s: bad.append((a,'not on home'))
     if 'class="sources"' not in open(a).read(): bad.append((a,'no sources'))
