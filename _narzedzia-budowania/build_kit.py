@@ -68,6 +68,13 @@ for sid, prefix, title, when, path in SETS:
   </section>
 ''')
 
+EXTRA = [
+    ('Wykop — mikroblog', 'Po godzinach zrobiłem darmową stronę z kalkulatorami dla osób na starcie kariery: ile na rękę w 2027, L4, nadgodziny, urlop i ekwiwalent, porównanie dwóch ofert pracy, a do tego „Czy dobrze zarabiam?” — wpisujesz pensję i widzisz, ile procent pracujących zarabia mniej (dane GUS).\n\nBez reklam, bez rejestracji, wszystko liczy się w przeglądarce, kod jest otwarty na GitHubie. Szukam uwag: co liczy źle, czego brakuje?\n\n' + BASE + '\n\n#finanse #pieniadze #praca #oszczedzanie #programowanie'),
+    ('Reddit (np. r/Polska — najpierw sprawdź zasady subreddita o autopromocji)', 'Tytuł: Zrobiłem darmowe kalkulatory finansowe bez reklam — ile na rękę 2027, L4, nadgodziny, urlop. Szukam uwag\n\nTreść: Cześć! Po godzinach zrobiłem stronę dla osób, które zaczynają pracę: kalkulator brutto–netto na 2027, L4, nadgodziny (z wymiarem godzin na każdy miesiąc), urlop i ekwiwalent, porównanie ofert pracy i „Czy dobrze zarabiam?” na danych GUS. Bez reklam i rejestracji, kod na GitHubie. Jeśli coś liczy inaczej niż Wasz pasek wypłaty — dajcie znać, poprawię.\n\n' + BASE),
+    ('Mail do redakcji (Bankier, Money.pl, Business Insider, Infor, portale regionalne)', 'Temat: Darmowe narzędzie: ile procent Polaków zarabia mniej od Ciebie (dane GUS 2026)\n\nDzień dobry,\n\nprowadzę niezależny, niekomercyjny serwis Mądry Portfel z kalkulatorami finansowymi dla osób na starcie kariery. Jeden z nich — „Czy dobrze zarabiam?” — na podstawie rozkładu wynagrodzeń GUS z maja 2026 r. pokazuje, ile procent pracujących zarabia mniej niż wpisana pensja. Przykład: 7550 zł brutto (mediana) to połowa pracujących, a mniej niż „średnią krajową” (9178 zł) zarabia ok. 65% osób.\n\nNa stronie są też kalkulatory na 2027 r.: brutto–netto, L4, nadgodziny i urlop, a także kalendarz dni wolnych i niedziel handlowych. Wszystko bez reklam i rejestracji, z metodologią i źródłami. Jeśli przyda się Państwu do materiału — można z niego korzystać i linkować bez ograniczeń.\n\n' + BASE + 'narzedzia/czy-dobrze-zarabiam.html\n\nPozdrawiam'),
+    ('Gdzie szukać grup na Facebooku', 'Wpisz w wyszukiwarce grup: „oszczędzanie”, „finanse osobiste”, „praca + Twoje miasto”, „studenci + Twoja uczelnia”, „mamy + Twoje miasto”, „pierwsza praca”. Wybierz grupy aktywne (posty z ostatnich dni), przeczytaj regulamin i wrzucaj po jednym poście dziennie — najlepiej karuzelę albo pytanie z linkiem, nie sam link.'),
+]
+
 msg = ('Hej! Zrobiłem stronę z darmowymi kalkulatorami finansowymi — ile na rękę z pensji, L4, nadgodziny, urlop i czy dobrze zarabiasz na tle Polaków. '
        'Bez reklam i bez rejestracji. Rzucisz okiem i powiesz, co poprawić? ' + BASE)
 
@@ -134,6 +141,15 @@ main = f'''<main>
   </section>
 
 {''.join(cards)}
+  <section class="kit-step">
+    <h2>4. Pokaż stronę tam, gdzie są ludzie</h2>
+    <p>Jedna wzmianka w dużym portalu albo popularny wpis na Wykopie potrafi dać tysiące wejść. Napisz wprost, że to Twój projekt, i poproś o uwagi — to działa lepiej niż reklama.</p>
+    <p><strong>Nowość do relacji:</strong> w kalkulatorze <a href="narzedzia/czy-dobrze-zarabiam.html">„Czy dobrze zarabiam?”</a> jest przycisk „Grafika do relacji” — wrzuć swój wynik na Instagram z naklejką z linkiem i poproś znajomych, żeby sprawdzili swój.</p>
+{''.join(f'''    <div class="cap">
+      <div class="cap-head"><strong>{html.escape(n)}</strong><button type="button" class="copy" data-copy="x-{k}">Kopiuj</button></div>
+      <textarea id="x-{k}" readonly rows="7">{html.escape(t)}</textarea>
+    </div>
+''' for k, (n, t) in enumerate(EXTRA))}  </section>
 </main>'''
 
 script = '''<script>
