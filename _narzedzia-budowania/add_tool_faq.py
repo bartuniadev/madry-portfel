@@ -42,6 +42,12 @@ FAQ = {
         ('Ile urlopu przy zmianie pracy w trakcie roku?', 'U każdego pracodawcy proporcjonalnie do miesięcy zatrudnienia w danym roku. Np. przy 20 dniach i pracy od marca do grudnia (10 miesięcy) — 17 dni (20 × 10/12, zaokrąglone w górę).'),
         ('Do kiedy trzeba wykorzystać zaległy urlop?', 'Do 30 września następnego roku — urlop z 2026 r. trzeba wykorzystać do 30 września 2027 r.'),
     ],
+    'ile-zarabiam-na-godzine': [
+        ('Ile zarabiam na godzinę przy 7000 zł brutto?', 'Na umowie o pracę ok. 30,49 zł na rękę za godzinę (5101,67 zł netto ÷ 167,3 godziny pracy w miesiącu przy pełnym etacie), czyli ok. 0,51 zł na minutę. Brutto to ok. 41,83 zł za godzinę.'),
+        ('Ile zarabiam na godzinę przy płacy minimalnej?', 'W 2026 r. (4806 zł brutto) ok. 21,55 zł na rękę za godzinę, a w 2027 r. (4950 zł brutto) ok. 22,14 zł — przy pełnym etacie, z PIT-2 i bez PPK.'),
+        ('Ile godzin pracy jest w miesiącu?', 'Przy pełnym etacie średnio 167,3 godziny — w 2026 i 2027 r. to 2008 godzin rocznie. W konkretnych miesiącach od 144 godzin (maj 2027) do 184 godzin (lipiec 2026).'),
+        ('Co to jest realna stawka godzinowa?', 'To pensja na rękę podzielona przez czas pracy razem z dojazdami. Przy 7000 zł brutto i godzinie dojazdów dziennie spada z 30,49 zł do ok. 27,10 zł za godzinę.'),
+    ],
 }
 CSS = '''  .tool-faq{margin-top:30px;}
   .tool-faq h2{font-size:1.25rem;margin:0 0 6px;}

@@ -560,7 +560,7 @@
     if (fontsReady) return fontsReady;
     var l = document.createElement('link'); l.rel = 'stylesheet'; l.href = '../assets/fonts/fonts.css'; document.head.appendChild(l);
     fontsReady = new Promise(function(res){ l.onload = res; l.onerror = res; }).then(function(){
-      return Promise.all(['600 100px Fraunces', '500 60px Inter', '600 60px Inter'].map(function(f){ return document.fonts.load(f, 'ąęłśćżźóń%0'); })).catch(function(){});
+      return Promise.all(['600 100px Fraunces', '500 60px Fraunces', '500 60px Inter', '600 60px Inter'].map(function(f){ return document.fonts.load(f, 'ąęłśćżźóń%0'); })).catch(function(){});
     });
     return fontsReady;
   }
@@ -595,18 +595,18 @@
     c.beginPath(); c.moveTo(103, 1658); c.lineTo(115, 1646); c.lineTo(124, 1653); c.lineTo(136, 1640); c.stroke();
     c.fillStyle = '#ffffff'; c.font = '500 56px ' + F; c.fillText('Mądry Portfel', 166, 1670);
     c.fillStyle = '#a8b6ae'; c.font = '500 36px ' + I; c.fillText('bartuniadev.github.io/madry-portfel', 90, 1745);
-    cv.toBlob(function(b){ storyBlob = b; storyKey = key; }, 'image/png');
+    cv.toBlob(function(b){ storyBlob = b; storyKey = key; }, 'image/jpeg', 0.92);
   }
   function queueStory(){ if (storyBlob && storyKey === curKey()) return; clearTimeout(storyTimer); storyTimer = setTimeout(function(){ loadFonts().then(drawStory); }, 250); }
   $('storyBtn').addEventListener('click', function(){
     var st = $('shareStatus');
     if (!storyBlob || storyKey !== curKey()){ st.textContent = 'Przygotowuję grafikę — kliknij jeszcze raz za chwilę.'; queueStory(); return; }
-    var file = new File([storyBlob], 'czy-dobrze-zarabiam.png', {type: 'image/png'});
+    var file = new File([storyBlob], 'czy-dobrze-zarabiam.jpg', {type: 'image/jpeg'});
     if (navigator.canShare && navigator.canShare({files: [file]})){
       navigator.share({files: [file], title: 'Czy dobrze zarabiam?'}).catch(function(){});
       return;
     }
-    var a = document.createElement('a'); a.href = URL.createObjectURL(storyBlob); a.download = 'czy-dobrze-zarabiam.png';
+    var a = document.createElement('a'); a.href = URL.createObjectURL(storyBlob); a.download = 'czy-dobrze-zarabiam.jpg';
     document.body.appendChild(a); a.click(); a.remove();
     st.textContent = 'Zapisano grafikę — wrzuć ją do relacji i dodaj naklejkę z linkiem do strony.';
   });
@@ -616,7 +616,7 @@
   document.querySelectorAll('.preset-btn').forEach(function(b){ b.addEventListener('click', queueStory); });
   document.querySelectorAll('.preset-btn').forEach(function(b){ b.addEventListener('click', function(){ $('kGross').checked = true; $('amount').value = b.getAttribute('data-v'); recalc(); }); });
   recalc();
-  queueStory();
+  (window.requestIdleCallback || function(cb){ setTimeout(cb, 2500); })(function(){ queueStory(); }, {timeout: 4000});
 </script>
 <script defer src="../assets/stats.js"></script>
 </body>

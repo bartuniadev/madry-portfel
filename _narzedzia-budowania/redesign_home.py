@@ -41,9 +41,9 @@ TOOLS = [
     ('kalkulator-urlopu', 'Kalkulator urlopu', '20 czy 26 dni, zmiana pracy i ekwiwalent', False),
     ('porownanie-ofert-pracy', 'Porównanie ofert pracy', 'Netto, benefity i dojazdy — która jest warta więcej', False),
     ('kalkulator-budzetu', 'Budżet 50/30/20', 'Podział wypłaty na potrzeby, zachcianki i oszczędności', False),
-    ('kalkulator-procentu-skladanego', 'Procent składany', 'Ile urosną regularne oszczędności po latach', False),
+    ('ile-zarabiam-na-godzine', 'Ile zarabiam na godzinę?', 'I ile godzin pracy kosztuje smartfon, czynsz czy kawa', False),
 ]
-MORE = [('kalkulator-umowy-zlecenia', 'Umowa zlecenia'), ('kalkulator-oki', 'OKI'), ('kalkulator-lokaty', 'Lokata'),
+MORE = [('kalkulator-procentu-skladanego', 'Procent składany'), ('kalkulator-umowy-zlecenia', 'Umowa zlecenia'), ('kalkulator-oki', 'OKI'), ('kalkulator-lokaty', 'Lokata'),
         ('kalkulator-kredytu', 'Rata kredytu'), ('kalkulator-poduszki-finansowej', 'Poduszka finansowa'),
         ('kalkulator-podzialu-kosztow', 'Podział kosztów dla par'), ('kalkulator-inflacji', 'Inflacja'),
         ('kalkulator-splaty-dlugow', 'Spłata długów'), ('kalkulator-l4', 'L4 — chorobowe'), ('kalkulator-nadgodzin', 'Nadgodziny')]

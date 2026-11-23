@@ -144,7 +144,7 @@ main = f'''<main>
   <section class="kit-step">
     <h2>4. Pokaż stronę tam, gdzie są ludzie</h2>
     <p>Jedna wzmianka w dużym portalu albo popularny wpis na Wykopie potrafi dać tysiące wejść. Napisz wprost, że to Twój projekt, i poproś o uwagi — to działa lepiej niż reklama.</p>
-    <p><strong>Nowość do relacji:</strong> w kalkulatorze <a href="narzedzia/czy-dobrze-zarabiam.html">„Czy dobrze zarabiam?”</a> jest przycisk „Grafika do relacji” — wrzuć swój wynik na Instagram z naklejką z linkiem i poproś znajomych, żeby sprawdzili swój.</p>
+    <p><strong>Grafiki do relacji:</strong> w kalkulatorach <a href="narzedzia/czy-dobrze-zarabiam.html">„Czy dobrze zarabiam?”</a> i <a href="narzedzia/ile-zarabiam-na-godzine.html">„Ile zarabiam na godzinę?”</a> jest przycisk „Grafika do relacji” — wrzuć swój wynik („Zarabiam więcej niż X% Polaków”, „Smartfon kosztuje mnie 213 godzin pracy”) na Instagram z naklejką z linkiem i poproś znajomych, żeby sprawdzili swój.</p>
 {''.join(f'''    <div class="cap">
       <div class="cap-head"><strong>{html.escape(n)}</strong><button type="button" class="copy" data-copy="x-{k}">Kopiuj</button></div>
       <textarea id="x-{k}" readonly rows="7">{html.escape(t)}</textarea>

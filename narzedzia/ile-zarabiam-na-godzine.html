@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ile zarabiam na godzinę? Cena w godzinach pracy</title>
+<meta name="description" content="Przelicz pensję na stawkę za godzinę i minutę na rękę i sprawdź, ile godzin pracy kosztuje smartfon, czynsz czy codzienna kawa. Z grafiką do udostępnienia.">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="canonical" href="https://bartuniadev.github.io/madry-portfel/narzedzia/ile-zarabiam-na-godzine.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mądry Portfel">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:title" content="Ile zarabiam na godzinę? Cena w godzinach pracy">
+<meta property="og:description" content="Przelicz pensję na stawkę za godzinę i minutę na rękę i sprawdź, ile godzin pracy kosztuje smartfon, czynsz czy codzienna kawa. Z grafiką do udostępnienia.">
+<meta property="og:url" content="https://bartuniadev.github.io/madry-portfel/narzedzia/ile-zarabiam-na-godzine.html">
+<meta property="og:image" content="https://bartuniadev.github.io/madry-portfel/assets/og/ile-zarabiam-na-godzine.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ile zarabiam na godzinę? Cena w godzinach pracy">
+<meta name="twitter:image" content="https://bartuniadev.github.io/madry-portfel/assets/og/ile-zarabiam-na-godzine.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Ile zarabiam na godzinę — kalkulator",
+  "url": "https://bartuniadev.github.io/madry-portfel/narzedzia/ile-zarabiam-na-godzine.html",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any (przeglądarka)",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "PLN"
+  },
+  "isAccessibleForFree": true,
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://bartuniadev.github.io/madry-portfel/#organization",
+    "name": "Mądry Portfel",
+    "url": "https://bartuniadev.github.io/madry-portfel/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://bartuniadev.github.io/madry-portfel/assets/logo-512.png",
+      "width": 512,
+      "height": 512
+    },
+    "sameAs": [
+      "https://github.com/bartuniadev/madry-portfel"
+    ],
+    "publishingPrinciples": "https://bartuniadev.github.io/madry-portfel/jak-powstaja-tresci.html"
+  },
+  "description": "Przelicz pensję na stawkę za godzinę i minutę na rękę i sprawdź, ile godzin pracy kosztuje smartfon, czynsz czy codzienna kawa. Z grafiką do udostępnienia.",
+  "keywords": "ile zarabiam na godzinę, stawka godzinowa netto, ile godzin pracy kosztuje, kalkulator stawki godzinowej, ile zarabiam na minutę"
+}
+</script>
+<style>
+  :root{
+    --bg:#0e130f;
+    --surface:#161d19;
+    --surface-2:#1c241f;
+    --border:#2b362f;
+    --text:#eef2ef;
+    --text-2:#93a49a;
+    --green:#3ad889;
+    --gold:#f2c14e;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--green);}
+  a:focus-visible, button:focus-visible, input:focus-visible{outline:2px solid var(--green); outline-offset:2px;}
+
+  header.site-header{border-bottom:1px solid var(--border);}
+  .header-inner{
+    max-width:760px;
+    margin:0 auto;
+    padding:18px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  .logo{
+    font-weight:700;
+    font-size:1.15rem;
+    letter-spacing:-0.01em;
+    color:var(--text);
+    text-decoration:none;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .logo svg{width:20px;height:20px;color:var(--green);flex-shrink:0;}
+  nav.top a{
+    color:var(--text-2);
+    text-decoration:none;
+    margin-left:18px;
+    font-size:0.92rem;
+  }
+  nav.top a:hover, nav.top a[aria-current]{color:var(--green);}
+
+  main{max-width:760px;margin:0 auto;padding:32px 20px 60px;}
+
+  .breadcrumb-dark{
+    display:block;
+    font-size:0.8rem;
+    color:var(--text-2);
+    margin:22px 0 14px;
+  }
+  .breadcrumb-dark a{color:var(--text-2);text-decoration:none;}
+  .breadcrumb-dark a:hover{color:var(--green);}
+  .breadcrumb-dark span[aria-current]{color:var(--text);}
+
+  .pill{
+    display:inline-flex;
+    align-items:center;
+    font-family:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+    font-size:12px;
+    letter-spacing:.04em;
+    color:var(--green);
+    border:1px solid var(--green);
+    padding:4px 11px;
+    border-radius:999px;
+  }
+  h1{
+    font-size:clamp(1.7rem,5vw,2.15rem);
+    line-height:1.2;
+    margin:14px 0 0;
+    letter-spacing:-0.01em;
+  }
+  .lead{
+    max-width:60ch;
+    color:var(--text-2);
+    font-size:1.02rem;
+    margin-top:12px;
+  }
+
+  .calc-card{
+    margin-top:28px;
+    background:var(--surface);
+    border:2px solid var(--green);
+    border-radius:12px;
+    box-shadow:6px 6px 0 var(--gold);
+    padding:26px 24px;
+  }
+
+  .field{display:flex;flex-direction:column;gap:6px;margin-bottom:20px;}
+  .field label{font-size:0.88rem;color:var(--text-2);font-weight:600;}
+  .field input{
+    background:var(--bg);
+    border:1px solid var(--border);
+    color:var(--text);
+    border-radius:8px;
+    padding:12px 14px;
+    font-size:1.4rem;
+    font-family:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+    font-variant-numeric:tabular-nums;
+  }
+  .field input#income{font-weight:700;}
+  .field input::placeholder{color:#5c6a62;}
+
+  .split-controls{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+    margin-bottom:14px;
+  }
+  .split-controls .field{margin-bottom:0;}
+  .split-controls input{font-size:1.05rem;padding:9px 10px;}
+
+  .presets{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px;}
+  .preset-btn{
+    font-family:inherit;
+    font-size:0.82rem;
+    color:var(--text-2);
+    background:var(--surface-2);
+    border:1px solid var(--border);
+    border-radius:999px;
+    padding:7px 13px;
+    cursor:pointer;
+  }
+  .preset-btn:hover{color:var(--text);border-color:var(--green);}
+
+  .sum-warning{
+    font-size:0.85rem;
+    color:var(--gold);
+    background:rgba(242,193,78,0.1);
+    border:1px solid rgba(242,193,78,0.4);
+    border-radius:7px;
+    padding:8px 12px;
+    margin:6px 0 18px;
+  }
+
+  .bar{
+    display:flex;
+    height:14px;
+    border-radius:999px;
+    overflow:hidden;
+    background:var(--bg);
+    border:1px solid var(--border);
+    margin-bottom:24px;
+  }
+  .bar .seg{height:100%;transition:width .2s ease;}
+  .bar .seg.needs{background:var(--green);}
+  .bar .seg.wants{background:var(--border);}
+  .bar .seg.savings{background:var(--gold);}
+
+  .results-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+  }
+  .result-card{
+    background:var(--bg);
+    border:1px solid var(--border);
+    border-radius:9px;
+    padding:14px;
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+  }
+  .result-card .label{font-size:0.8rem;color:var(--text-2);}
+  .result-card .amount{
+    font-family:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+    font-weight:700;
+    font-size:1.15rem;
+    font-variant-numeric:tabular-nums;
+  }
+  .result-card .pct{font-size:0.78rem;color:var(--text-2);font-variant-numeric:tabular-nums;}
+  .result-card.needs{border-color:var(--green);}
+  .result-card.needs .amount{color:var(--green);}
+  .result-card.savings{border-color:var(--gold);}
+  .result-card.savings .amount{color:var(--gold);}
+
+  @media (max-width:480px){
+    .results-grid{grid-template-columns:1fr;}
+    .split-controls{grid-template-columns:1fr;}
+  }
+
+  .trust{
+    margin-top:22px;
+    padding-top:22px;
+    border-top:1px dashed var(--border);
+  }
+  .trust p{color:var(--text-2);font-size:0.92rem;max-width:60ch;margin:0 0 14px;}
+  .download-btn{
+    display:inline-block;
+    font-weight:700;
+    font-size:0.95rem;
+    color:#08130d;
+    background:var(--green);
+    padding:12px 20px;
+    border-radius:9px;
+    text-decoration:none;
+  }
+  .download-btn:hover{background:#4fe49a;}
+  .microcopy{font-size:0.8rem !important;color:#93a49a !important;margin-top:12px !important;}
+
+  .more-link{margin-top:26px;font-size:0.95rem;}
+
+  footer{
+    border-top:1px solid var(--border);
+    margin-top:20px;
+    padding:24px 20px;
+    text-align:center;
+    color:var(--text-2);
+    font-size:0.85rem;
+  }
+  footer a{color:var(--text-2);}
+  footer .ai-note{opacity:0.75;}
+
+  @media (prefers-reduced-motion: reduce){
+    *{transition-duration:0.01ms !important;}
+  }
+
+  .split-controls.two{grid-template-columns:repeat(2,1fr);gap:14px 16px;margin-bottom:16px;}
+  .field.check{justify-content:center;}
+  .field.check label{display:flex;align-items:center;gap:9px;color:var(--text);font-weight:500;cursor:pointer;}
+  .field.check input{width:18px;height:18px;accent-color:var(--green);}
+  .field .hint{font-size:0.78rem;color:var(--text-2);}
+  .growth-chart{width:100%;height:auto;display:block;margin:18px 0 6px;font-family:system-ui,sans-serif;}
+  .legend{display:flex;gap:18px;font-size:0.82rem;color:var(--text-2);margin-bottom:20px;}
+  .legend span{display:inline-flex;align-items:center;gap:7px;}
+  .legend i{width:11px;height:11px;border-radius:3px;display:inline-block;}
+  .sw-dep{background:var(--green);} .sw-gain{background:var(--gold);}
+  @media (max-width:480px){.split-controls.two{grid-template-columns:1fr;}}
+  .type-toggle{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px;}
+  .type-toggle label{position:relative;cursor:pointer;}
+  .type-toggle input{position:absolute;opacity:0;width:1px;height:1px;}
+  .type-toggle span{display:block;padding:8px 14px;border-radius:999px;border:1px solid var(--border);font-size:0.88rem;color:var(--text-2);background:var(--bg);}
+  .type-toggle input:checked + span{background:var(--green);border-color:var(--green);color:#08130d;font-weight:700;}
+  .type-toggle input:focus-visible + span{outline:2px solid var(--green);outline-offset:2px;}
+  .net-box{display:flex;flex-direction:column;gap:2px;margin:10px 0 16px;padding:16px 18px;background:var(--bg);border:1px solid var(--green);border-radius:10px;}
+  .net-box .label{font-size:0.85rem;color:var(--text-2);}
+  .net-box .pct{font-size:0.8rem;color:var(--text-2);}
+  .net-amount{font-family:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;font-weight:700;font-size:clamp(1.7rem,7vw,2.3rem);color:var(--green);font-variant-numeric:tabular-nums;}
+  .breakdown{width:100%;border-collapse:collapse;margin:0 0 20px;font-size:0.92rem;}
+  .breakdown td{padding:9px 4px;border-bottom:1px solid var(--border);}
+  .breakdown td:last-child{text-align:right;white-space:nowrap;font-family:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;font-variant-numeric:tabular-nums;}
+  .breakdown tr.total td{border-bottom:0;font-weight:700;color:var(--green);}
+  .verdict{margin:4px 0 18px;padding:14px 16px;border:1px solid var(--green);border-radius:10px;background:var(--bg);font-size:0.95rem;}
+  .verdict.worse{border-color:var(--gold);}
+  details.tbl{margin:18px 0 0;border:1px solid var(--border);border-radius:9px;background:var(--bg);}
+  details.tbl summary{cursor:pointer;padding:12px 14px;font-weight:600;font-size:0.92rem;}
+  details.tbl summary:focus-visible{outline:2px solid var(--green);outline-offset:2px;}
+  .tbl-wrap{overflow-x:auto;}
+  .data-table{width:100%;border-collapse:collapse;font-size:0.85rem;}
+  .data-table th,.data-table td{padding:7px 6px;border-top:1px solid var(--border);text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;}
+  .data-table th{color:var(--text-2);font-weight:600;font-size:0.78rem;}
+  .data-table th:first-child,.data-table td:first-child{text-align:left;}
+  .data-table caption{caption-side:bottom;text-align:left;padding:8px 10px 10px;font-size:0.75rem;color:var(--text-2);}
+  @media (max-width:380px){.data-table th,.data-table td{padding:7px 4px;font-size:0.78rem;}}
+  .more-link{line-height:2.2;}
+  [hidden]{display:none !important;}
+  .presets{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 12px;}
+  .preset-btn{font:inherit;font-size:0.85rem;cursor:pointer;color:var(--text);background:var(--surface-2);border:1px solid var(--border);border-radius:999px;padding:7px 12px;}
+  .preset-btn:hover{border-color:var(--green);}
+  .preset-btn:focus-visible{outline:2px solid var(--green);outline-offset:2px;}
+  #iname{width:100%;background:var(--surface);border:1px solid var(--border);color:var(--text);border-radius:8px;padding:9px 10px;font-size:1rem;font-family:inherit;min-height:44px;}
+  .cost-box{display:grid;gap:4px;margin:6px 0 4px;padding:16px 18px;border-radius:12px;background:var(--surface-2);border:1px solid var(--border);}
+  .cost-big{font-size:2rem;font-weight:700;color:#e0a63f;font-variant-numeric:tabular-nums;line-height:1.15;}
+  .cost-note{font-size:0.9rem;color:var(--text-2);}
+  .share-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:16px;}
+  .share-row .download-btn{border:0;cursor:pointer;font-family:inherit;}
+  .share-row .story-btn{background:var(--surface-2);color:var(--text);border:1px solid var(--border);}
+  .share-row .hint{font-size:0.82rem;color:var(--text-2);overflow-wrap:anywhere;}
+  .hours tr.em td{font-weight:700;color:#e0a63f;}
+  .tool-faq{margin-top:30px;}
+  .tool-faq h2{font-size:1.25rem;margin:0 0 6px;}
+  .tool-faq details{border-top:1px solid var(--border);padding:12px 2px;}
+  .tool-faq summary{cursor:pointer;font-weight:600;}
+  .tool-faq summary:focus-visible{outline:2px solid var(--green);outline-offset:2px;}
+  .tool-faq p{color:var(--text-2);margin:8px 0 0;max-width:65ch;}
+</style>
+<link rel="alternate" type="application/rss+xml" title="Mądry Portfel — nowe poradniki" href="https://bartuniadev.github.io/madry-portfel/feed.xml">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Ile zarabiam na godzinę przy 7000 zł brutto?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Na umowie o pracę ok. 30,49 zł na rękę za godzinę (5101,67 zł netto ÷ 167,3 godziny pracy w miesiącu przy pełnym etacie), czyli ok. 0,51 zł na minutę. Brutto to ok. 41,83 zł za godzinę."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Ile zarabiam na godzinę przy płacy minimalnej?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "W 2026 r. (4806 zł brutto) ok. 21,55 zł na rękę za godzinę, a w 2027 r. (4950 zł brutto) ok. 22,14 zł — przy pełnym etacie, z PIT-2 i bez PPK."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Ile godzin pracy jest w miesiącu?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Przy pełnym etacie średnio 167,3 godziny — w 2026 i 2027 r. to 2008 godzin rocznie. W konkretnych miesiącach od 144 godzin (maj 2027) do 184 godzin (lipiec 2026)."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Co to jest realna stawka godzinowa?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "To pensja na rękę podzielona przez czas pracy razem z dojazdami. Przy 7000 zł brutto i godzinie dojazdów dziennie spada z 30,49 zł do ok. 27,10 zł za godzinę."
+   }
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../index.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="7.5 13.5 10.5 10.5 13 12.5 16.5 8.5"/><polyline points="14 8.5 16.5 8.5 16.5 11"/></svg>
+      Mądry Portfel
+    </a>
+    <nav class="top">
+      <a href="index.html" aria-current="page">Narzędzia</a>
+      <a href="../index.html">Artykuły</a>
+      <a href="../o-nas.html">O nas</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <nav class="breadcrumb-dark" aria-label="Okruszki"><a href="../index.html">Mądry Portfel</a> <span aria-hidden="true">/</span> <a href="index.html">Narzędzia</a> <span aria-hidden="true">/</span> <span aria-current="page">Ile zarabiam na godzinę</span></nav>
+  <span class="pill">0 kont · 0 maila · 0 ciasteczek</span>
+  <h1>Ile zarabiam na godzinę — i ile godzin pracy kosztują Twoje wydatki</h1>
+  <p class="lead">Wpisz pensję, a policzę, ile zarabiasz na rękę za godzinę i za minutę — także realnie, z czasem dojazdów. Potem sprawdź, ile godzin pracy kosztuje rzecz, którą chcesz kupić. Wszystko liczy się w Twojej przeglądarce.</p>
+
+  <div class="calc-card">
+    <p class="field-title" id="kindLabel">Twoja pensja</p>
+    <div class="type-toggle" role="radiogroup" aria-labelledby="kindLabel">
+      <label><input type="radio" name="kind" id="kGross" value="gross" checked><span>Brutto (umowa o pracę)</span></label>
+      <label><input type="radio" name="kind" id="kNet" value="net"><span>Na rękę</span></label>
+    </div>
+    <div class="split-controls two">
+      <div class="field"><label for="pay" id="payLbl">Pensja brutto miesięcznie (zł)</label><input type="number" id="pay" inputmode="decimal" value="7000" min="0" step="100"></div>
+      <div class="field"><label for="hw">Godziny pracy w tygodniu</label><input type="number" id="hw" inputmode="decimal" value="40" min="1" max="80" step="1"><span class="hint">Pełny etat to 40 godzin.</span></div>
+    </div>
+    <div class="field"><label for="cm">Dojazd do pracy w obie strony dziennie (minuty)</label><input type="number" id="cm" inputmode="numeric" value="0" min="0" max="300" step="5"><span class="hint">Opcjonalnie — wtedy policzymy też Twoją realną stawkę, z czasem dojazdów.</span></div>
+
+    <div class="net-box">
+      <span class="label">Zarabiasz na rękę</span>
+      <span class="net-amount" id="ph">0 zł/godz.</span>
+      <span class="pct" id="phNote"></span>
+    </div>
+
+    <p class="field-title">Ile godzin pracy to kosztuje?</p>
+    <div class="presets"><button type="button" class="preset-btn" data-name="Kawa na mieście" data-price="15">Kawa na mieście</button><button type="button" class="preset-btn" data-name="Pizza na wynos" data-price="45">Pizza na wynos</button><button type="button" class="preset-btn" data-name="Bilet do kina" data-price="35">Bilet do kina</button><button type="button" class="preset-btn" data-name="Subskrypcja streamingu" data-price="50">Subskrypcja streamingu</button><button type="button" class="preset-btn" data-name="Pełny bak paliwa" data-price="300">Pełny bak paliwa</button><button type="button" class="preset-btn" data-name="Nowy smartfon" data-price="4000">Nowy smartfon</button><button type="button" class="preset-btn" data-name="Flagowy smartfon" data-price="6500">Flagowy smartfon</button><button type="button" class="preset-btn" data-name="Czynsz za mieszkanie" data-price="2500">Czynsz za mieszkanie</button><button type="button" class="preset-btn" data-name="Tydzień wakacji" data-price="4000">Tydzień wakacji</button><button type="button" class="preset-btn" data-name="Używany samochód" data-price="40000">Używany samochód</button></div>
+    <div class="split-controls two">
+      <div class="field"><label for="iname">Co chcesz kupić</label><input type="text" id="iname" value="Flagowy smartfon" maxlength="40" autocomplete="off"></div>
+      <div class="field"><label for="iprice">Cena (zł)</label><input type="number" id="iprice" inputmode="decimal" value="6500" min="0" step="10"></div>
+    </div>
+    <div class="cost-box" aria-live="polite">
+      <span class="cost-big" id="cost">0 godz.</span>
+      <span class="cost-note" id="costNote"></span>
+    </div>
+
+    <div class="share-row">
+      <button type="button" class="download-btn" id="storyBtn">Grafika do relacji (Instagram)</button>
+      <button type="button" class="download-btn story-btn" id="shareBtn">Udostępnij link</button>
+      <span class="hint" id="shareStatus" aria-live="polite"></span>
+    </div>
+
+    <div class="tbl-wrap">
+    <table class="data-table hours">
+      <caption>Ile pracy kosztują codzienne wydatki — przy Twojej stawce</caption>
+      <thead><tr><th scope="col">Wydatek</th><th scope="col">Cena</th><th scope="col">Czas pracy</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+    </div>
+    <div class="verdict" id="verdict"></div>
+  </div>
+
+  <section class="tool-faq" aria-labelledby="faqTitle">
+    <h2 id="faqTitle">Najczęstsze pytania</h2>
+    <details>
+      <summary>Ile zarabiam na godzinę przy 7000 zł brutto?</summary>
+      <p>Na umowie o pracę ok. 30,49 zł na rękę za godzinę (5101,67 zł netto ÷ 167,3 godziny pracy w miesiącu przy pełnym etacie), czyli ok. 0,51 zł na minutę. Brutto to ok. 41,83 zł za godzinę.</p>
+    </details>
+    <details>
+      <summary>Ile zarabiam na godzinę przy płacy minimalnej?</summary>
+      <p>W 2026 r. (4806 zł brutto) ok. 21,55 zł na rękę za godzinę, a w 2027 r. (4950 zł brutto) ok. 22,14 zł — przy pełnym etacie, z PIT-2 i bez PPK.</p>
+    </details>
+    <details>
+      <summary>Ile godzin pracy jest w miesiącu?</summary>
+      <p>Przy pełnym etacie średnio 167,3 godziny — w 2026 i 2027 r. to 2008 godzin rocznie. W konkretnych miesiącach od 144 godzin (maj 2027) do 184 godzin (lipiec 2026).</p>
+    </details>
+    <details>
+      <summary>Co to jest realna stawka godzinowa?</summary>
+      <p>To pensja na rękę podzielona przez czas pracy razem z dojazdami. Przy 7000 zł brutto i godzinie dojazdów dziennie spada z 30,49 zł do ok. 27,10 zł za godzinę.</p>
+    </details>
+  </section>
+
+  <div class="trust">
+    <p><strong>Jak to liczymy:</strong> <strong>Stawka na rękę</strong> to pensja netto podzielona przez godziny pracy w miesiącu: przy 40 godzinach tygodniowo średnio 167,3 godziny (2008 godzin w 2026 i 2027 r. ÷ 12). Netto z kwoty brutto liczymy jak na umowie o pracę (składki 13,71%, zdrowotna 9%, podatek 12% z PIT-2, bez PPK). <strong>Realna stawka</strong> uwzględnia też czas dojazdów w dniach roboczych — to pomysł znany z klasycznej książki „Your Money or Your Life” Vicki Robin i Joe Domingueza: każda rzecz kosztuje nie tylko złotówki, ale też godziny Twojego życia. Ceny w przykładach są orientacyjne — wpisz własne.</p>
+    <a class="download-btn" href="ile-zarabiam-na-godzine.html" download="ile-zarabiam-na-godzine-madry-portfel.html">Pobierz i używaj offline (HTML)</a>
+    <p class="microcopy">To zwykła strona HTML bez makr i bez ciasteczek. <a href="https://github.com/bartuniadev/madry-portfel/blob/master/narzedzia/ile-zarabiam-na-godzine.html">Zobacz kod źródłowy na GitHub</a>.</p>
+  </div>
+
+  <p class="more-link"><a href="kalkulator-budzetu.html">Budżet 50/30/20 — podział wypłaty →</a><br><a href="../artykuly/psychologia-wydawania-pieniedzy.html">Jak przestać wydawać pieniądze — psychologia wydawania →</a><br><a href="czy-dobrze-zarabiam.html">Czy dobrze zarabiam? →</a></p>
+</main>
+
+<footer>
+  <p>&copy; 2026 Mądry Portfel. <a href="../polityka-prywatnosci.html">Polityka prywatności</a></p>
+  <p class="ai-note">Treści na tej stronie powstają z pomocą narzędzi AI, na podstawie źródeł podanych przy artykułach. Przepisy i kwoty się zmieniają — przed decyzją sprawdź je u źródła. <a href="../jak-powstaja-tresci.html">Jak powstają treści</a></p>
+</footer>
+
+<script>
+  function $(id){ return document.getElementById(id); }
+  function r2(x){ return Math.round((x + Number.EPSILON) * 100) / 100; }
+  function fmt(n){ return new Intl.NumberFormat('pl-PL',{maximumFractionDigits:0,useGrouping:'always'}).format(Math.round(n)) + ' zł'; }
+  function fmt2(n){ return new Intl.NumberFormat('pl-PL',{minimumFractionDigits:2,maximumFractionDigits:2,useGrouping:'always'}).format(r2(n)) + ' zł'; }
+  function num(id, max){ var v = parseFloat($(id).value); if (!isFinite(v) || v < 0) v = 0; return max != null ? Math.min(v, max) : v; }
+  function netEtat(g){
+    var zus = r2(r2(g * 0.0976) + r2(g * 0.015) + r2(g * 0.0245)), h = r2((g - zus) * 0.09);
+    var tax = Math.max(0, Math.round(Math.max(0, Math.round(g - zus - 250)) * 0.12 - 300));
+    return g - zus - h - tax;
+  }
+  function plural(n, one, few, many){ var a = Math.abs(n) % 100, b = a % 10; if (n === 1) return one; if (b >= 2 && b <= 4 && (a < 12 || a > 14)) return few; return many; }
+  /* czas pracy po polsku: „45 min”, „3 godz. 20 min”, „61 godz. (ok. 8 dni pracy)” */
+  function dur(h, hpd){
+    var m = Math.round(h * 60);
+    if (m < 60) return m + ' min';
+    var H = Math.floor(m / 60), M = m % 60;
+    var s = H < 10 ? H + ' godz.' + (M ? ' ' + M + ' min' : '') : Math.round(h) + ' godz.';
+    if (h >= hpd * 2) s += ' (ok. ' + Math.round(h / hpd) + ' ' + plural(Math.round(h / hpd), 'dzień', 'dni', 'dni') + ' pracy)';
+    return s;
+  }
+  function durShort(h){ var m = Math.round(h * 60); if (m < 60) return m + ' minut'; var H = Math.round(h); return H + ' ' + plural(H, 'godzinę', 'godziny', 'godzin'); }
+  var PRE = [["Kawa na mieście", 15], ["Pizza na wynos", 45], ["Bilet do kina", 35], ["Subskrypcja streamingu", 50], ["Pełny bak paliwa", 300], ["Nowy smartfon", 4000], ["Flagowy smartfon", 6500], ["Czynsz za mieszkanie", 2500], ["Tydzień wakacji", 4000], ["Używany samochód", 40000]];
+  var last = null;
+  function recalc(){
+    var isNet = $('kNet').checked, pay = num('pay'), hw = Math.max(1, num('hw', 80)), cm = num('cm', 300);
+    $('payLbl').textContent = isNet ? 'Pensja na rękę miesięcznie (zł)' : 'Pensja brutto miesięcznie (zł)';
+    var net = isNet ? pay : Math.max(0, netEtat(pay));
+    var hm = 2008 / 12 * hw / 40, hpd = hw / 5;
+    var rate = hm ? net / hm : 0;
+    var real = hm ? net / (hm + cm / 60 * 251 / 12) : 0;
+    $('ph').textContent = fmt2(rate) + '/godz.';
+    var note = 'czyli ' + fmt2(rate / 60) + ' na minutę · ' + fmt(net) + ' na rękę ÷ ' + Math.round(hm) + ' godz. w miesiącu';
+    if (cm > 0) note += ' · realnie, z dojazdami: ' + fmt2(real) + ' / godz.';
+    $('phNote').textContent = note;
+    var name = $('iname').value.trim() || 'To', price = num('iprice');
+    var h = rate ? price / rate : 0;
+    $('cost').textContent = rate ? dur(h, hpd) : '—';
+    $('costNote').textContent = rate ? name + ' za ' + fmt(price) + ' to tyle Twojej pracy' + (cm > 0 ? ' — a z dojazdami ' + dur(price / real, hpd) : '') + '.' : 'Wpisz pensję.';
+    $('rows').innerHTML = PRE.map(function(p){ return '<tr><td>' + p[0] + '</td><td>' + fmt(p[1]) + '</td><td>' + (rate ? dur(p[1] / rate, hpd) : '—') + '</td></tr>'; }).join('') +
+      '<tr class="em"><td>Codzienna kawa przez rok (250 dni)</td><td>' + fmt(15 * 250) + '</td><td>' + (rate ? dur(3750 / rate, hpd) : '—') + '</td></tr>';
+    $('verdict').textContent = rate ? 'Kawa za 15 zł w każdy dzień roboczy to ' + fmt(3750) + ' rocznie — ' + durShort(3750 / rate) + ' Twojej pracy. Nie chodzi o to, żeby z niej rezygnować, tylko żeby wydawać świadomie: czy ta rzecz jest warta tylu godzin?' : '';
+    last = {name: name, price: price, h: h, rate: rate};
+    queueStory();
+  }
+
+  /* grafika 1080×1920 do relacji */
+  var storyBlob = null, storyKey = '', storyTimer = null, fontsReady = null;
+  function curKey(){ return last ? last.name + '|' + Math.round(last.price) + '|' + Math.round(last.h * 60) : ''; }
+  function loadFonts(){
+    if (fontsReady) return fontsReady;
+    var l = document.createElement('link'); l.rel = 'stylesheet'; l.href = '../assets/fonts/fonts.css'; document.head.appendChild(l);
+    fontsReady = new Promise(function(res){ l.onload = res; l.onerror = res; }).then(function(){
+      return Promise.all(['600 100px Fraunces', '500 60px Fraunces', '500 60px Inter', '600 60px Inter'].map(function(f){ return document.fonts.load(f, 'ąęłśćżźóń%0'); })).catch(function(){});
+    });
+    return fontsReady;
+  }
+  function rr(c, x, y, w, h, r){ c.beginPath(); c.moveTo(x + r, y); c.arcTo(x + w, y, x + w, y + h, r); c.arcTo(x + w, y + h, x, y + h, r); c.arcTo(x, y + h, x, y, r); c.arcTo(x, y, x + w, y, r); c.closePath(); }
+  function wrap(c, text, x, y, maxW, lh){
+    var words = text.split(' '), line = '', lines = [];
+    words.forEach(function(w){ var t = line ? line + ' ' + w : w; if (c.measureText(t).width > maxW && line){ lines.push(line); line = w; } else line = t; });
+    if (line) lines.push(line);
+    lines.forEach(function(l, i){ c.fillText(l, x, y + i * lh); });
+    return y + (lines.length - 1) * lh;
+  }
+  function drawStory(){
+    if (!last || !last.rate) return;
+    var key = curKey();
+    var cv = document.createElement('canvas'); cv.width = 1080; cv.height = 1920; var c = cv.getContext('2d');
+    var g = c.createLinearGradient(0, 0, 1080, 1920); g.addColorStop(0, '#1b2a22'); g.addColorStop(1, '#0a100c'); c.fillStyle = g; c.fillRect(0, 0, 1080, 1920);
+    var rg = c.createRadialGradient(880, 460, 0, 880, 460, 760); rg.addColorStop(0, 'rgba(224,166,63,0.22)'); rg.addColorStop(1, 'rgba(224,166,63,0)'); c.fillStyle = rg; c.fillRect(0, 0, 1080, 1920);
+    var F = '"Fraunces", Georgia, serif', I = '"Inter", system-ui, sans-serif';
+    c.textBaseline = 'alphabetic'; c.textAlign = 'left';
+    c.fillStyle = '#e0a63f'; c.font = '600 40px ' + I; c.fillText('ILE GODZIN PRACY TO KOSZTUJE?', 90, 330);
+    c.fillStyle = '#eef2ef'; c.font = '500 70px ' + F;
+    var y = wrap(c, last.name + ' (' + fmt(last.price) + ')', 90, 520, 900, 84);
+    c.font = '500 62px ' + I; c.fillText('kosztuje mnie', 90, y + 110);
+    var m = Math.round(last.h * 60), big, unit;
+    if (m < 60){ big = String(m); unit = plural(m, 'minutę pracy', 'minuty pracy', 'minut pracy'); }
+    else { var H = Math.round(last.h); big = String(H); unit = plural(H, 'godzinę pracy', 'godziny pracy', 'godzin pracy'); }
+    c.fillStyle = '#e0a63f'; c.font = '600 ' + (big.length > 3 ? 260 : 330) + 'px ' + F; c.fillText(big, 78, y + 440);
+    c.fillStyle = '#eef2ef'; c.font = '500 66px ' + I; c.fillText(unit, 90, y + 550);
+    c.fillStyle = '#3ad889'; rr(c, 90, 1390, 900, 150, 32); c.fill();
+    c.fillStyle = '#08130d'; c.font = '600 52px ' + I; c.textAlign = 'center'; c.fillText('Policz swoje rzeczy →', 540, 1485); c.textAlign = 'left';
+    c.strokeStyle = '#3ad889'; c.lineWidth = 6; c.beginPath(); c.arc(118, 1650, 28, 0, Math.PI * 2); c.stroke();
+    c.beginPath(); c.moveTo(103, 1658); c.lineTo(115, 1646); c.lineTo(124, 1653); c.lineTo(136, 1640); c.stroke();
+    c.fillStyle = '#ffffff'; c.font = '500 56px ' + F; c.fillText('Mądry Portfel', 166, 1670);
+    c.fillStyle = '#a8b6ae'; c.font = '500 36px ' + I; c.fillText('bartuniadev.github.io/madry-portfel', 90, 1745);
+    cv.toBlob(function(b){ storyBlob = b; storyKey = key; }, 'image/jpeg', 0.92);
+  }
+  var storyIdle = false;
+  function queueStory(){ if (!storyIdle) return; if (storyBlob && storyKey === curKey()) return; clearTimeout(storyTimer); storyTimer = setTimeout(function(){ loadFonts().then(drawStory); }, 300); }
+  $('storyBtn').addEventListener('click', function(){
+    var st = $('shareStatus');
+    if (!storyBlob || storyKey !== curKey()){ st.textContent = 'Przygotowuję grafikę — kliknij jeszcze raz za chwilę.'; storyIdle = true; queueStory(); return; }
+    var file = new File([storyBlob], 'ile-godzin-pracy.jpg', {type: 'image/jpeg'});
+    if (navigator.canShare && navigator.canShare({files: [file]})){ navigator.share({files: [file], title: 'Ile godzin pracy to kosztuje?'}).catch(function(){}); return; }
+    var a = document.createElement('a'); a.href = URL.createObjectURL(storyBlob); a.download = 'ile-godzin-pracy.jpg';
+    document.body.appendChild(a); a.click(); a.remove();
+    st.textContent = 'Zapisano grafikę — wrzuć ją do relacji i dodaj naklejkę z linkiem do strony.';
+  });
+  $('shareBtn').addEventListener('click', function(){
+    var url = 'https://bartuniadev.github.io/madry-portfel/narzedzia/ile-zarabiam-na-godzine.html';
+    var text = last && last.rate ? last.name + ' kosztuje mnie ' + durShort(last.h) + ' pracy. Sprawdź, ile kosztuje Ciebie:' : 'Ile godzin pracy kosztują Twoje wydatki?';
+    var st = $('shareStatus');
+    if (navigator.share){ navigator.share({title: 'Ile godzin pracy to kosztuje?', text: text, url: url}).catch(function(){}); return; }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text + ' ' + url).then(function(){ st.textContent = 'Skopiowano — wklej znajomym.'; }, function(){ st.textContent = url; });
+    else st.textContent = url;
+  });
+  document.querySelectorAll('.preset-btn').forEach(function(b){ b.addEventListener('click', function(){ $('iname').value = b.getAttribute('data-name'); $('iprice').value = b.getAttribute('data-price'); recalc(); }); });
+  ['pay','hw','cm','iname','iprice','kGross','kNet'].forEach(function(id){ $(id).addEventListener('input', recalc); $(id).addEventListener('change', recalc); });
+  recalc();
+  (window.requestIdleCallback || function(cb){ setTimeout(cb, 2500); })(function(){ storyIdle = true; queueStory(); }, {timeout: 4000});
+</script>
+<script defer src="../assets/stats.js"></script>
+</body>
+</html>
