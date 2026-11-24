@@ -51,6 +51,37 @@ SETS = {
         ('stat', {'eyebrow': 'Cały 2027 rok', 'big': '8 niedziel', 'title': 'handlowych: 31.01, 21.03, 25.04, 27.06, 29.08 i 5, 12, 19.12', 'sub': 'Zawsze ostatnia niedziela stycznia, kwietnia, czerwca i sierpnia, niedziela przed Wielkanocą i trzy przed Wigilią.'}),
         ('cta', {'eyebrow': 'Licznik dni i pełna lista', 'title': 'Kiedy najbliższa niedziela handlowa?', 'sub': 'Sprawdzisz w kalendarzu niedziel handlowych 2026 i 2027 — z poradami, jak nie przepłacić przed świętami.', 'link': 'bartuniadev.github.io/madry-portfel'}),
     ],
+    'start': [
+        ('hook', {'eyebrow': 'Cześć! Tu Mądry Portfel', 'title': 'Finanse na starcie kariery — <em>bez lania wody</em>', 'sub': 'Pensja, podatki, oszczędzanie. Przesuń →'}),
+        ('stat', {'eyebrow': 'Policz to sam', 'big': '17', 'title': 'darmowych kalkulatorów — od brutto–netto po L4 i nadgodziny', 'sub': 'Wszystko liczy się w telefonie: bez konta, bez maila, nic nie wysyłasz.'}),
+        ('stat', {'eyebrow': 'Przeczytaj', 'big': '80', 'title': 'poradników ze źródłami urzędowymi', 'sub': 'PIT, IKE i IKZE, pierwsza praca, kredyt, budżet — każda kwota sprawdzona w ZUS, GUS albo na podatki.gov.pl.'}),
+        ('stat', {'eyebrow': 'Bez haczyków', 'big': '0 reklam', 'title': 'i zero sprzedawania produktów finansowych', 'sub': 'Nie polecamy banków za pieniądze. Tylko liczby i konkret.'}),
+        ('cta', {'eyebrow': 'Obserwuj i zapisuj', 'title': 'Co tydzień nowe liczby o Twoich pieniądzach', 'sub': 'Kalkulatory i poradniki — link w bio.', 'link': 'bartuniadev.github.io/madry-portfel'}),
+    ],
+    'godziny': [
+        ('hook', {'eyebrow': 'Cena w godzinach pracy', 'title': 'Ile godzin pracujesz na <em>nowy smartfon</em>?', 'sub': 'Przy pensji 7000 zł brutto — przesuń →'}),
+        ('table', {'eyebrow': 'Pensja 7000 zł brutto', 'title': 'Twoje wydatki w godzinach pracy',
+                   'rows': [('Kawa na mieście', '15 zł', '30 min'), ('Pizza na wynos', '45 zł', '1,5 godz.'), ('Czynsz', '2500 zł', '82 godz.'), ('Flagowy smartfon', '6500 zł', '213 godz.')],
+                   'note': 'Umowa o pracę: 30,49 zł na rękę za godzinę (167 godzin pracy w miesiącu).', 'cols': ('Wydatek', 'Cena', 'Praca')}),
+        ('stat', {'eyebrow': 'Mała rzecz, duży rachunek', 'big': '123 godziny', 'title': 'tyle pracy kosztuje rok codziennej kawy za 15 zł', 'sub': '3750 zł rocznie. Nie chodzi o rezygnację — tylko o to, czy ta rzecz jest warta tylu godzin.'}),
+        ('cta', {'eyebrow': 'Policz swoje rzeczy', 'title': 'Ile kosztuje Cię to, co chcesz kupić?', 'sub': 'Kalkulator „Ile zarabiam na godzinę?” — z grafiką do relacji. Link w bio.', 'link': 'bartuniadev.github.io/madry-portfel'}),
+    ],
+    'l4': [
+        ('hook', {'eyebrow': 'Zwolnienie lekarskie', 'title': 'Ile naprawdę dostaniesz na <em>L4</em>?', 'sub': 'Na przykładzie pensji 7000 zł brutto →'}),
+        ('table', {'eyebrow': 'Pensja 7000 zł brutto', 'title': 'Wypłata w miesiącu z L4 (80%)',
+                   'rows': [('Bez L4', '5102 zł', '—'), ('5 dni L4', '4942 zł', '− 159 zł'), ('10 dni L4', '4783 zł', '− 318 zł'), ('Cały miesiąc', '4147 zł', '− 954 zł')],
+                   'note': 'Na rękę, umowa o pracę, PIT-2, bez PPK.', 'cols': ('L4', 'Na rękę', 'Różnica')}),
+        ('stat', {'eyebrow': 'Dlaczego nie 20% mniej?', 'big': '80%', 'title': 'podstawy — ale na rękę tracisz mniej', 'sub': 'Od chorobowego nie płaci się składek emerytalnej, rentowej i chorobowej.'}),
+        ('stat', {'eyebrow': 'Kto płaci', 'big': '33 dni', 'title': 'w roku płaci pracodawca, potem ZUS', 'sub': 'Po 50. roku życia — 14 dni. Zasiłek z ZUS jest w tej samej wysokości.'}),
+        ('cta', {'eyebrow': 'Policz swoje L4', 'title': 'Ile dostaniesz za swoje zwolnienie?', 'sub': 'Darmowy kalkulator L4 — link w bio.', 'link': 'bartuniadev.github.io/madry-portfel'}),
+    ],
+    'urlop': [
+        ('hook', {'eyebrow': 'Urlop wypoczynkowy', 'title': 'Masz 20 czy <em>26 dni</em> urlopu?', 'sub': 'Studia liczą się do stażu — przesuń →'}),
+        ('stat', {'eyebrow': 'Staż za szkołę', 'big': '8 lat', 'title': 'stażu dają ukończone studia', 'sub': 'Dlatego po studiach 26 dni urlopu masz już po 2 latach pracy. Liceum to 4 lata, technikum 5.'}),
+        ('stat', {'eyebrow': 'Nowość od 2026 r.', 'big': 'Zlecenia', 'title': 'i własna firma też liczą się do stażu', 'sub': 'Trzeba je udokumentować — najczęściej zaświadczeniem z ZUS (wniosek przez eZUS).'}),
+        ('stat', {'eyebrow': 'Nie przegap', 'big': '30 września', 'title': 'termin na zaległy urlop z 2026 r.', 'sub': 'Niewykorzystany urlop nie przepada z końcem roku — ale trzeba go wykorzystać do 30.09.2027.'}),
+        ('cta', {'eyebrow': 'Policz swój urlop', 'title': 'Ile dni urlopu masz w tym roku?', 'sub': 'Kalkulator urlopu: staż ze szkołą, zmiana pracy, ekwiwalent. Link w bio.', 'link': 'bartuniadev.github.io/madry-portfel'}),
+    ],
 }
 CSS = '''
 @import url("file:///home/user/madry-portfel/assets/fonts/fonts.css");

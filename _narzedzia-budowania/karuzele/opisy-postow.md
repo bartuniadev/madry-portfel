@@ -160,3 +160,68 @@ Opis: „Wpisz swoją pensję i sprawdź 👀 Dane GUS 2026. #zarobki #finanse #
 > Przypominajka na grudzień: niedziele handlowe to 6, 13 i 20 grudnia. Od czwartku 24 do niedzieli 27 grudnia duże sklepy będą zamknięte — cztery dni bez zakupów. W 2027 r. niedziel handlowych będzie osiem (31.01, 21.03, 25.04, 27.06, 29.08 i 5, 12, 19.12).
 > Pełna lista z licznikiem dni do najbliższej niedzieli handlowej (moja strona, bez reklam):
 > https://bartuniadev.github.io/madry-portfel/artykuly/niedziele-handlowe-2026-2027.html
+
+---
+
+## Karuzela 6: start — przedstawienie profilu (start-1 … start-5) — pierwszy post, przypnij
+
+### Instagram
+> Cześć! 👋 Tu Mądry Portfel — finanse dla osób, które dopiero zaczynają zarabiać.
+>
+> Co tu znajdziesz:
+> • kalkulatory: ile na rękę w 2027, L4, nadgodziny, urlop i czy dobrze zarabiasz na tle Polaków
+> • poradniki ze źródłami: PIT, IKE i IKZE, pierwsza praca, budżet
+> • zero reklam i zero polecania banków za pieniądze
+>
+> Co tydzień nowe liczby o Twoich pieniądzach. Obserwuj i zapisuj posty, które Ci się przydadzą. Wszystkie kalkulatory — link w bio.
+>
+> #finanseosobiste #pieniądze #oszczędzanie #pierwszapraca #budżetdomowy #podatki #wynagrodzenie
+
+---
+
+## Karuzela 7: ile godzin pracy (godziny-1 … godziny-4)
+
+### Instagram
+> Ile godzin pracujesz na nowy smartfon? 📱 Przy pensji 7000 zł brutto zarabiasz na rękę ok. 30,49 zł za godzinę. To znaczy, że:
+> • kawa za 15 zł = 30 minut pracy
+> • czynsz 2500 zł = 82 godziny
+> • smartfon za 6500 zł = 213 godzin (ok. 27 dni pracy)
+>
+> A codzienna kawa przez rok to 123 godziny. Nie chodzi o to, żeby z niej rezygnować — tylko żeby świadomie wybierać, na co wydajesz swoje godziny.
+>
+> Policz swoje rzeczy w kalkulatorze „Ile zarabiam na godzinę?” — zrobisz w nim też grafikę do relacji. Link w bio.
+>
+> #oszczędzanie #finanseosobiste #pieniądze #budżet #świadomezakupy #wynagrodzenie
+
+---
+
+## Karuzela 8: L4 (l4-1 … l4-5)
+
+### Instagram
+> Ile naprawdę dostaniesz na L4? 🤒 Chorobowe to 80% podstawy — ale na rękę tracisz mniej, bo od chorobowego nie płaci się składek emerytalnej, rentowej i chorobowej.
+>
+> Przy pensji 7000 zł brutto:
+> • 5 dni L4 → ok. 159 zł mniej
+> • 10 dni L4 → ok. 318 zł mniej
+> • cały miesiąc → ok. 954 zł mniej
+>
+> Przez pierwsze 33 dni w roku płaci pracodawca, potem ZUS — tyle samo.
+>
+> Policz swoje L4 w darmowym kalkulatorze — link w bio.
+>
+> #L4 #zwolnienielekarskie #praca #wynagrodzenie #prawopracy #finanseosobiste
+
+---
+
+## Karuzela 9: urlop 20 czy 26 dni (urlop-1 … urlop-5)
+
+### Instagram
+> Masz 20 czy 26 dni urlopu? 🏖️ Ukończone studia liczą się do stażu jako 8 lat — więc 26 dni masz już po 2 latach pracy. Liceum to 4 lata, technikum 5.
+>
+> Nowość od 2026 r.: do stażu liczą się też umowy zlecenia i własna firma (po udokumentowaniu zaświadczeniem z ZUS).
+>
+> I pamiętaj: zaległy urlop z 2026 r. trzeba wykorzystać do 30 września 2027.
+>
+> Kalkulator urlopu — ile dni masz w tym roku i ile wyniesie ekwiwalent — link w bio.
+>
+> #urlop #praca #prawopracy #pierwszapraca #kariera #finanseosobiste

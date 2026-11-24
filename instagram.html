@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Start na Instagramie | Mądry Portfel</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="alternate" type="application/rss+xml" title="Mądry Portfel — nowe poradniki" href="https://bartuniadev.github.io/madry-portfel/feed.xml">
+<meta name="robots" content="noindex, nofollow">
+<style>
+.kit-step{margin:28px 0;padding:20px 22px;border:1px solid var(--border);border-radius:16px;background:var(--card)}
+.kit-step h2{margin:0 0 8px;font-size:1.3rem}
+.kit-step ol{padding-left:1.2em}.kit-step li{margin:6px 0}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:12px 0}
+.btn{display:inline-block;font:inherit;font-size:.9rem;font-weight:600;text-decoration:none;cursor:pointer;color:var(--accent-dark);background:var(--bg);border:1px solid var(--border);border-radius:999px;padding:8px 14px}
+.btn:hover{border-color:var(--accent);background:#eef7f0}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.primary:hover{background:var(--accent-dark)}
+.copy{font:inherit;font-size:.85rem;font-weight:600;cursor:pointer;color:var(--accent-dark);background:#eef7f0;border:1px solid #cfe5d6;border-radius:999px;padding:5px 12px}
+.copy.done{background:var(--accent);color:#fff;border-color:var(--accent)}
+.kit-card{margin:22px 0;padding:20px 22px;border:1px solid var(--border);border-radius:16px;background:var(--card)}
+.kit-card h3{margin:0;font-size:1.2rem}
+.when{margin:4px 0 12px;color:var(--muted);font-size:.9rem}
+.thumbs{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px}
+.thumbs img{width:108px;height:135px;object-fit:cover;border-radius:8px;border:1px solid var(--border);display:block}
+.cap{margin:12px 0}.cap-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.cap textarea{width:100%;font:inherit;font-size:.88rem;line-height:1.5;padding:10px 12px;border:1px solid var(--border);border-radius:10px;background:var(--bg);color:var(--text);resize:vertical}
+.lbl{font-size:.88rem;color:var(--muted)}
+.hint{font-size:.82rem;color:var(--muted)}
+.msg{width:100%;font:inherit;font-size:.95rem;padding:12px;border:1px solid var(--border);border-radius:10px;background:var(--bg)}
+.avatar{width:72px;height:72px;border-radius:50%;vertical-align:middle}
+.thumbs.hl img{width:68px;height:120px}
+.thumbs img{width:96px;height:120px}
+video{display:block;border-radius:12px;background:#000;margin:6px 0}
+#bio{width:100%;font:inherit;font-size:.9rem;padding:10px;border:1px solid var(--border);border-radius:10px;background:var(--bg);margin:6px 0}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="index.html"><svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="7.5 13.5 10.5 10.5 13 12.5 16.5 8.5"/><polyline points="14 8.5 16.5 8.5 16.5 11"/></svg>Mądry Portfel</a>
+    <nav>
+      <a href="index.html">Artykuły</a>
+      <a href="narzedzia/index.html">Narzędzia</a>
+      <a href="slownik.html">Słownik</a>
+      <a href="o-nas.html">O nas</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <h1>Start na Instagramie</h1>
+  <p class="lead">Wszystko do założenia profilu i pierwszych dwóch tygodni publikacji: grafiki, filmy i opisy do skopiowania. Ta strona jest tylko dla Ciebie — nie ma jej w menu ani w wyszukiwarkach.</p>
+
+  <section class="kit-step">
+    <h2>1. Załóż profil (10 minut)</h2>
+    <ol>
+      <li><strong>Nazwa użytkownika</strong> — sprawdź, która jest wolna: <code>madry.portfel</code>, <code>madryportfel</code> albo <code>madry_portfel</code>.</li>
+      <li><strong>Imię i nazwisko</strong> (to pole jest wyszukiwane): <button type="button" class="copy" data-copy-text="Mądry Portfel | Finanse">Kopiuj: Mądry Portfel | Finanse</button></li>
+      <li><strong>Bio</strong>: <textarea id="bio" readonly rows="4">Finanse na starcie kariery 💸
+Pensja, podatki, oszczędzanie — konkretnie
+17 darmowych kalkulatorów, 0 reklam
+👇 Kalkulatory i poradniki</textarea> <button type="button" class="copy" data-copy="bio">Kopiuj bio</button></li>
+      <li><strong>Link w bio</strong> — strona z najważniejszymi kalkulatorami: <button type="button" class="copy" data-copy-text="https://bartuniadev.github.io/madry-portfel/linki.html">Kopiuj link</button> (<a href="linki.html">zobacz, jak wygląda</a>)</li>
+      <li><strong>Zdjęcie profilowe</strong>: <a href="pliki/instagram/profilowe.jpg" target="_blank" rel="noopener"><img class="avatar" src="pliki/instagram/profilowe.jpg" alt="Zdjęcie profilowe" width="72" height="72"></a> — przytrzymaj i zapisz.</li>
+      <li>W ustawieniach przełącz na <strong>konto profesjonalne → Twórca</strong> (za darmo) — zobaczysz statystyki zasięgów.</li>
+      <li><strong>Okładki wyróżnionych relacji</strong> (Kalkulatory, Pensja, Kalendarz, Oszczędzanie, Podatki):<div class="thumbs hl"><a href="pliki/instagram/wyroznione-kalkulatory.jpg" target="_blank" rel="noopener"><img src="pliki/instagram/wyroznione-kalkulatory.jpg" alt="Okładka: kalkulatory" width="68" height="120" loading="lazy"></a><a href="pliki/instagram/wyroznione-pensja.jpg" target="_blank" rel="noopener"><img src="pliki/instagram/wyroznione-pensja.jpg" alt="Okładka: pensja" width="68" height="120" loading="lazy"></a><a href="pliki/instagram/wyroznione-kalendarz.jpg" target="_blank" rel="noopener"><img src="pliki/instagram/wyroznione-kalendarz.jpg" alt="Okładka: kalendarz" width="68" height="120" loading="lazy"></a><a href="pliki/instagram/wyroznione-oszczedzanie.jpg" target="_blank" rel="noopener"><img src="pliki/instagram/wyroznione-oszczedzanie.jpg" alt="Okładka: oszczedzanie" width="68" height="120" loading="lazy"></a><a href="pliki/instagram/wyroznione-podatki.jpg" target="_blank" rel="noopener"><img src="pliki/instagram/wyroznione-podatki.jpg" alt="Okładka: podatki" width="68" height="120" loading="lazy"></a></div></li>
+    </ol>
+  </section>
+
+  <section class="kit-step">
+    <h2>2. Plan na dwa tygodnie</h2>
+    <p>Publikuj wieczorem, między 19 a 21. Pod każdym postem odpowiadaj na komentarze przez pierwszą godzinę — to najmocniej podbija zasięg. Do Reelsów dodaj modną muzykę z biblioteki Instagrama (pliki są bez dźwięku).</p>
+  </section>
+  <section class="kit-card">
+    <p class="when"><strong>śr 25.11</strong> · Karuzela · Pierwszy post — przypnij go na górze profilu.</p>
+    <h3>Cześć, tu Mądry Portfel</h3>
+      <div class="thumbs"><a href="pliki/karuzele/start-1.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/start-1.jpg" alt="Slajd 1" width="96" height="120" loading="lazy"></a><a href="pliki/karuzele/start-2.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/start-2.jpg" alt="Slajd 2" width="96" height="120" loading="lazy"></a><a href="pliki/karuzele/start-3.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/start-3.jpg" alt="Slajd 3" width="96" height="120" loading="lazy"></a><a href="pliki/karuzele/start-4.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/start-4.jpg" alt="Slajd 4" width="96" height="120" loading="lazy"></a><a href="pliki/karuzele/start-5.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/start-5.jpg" alt="Slajd 5" width="96" height="120" loading="lazy"></a></div>
+      <div class="row"><button type="button" class="btn primary share-files" data-files='["pliki/karuzele/start-1.jpg", "pliki/karuzele/start-2.jpg", "pliki/karuzele/start-3.jpg", "pliki/karuzele/start-4.jpg", "pliki/karuzele/start-5.jpg"]' data-type="image/jpeg" data-title="Cześć, tu Mądry Portfel">Udostępnij zdjęcia do Instagrama</button></div>
+    <div class="cap">
+      <div class="cap-head"><strong>Opis</strong><button type="button" class="copy" data-copy="p-0">Kopiuj</button></div>
+      <textarea id="p-0" readonly rows="6">Cześć! 👋 Tu Mądry Portfel — finanse dla osób, które dopiero zaczynają zarabiać.
+
+Co tu znajdziesz:
+• kalkulatory: ile na rękę w 2027, L4, nadgodziny, urlop i czy dobrze zarabiasz na tle Polaków
+• poradniki ze źródłami: PIT, IKE i IKZE, pierwsza praca, budżet
+• zero reklam i zero polecania banków za pieniądze
+
+Co tydzień nowe liczby o Twoich pieniądzach. Obserwuj i zapisuj posty, które Ci się przydadzą. Wszystkie kalkulatory — link w bio.
+
+#finanseosobiste #pieniądze #oszczędzanie #pierwszapraca #budżetdomowy #podatki #wynagrodzenie</textarea>
+    </div>
+  </section>
+  <section class="kit-card">
+    <p class="when"><strong>czw 26.11</strong> · Karuzela</p>
+    <h3>Ile godzin pracy kosztuje smartfon</h3>
+      <div class="thumbs"><a href="pliki/karuzele/godziny-1.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/godziny-1.jpg" alt="Slajd 1" width="96" height="120" loading="lazy"></a><a href="pliki/karuzele/godziny-2.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/godziny-2.jpg" alt="Slajd 2" width="96" height="120" loading="lazy"></a><a href="pliki/karuzele/godziny-3.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/godziny-3.jpg" alt="Slajd 3" width="96" height="120" loading="lazy"></a><a href="pliki/karuzele/godziny-4.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/godziny-4.jpg" alt="Slajd 4" width="96" height="120" loading="lazy"></a></div>
+      <div class="row"><button type="button" class="btn primary share-files" data-files='["pliki/karuzele/godziny-1.jpg", "pliki/karuzele/godziny-2.jpg", "pliki/karuzele/godziny-3.jpg", "pliki/karuzele/godziny-4.jpg"]' data-type="image/jpeg" data-title="Ile godzin pracy kosztuje smartfon">Udostępnij zdjęcia do Instagrama</button></div>
+    <div class="cap">
+      <div class="cap-head"><strong>Opis</strong><button type="button" class="copy" data-copy="p-1">Kopiuj</button></div>
+      <textarea id="p-1" readonly rows="6">Ile godzin pracujesz na nowy smartfon? 📱 Przy pensji 7000 zł brutto zarabiasz na rękę ok. 30,49 zł za godzinę. To znaczy, że:
+• kawa za 15 zł = 30 minut pracy
+• czynsz 2500 zł = 82 godziny
+• smartfon za 6500 zł = 213 godzin (ok. 27 dni pracy)
+
+A codzienna kawa przez rok to 123 godziny. Nie chodzi o to, żeby z niej rezygnować — tylko żeby świadomie wybierać, na co wydajesz swoje godziny.
+
+Policz swoje rzeczy w kalkulatorze „Ile zarabiam na godzinę?” — zrobisz w nim też grafikę do relacji. Link w bio.
+
+#oszczędzanie #finanseosobiste #pieniądze #budżet #świadomezakupy #wynagrodzenie</textarea>
+    </div>
+  </section>
+  <section class="kit-card">
+    <p class="when"><strong>pt 27.11</strong> · Reel · Dodaj modną muzykę z biblioteki Instagrama.</p>
+    <h3>Reel: 28 dni wolnego za 11 dni urlopu</h3>
+      <video src="pliki/instagram/reel-weekendy.mp4" controls playsinline muted preload="metadata" width="180" height="320"></video>
+      <div class="row"><button type="button" class="btn primary share-files" data-files='["pliki/instagram/reel-weekendy.mp4"]' data-type="video/mp4" data-title="Reel: 28 dni wolnego za 11 dni urlopu">Udostępnij film do Instagrama</button> <a class="btn" href="pliki/instagram/reel-weekendy.mp4" download>Pobierz MP4</a></div>
+    <div class="cap">
+      <div class="cap-head"><strong>Opis</strong><button type="button" class="copy" data-copy="p-2">Kopiuj</button></div>
+      <textarea id="p-2" readonly rows="6">28 dni wolnego za 11 dni urlopu — tak rozłóż wolne w 2027 🗓️ Zapisz i wyślij osobie, z którą planujesz wyjazdy. Pełny kalendarz — link w bio.
+
+#długiweekend #urlop #dniwolne2027 #podróże #praca</textarea>
+    </div>
+  </section>
+  <section class="kit-card">
+    <p class="when"><strong>sob 28.11</strong> · Karuzela</p>
+    <h3>Niedziele handlowe w grudniu</h3>
+      <div class="thumbs"><a href="pliki/karuzele/niedziele-1.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/niedziele-1.jpg" alt="Slajd 1" width="96" height="120" loading="lazy"></a><a href="pliki/karuzele/niedziele-2.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/niedziele-2.jpg" alt="Slajd 2" width="96" height="120" loading="lazy"></a><a href="pliki/karuzele/niedziele-3.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/niedziele-3.jpg" alt="Slajd 3" width="96" height="120" loading="lazy"></a><a href="pliki/karuzele/niedziele-4.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/niedziele-4.jpg" alt="Slajd 4" width="96" height="120" loading="lazy"></a></div>
+      <div class="row"><button type="button" class="btn primary share-files" data-files='["pliki/karuzele/niedziele-1.jpg", "pliki/karuzele/niedziele-2.jpg", "pliki/karuzele/niedziele-3.jpg", "pliki/karuzele/niedziele-4.jpg"]' data-type="image/jpeg" data-title="Niedziele handlowe w grudniu">Udostępnij zdjęcia do Instagrama</button></div>
+    <div class="cap">
+      <div class="cap-head"><strong>Opis</strong><button type="button" class="copy" data-copy="p-3">Kopiuj</button></div>
+      <textarea id="p-3" readonly rows="6">Grudzień 2026 w sklepach 🛒 Niedziele handlowe: 6, 13 i 20 grudnia. A od 24 do 27 grudnia duże sklepy będą zamknięte — cztery dni z rzędu (Wigilia jest wolna od 2025 r.).
+
+Zrób zakupy suche i chemię wcześniej, na ostatnią chwilę zostaw tylko świeże produkty — taniej i bez kolejek.
+
+Wszystkie niedziele handlowe 2026 i 2027 + licznik do najbliższej — link w bio.
+
+#niedzielahandlowa #święta #zakupy #wigilia #oszczędzanie #budżet #finanseosobiste</textarea>
+    </div>
+  </section>
+  <section class="kit-card">
+    <p class="when"><strong>nd 29.11</strong> · Karuzela · Przypnij jako drugi.</p>
+    <h3>Czy dobrze zarabiasz? Mediana GUS</h3>
+      <div class="thumbs"><a href="pliki/karuzele/zarobki-1.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/zarobki-1.jpg" alt="Slajd 1" width="96" height="120" loading="lazy"></a><a href="pliki/karuzele/zarobki-2.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/zarobki-2.jpg" alt="Slajd 2" width="96" height="120" loading="lazy"></a><a href="pliki/karuzele/zarobki-3.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/zarobki-3.jpg" alt="Slajd 3" width="96" height="120" loading="lazy"></a><a href="pliki/karuzele/zarobki-4.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/zarobki-4.jpg" alt="Slajd 4" width="96" height="120" loading="lazy"></a><a href="pliki/karuzele/zarobki-5.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/zarobki-5.jpg" alt="Slajd 5" width="96" height="120" loading="lazy"></a></div>
+      <div class="row"><button type="button" class="btn primary share-files" data-files='["pliki/karuzele/zarobki-1.jpg", "pliki/karuzele/zarobki-2.jpg", "pliki/karuzele/zarobki-3.jpg", "pliki/karuzele/zarobki-4.jpg", "pliki/karuzele/zarobki-5.jpg"]' data-type="image/jpeg" data-title="Czy dobrze zarabiasz? Mediana GUS">Udostępnij zdjęcia do Instagrama</button></div>
+    <div class="cap">
+      <div class="cap-head"><strong>Opis</strong><button type="button" class="copy" data-copy="p-4">Kopiuj</button></div>
+      <textarea id="p-4" readonly rows="6">Połowa Polaków zarabia mniej niż 7550 zł brutto, czyli ok. 5477 zł na rękę. A „średnia krajowa”? 9178 zł — tyle nie zarabia ok. 65% pracujących. 👀
+
+Średnią zawyżają najwyższe pensje, dlatego do porównań lepsza jest mediana. Na slajdach progi: ile zarabia 10% najmniej i 10% najlepiej zarabiających — brutto i na rękę.
+
+Zrobiłem darmowy kalkulator „Czy dobrze zarabiam?” — wpisujesz pensję i widzisz, ile procent Polaków zarabia mniej od Ciebie. Bez rejestracji, nic nie jest wysyłane. Link w bio.
+
+Dane: GUS, rozkład wynagrodzeń, maj 2026.
+
+#zarobki #wynagrodzenie #finanseosobiste #pieniądze #praca #mediana #gus #oszczędzanie #pierwszapraca #kariera</textarea>
+    </div>
+  </section>
+  <section class="kit-card">
+    <p class="when"><strong>wt 1.12</strong> · Reel</p>
+    <h3>Reel: ile dostaniesz na L4</h3>
+      <video src="pliki/instagram/reel-l4.mp4" controls playsinline muted preload="metadata" width="180" height="320"></video>
+      <div class="row"><button type="button" class="btn primary share-files" data-files='["pliki/instagram/reel-l4.mp4"]' data-type="video/mp4" data-title="Reel: ile dostaniesz na L4">Udostępnij film do Instagrama</button> <a class="btn" href="pliki/instagram/reel-l4.mp4" download>Pobierz MP4</a></div>
+    <div class="cap">
+      <div class="cap-head"><strong>Opis</strong><button type="button" class="copy" data-copy="p-5">Kopiuj</button></div>
+      <textarea id="p-5" readonly rows="6">Ile naprawdę dostaniesz na L4? Na rękę tracisz mniej, niż myślisz 👀 Kalkulator L4 — link w bio.
+
+#L4 #praca #wynagrodzenie #prawopracy</textarea>
+    </div>
+  </section>
+  <section class="kit-card">
+    <p class="when"><strong>czw 3.12</strong> · Karuzela</p>
+    <h3>Premia świąteczna — ile zostanie</h3>
+      <div class="thumbs"><a href="pliki/karuzele/premia-1.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/premia-1.jpg" alt="Slajd 1" width="96" height="120" loading="lazy"></a><a href="pliki/karuzele/premia-2.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/premia-2.jpg" alt="Slajd 2" width="96" height="120" loading="lazy"></a><a href="pliki/karuzele/premia-3.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/premia-3.jpg" alt="Slajd 3" width="96" height="120" loading="lazy"></a><a href="pliki/karuzele/premia-4.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/premia-4.jpg" alt="Slajd 4" width="96" height="120" loading="lazy"></a><a href="pliki/karuzele/premia-5.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/premia-5.jpg" alt="Slajd 5" width="96" height="120" loading="lazy"></a></div>
+      <div class="row"><button type="button" class="btn primary share-files" data-files='["pliki/karuzele/premia-1.jpg", "pliki/karuzele/premia-2.jpg", "pliki/karuzele/premia-3.jpg", "pliki/karuzele/premia-4.jpg", "pliki/karuzele/premia-5.jpg"]' data-type="image/jpeg" data-title="Premia świąteczna — ile zostanie">Udostępnij zdjęcia do Instagrama</button></div>
+    <div class="cap">
+      <div class="cap-head"><strong>Opis</strong><button type="button" class="copy" data-copy="p-6">Kopiuj</button></div>
+      <textarea id="p-6" readonly rows="6">Dostajesz premię świąteczną? Zanim wydasz ją w głowie — z 1000 zł brutto na rękę zostaje ok. 681 zł 😬 (do 26 lat ok. 785 zł).
+
+Inaczej z funduszem socjalnym: świadczenia z ZFŚS (paczka, bon, dopłata do wczasów) są bez podatku do 1000 zł rocznie.
+
+A sprytny ruch na koniec roku: wpłata części premii na IKZE do 31 grudnia obniży podatek za 2026 r.
+
+Tabela premii i zasady ZFŚS — link w bio.
+
+#premia #święta #finanseosobiste #pieniądze #podatki #ikze #praca #wynagrodzenie</textarea>
+    </div>
+  </section>
+  <section class="kit-card">
+    <p class="when"><strong>sob 5.12</strong> · Reel · Dzień przed niedzielą handlową 6 grudnia.</p>
+    <h3>Reel: kiedy sklepy są otwarte</h3>
+      <video src="pliki/instagram/reel-niedziele.mp4" controls playsinline muted preload="metadata" width="180" height="320"></video>
+      <div class="row"><button type="button" class="btn primary share-files" data-files='["pliki/instagram/reel-niedziele.mp4"]' data-type="video/mp4" data-title="Reel: kiedy sklepy są otwarte">Udostępnij film do Instagrama</button> <a class="btn" href="pliki/instagram/reel-niedziele.mp4" download>Pobierz MP4</a></div>
+    <div class="cap">
+      <div class="cap-head"><strong>Opis</strong><button type="button" class="copy" data-copy="p-7">Kopiuj</button></div>
+      <textarea id="p-7" readonly rows="6">Grudzień w sklepach: niedziele handlowe 6, 13 i 20 grudnia, a od 24 do 27 grudnia duże sklepy zamknięte 🛒 Zapisz, żeby nie zapomnieć. Wszystkie daty na 2027 — link w bio.
+
+#niedzielahandlowa #święta #zakupy #wigilia #grudzień</textarea>
+    </div>
+  </section>
+  <section class="kit-card">
+    <p class="when"><strong>wt 8.12</strong> · Karuzela</p>
+    <h3>Ile dostaniesz na L4</h3>
+      <div class="thumbs"><a href="pliki/karuzele/l4-1.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/l4-1.jpg" alt="Slajd 1" width="96" height="120" loading="lazy"></a><a href="pliki/karuzele/l4-2.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/l4-2.jpg" alt="Slajd 2" width="96" height="120" loading="lazy"></a><a href="pliki/karuzele/l4-3.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/l4-3.jpg" alt="Slajd 3" width="96" height="120" loading="lazy"></a><a href="pliki/karuzele/l4-4.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/l4-4.jpg" alt="Slajd 4" width="96" height="120" loading="lazy"></a><a href="pliki/karuzele/l4-5.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/l4-5.jpg" alt="Slajd 5" width="96" height="120" loading="lazy"></a></div>
+      <div class="row"><button type="button" class="btn primary share-files" data-files='["pliki/karuzele/l4-1.jpg", "pliki/karuzele/l4-2.jpg", "pliki/karuzele/l4-3.jpg", "pliki/karuzele/l4-4.jpg", "pliki/karuzele/l4-5.jpg"]' data-type="image/jpeg" data-title="Ile dostaniesz na L4">Udostępnij zdjęcia do Instagrama</button></div>
+    <div class="cap">
+      <div class="cap-head"><strong>Opis</strong><button type="button" class="copy" data-copy="p-8">Kopiuj</button></div>
+      <textarea id="p-8" readonly rows="6">Ile naprawdę dostaniesz na L4? 🤒 Chorobowe to 80% podstawy — ale na rękę tracisz mniej, bo od chorobowego nie płaci się składek emerytalnej, rentowej i chorobowej.
+
+Przy pensji 7000 zł brutto:
+• 5 dni L4 → ok. 159 zł mniej
+• 10 dni L4 → ok. 318 zł mniej
+• cały miesiąc → ok. 954 zł mniej
+
+Przez pierwsze 33 dni w roku płaci pracodawca, potem ZUS — tyle samo.
+
+Policz swoje L4 w darmowym kalkulatorze — link w bio.
+
+#L4 #zwolnienielekarskie #praca #wynagrodzenie #prawopracy #finanseosobiste</textarea>
+    </div>
+  </section>
+  <section class="kit-card">
+    <p class="when"><strong>czw 10.12</strong> · Karuzela</p>
+    <h3>Masz 20 czy 26 dni urlopu?</h3>
+      <div class="thumbs"><a href="pliki/karuzele/urlop-1.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/urlop-1.jpg" alt="Slajd 1" width="96" height="120" loading="lazy"></a><a href="pliki/karuzele/urlop-2.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/urlop-2.jpg" alt="Slajd 2" width="96" height="120" loading="lazy"></a><a href="pliki/karuzele/urlop-3.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/urlop-3.jpg" alt="Slajd 3" width="96" height="120" loading="lazy"></a><a href="pliki/karuzele/urlop-4.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/urlop-4.jpg" alt="Slajd 4" width="96" height="120" loading="lazy"></a><a href="pliki/karuzele/urlop-5.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/urlop-5.jpg" alt="Slajd 5" width="96" height="120" loading="lazy"></a></div>
+      <div class="row"><button type="button" class="btn primary share-files" data-files='["pliki/karuzele/urlop-1.jpg", "pliki/karuzele/urlop-2.jpg", "pliki/karuzele/urlop-3.jpg", "pliki/karuzele/urlop-4.jpg", "pliki/karuzele/urlop-5.jpg"]' data-type="image/jpeg" data-title="Masz 20 czy 26 dni urlopu?">Udostępnij zdjęcia do Instagrama</button></div>
+    <div class="cap">
+      <div class="cap-head"><strong>Opis</strong><button type="button" class="copy" data-copy="p-9">Kopiuj</button></div>
+      <textarea id="p-9" readonly rows="6">Masz 20 czy 26 dni urlopu? 🏖️ Ukończone studia liczą się do stażu jako 8 lat — więc 26 dni masz już po 2 latach pracy. Liceum to 4 lata, technikum 5.
+
+Nowość od 2026 r.: do stażu liczą się też umowy zlecenia i własna firma (po udokumentowaniu zaświadczeniem z ZUS).
+
+I pamiętaj: zaległy urlop z 2026 r. trzeba wykorzystać do 30 września 2027.
+
+Kalkulator urlopu — ile dni masz w tym roku i ile wyniesie ekwiwalent — link w bio.
+
+#urlop #praca #prawopracy #pierwszapraca #kariera #finanseosobiste</textarea>
+    </div>
+  </section>
+  <section class="kit-card">
+    <p class="when"><strong>sob 12.12</strong> · Reel</p>
+    <h3>Reel: ile godzin pracujesz na smartfon</h3>
+      <video src="pliki/instagram/reel-godziny.mp4" controls playsinline muted preload="metadata" width="180" height="320"></video>
+      <div class="row"><button type="button" class="btn primary share-files" data-files='["pliki/instagram/reel-godziny.mp4"]' data-type="video/mp4" data-title="Reel: ile godzin pracujesz na smartfon">Udostępnij film do Instagrama</button> <a class="btn" href="pliki/instagram/reel-godziny.mp4" download>Pobierz MP4</a></div>
+    <div class="cap">
+      <div class="cap-head"><strong>Opis</strong><button type="button" class="copy" data-copy="p-10">Kopiuj</button></div>
+      <textarea id="p-10" readonly rows="6">Ile godzin pracujesz na nowy smartfon? 📱 Przy 7000 zł brutto to 213 godzin. Policz swoje rzeczy — link w bio.
+
+#oszczędzanie #pieniądze #finanseosobiste #świadomezakupy</textarea>
+    </div>
+  </section>
+  <section class="kit-card">
+    <p class="when"><strong>od 20.12</strong> · Karuzela · Między 20 grudnia a 10 stycznia.</p>
+    <h3>Zmiany w finansach od 1 stycznia 2027</h3>
+      <div class="thumbs"><a href="pliki/karuzele/zmiany2027-1.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/zmiany2027-1.jpg" alt="Slajd 1" width="96" height="120" loading="lazy"></a><a href="pliki/karuzele/zmiany2027-2.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/zmiany2027-2.jpg" alt="Slajd 2" width="96" height="120" loading="lazy"></a><a href="pliki/karuzele/zmiany2027-3.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/zmiany2027-3.jpg" alt="Slajd 3" width="96" height="120" loading="lazy"></a><a href="pliki/karuzele/zmiany2027-4.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/zmiany2027-4.jpg" alt="Slajd 4" width="96" height="120" loading="lazy"></a><a href="pliki/karuzele/zmiany2027-5.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/zmiany2027-5.jpg" alt="Slajd 5" width="96" height="120" loading="lazy"></a><a href="pliki/karuzele/zmiany2027-6.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/zmiany2027-6.jpg" alt="Slajd 6" width="96" height="120" loading="lazy"></a><a href="pliki/karuzele/zmiany2027-7.jpg" target="_blank" rel="noopener"><img src="pliki/karuzele/zmiany2027-7.jpg" alt="Slajd 7" width="96" height="120" loading="lazy"></a></div>
+      <div class="row"><button type="button" class="btn primary share-files" data-files='["pliki/karuzele/zmiany2027-1.jpg", "pliki/karuzele/zmiany2027-2.jpg", "pliki/karuzele/zmiany2027-3.jpg", "pliki/karuzele/zmiany2027-4.jpg", "pliki/karuzele/zmiany2027-5.jpg", "pliki/karuzele/zmiany2027-6.jpg", "pliki/karuzele/zmiany2027-7.jpg"]' data-type="image/jpeg" data-title="Zmiany w finansach od 1 stycznia 2027">Udostępnij zdjęcia do Instagrama</button></div>
+    <div class="cap">
+      <div class="cap-head"><strong>Opis</strong><button type="button" class="copy" data-copy="p-11">Kopiuj</button></div>
+      <textarea id="p-11" readonly rows="6">Od 1 stycznia 2027 zmienia się kilka kwot, które dotyczą prawie każdego, kto pracuje 👇
+
+1. Płaca minimalna: 4950 zł brutto (ok. 3704 zł na rękę), 32,30 zł/h na zleceniu
+2. IKE: limit 30 099 zł, IKZE: 12 039,60 zł
+3. Nowe konto OKI — inwestowanie bez podatku Belki
+4. Dorabianie bez firmy: do 11 137,50 zł na kwartał
+5. Na koncie 3712,50 zł miesięcznie jest wolne od zajęcia komorniczego
+
+Zapisz, żeby mieć pod ręką w styczniu. Kalkulator brutto–netto 2027 i pełna lista zmian — link w bio.
+
+#finanseosobiste #2027 #płacaminimalna #ike #ikze #oki #podatki #pieniądze #oszczędzanie #nowyrok</textarea>
+    </div>
+  </section>
+
+  <section class="kit-step">
+    <h2>3. Relacje — pomysły na codzień</h2>
+    <ul>
+      <li><strong>Quiz:</strong> Naklejka „Quiz”: „Ile procent Polaków zarabia mniej niż 7550 zł brutto?” — 25% / 50% / 75%. Poprawna: 50% (to mediana). W kolejnej relacji naklejka z linkiem do „Czy dobrze zarabiam?”.</li>
+      <li><strong>Ankieta:</strong> Naklejka „Ankieta”: „Kawa na mieście codziennie?” Tak / Nie. Następna relacja: „Rok takiej kawy to 123 godziny pracy” + link do „Ile zarabiam na godzinę?”.</li>
+      <li><strong>Twój wynik:</strong> Zrób swoją grafikę w „Czy dobrze zarabiam?” albo „Ile zarabiam na godzinę?” (przycisk „Grafika do relacji”), dodaj naklejkę z linkiem i napisz „A Wy?”.</li>
+      <li><strong>Odliczanie:</strong> Naklejka „Odliczanie” do niedzieli handlowej 6 grudnia — kto ją kliknie, dostanie przypomnienie. Link do listy niedziel handlowych.</li>
+      <li><strong>Pytania:</strong> Naklejka „Pytania”: „Zapytaj o pensję, podatki albo urlop — odpowiem w relacjach”. Odpowiedzi to gotowe pomysły na kolejne posty.</li>
+      <li><strong>Repost:</strong> Po każdym nowym poście udostępnij go w relacji z dopiskiem „Nowy post 👆” — to najprostszy sposób, żeby obserwujący go zobaczyli.</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2026 Mądry Portfel. <a href="polityka-prywatnosci.html">Polityka prywatności</a> · <a href="pytania.html">Najczęstsze pytania</a> · <a href="slownik.html">Słownik</a></p>
+  <p class="ai-note">Treści na tej stronie powstają z pomocą narzędzi AI, na podstawie źródeł podanych przy artykułach. Przepisy i kwoty się zmieniają — przed decyzją sprawdź je u źródła. <a href="jak-powstaja-tresci.html">Jak powstają treści</a></p>
+</footer>
+<script defer src="assets/reveal.js"></script>
+<script defer src="assets/stats.js"></script>
+<script>
+(function(){
+  function flash(b){ var t = b.textContent; b.classList.add('done'); b.textContent = 'Skopiowano'; setTimeout(function(){ b.classList.remove('done'); b.textContent = t; }, 1600); }
+  function copy(text, b){
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(function(){ flash(b); }, function(){ fallback(text, b); });
+    else fallback(text, b);
+  }
+  function fallback(text, b){ var t = document.createElement('textarea'); t.value = text; document.body.appendChild(t); t.select(); try { document.execCommand('copy'); flash(b); } catch (e) {} t.remove(); }
+  document.querySelectorAll('[data-copy]').forEach(function(b){ b.addEventListener('click', function(){ copy(document.getElementById(b.getAttribute('data-copy')).value, b); }); });
+  document.querySelectorAll('[data-copy-text]').forEach(function(b){ b.addEventListener('click', function(){ copy(b.getAttribute('data-copy-text'), b); }); });
+  document.querySelectorAll('.share-files').forEach(function(b){
+    b.addEventListener('click', function(){
+      var paths = JSON.parse(b.getAttribute('data-files'));
+      Promise.all(paths.map(function(p){ return fetch(p).then(function(r){ return r.blob(); }).then(function(bl){ return new File([bl], p.split('/').pop(), {type: b.getAttribute('data-type') || 'image/jpeg'}); }); }))
+        .then(function(files){
+          if (navigator.canShare && navigator.canShare({files: files})) return navigator.share({files: files, title: b.getAttribute('data-title')});
+          window.open(paths[0], '_blank');
+        }).catch(function(){});
+    });
+  });
+})();
+</script>
+</body>
+</html>

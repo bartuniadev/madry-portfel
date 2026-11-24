@@ -109,7 +109,7 @@ head = head.replace('</head>', '<meta name="robots" content="noindex, nofollow">
 
 main = f'''<main>
   <h1>Pakiet do udostępniania</h1>
-  <p class="lead">Ta strona jest dla Ciebie — nie ma jej w menu ani w wyszukiwarkach. Trzy kroki, każdy zajmuje kilka minut, a razem dają stronie pierwszych czytelników.</p>
+  <p class="lead">Ta strona jest dla Ciebie — nie ma jej w menu ani w wyszukiwarkach. Trzy kroki, każdy zajmuje kilka minut, a razem dają stronie pierwszych czytelników. <strong>Zaczynasz na Instagramie?</strong> Gotowy plan startu z grafikami, Reelsami i opisami: <a href="instagram.html">Start na Instagramie →</a></p>
 
   <section class="kit-step">
     <h2>1. Zgłoś stronę do Google i Bing (5 minut, raz)</h2>
