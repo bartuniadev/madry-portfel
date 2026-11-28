@@ -18,7 +18,10 @@ def build(slug, title, desc, cat_name, cat_id, icon, hero_label, body, related, 
     import re as _re
     _m = _re.search(r'Opublikowano (\d+) listopada 2026', body)
     _d = '2026-11-%02d' % int(_m.group(1)) if _m else '2026-11-15'
-    h = h.replace('"datePublished": "2026-09-21"', '"datePublished": "%s"' % _d).replace('"dateModified": "2026-09-21"', '"dateModified": "%s"' % _d)
+    _MON = {'stycznia': 1, 'lutego': 2, 'marca': 3, 'kwietnia': 4, 'maja': 5, 'czerwca': 6, 'lipca': 7, 'sierpnia': 8, 'września': 9, 'października': 10, 'listopada': 11, 'grudnia': 12}
+    _u = _re.search(r'Zaktualizowano (\d+) (\w+) (\d{4})', body)
+    _dm = '%s-%02d-%02d' % (_u.group(3), _MON[_u.group(2)], int(_u.group(1))) if _u and _u.group(2) in _MON else _d
+    h = h.replace('"datePublished": "2026-09-21"', '"datePublished": "%s"' % _d).replace('"dateModified": "2026-09-21"', '"dateModified": "%s"' % _dm)
     hero = f'''  <div class="hero-graphic">
     <svg viewBox="0 0 720 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{hero_label}">
       <defs>

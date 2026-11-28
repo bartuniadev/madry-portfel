@@ -105,7 +105,7 @@ def page(n):
   <p class="amounts-nav">{others}</p>
   <p>Odwrotnie — od brutto do netto: <a href="../artykuly/ile-na-reke-tabela-brutto-netto.html">tabela brutto–netto od 4950 do 20 000 zł</a>.</p>
 
-  <p><em>Treść ma charakter edukacyjny. Wyliczenia według zasad obowiązujących w listopadzie 2026 r. (skala PIT 12% do 120 000 zł dochodu, kwota zmniejszająca 300 zł miesięcznie, koszty uzyskania przychodu 250 zł); w 2027 r. zasady liczenia pensji są takie same, chyba że wejdzie w życie nowa skala podatkowa. Rzeczywista wypłata może różnić się o kilka złotych przez zaokrąglenia.</em></p>
+  <p><em>Treść ma charakter edukacyjny. Wyliczenia według zasad obowiązujących w listopadzie 2026 r. (skala PIT 12% do 120 000 zł dochodu, kwota zmniejszająca 300 zł miesięcznie, koszty uzyskania przychodu 250 zł); w 2027 r. zasady liczenia pensji są takie same — prezydent zawetował 27 listopada 2026 r. zmianę skali PIT. Rzeczywista wypłata może różnić się o kilka złotych przez zaokrąglenia.</em></p>
 '''
     body = re.sub(r'(\d) (\d{3})(?!\d)', '\\1\u00a0\\2', body)
     ld = {"@context": "https://schema.org", "@graph": [

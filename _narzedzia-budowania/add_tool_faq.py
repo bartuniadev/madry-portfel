@@ -5,7 +5,7 @@ FAQ = {
     'kalkulator-brutto-netto': [
         ('Ile na rękę z 6000 zł brutto w 2027 roku?', 'Na umowie o pracę ok. 4420,43 zł (z PIT-2, bez PPK, dla osoby powyżej 26 lat). Z PPK zostaje 4289,43 zł, a osobie do 26 lat z ulgą dla młodych — 4711,43 zł.'),
         ('Ile brutto, żeby mieć 5000 zł na rękę?', 'Na umowie o pracę ok. 6850,14 zł brutto (z PIT-2, bez PPK). Swój wariant policzysz, przełączając kalkulator na „Netto → brutto”.'),
-        ('Czy w 2027 roku zmienia się sposób liczenia pensji?', 'Składki, koszty uzyskania przychodu i kwota zmniejszająca podatek zostają bez zmian. Rośnie płaca minimalna — do 4950 zł brutto. Nowa skala PIT (próg 130 000 zł i stawka 24%) czeka na decyzję prezydenta i dotyczyłaby tylko dochodów powyżej 120 000 zł rocznie.'),
+        ('Czy w 2027 roku zmienia się sposób liczenia pensji?', 'Nie. Składki, koszty uzyskania przychodu, kwota zmniejszająca podatek i skala PIT (12% do 120 000 zł, 32% powyżej) zostają bez zmian — prezydent zawetował 27 listopada 2026 r. ustawę podnoszącą próg do 130 000 zł. Rośnie płaca minimalna — do 4950 zł brutto.'),
         ('Dlaczego pod koniec roku wypłata może być niższa?', 'Gdy dochód od początku roku przekroczy 120 000 zł, nadwyżka jest opodatkowana stawką 32%. U osób do 26 lat wypłata spada po przekroczeniu limitu ulgi dla młodych (85 528 zł przychodu). Wypłata rośnie za to po przekroczeniu rocznego limitu składek emerytalnej i rentowej.'),
     ],
     'czy-dobrze-zarabiam': [

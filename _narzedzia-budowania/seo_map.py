@@ -6,7 +6,7 @@ A+'placa-minimalna-2027-netto': ('płaca minimalna 2027 netto', ['najniższa kra
  'Płaca minimalna 2027: 4950 zł brutto to ok. 3704 zł netto. Kwoty z PPK i ulgą dla młodych, stawka godzinowa 32,30 zł i co rośnie razem z nią.'),
 A+'zmiany-w-finansach-2027': ('zmiany od 1 stycznia 2027', ['zmiany w podatkach 2027','limit IKE 2027','limit IKZE 2027','nowe progi podatkowe 2027'],
  'Zmiany od 1 stycznia 2027 — pensja, podatki, IKE, OKI',
- 'Zmiany od 1 stycznia 2027: płaca minimalna 4950 zł, limity IKE i IKZE, konta OKI bez podatku Belki, nowy próg PIT i KSeF. Co przesądzone, co czeka.'),
+ 'Zmiany od 1 stycznia 2027: płaca minimalna 4950 zł, limity IKE i IKZE, konta OKI bez podatku Belki, KSeF — i skala PIT bez zmian po wecie prezydenta.'),
 A+'osobiste-konto-inwestycyjne-oki': ('osobiste konto inwestycyjne OKI', ['OKI co to jest','OKI czy IKE','podatek od aktywów OKI','inwestowanie bez podatku Belki'],
  'OKI — osobiste konto inwestycyjne 2027: jak działa',
  'Osobiste konto inwestycyjne OKI od 2027: zyski bez podatku Belki, podatek 0,85% od aktywów ponad 100 000 zł, przykłady i porównanie z IKE i IKZE.'),

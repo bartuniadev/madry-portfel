@@ -60,7 +60,7 @@ Część treści zawiera kwoty obowiązujące w konkretnym roku (stan: listopad 
 | Limit IKE / IKZE | 28 260 / 11 304 zł | 30 099 / 12 039,60 zł | `artykuly/ike-ikze-emerytura.html`, `artykuly/koniec-roku-finanse-lista.html`, kalkulator OKI (`IKE_LIMIT`) |
 | Roczny limit podstawy składek emerytalnej i rentowej | 282 600 zł | ok. 300 990 zł (z projektu budżetu — potwierdź w styczniu) | kalkulator brutto–netto (`YEARS.cap`) |
 | Podatek od aktywów OKI / kwota zwolniona | — | 0,85% / 100 000 zł (w tym 25 000 zł oszczędności) | kalkulator OKI, `artykuly/osobiste-konto-inwestycyjne-oki.html` |
-| Skala PIT | 12% do 120 000 zł, 32% powyżej | czeka na decyzję prezydenta (12% / 24% / 32%, progi 130 i 150 tys. zł) | kalkulator brutto–netto (pole „Nowa skala”), `artykuly/zmiany-w-finansach-2027.html`, `artykuly/ile-na-reke-tabela-brutto-netto.html` |
+| Skala PIT | 12% do 120 000 zł, 32% powyżej | bez zmian — prezydent zawetował nową skalę 27.11.2026 (Sejm może odrzucić weto) | kalkulator brutto–netto (pole „Wariant z zawetowanej ustawy”), `artykuly/zmiany-w-finansach-2027.html`, `artykuly/ile-na-reke-tabela-brutto-netto.html` |
 | Rozkład płac GUS (mediana, decyle) | — | maj 2026: D1 4806 zł, mediana 7550,32 zł, D9 14 239 zł | `narzedzia/czy-dobrze-zarabiam.html` (MED, D1, D9), `artykuly/mediana-wynagrodzen-ile-zarabiaja-polacy.html`, strony w `wynagrodzenia/` |
 | Inflacja średnioroczna (CPI GUS) | 2025: 3,6% | 2026: szacunek 3,5% — w styczniu 2027 wpisz wynik GUS | `narzedzia/kalkulator-inflacji.html` (obiekt `CPI`) |
 | Limit ulgi dla młodych, kwota wolna | 85 528 zł / 30 000 zł | bez zmian | `artykuly/zwrot-podatku-pit-dla-mlodych.html`, kalkulator brutto–netto |
